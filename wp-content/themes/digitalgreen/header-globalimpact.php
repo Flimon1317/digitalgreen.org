@@ -21,8 +21,8 @@
         <link rel="stylesheet" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/media.css" type="text/css" />
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class(); ?>>
-    <body>
+    
+    <body class="post-type-archive-careers page-animate">
         <header class="inner-pageh clearfix">
             <nav class="navbar navbar-default navbar-background clearfix">
                 <div class="navbar-header">

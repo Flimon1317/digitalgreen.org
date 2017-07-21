@@ -67,9 +67,9 @@
                                 </span></h4>
                                 <div class="footer-list dg-header-5 text-details">
                                     <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Full Name">
-                                    <span class="error-msg">Your Full Name Required</span></div>
+                                    <!--<span class="error-msg">Your Full Name Required</span> --></div>
                                     <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Email Address">
-                                    <span class="error-msg">Your Email Is Required</span></div>
+                                    <!--<span class="error-msg">Your Email Is Required</span>--></div>
                                     <p><a href="javascript:void;" class="green-arrow">Submit<i class="on-hover-arrow-left"></i></a></p>
                                 </div>
                             </div>
@@ -100,6 +100,7 @@
     <script type="text/javascript" src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.fullPage.min.js"></script>
     <script type='text/javascript' src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/slick.min.js"></script>
     <script type='text/javascript' src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/script.js"></script>
+    <script type='text/javascript' src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.ba-throttle-debounce.min.js"></script>
     
 
 </body>

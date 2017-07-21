@@ -229,12 +229,13 @@ get_header('home'); ?>
 <?php get_footer(); ?>
 
 
-       <script type='text/javascript' src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.ba-throttle-debounce.min.js"></script>
+       
      <script type="text/javascript">
         $(document).ready(function() {
             var isSlider = true;
-            var lastScroll = 0, scrollTop = 0;
+            
             var slideHeight = jQuery('.header-slider').outerHeight();
+
             var options = {
                 navigation: true,
                 scrollOverflow: true,
@@ -242,14 +243,10 @@ get_header('home'); ?>
                 slidesNavPosition: 'bottom',
                 navigationPosition: 'right',
                 afterLoad: function(anchorLink, index){
-                    console.log(index);
                     jQuery('.mega-dropdown-menu').removeClass('disable-submenu');
                     jQuery('body').addClass('fullpage-loaded');
                     if(index == 3){
                         jQuery('body, html').css({'overflow': 'visible'});
-                        if(jQuery(window).scrollTop() > slideHeight){
-                            $('#fp-nav').fadeOut();
-                        }
                         if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
                             $.fn.fullpage.destroy('all');
                             jQuery('.header-slider').css('pointer-events', 'none');
@@ -260,8 +257,6 @@ get_header('home'); ?>
                             jQuery('.header-slider').css('pointer-events', 'none');
                         }
                         jQuery(window).scrollTop(10);
-                    }else {
-                        $('#fp-nav').fadeIn();
                     }
 
                     
@@ -282,27 +277,6 @@ get_header('home'); ?>
             };
             $('#fullpage').fullpage(options);
 
-            function pageScroll(){
-                scrollTop = jQuery(window).scrollTop();
-                if (lastScroll >= scrollTop) {
-                    if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && scrollTop <= 50 && !jQuery('html').hasClass('fp-enabled')) {
-                        $('#fullpage').fullpage(options);
-                        jQuery(window).scrollTop(0);
-                        $('#fp-nav').fadeIn();
-                    } else {
-                        if(jQuery(window).scrollTop() == 0){
-                            $.fn.fullpage.setAllowScrolling(true);
-                            jQuery('body, html').css({'overflow': 'hidden'});
-                        }else{
-                            $.fn.fullpage.setAllowScrolling(false);
-                            jQuery('body, html').css({'overflow': 'visible'});
-                        }
-                        jQuery('.header-slider').css('pointer-events', 'auto');
-                        jQuery('.header-slider').css('-webkit-pointer-events', 'auto');
-                    }
-                }
-                lastScroll = jQuery(window).scrollTop();
-            }
 
             jQuery('.slide-single .slider-next').click(function(e) {
                 $.fn.fullpage.moveSectionDown();
@@ -313,8 +287,5 @@ get_header('home'); ?>
                     jQuery('body').addClass('fullpage-loaded');
                 }, 1000);
             }
-
-            $(window).scroll( $.throttle( 250, pageScroll ) );
-
         });
     </script>

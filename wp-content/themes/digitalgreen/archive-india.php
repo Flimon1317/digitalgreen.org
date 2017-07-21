@@ -335,7 +335,7 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                         <div class="partners-section">
-                            <a href="#" class="partner-collepse-button hidden-xs" >View Parteners &nbsp;
+                            <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
                                 <span class="icon icon-up-arrow"></span>
                                 <span class="icon icon-down-arrow"></span>
                             </a>

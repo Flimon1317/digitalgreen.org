@@ -232,7 +232,6 @@ input:visited, textarea:visited, input:focus, textarea:focus {
   padding: 20px 50px;
   margin: 0; }
   .navbar-background.set-to-fixed {
-    top: 0;
     background-color: #fff;
     position: fixed;
     top: 0;
@@ -1359,6 +1358,11 @@ a.forward-redirection-green-link:hover {
   position: relative;
   transition: all 0.3s ease-in-out; }
 
+.post-type-archive-careers .work-inner-block.col-sm-7 {
+  padding-right: 0; }
+.post-type-archive-careers .work-inner-block.col-md-5 {
+  padding-left: 15px; }
+
 .stats-container {
   padding: 120px 0 20px 0; }
   .stats-container .container > .row {
@@ -2208,11 +2212,12 @@ a.forward-redirection-green-link:hover {
 .country-partner .gray-box-tabbing, .partners-container {
   display: none; }
 
-.country-partner.active .gray-box-tabbing:first-child {
+.partners-container.active .gray-box-tabbing:first-child {
   display: block; }
 
 .gray-box-tabbing {
-  margin-top: 57px; }
+  margin-top: 57px;
+  display: none; }
 
 .gray-box-wrap {
   width: 25%; }

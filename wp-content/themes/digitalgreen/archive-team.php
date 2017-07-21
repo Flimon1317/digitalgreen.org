@@ -19,7 +19,7 @@ get_header('globalimpact'); ?>
     
         <!-- Banner Section -->
         <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo ot_get_option('team_banner_image'); ?><?php echo ot_get_option('team_banner_image'); ?>" class="img-responsive"/></div>
+            <div class="banner-img"><img src="<?php echo ot_get_option('team_banner_image'); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -48,74 +48,62 @@ get_header('globalimpact'); ?>
                     </div>
                     <div class="our-team-list section-margin">
                         <div class="col-md-3 hidden-xs">
-                            <ul class="filter-tab">
-                                <li class="main-tab">
-                                <?php
+                            <ul class="filter-tab row">
+                             <?php
         
-				$terms = get_terms("list_team",array( 'parent' => 0 ));
-				$i=1;
-				foreach ( $terms as $term ) { 
-				$termname = strtolower($term->name);
-				$termname = str_replace(' ', '-', $termname);
-				$children = get_terms( "list_team", array('parent' => $term->term_id));
-				
-					?>
-                                   <div class="main-tab-txt"><?php echo $term->name; ?></div>
+                $terms = get_terms("list_team",array( 'parent' => 0 ));
+                $i=1;
+                foreach ( $terms as $term ) { 
+                $termname = strtolower($term->name);
+                $termname = str_replace(' ', '-', $termname);
+                $children = get_terms( "list_team", array('parent' => $term->term_id));
+                
+                    ?>
+                                <li class="main-tab">
+                                
+                                    <div class="main-tab-txt <?php if($i==1) echo 'active-tab'; ?>"><?php echo $term->name; ?></div>
                                     <ul class="sub-tab-list">
-                                    <?php if($term->name=='Team') echo '<li><a href="#" data-index="1" >Executive Leadership</a></li>'; ?>
+                                        <?php if($term->name=='Team') echo '<li><a href="#" data-index="1" class="active-link" >Executive Leadership</a></li>'; ?>
                                      <?php if($term->name=='Board') echo '<li><a href="#" data-index="2" >Executive Leadership</a></li>'; ?>
-                                       <?php
+                                        <li>
+                                        <?php
 
-					foreach ( $children as $child ) {
-						$termname = strtolower($child->name);
-						$termname = str_replace(' ', '-', $termname);
+                    foreach ( $children as $child ) {
+                        $termname = strtolower($child->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        $childrens = get_terms( "list_team", array('parent' => $child->term_id));
+
+                        ?> 
+                                            <div class="tab-acc "><?php echo $child->name; ?></div>
+                                            
+                    
+                                            <ul class="child-sub-list sub-tab-list">
+                                            <?php
 $j=1;
-						?> 
-                                        <li><a href="#" data-index="<?php echo $child->description; ?><?php echo $j; ?>" ><?php echo $child->name; ?></a></li>
+                    foreach ( $childrens as $child1 ) {
+                        $termname = strtolower($child1->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        
 
-                                        <?php $j=$j+1;
-					}
-					?>
-                                    <!--    <li><a href="#" data-index="2">India</a></li>
-                                        <li>
-                                        <li><a href="#" data-index="3">Ethiopia</a></li> -->
-                                        
+                        ?> 
+                                                <li><a href="#" data-index="<?php echo $child1->description; ?><?php echo $j; ?>"><?php echo $child1->name; ?></a></li>
+                                                <?php $j=$j+1;
+                    }
+                    ?>
+                                            </ul>
+                                            <?php $i++; } ?>
+                                        </li>
+                                         
                                     </ul>
-<?php $i++; } ?>
-
                                 </li>
-                               <!-- <li class="main-tab">
-                                    <div class="main-tab-txt">Board</div>
-                                    <ul class="sub-tab-list">
-                                        <li><a href="#" data-index="1">Executive Leadership</a></li>
-                                        <li><a href="#" data-index="2">India</a></li>
-                                        <li>
-                                        <li><a href="#" data-index="3">Ethiopia</a></li>
-                                       
-                                    </ul>
-                                </li> -->
+                                <?php }?>
                             </ul>
                         </div>
                         <div class="col-md-8 col-md-offset-1">
-                            <div class="filter-details" data-index="1">
+                            <div class="row filter-details" data-index="1">
                                 <div class="main-tab-txt active-tab hidden-sm hidden-md hidden-lg">Executive Leadership</div>
                                 <div class="team-list">
-                                 <!--    <div class="team-member clearfix">
-                                        <div class="tab-details">
-                                            <div class="image-green-shadow col-sm-3 member-img">
-                                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                            </div>
-                                            <div class="member-details col-sm-9">
-                                                <h2>Rikin Gandhi</h2>
-                                                <span class="member-designation">Chief Executive Officer</span>
-                                                <div class="member-intro">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                                </div>
-                                                <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <?php
+                                  <?php
       if (function_exists('get_option_tree')){
         $team_team = ot_get_option( 'team_team', array() );
         if ( ! empty( $team_team ) ) {
@@ -123,81 +111,34 @@ $j=1;
           $i=1;
           foreach( $team_team as $section ) {
       ?>
+                                
                                     <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo $section['team_image']; ?> " alt="Rikin Gandhi"/>
-                                        </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2><?php echo $section['title']; ?> </h2>
-                                            <span class="member-designation"><?php echo $section['team_designation']; ?> </span>
-                                            <div class="member-intro">
-                                                <p><?php echo $section['team_desc']; ?> </p>
+                                        <div class="member-img-wrap">
+                                            <div class="image-green-shadow member-img">
+                                                <img src="<?php echo $section['team_image']; ?>" alt="Rikin Gandhi"/>
                                             </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
                                         </div>
+                                        <div class="member-details">
+                                            <h2><a href="#"><?php echo $section['title']; ?></a></h2>
+                                            <span class="member-designation"><?php echo $section['team_designation']; ?></span>
+                                            <div class="member-intro">
+                                                <p><?php echo $section['short_team_desc']; ?> </p>
+                                            
+                                            <div class="expand-txt">
+                                                    <p><?php echo $section['expand_team_desc']; ?>
+                                                    </p>
+                                                </div>
+                                            <a href="#" class="link-read read-load-link">Read More <span class="icon icon-down-arrow"></span></a>
+                                       </div> 
+                                      </div>
                                     </div>
-<?php } } } ?>
-
-           <!--                         <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                        </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2>Rikin Gandhi</h2>
-                                            <span class="member-designation">Chief Executive Officer</span>
-                                            <div class="member-intro">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                            </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                        </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2>Rikin Gandhi</h2>
-                                            <span class="member-designation">Chief Executive Officer</span>
-                                            <div class="member-intro">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                            </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                        </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2>Rikin Gandhi</h2>
-                                            <span class="member-designation">Chief Executive Officer</span>
-                                            <div class="member-intro">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                            </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                        </div>
-                                    </div> -->
+                                    <?php } } } ?>
                                 </div>
                             </div>
-                            <div class="filter-details" data-index="2">
-                                <div class="main-tab-txt  hidden-sm hidden-md hidden-lg">Executive Leadership</div>
+<div class="filter-details" data-index="2">
+                                <div class="main-tab-txt active-tab hidden-sm hidden-md hidden-lg">Executive Leadership</div>
                                 <div class="team-list">
-                                 <!--    <div class="team-member clearfix">
-                                        <div class="tab-details">
-                                            <div class="image-green-shadow col-sm-3 member-img">
-                                                <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                            </div>
-                                            <div class="member-details col-sm-9">
-                                                <h2>Rikin Gandhi</h2>
-                                                <span class="member-designation">Chief Executive Officer</span>
-                                                <div class="member-intro">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                                </div>
-                                                <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                            </div>
-                                        </div>
-                                    </div> -->
-                                    <?php
+                                  <?php
       if (function_exists('get_option_tree')){
         $team_board = ot_get_option( 'team_board', array() );
         if ( ! empty( $team_board ) ) {
@@ -205,79 +146,48 @@ $j=1;
           $i=1;
           foreach( $team_board as $section ) {
       ?>
+                                
                                     <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo $section['team_board_image']; ?> " alt="Rikin Gandhi"/>
+                                        <div class="member-img-wrap">
+                                            <div class="image-green-shadow member-img">
+                                                <img src="<?php echo $section['team_board_image']; ?>" alt="Rikin Gandhi"/>
+                                            </div>
                                         </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2><?php echo $section['title']; ?> </h2>
-                                            <span class="member-designation"><?php echo $section['team_board_designation']; ?> </span>
+                                        <div class="member-details">
+                                            <h2><a href="#"><?php echo $section['title']; ?></a></h2>
+                                            <span class="member-designation"><?php echo $section['team_board_designation']; ?></span>
                                             <div class="member-intro">
                                                 <p><?php echo $section['team_board_desc']; ?> </p>
                                             </div>
                                             <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
                                         </div>
                                     </div>
-<?php } } } ?>
-
-           <!--                         <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                        </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2>Rikin Gandhi</h2>
-                                            <span class="member-designation">Chief Executive Officer</span>
-                                            <div class="member-intro">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                            </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                        </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2>Rikin Gandhi</h2>
-                                            <span class="member-designation">Chief Executive Officer</span>
-                                            <div class="member-intro">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                            </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="team-member clearfix">
-                                        <div class="image-green-shadow col-sm-3 member-img">
-                                            <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" alt="Rikin Gandhi"/>
-                                        </div>
-                                        <div class="member-details col-sm-9">
-                                            <h2>Rikin Gandhi</h2>
-                                            <span class="member-designation">Chief Executive Officer</span>
-                                            <div class="member-intro">
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ipsum magna, eleifend quis ultricies ac, faucibus quis engageim. Duis cursus magna sit amet ante dictum rhoncus. Nulla non dolor id enim ultrices vehicula ut non tellus.</p>
-                                            </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
-                                        </div>
-                                    </div> -->
+                                    <?php } } } ?>
                                 </div>
                             </div>
 
-<?php
-			    $terms = get_terms("list_team",array( 'parent' => 0 ));
+                            
+ <?php
+                $terms = get_terms("list_team",array( 'parent' => 0 ));
                 foreach ( $terms as $term ) { 
                 $termname = strtolower($term->name);
                 $termname = str_replace(' ', '-', $termname);
-				$children = get_terms( "list_team", array('parent' => $term->term_id));
-				
-$j=1;
-				foreach ( $children as $child ) {
-						$termname = strtolower($child->name);
-						$termname = str_replace(' ', '-', $termname);
-						$the_query = new WP_Query( array('post_type' => 'team','tax_query' => array(array ('taxonomy' => 'list_team','field' => 'slug','terms' => $child->slug))));
-						?>
+                $children = get_terms( "list_team", array('parent' => $term->term_id));
+                
+
+                foreach ( $children as $child ) {
+                        $termname = strtolower($child->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        $childrens = get_terms( "list_team", array('parent' => $child->term_id));
+                        $j=1;
+                        foreach ( $childrens as $child1 ) {
+                        $termname = strtolower($child1->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        $the_query = new WP_Query( array('post_type' => 'team','tax_query' => array(array ('taxonomy' => 'list_team','field' => 'slug','terms' => $child1->slug))));
+                        ?>
                        
-                            <div class="filter-details" data-index="<?php echo $child->description; ?><?php echo $j; ?>">
-                                <div class="main-tab-txt hidden-sm hidden-md hidden-lg"><?php echo $child->name; ?></div>
+                            <div class="filter-details" data-index="<?php echo $child1->description; ?><?php echo $j; ?>">
+                                <div class="main-tab-txt hidden-sm hidden-md hidden-lg"><?php echo $child1->name; ?></div>
  <?php
                         while ( $the_query->have_posts() ) : $the_query->the_post();
  $team_image = get_post_meta(get_the_ID(),'team_image', true);
@@ -403,7 +313,7 @@ $j=1;
                             </div>
                             
 
-<?php $j=$j+1; } } ?>
+<?php $j=$j+1; } } } ?>
                           <!--  <div class="filter-details" data-index="3">
                                 <div class="main-tab-txt hidden-sm hidden-md hidden-lg">Ethiopia</div>
                                 <div class="team-list">

@@ -216,7 +216,7 @@ get_header('loop'); ?>
                                 <div class="solution-gray-box-content">
                                     <h2 class="dg-header-3"><?php echo ot_get_option('loop_product_title'); ?></h2>
                                     <p><?php echo ot_get_option('loop_product_desc'); ?></p>
-                                    <a href="#" class="btn-google-play"><img src="images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
+                                    <a href="<?php echo ot_get_option('loop_product_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
                                 </div>
                             </div>
                         </div>

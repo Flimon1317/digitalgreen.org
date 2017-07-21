@@ -26,7 +26,13 @@ function custom_meta_boxes_partners() {
     'context'     => 'normal',
     'priority'    => 'high',
     'fields'      => array(	  
-	       
+	
+array(
+      'id'          => 'partners_link',
+      'label'       => __( 'Visit Website Link', 'digitalgreen' ),
+      
+        'type'        => 'text'
+      ),        
 	  
       
     )

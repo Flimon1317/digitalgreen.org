@@ -549,6 +549,8 @@ function custom_theme_options() {
         'section'     => 'homepage',
       ),
 
+    
+
 	 
     
     array(
@@ -2482,6 +2484,13 @@ array(
         'section'     => 'loop',
       ),
 
+     array(        
+      'id'          => 'loop_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'loop',      
+      ),
+
     
 
   array(
@@ -2844,6 +2853,13 @@ array(
         'section'     => 'training',
       ),
 
+     array(        
+      'id'          => 'training_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'training',      
+      ),
+
     
 
   array(
@@ -3203,6 +3219,13 @@ array(
     'desc'        => 'Upload',
         'type'        => 'upload',
         'section'     => 'communityvideos',
+      ),
+
+    array(        
+      'id'          => 'communityvideos_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'communityvideos',      
       ),
 
     
@@ -3686,6 +3709,73 @@ array(
       'section'     => 'innovation',      
       ),
 
+  array(
+    'id' => 'innovation_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'innovation'
+    ), 
+
+      array(        
+      'id'          => 'innovation_solution_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'innovation',      
+      ),
+
+      array(        
+      'id'          => 'innovation_solution_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'innovation',      
+      ),
+
+      array(
+        'id'          => 'innovation_solution_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+  'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'innovation',
+      ),
+
+      
+      array(
+        'id'          => 'innovation_solution_values',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'innovation',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'innovation_solution_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'innovation_solution_values',
+              ),
+             array(
+              'id'          => 'innovation_solution_text',
+              'label'       => __( 'Add heading', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'innovation_solution_values',
+              ),
+              
+
+          )
+      ),
+
+      array(        
+      'id'          => 'innovation_solution_blog',        
+      'label'       => __( 'Featured Blog', 'digitalgreen' ),        
+      'type'        => 'custom-post-blog-select',        
+      'section'     => 'innovation',      
+      ),
+
       
    array(
     'id' => 'solutionscoco_banner_tab',
@@ -3811,6 +3901,12 @@ array(
     'desc'        => 'Upload',
         'type'        => 'upload',
         'section'     => 'solutionscoco',
+      ),
+    array(        
+      'id'          => 'solutionscoco_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'solutionscoco',      
       ),
 
     
@@ -4084,13 +4180,51 @@ array(
     'type' => 'tab',
     'section' => 'careers'
     ),
-
+     array(        
+        'id'          => 'careers_offer_title',        
+        'label'       => __( 'Heading', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'careers',      
+        ),
      array(        
         'id'          => 'careers_offer_desc',        
         'label'       => __( 'Description', 'digitalgreen' ),        
         'type'        => 'text',        
         'section'     => 'careers',      
-        ),  
+        ),
+
+     array(
+    'id' => 'careers_community_tab',
+    'label' => 'Community Video Section',
+    'type' => 'tab',
+    'section' => 'careers'
+    ),
+     array(        
+        'id'          => 'careers_community_title',        
+        'label'       => __( 'Title', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'careers',      
+        ),
+     array(        
+        'id'          => 'careers_community_desc',        
+        'label'       => __( 'Description', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'careers',      
+        ),
+
+    array(        
+        'id'          => 'careers_community_image',        
+        'label'       => __( 'Upload image', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'careers',      
+        ), 
+
+   array(        
+        'id'          => 'careers_community_link',        
+        'label'       => __( 'Link', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'careers',      
+        ), 
 
 
     array(
@@ -4149,6 +4283,73 @@ array(
               ),
 
           )
+      ),
+
+   array(
+		'id' => 'careers_solutions_tab',
+		'label' => 'Featured tab',
+		'type' => 'tab',
+		'section' => 'careers'
+		), 
+
+      array(        
+      'id'          => 'careers_solution_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'careers',      
+      ),
+
+      array(        
+      'id'          => 'careers_solution_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'careers',      
+      ),
+
+      array(
+        'id'          => 'careers_solution_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+	'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'careers',
+      ),
+
+      
+      array(
+        'id'          => 'careers_solution_values',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'careers',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'careers_solution_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'careers_solution_values',
+              ),
+             array(
+              'id'          => 'careers_solution_text',
+              'label'       => __( 'Add heading', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'careers_solution_values',
+              ),
+              
+
+          )
+      ),
+
+      array(        
+      'id'          => 'careers_solution_blog',        
+      'label'       => __( 'Featured Blog', 'digitalgreen' ),        
+      'type'        => 'custom-post-blog-select',        
+      'section'     => 'careers',      
       ),
 
 
@@ -4857,12 +5058,18 @@ array(
               'id'          => 'team_designation',
               'label'       => __( 'Designation', 'digitalgreen' ),
               'type'        => 'text',
-              'section'     => 'team_board',
+              'section'     => 'team_team',
               ),
 
                array(
-              'id'          => 'team_desc',
+              'id'          => 'short_team_desc',
               'label'       => __( 'Add Description', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'team_team',
+              ),
+             array(
+              'id'          => 'expand_team_desc',
+              'label'       => __( 'Add Expanded Description', 'digitalgreen' ),
               'type'        => 'text',
               'section'     => 'team_team',
               ),
@@ -5039,6 +5246,73 @@ array(
       'id'          => 'partner_banner_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
+      'section'     => 'partners',      
+      ),
+
+ array(
+    'id' => 'partners_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'partners'
+    ), 
+
+      array(        
+      'id'          => 'partners_solution_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'partners',      
+      ),
+
+      array(        
+      'id'          => 'partners_solution_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'partners',      
+      ),
+
+      array(
+        'id'          => 'partners_solution_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+  'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'partners',
+      ),
+
+      
+      array(
+        'id'          => 'partners_solution_values',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'partners',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'partners_solution_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'partners_solution_values',
+              ),
+             array(
+              'id'          => 'partners_solution_text',
+              'label'       => __( 'Add heading', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'partners_solution_values',
+              ),
+              
+
+          )
+      ),
+
+      array(        
+      'id'          => 'partners_solution_blog',        
+      'label'       => __( 'Featured Blog', 'digitalgreen' ),        
+      'type'        => 'custom-post-blog-select',        
       'section'     => 'partners',      
       ),
 

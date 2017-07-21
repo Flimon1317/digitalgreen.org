@@ -255,7 +255,7 @@ $blog_permalink = get_the_permalink($blog_id);
 ?>
 
 
-                                    <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
+                                    <div class="col-sm-7 work-inner-block  hidden-xs">
                                         <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
@@ -269,7 +269,9 @@ $blog_permalink = get_the_permalink($blog_id);
                     </div>
                 </div>
             </div>
-         <a href="#" class="scroll-to hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
+</div>
+</div>
+         <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
    
 
 <?php get_footer(); ?>

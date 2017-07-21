@@ -82,16 +82,8 @@ get_header('globalimpact'); ?>
                                         <div class="current-opening-disc container" data-code="<?php echo $termname; ?><?php echo $j; ?>">
                                             <h3>Name of partner goes here</h3>
                                             <div class="opening-details">
-                                                <p> <?php the_content(); ?></p>
-                                                <h4 class="dg-header-4">Education Qualification</h4>
-                                                <ul class="opening-details-points">
-                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur, ex sit amet auctor tristique, eros libero eleifend mi Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur, ex sit amet auctor tristique, eros libero eleifend mi</li>
-                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur</li>
-                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur, ex sit amet auctor tristique, eros libero eleifend mi</li>
-                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur, ex sit amet auctor tristique</li>
-                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur, ex sit amet auctor tristique, eros libero eleifend mi</li>
-                                                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur, ex sit amet auctor tristique</li>
-                                                </ul>
+                                                 <?php the_content(); ?>
+                                                
                                                 <a href="#" class="learn-more green-bordered-button">Apply Today</a>
                                             </div>
 
@@ -382,7 +374,7 @@ get_header('globalimpact'); ?>
                 <div class="row">
                     <div class="col-sm-5 team-head-left">
                         <div class="title-header">
-                            <h2 class="dg-header-1 main-section-title ">What We Offer
+                            <h2 class="dg-header-1 main-section-title "><?php echo ot_get_option('careers_offer_title'); ?>
                                 <span class="half-squre-before-title"></span>
                             </h2>
                         </div>
@@ -400,7 +392,7 @@ get_header('globalimpact'); ?>
                         <div class="col-md-6 right-block">
                             <div class="img-right-part">
                                 <div class="image-green-shadow">
-                                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img-2.png" class="img-responsive">
+                                    <img src="<?php echo ot_get_option('careers_community_image'); ?>" class="img-responsive">
                                 </div>
                             </div>
                         </div>
@@ -409,14 +401,14 @@ get_header('globalimpact'); ?>
                                 <div class="single-img">
                                     <div class="side-gray-border">
                                         <span class="tag-text">Project that matter</span>
-                                        <h3 class="dg-header-2 sub-section-title">Community Videos
+                                        <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('careers_community_title'); ?>
                                             <span class="half-squre-before-title"></span>
                                         </h3>
                                         <div class="single-img-content">
-                                            <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            <p class="dg-header-5 text-details"><?php echo ot_get_option('careers_community_desc'); ?>
                                             </p>
                                         </div>
-                                        <a href="#" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo ot_get_option('careers_community_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -492,66 +484,92 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
                 <div class="stats-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9 work-inner-block">
-                    <div class="stats-right">
-                        <div class="our-solution-stats">
-                            <div class="row full-row clearfix">
-                                 <div class="col-md-7">
-                                <div class="our-solution-wrap">
-                                    <div class="our-solution-box">
-                                        <h3 class="dg-header-2 sub-section-title on-hover-title-color">Our Solutions <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
-                                        </h3>
-                                        <p class="dg-header-5 on-hover-title-color">We engage withand empower rural communities to produce participatory localized videos.</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="stats-right">
+                            <div class="our-solution-stats">
+                                <div class="row full-row clearfix">
+                                    <div class="full-col col-sm-7">
+                                        <div class="our-solution-wrap">
+                                            <div class="our-solution-box">
+                                                <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('global_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                                </h3>
+                                                <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('global_solution_desc'); ?></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="full-col col-sm-5 solution-img-wrap hidden-xs">
+                                        <div class="our-solution-img">
+                                            <img src="<?php echo ot_get_option('global_solution_image'); ?>">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                                <div class="full-col col-md-5 solution-img-wrap hidden-sm hidden-xs">
-                                    <div class="our-solution-img">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img-2.png">
+<?php 
+
+$blog_id=ot_get_option('global_solution_blog');
+$auth = get_post($blog_id); // gets author from post
+$blog_title = get_the_title($blog_id);
+
+$blog_image = $auth->blogs_blog_image;
+
+$blog_permalink = get_the_permalink($blog_id);
+
+
+?>
+
+                            <div class="work-block row clearfix">
+                                <div class="work-inner-block col-sm-7 hidden-sm hidden-xs">
+                                    <div class="blog-post-img-box" style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
+                                        <div class="blog-post-img-text">
+                                            <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
+                                               <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="work-block row clearfix">
-                            <div class="work-inner-block col-sm-7 hidden-sm hidden-xs">
-                                <div class="blog-post-img-box">
-                                    <div class="blog-post-img-text">
-                                        <h4 class="dg-header-4 text-white">Title of the blog post goes hear</h4>
-                                           <a href="#" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                    </div>
+                                <div class="work-inner-block col-md-5  green-squre-box-title">
+                                    <a href="<?php echo esc_url(site_url()); ?>/careers" class="green-squre-box">
+                                       <h2 class="dg-header-2"><span class="green-arrow">Work <br> With Us<i class="on-hover-arrow-left on-hover-big-aerrow-left""></i></span></h2>
+                                    </a>
                                 </div>
-                            </div>
-                            <div class="work-inner-block col-md-5  green-squre-box-title">
-                                <a href="<?php echo esc_url(site_url()); ?>/careers" class="green-squre-box">
-                                   <h2 class="dg-header-2"><span class="green-arrow">Work <br> With Us<i class="on-hover-arrow-left on-hover-big-aerrow-left""></i></span></h2>
-                                </a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 work-inner-block">
-                    <div class="custom-class-slideshow stats-slider-wrap">
-                        <div class="stats-values stat-slider">
-                            <div class="count-global-stat text-center">
-                                <h1 class="dg-header-1">80%</h1>
-                                <h4 class="dg-header-5">Global impact stat</h4>
-                            </div>
-                            <div class="count-global-stat text-center">
-                                <h1 class="dg-header-2">270,000</h1>
-                                <h4 class="dg-header-5">Global impact stat</h4>
-                            </div>
-                            <div class="count-global-stat text-center">
-                                <h1 class="dg-header-2">1 Million</h1>
-                                <h4 class="dg-header-5">Global impact stat</h4>
+                    <div class="col-sm-3">
+                        <div class="custom-class-slideshow stats-slider-wrap">
+                            <div class="stats-values stat-slider">
+ <?php
+      if (function_exists('get_option_tree')){
+        $careers_solution_values = ot_get_option( 'careers_solution_values', array() );
+        if ( ! empty( $careers_solution_values ) ) {
+          /* print_r($home_banner); */
+          $i=1;
+          foreach( $careers_solution_values as $section ) {
+            
+      ?>
+
+                                <div class="count-global-stat text-center">
+                                    <h1 class="dg-header-1"><?php echo $section['careers_solution_value']; ?></h1>
+                                    <h4 class="dg-header-5"><?php echo $section['careers_solution_text']; ?></h4>
+                                </div>
+<?php } } } ?>
+
+                               <!-- <div class="count-global-stat text-center">
+                                    <h1 class="dg-header-2">270,000</h1>
+                                    <h4 class="dg-header-5">Global impact stat</h4>
+                                </div>
+                                <div class="count-global-stat text-center">
+                                    <h1 class="dg-header-2">1 Million</h1>
+                                    <h4 class="dg-header-5">Global impact stat</h4>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+     <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
     
     <?php get_footer(); ?>
     
