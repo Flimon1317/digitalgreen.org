@@ -65,18 +65,20 @@ get_header('globalimpact'); ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white"><?php echo $section['casestudy_area']; ?></h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link"><?php echo $section['casestudy_value']; ?></h1>
-                                    <h4 class=" text-white"><?php echo $section['casestudy_desc']; ?></h4>
+                        <a href="<?php echo $section['casestudy_attach']; ?>" target="_blank" class="forward-redirection-green-link">
+                            <div class="hover-card-details hidden-xs">
+                                <div class="hover-card-text-content">
+                                    <h3 class="dg-header-3 text-white"><?php echo $section['casestudy_area']; ?></h3>
+                                    <div class="count-globel-impact-stat text-center">
+                                        <h1 class="dg-header-1 forward-redirection-green-link"><?php echo $section['casestudy_value']; ?></h1>
+                                        <h4 class=" text-white"><?php echo $section['casestudy_desc']; ?></h4>
+                                    </div>
+                                   <p>
+                                        <a href="<?php echo $section['casestudy_attach']; ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                    </p> 
                                 </div>
-                               <p>
-                                    <a href="<?php echo $section['casestudy_attach']; ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p> 
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
 <?php } } } ?>

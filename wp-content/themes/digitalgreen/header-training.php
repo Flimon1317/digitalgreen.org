@@ -22,7 +22,7 @@
         <?php wp_head(); ?>
     </head>
     
-    <body class="trainning-courseware">
+    <body class="training">
         <header class="inner-pageh clearfix">
             <nav class="navbar navbar-default navbar-background clearfix">
                 <div class="navbar-header">
@@ -57,31 +57,20 @@
                             <ul class="mega-dropdown-menu">
                             <?php
       if (function_exists('get_option_tree')){
-        $solution_impact = ot_get_option( 'solution_impact', array() );
-        if ( ! empty( $solution_impact ) ) {
+        $global_impact = ot_get_option( 'global_impact', array() );
+        if ( ! empty( $global_impact ) ) {
           /* print_r($home_banner); */
           
-          foreach( $solution_impact as $section ) {
-      
-                if($section === reset($solution_impact)){ ?>
-                                <li class="col-sm-3 col-lg-2 col-lg-offset-1">
+          foreach( $global_impact as $section ) {
+      ?>
+                                <li class="col-sm-3">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
-                                        <p class="dg-header-5 text-details"><?php echo $section['solution_description']; ?></p>
-                                        <p><a href="<?php echo $section['solution_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                        <p class="dg-header-5 text-details"><?php echo $section['global_description']; ?></p>
+                                        <p><a href="<?php echo $section['global_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
                                 </li>
-                            <?php    }
-                                else { ?>
-                                <li class="col-sm-3 col-lg-2">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
-                                        <p class="dg-header-5 text-details"><?php echo $section['solution_description']; ?></p>
-                                        <p><a href="<?php echo $section['solution_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <?php }?>
-<?php } } } ?>                      
+      <?php } } } ?>                          
                                <!--  <li class="col-sm-3">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3">Ethiopia</h2>
@@ -132,15 +121,26 @@
           /* print_r($home_banner); */
           
           foreach( $solution_impact as $section ) {
-      ?>
-                                <li class="col-sm-3">
+      
+                if($section === reset($solution_impact)){ ?>
+                                <li class="col-sm-3 col-lg-2 col-lg-offset-1">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
                                         <p class="dg-header-5 text-details"><?php echo $section['solution_description']; ?></p>
                                         <p><a href="<?php echo $section['solution_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
                                 </li>
-       <?php } } } ?>                         
+                            <?php    }
+                                else { ?>
+                                <li class="col-sm-3 col-lg-2">
+                                    <div class="menu-content">
+                                        <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
+                                        <p class="dg-header-5 text-details"><?php echo $section['solution_description']; ?></p>
+                                        <p><a href="<?php echo $section['solution_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                    </div>
+                                </li>
+                                <?php }?>
+<?php } } } ?>                         
                                 <!-- <li class="col-sm-3">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3">Solution</h2>

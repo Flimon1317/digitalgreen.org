@@ -10,7 +10,25 @@
 get_header('about'); ?>
 
 
-
+<div class="page-sub-menu hidden-xs clearfix">
+                <div class="container">
+                    <div class="row">
+                        <ul class="sub-menu-title">
+                            <li class="activemenu">
+                                <a href="#our_team">Team</a>
+                            </li>
+                            <li>
+                                <a href="#history">History</a></li>
+                            <li>
+                                <a href="#partners">Partners</a>
+                            </li>
+                            <li>
+                                <a href="#documents">Documents</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
     <!-- Banner Section -->
         <div class="banner-section">
             <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('aboutus_banner_image')); ?>" class="img-responsive"/></div>
@@ -66,7 +84,7 @@ get_header('about'); ?>
                     </div>
                 </div>
             </div>
-            <div class="container our-team-section clearfix">
+            <div id="our_team" class="container our-team-section clearfix">
                 <div class="title-header section-margin ">
                     <h2 class="dg-header-1 main-section-title ">Our Team<span class="half-squre-before-title"></span></h2>
                     <a href="<?php echo esc_url(site_url()); ?>/our-team" class="green-arrow">View Team Bios<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
@@ -96,7 +114,7 @@ get_header('about'); ?>
                         </div>
 <?php } } } ?>
 
-<?php
+<!-- <?php
       if (function_exists('get_option_tree')){
         $team_board = ot_get_option( 'team_board', array() );
         if ( ! empty( $team_board ) ) {
@@ -118,7 +136,7 @@ get_header('about'); ?>
                                 </div>
                             </div>
                         </div>
-<?php } } } ?>
+<?php } } } ?> -->
 
                     <!--    <div class="col-sm-3 team-item">
                             <div class="single-activity-details">
@@ -202,7 +220,7 @@ get_header('about'); ?>
                 </div>
             </div>
             <div class="team-history-wrap section-margin">
-                <div class="container clearfix">
+                <div id="history" class="container clearfix">
                     <div class="title-header section-margin ">
                         <h2 class="dg-header-2 text-center">The History of Digital Green</h2>
                     </div>
@@ -389,7 +407,7 @@ get_header('about'); ?>
                 </div>
             </div>
             <div class="dg-partners-wrapper">
-                <div class="container">
+                <div id="partners" class="container">
                     <div class="row section-margin ">
                         <div class="col-sm-6">
                             <div class="row title-header">
@@ -447,7 +465,7 @@ get_header('about'); ?>
 $aboutus_financials_array = ot_get_option( 'aboutus_financials_array', array() );
         if ( ! empty( $aboutus_financials_array ) ) {
  ?>
-            <div class="features-list-wrapper">
+            <div id="documents" class="features-list-wrapper">
                 <div class="features-blocks">
                     <div class="row clearfix features-list">
  <?php 

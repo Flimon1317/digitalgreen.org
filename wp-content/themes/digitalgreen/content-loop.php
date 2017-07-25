@@ -204,23 +204,7 @@ get_header('loop'); ?>
             </div>
         </div>
             <div class="container">
-                <div class="row">
-                    <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
-                        <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
-                            <div class="col-md-6">
-                                <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('loop_product_image'); ?>" class="img-responsive">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="solution-gray-box-content">
-                                    <h2 class="dg-header-3"><?php echo ot_get_option('loop_product_title'); ?></h2>
-                                    <p><?php echo ot_get_option('loop_product_desc'); ?></p>
-                                    <a href="<?php echo ot_get_option('loop_product_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>   
+                <div class="row">   
                    <div class="coco-images section-margin">
                         <img src="<?php echo ot_get_option('loop_product_show_image'); ?>" alt="sample image"/>
                     </div> 
@@ -269,9 +253,25 @@ get_header('loop'); ?>
                                 </div>
                             </div>
                         </div>
+                        <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
+                        <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
+                            <div class="col-md-6 padding-image">
+                                <div class="solution-gray-box-img">
+                                    <img src="<?php echo ot_get_option('loop_product_image'); ?>" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="solution-gray-box-content">
+                                    <h2 class="dg-header-3"><?php echo ot_get_option('loop_product_title'); ?></h2>
+                                    <p><?php echo ot_get_option('loop_product_desc'); ?></p>
+                                    <a href="<?php echo ot_get_option('loop_product_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
             <div class="app-screenshots big-arrow-slider">
                 <div class="custom-class-slideshow text-center">
                     <div class="container"><h1 class="dg-header-2 mobile-slider-main-title"><?php echo ot_get_option('loop_screenshots_title'); ?></h1></div>

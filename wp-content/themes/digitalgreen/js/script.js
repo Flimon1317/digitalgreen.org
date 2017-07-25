@@ -405,10 +405,10 @@ jQuery(document).ready(function(){
 
         jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
         jQuery('.award-content .logo-details').removeClass('hover-on');
-        var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+        var currentSlide = jQuery('#logo_slider').slick('slickCurrentSlide');
         var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
-        var target_slide = (centerSlide%totalSlides)+1;
-        var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
+        var target_slide = (currentSlide%totalSlides)+1;
+        // var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
         jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow');            
         jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');            
 
@@ -427,9 +427,9 @@ jQuery(document).ready(function(){
         function(){
             jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
             jQuery('.award-content .logo-details').removeClass('hover-on');
-            var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+            var currentSlide = jQuery('#logo_slider').slick('slickCurrentSlide');
             var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
-            var target_slide = (centerSlide%totalSlides)+1;
+            var target_slide = (currentSlide%totalSlides)+1;
             var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
             jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow').addClass('active-arrow');            
             jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');
@@ -438,9 +438,9 @@ jQuery(document).ready(function(){
         jQuery('#logo_slider .slick-next').click(function(){
             jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
             jQuery('.award-content .logo-details').removeClass('hover-on');
-            var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+            var currentSlide = jQuery('#logo_slider').slick('slickCurrentSlide');
             var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
-            var target_slide = (centerSlide%totalSlides)+1;
+            var target_slide = (currentSlide%totalSlides)+1;
             var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
             jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow');            
             jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');
@@ -448,9 +448,9 @@ jQuery(document).ready(function(){
         jQuery('#logo_slider .slick-prev').click(function(){
             jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
             jQuery('.award-content .logo-details').removeClass('hover-on');
-            var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+            var currentSlide = jQuery('#logo_slider').slick('slickCurrentSlide');
             var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
-            var target_slide = (centerSlide%totalSlides)+1;
+            var target_slide = (currentSlide%totalSlides)+1;
             var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
             jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow');            
             jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');

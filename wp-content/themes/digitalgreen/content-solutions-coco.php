@@ -203,11 +203,11 @@ get_header('coco'); ?>
                 </div>
             </div>
         </div>
-            <div class="container">
+<!--             <div class="container">
                 <div class="row">
                     <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
-                            <div class="col-md-6">
+                            <div class="col-md-6 padding-image">
                                 <div class="solution-gray-box-img">
                                     <img src="<?php echo ot_get_option('solutionscoco_product_image'); ?>" class="img-responsive">
                                 </div>
@@ -271,8 +271,8 @@ get_header('coco'); ?>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="app-screenshots big-arrow-slider">
+            </div> -->
+<!--             <div class="app-screenshots big-arrow-slider">
                 <div class="custom-class-slideshow text-center">
                     <div class="container"><h1 class="dg-header-2 mobile-slider-main-title"><?php echo ot_get_option('solutionscoco_screenshots_title'); ?></h1></div>
                     <div id="carousel-mobile-img" class="clearfix">
@@ -289,7 +289,7 @@ get_header('coco'); ?>
                         </div> 
                         <?php $i++; } } } ?>
                         
-                 <!--      <div class="slide-item">
+                      <div class="slide-item">
                              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide2">
                         </div>
                         <div class="slide-item">
@@ -309,11 +309,11 @@ get_header('coco'); ?>
                         </div>
                         <div class="slide-item">
                              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide8">
-                        </div>  -->  
+                        </div>   
                         
                     </div>
                 </div>
-            </div>
+            </div> -->
 
 <?php
       if (function_exists('get_option_tree')){ 

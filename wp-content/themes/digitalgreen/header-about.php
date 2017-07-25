@@ -205,7 +205,7 @@
                     <div class="row">
                         <ul class="sub-menu-title">
 
-<?php
+<!-- <?php
       if (function_exists('get_option_tree')){
         $aboutus_financials_array = ot_get_option( 'aboutus_financials_array', array() );
         if ( ! empty( $aboutus_financials_array ) ) {
@@ -217,7 +217,7 @@
                                 <a href="<?php echo $section['aboutus_link']; ?>"><?php echo $section['title']; ?></a>
                             </li>
 
-<?php $i++; } } } ?>
+<?php $i++; } } } ?> -->
                            <!-- <li>
                                 <a href="#ethiopia">Annual Report</a></li>
                             <li>
