@@ -121,15 +121,26 @@
           /* print_r($home_banner); */
           
           foreach( $solution_impact as $section ) {
-      ?>
-                                <li class="col-sm-3">
+      
+                if($section === reset($solution_impact)){ ?>
+                                <li class="col-sm-3 col-lg-2 col-lg-offset-1">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
                                         <p class="dg-header-5 text-details"><?php echo $section['solution_description']; ?></p>
                                         <p><a href="<?php echo $section['solution_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
                                 </li>
-       <?php } } } ?>                         
+                            <?php    }
+                                else { ?>
+                                <li class="col-sm-3 col-lg-2">
+                                    <div class="menu-content">
+                                        <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
+                                        <p class="dg-header-5 text-details"><?php echo $section['solution_description']; ?></p>
+                                        <p><a href="<?php echo $section['solution_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                    </div>
+                                </li>
+                                <?php }?>
+<?php } } } ?>                         
                                 <!-- <li class="col-sm-3">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3">Solution</h2>

@@ -257,6 +257,23 @@ input:visited, textarea:visited, input:focus, textarea:focus {
   margin-right: -15px;
   margin-top: 0; }
 
+
+nav:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+nav:hover > .navbar-header > a > img.white-logo {
+  display: none;
+}
+
+nav:hover > .navbar-header > a > img.gray-logo {
+  display: block;
+}
+
+nav:hover > .navbar-collapse ul > li > a {
+  color : #000;
+}
+
 .nav.page-menu {
   width: 54%;
   float: left;
@@ -282,7 +299,7 @@ input:visited, textarea:visited, input:focus, textarea:focus {
   clear: both;
   overflow: hidden;
   box-sizing: border-box;
-  height: auto !important; }
+  /*height: auto !important; */}
   .mega-dropdown-menu li {
     border-right: 1px solid #fff; }
     .mega-dropdown-menu li.col-sm-3:last-child {
@@ -292,7 +309,7 @@ input:visited, textarea:visited, input:focus, textarea:focus {
       .mega-dropdown-menu li .menu-content h2 {
         min-height: 80px;
         margin: 0;
-        transition: all 0.3s; }
+        transition: all 0.1s ease-in;}
       .mega-dropdown-menu li .menu-content:hover h2 {
         color: #65E214; }
 
@@ -307,7 +324,7 @@ input:visited, textarea:visited, input:focus, textarea:focus {
 
 .navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav .open .mobile-sub-menu > li > a {
   color: #fff;
-  transition: all 1s; }
+  transition: all 0.1s ease-in; }
 
 .navbar-background.set-to-fixed .navbar-nav > li > a, .navbar-background.set-to-fixed .open .mobile-sub-menu > li > a {
   color: #9BA0A7; }
@@ -715,11 +732,11 @@ input:visited, textarea:visited, input:focus, textarea:focus {
 .half-squre-before-title {
   background: transparent url(../images/path.png) 0 0 no-repeat;
   position: absolute;
-  left: -20px;
+  left: -32px;
   width: 16px;
   height: 16px;
   display: inline-block;
-  top: 28px;
+  top: 22px;
   background-size: 100% 100%; }
 
 .mobile-half-squre-before-title {
@@ -927,7 +944,7 @@ input:visited, textarea:visited, input:focus, textarea:focus {
     display: table; }
 
 .testimonials-box-div {
-  background-color: rgba(0, 0, 0, 0.62);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   display: table-cell;
   vertical-align: middle;
@@ -1023,6 +1040,7 @@ input:visited, textarea:visited, input:focus, textarea:focus {
         display: flex;
         align-items: center;
         height: 100%; }
+        
     .slider-section .award-logos-sec .logo-details {
       padding: 32px 38px 35px 38px;
       background-color: #f7f7f7;
@@ -1356,7 +1374,7 @@ a.forward-redirection-green-link:hover {
   min-height: 300px;
   background-size: cover;
   position: relative;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.1s ease-in-out; }
 
 .post-type-archive-careers .work-inner-block.col-sm-7 {
   padding-right: 0; }

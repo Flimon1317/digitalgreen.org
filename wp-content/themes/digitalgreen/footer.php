@@ -31,10 +31,9 @@
                                             <li><a href="<?php echo ot_get_option('footer_linkedin'); ?>"><i class="icon icon-linkedin"></i></a></li>
                                             <li><a href="<?php echo ot_get_option('footer_google+'); ?>"><i class="icon icon-gplus"></i></a></li>
                                             <li><a href="<?php echo ot_get_option('footer_flickr'); ?>"><i class="icon icon-flickr"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_vimeo'); ?>"><i class="icon icon-vimeo"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_instagram'); ?>"><i class="icon icon-instagram"></i></a></li><li>
-                                                <a href="#"><i class="icon icon-facebook"></i></a>
-                                                <span class="social-tooltip">Facebook</span>
+                                        
+<!--                                                 <a href="#"><i class="icon icon-facebook"></i></a>
+                                                <span class="social-tooltip">Facebook</span> -->
                                             </li>
                                         </ul>
                                     </li>

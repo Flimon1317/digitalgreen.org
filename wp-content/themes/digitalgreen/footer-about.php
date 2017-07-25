@@ -32,8 +32,8 @@
                                             <li><a href="#"><i class="icon icon-linkedin"></i></a></li>
                                             <li><a href="#"><i class="icon icon-gplus"></i></a></li>
                                             <li><a href="#"><i class="icon icon-flickr"></i></a></li>
-                                            <li><a href="#"><i class="icon icon-vimeo"></i></a></li>
-                                            <li><a href="#"><i class="icon icon-instagram"></i></a></li>
+                                            <!-- <li><a href="#"><i class="icon icon-vimeo"></i></a></li>
+                                            <li><a href="#"><i class="icon icon-instagram"></i></a></li> -->
                                         </ul>
                                     </li>
                                 </ul>

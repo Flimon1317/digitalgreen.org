@@ -22,7 +22,7 @@ get_header('home'); ?>
             <div class="header-slider">
                 <ul class="" id="fullpage">
                     <li class="slide-single section" id="slide1">
-                        <img src="<?php echo esc_url(ot_get_option('home_banner1')); ?>"/>
+                        <img src="<?php echo esc_url(ot_get_option('home_banner1')); ?>" class="w3-image" height=50vh width="50vw"/>
                         <div class="slider-text slider-1">
                             <div class="slider-1-text">
                                 <h2 class="slider-title">
@@ -36,7 +36,7 @@ get_header('home'); ?>
                         </div>
                     </li>
                     <li class="slide-single section" id="slide2">
-                        <img src="" data-src="<?php echo esc_url(ot_get_option('home_banner2')); ?>"/>
+                        <img src="" data-src="<?php echo esc_url(ot_get_option('home_banner2')); ?>" height="100vh" width="100vw"/>
                         <div class="slider-text slider-2">
                             <div class="slider-2-text">
                                 <h2 class="slider-title">
@@ -49,7 +49,7 @@ get_header('home'); ?>
                             </div>
                         </div>
                     </li>
-                    <li class="slide-single section" id="slide3"><img src="" data-src="<?php echo esc_url(ot_get_option('home_banner3')); ?>"/>
+                    <li class="slide-single section" id="slide3"><img src="" data-src="<?php echo esc_url(ot_get_option('home_banner3')); ?>" height="100vh" width="100vw"/>
                         <div class="slider-text slider-3">
                             <div class="slider-3-text">
                                 <div class="container">
@@ -124,6 +124,7 @@ get_header('home'); ?>
       ?>
 
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?>activity-blocks">
+                                <a href="<?php echo $section['solutions_array_link']; ?>" >
                                 <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
                                     <div class="image-green-shadow">
                                         <img src="<?php echo $section['solutions_image']; ?>" class="img-responsive">
@@ -137,6 +138,7 @@ get_header('home'); ?>
                                          <a href="<?php echo $section['solutions_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
+                                </a>
                             </div>
 <?php $i++; } } } ?>
 
@@ -243,7 +245,7 @@ get_header('home'); ?>
                 slidesNavPosition: 'bottom',
                 navigationPosition: 'right',
                 afterLoad: function(anchorLink, index){
-                    jQuery('.mega-dropdown-menu').removeClass('disable-submenu');
+                    // jQuery('.mega-dropdown-menu').removeClass('disable-submenu');
                     jQuery('body').addClass('fullpage-loaded');
                     if(index == 3){
                         jQuery('body, html').css({'overflow': 'visible'});
@@ -265,7 +267,7 @@ get_header('home'); ?>
                     }
                 },
                 onLeave: function(index, nextIndex, direction){
-                    jQuery('.mega-dropdown-menu').addClass('disable-submenu');
+                    // jQuery('.mega-dropdown-menu').addClass('disable-submenu');
                     jQuery('.home-page-search .search-input').css('top', '-152px')
                 },
                 afterRender: function(){

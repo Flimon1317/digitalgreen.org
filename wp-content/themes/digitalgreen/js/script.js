@@ -1,5 +1,7 @@
 jQuery(document).ready(function(){
         jQuery('body').addClass('page-animate');
+        jQuery(".search-button").hide();
+        jQuery('.icon-vimeo, .icon-instagram').hide();
         jQuery(".search-button").click(function() {
             var top = jQuery(".search-input").css("top");
              if (top == '-152px'){
@@ -9,17 +11,21 @@ jQuery(document).ready(function(){
             }
         });
 
-        jQuery('.award-content .logo-details:first-child').addClass('hover-on');
-        jQuery('#logo_slider li:first-child').addClass('active-arrow');
-        jQuery('#logo_slider li').hover(function(){
-            var thisPos = jQuery(this).position().left;
-            var dataIndex = jQuery(this).data('index');
-            jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
-            jQuery(this).addClass('active-arrow');
-            jQuery('.award-content .logo-details:first-child').removeClass('hover-on');
-            jQuery('.award-content .logo-details').removeClass('hover-on');
-            jQuery('.award-content .logo-details[data-index='+ dataIndex +']').addClass('hover-on').find('.triangle-up').css('left', thisPos + 70);
-        });
+        // jQuery('.award-content .logo-details:first-child').addClass('hover-on');
+        // jQuery('#logo_slider li:first-child').addClass('active-arrow');
+        // jQuery('#logo_slider li').hover(function(){
+        //     var thisPos = jQuery(this).position().left;
+        //     var dataIndex = jQuery(this).data('index');
+        //     jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
+        //     jQuery(this).addClass('active-arrow');
+        //     jQuery('.award-content .logo-details:first-child').removeClass('hover-on');
+        //     jQuery('.award-content .logo-details').removeClass('hover-on');
+        //     jQuery('.award-content .logo-details[data-index='+ dataIndex +']').addClass('hover-on').find('.triangle-up').css('left', thisPos + 70);
+        //     jQuery('.award-content .logo-details[data-index='+ dataIndex +']').show(800);
+        // }, function(){
+            
+        // });
+
     jQuery('.navbar-toggle').click(function(){
         if(jQuery('.navbar-collapse').is(':visible')){
             jQuery('.navbar-collapse').slideUp();
@@ -32,11 +38,11 @@ jQuery(document).ready(function(){
 
 
     jQuery('.mega-dropdown').mouseenter(function() {
-        jQuery(this).find('ul').css({'z-index':'300'}).stop().slideDown();
+        jQuery(this).find('ul').css({'z-index':'300'}).stop().slideDown(250, "linear");
     });
 
     jQuery('.mega-dropdown').mouseleave(function() {
-        jQuery(this).find('ul').css({'z-index':'0'}).stop().slideUp();
+        jQuery(this).find('ul').css({'z-index':'0'}).stop().slideUp(100, "linear");
     });
 
 /* All Slideshows */
@@ -76,11 +82,12 @@ jQuery(document).ready(function(){
             jQuery('#logo_slider').slick({
                 slidesToShow: 1,
                 dots: true,
+                infinite: true,
                 responsive: [
                     {
                       breakpoint: 767,
                       settings: {
-                        slidesToShow: 1
+                        slidesToShow: 1,
                       }
                     },
                     {
@@ -98,15 +105,14 @@ jQuery(document).ready(function(){
                 sliderBox.slick('slickGoTo', i);
                 return false;
             });
-
             
         }else{
             jQuery('#logo_slider').slick({
-                slidesToShow: 6,
+                slidesToShow: 5,
                 dots: false,
-                infinite: false,
+                infinite: true,
                 slidesToScroll: 1,
-                speed: 1200
+                speed: 1500
 
             });
         }
@@ -394,7 +400,64 @@ jQuery(document).ready(function(){
     jQuery('.scroll-top').click(function(){
          jQuery('html,body').animate({ scrollTop: 0 }, 800);
         return false; 
-    })
+    });
+
+
+        jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
+        jQuery('.award-content .logo-details').removeClass('hover-on');
+        var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+        var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
+        var target_slide = (centerSlide%totalSlides)+1;
+        var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
+        jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow');            
+        jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');            
+
+        // jQuery('.award-content .logo-details:first-child').addClass('hover-on');
+        // jQuery('#logo_slider li:first-child').addClass('active-arrow');
+        jQuery('#logo_slider li').hover(function(){
+            var thisPos = jQuery(this).position().left;
+            var dataIndex = jQuery(this).data('index');
+            jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
+            jQuery(this).addClass('active-arrow');
+            jQuery('.award-content .logo-details:first-child').removeClass('hover-on');
+            jQuery('.award-content .logo-details').removeClass('hover-on');
+            jQuery('.award-content .logo-details[data-index='+ dataIndex +']').addClass('hover-on').find('.triangle-up').css('left', thisPos + 70);
+            jQuery('.award-content .logo-details[data-index='+ dataIndex +']').show(800);
+        }, 
+        function(){
+            jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
+            jQuery('.award-content .logo-details').removeClass('hover-on');
+            var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+            var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
+            var target_slide = (centerSlide%totalSlides)+1;
+            var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
+            jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow').addClass('active-arrow');            
+            jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');
+        });
+
+        jQuery('#logo_slider .slick-next').click(function(){
+            jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
+            jQuery('.award-content .logo-details').removeClass('hover-on');
+            var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+            var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
+            var target_slide = (centerSlide%totalSlides)+1;
+            var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
+            jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow');            
+            jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');
+    });
+        jQuery('#logo_slider .slick-prev').click(function(){
+            jQuery('#logo_slider li, #logo_slider li:first-child').removeClass('active-arrow');
+            jQuery('.award-content .logo-details').removeClass('hover-on');
+            var centerSlide = jQuery('#logo_slider').slick('slickCurrentSlide')+2;
+            var totalSlides = jQuery('#logo_slider').slick('getSlick').slideCount;
+            var target_slide = (centerSlide%totalSlides)+1;
+            var target_pos = jQuery('.award-content .logo-details[data-index='+ target_slide +']').position().left;        
+            jQuery('#logo_slider li[data-index='+ target_slide +']').addClass('active-arrow');            
+            jQuery('.award-content .logo-details[data-index='+ target_slide +']').addClass('hover-on');
+    });
+
+
+
     jQuery(window).scroll(function () {
         if(jQuery(window).width() > 767){
             setTimeout(function(){
