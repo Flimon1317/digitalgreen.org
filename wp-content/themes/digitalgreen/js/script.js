@@ -11,6 +11,41 @@ jQuery(document).ready(function(){
             }
         });
 
+        jQuery('header.header-home').mouseenter(function(){
+            $('.navbar-header a img.white-logo').css('display','none');
+            $('.navbar-header a img.gray-logo').css('display','block');
+            $('.navbar-collapse ul li a').css('color','#9BA0A7');
+        });
+        jQuery('header.header-home').mouseleave(function(){
+            $('.navbar-header a img.white-logo').css('display','block');
+            $('.navbar-header a img.gray-logo').css('display','none');
+            $('.navbar-collapse ul li a').css('color','#fff');
+        });
+
+
+    function sticky_relocate() {
+        var window_top = $(window).scrollTop();
+        if(typeof $('#sticky-anchor').offset() === "undefined"){
+            
+        }
+        else {
+            var div_top = $('#sticky-anchor').offset().top;
+            if (window_top > div_top) {
+                $('#sticky').addClass('stick');
+                $('#sticky-anchor').height($('#sticky').outerHeight());
+            } else {
+                $('#sticky').removeClass('stick');
+                $('#sticky-anchor').height(0);
+            }
+        }
+    }
+
+
+    $(function() {
+        $(window).scroll(sticky_relocate);
+        sticky_relocate();
+    });
+
         // jQuery('.award-content .logo-details:first-child').addClass('hover-on');
         // jQuery('#logo_slider li:first-child').addClass('active-arrow');
         // jQuery('#logo_slider li').hover(function(){
@@ -229,13 +264,13 @@ jQuery(document).ready(function(){
             ]
         });
 
-    jQuery('.sub-menu-title a').click(function(){
-        jQuery('.sub-menu-title li').removeClass('activemenu');
-        jQuery(this).parent('.sub-menu-title li').addClass('activemenu');
-        var thisHref = jQuery(this).attr('href');
+    jQuery('.sub-menu-title li').click(function(e){
+        // jQuery('.activemenu').removeClass('activemenu');
+        var thisHref = jQuery(this).find('a').attr('href');
         jQuery('html, body').animate({
-        scrollTop: jQuery(thisHref).offset().top
-      }, 800, 'linear');
+        scrollTop: jQuery(thisHref).offset().top-100
+      }, 1000);
+        e.preventDefault();
     });
 
    jQuery(document).scroll(function(){
@@ -535,59 +570,137 @@ jQuery(document).ready(function(){
         jQuery(this).parents('.member-intro').find('.expand-txt').slideToggle();
     });
      
-    $(window).scroll( $.throttle( 250, pageScroll ) );
+    // $(window).scroll( $.throttle( 250, pageScroll ) );
 });
 
-var lastScroll = 0, scrollTop = 0;
-function pageScroll(){
-    scrollTop = jQuery(window).scrollTop();
-    var pivotElementPos =  $('.navbar-background').outerHeight();
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = $('header').outerHeight();
 
-    if(jQuery('.header-slider').length){
-        if (lastScroll >= scrollTop) {
-            if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && scrollTop <= 50 && !jQuery('html').hasClass('fp-enabled')) {
-                $('#fullpage').fullpage(options);
-                jQuery(window).scrollTop(0);
-                $('#fp-nav').fadeIn();
-            } else {
-                if(jQuery(window).scrollTop() == 0){
-                    $.fn.fullpage.setAllowScrolling(true);
-                    jQuery('body, html').css({'overflow': 'hidden'});
-                }else{
-                    $.fn.fullpage.setAllowScrolling(false);
-                    jQuery('body, html').css({'overflow': 'visible'});
-                }
-                jQuery('.header-slider').css('pointer-events', 'auto');
-                jQuery('.header-slider').css('-webkit-pointer-events', 'auto');
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    
+    if (st > lastScrollTop && st > navbarHeight){
+        // Scroll Down
+        $('header').removeClass('nav-down').addClass('nav-up');
+        }
+    else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('header').removeClass('nav-up').addClass('nav-down');
+            $('header').css('background-color','rgba(255,255,255, 1)');
+            if(typeof jQuery('.header-home').offset() === 'undefined'){
+                
+            }
+            else{
+                $('.navbar-header a img.white-logo').css('display','none');
+                $('.navbar-header a img.gray-logo').css('display','block');
+                $('.navbar-collapse ul li a').css('color','#9BA0A7');
+            }
+
+        }
+
+        if($(window).scrollTop() < 100){
+            if(typeof jQuery('.header-home').offset() === 'undefined'){
+                
+            }
+            else{
+                $('header').css('background-color','rgba(255,255,255,0)');
+                $('.navbar-header a img.gray-logo').css('display','none');
+                $('.navbar-header a img.white-logo').css('display','block');
+                $('.navbar-collapse ul li a').css('color','#fff');
             }
         }
-        if(scrollTop >= jQuery('.our-solution').offset().top - 100){
-            $('#fp-nav').fadeOut();
-        }else{
-            $('#fp-nav').fadeIn();
-        }
-        pivotElementPos = jQuery('.our-solution').offset().top - 100;
     }
 
-    if(scrollTop > lastScroll && scrollTop >= pivotElementPos && jQuery(window).width() > 1024){
-        $('.navbar-background').addClass('move-top').removeClass('set-to-fixed'); 
-    }else{
-        if (scrollTop < lastScroll) {
-            $('.navbar-background').addClass('set-to-fixed').removeClass('move-top');    
-        } 
-    }
-
-    if(scrollTop == 0){
-        $('.navbar-background').removeClass('set-to-fixed');
-    }
-    if((scrollTop + $(window).innerHeight() + 150) >= jQuery('.dg-footer').offset().top){
+     if((st + $(window).innerHeight() + 150) >= jQuery('.dg-footer').offset().top){
         jQuery('.dg-footer').addClass('active-footer');
     }
-    var headerHeight = jQuery('.inner-pageh').outerHeight();
-    if(jQuery(window).scrollTop() > headerHeight){
-        jQuery('.page-sub-menu').addClass('fixed-submenu');
-    }else{
-        jQuery('.page-sub-menu').removeClass('fixed-submenu');
+
+    if(typeof jQuery('.our-solution').offset() === 'undefined'){
+
     }
-    lastScroll = jQuery(window).scrollTop();
+    else{
+        if(st >= jQuery('.our-solution').offset().top - 100){
+                $('#fp-nav').fadeOut();
+            }else{
+                $('#fp-nav').fadeIn();
+            }
+    }
+    
+    lastScrollTop = st;
 }
+
+// var lastScroll = 0, scrollTop = 0;
+// function pageScroll(){
+//     scrollTop = jQuery(window).scrollTop();
+//     var pivotElementPos =  $('.navbar-background').outerHeight();
+
+//     if(jQuery('.header-slider').length){
+//         if (lastScroll >= scrollTop) {
+//             if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && scrollTop <= 50 && !jQuery('html').hasClass('fp-enabled')) {
+//                 $('#fullpage').fullpage(options);
+//                 jQuery(window).scrollTop(0);
+//                 $('#fp-nav').fadeIn();
+//             } else {
+//                 if(jQuery(window).scrollTop() == 0){
+//                     $.fn.fullpage.setAllowScrolling(true);
+//                     jQuery('body, html').css({'overflow': 'hidden'});
+//                 }else{
+//                     $.fn.fullpage.setAllowScrolling(false);
+//                     jQuery('body, html').css({'overflow': 'visible'});
+//                 }
+//                 jQuery('.header-slider').css('pointer-events', 'auto');
+//                 jQuery('.header-slider').css('-webkit-pointer-events', 'auto');
+//             }
+//         }
+//         if(scrollTop >= jQuery('.our-solution').offset().top - 100){
+//             $('#fp-nav').fadeOut();
+//         }else{
+//             $('#fp-nav').fadeIn();
+//         }
+//         pivotElementPos = jQuery('.our-solution').offset().top - 100;
+//     }
+
+//     if(scrollTop > lastScroll && scrollTop >= pivotElementPos && jQuery(window).width() > 1024){
+//         $('.navbar-background').addClass('move-top').removeClass('set-to-fixed'); 
+//     }else{
+//         if (scrollTop < lastScroll) {
+//             $('.navbar-background').addClass('set-to-fixed').removeClass('move-top');    
+//         } 
+//     }
+
+//     if(scrollTop == 0){
+//         $('.navbar-background').removeClass('set-to-fixed');
+//     }
+//     if((scrollTop + $(window).innerHeight() + 150) >= jQuery('.dg-footer').offset().top){
+//         jQuery('.dg-footer').addClass('active-footer');
+//     }
+//     var headerHeight = jQuery('.inner-pageh').outerHeight();
+//     if(jQuery(window).scrollTop() > headerHeight){
+//         jQuery('.page-sub-menu').addClass('fixed-submenu');
+//     }else{
+//         jQuery('.page-sub-menu').removeClass('fixed-submenu');
+//     }
+//     lastScroll = jQuery(window).scrollTop();
+// }

@@ -10,9 +10,8 @@
 get_header('training'); ?>
 
 
-
  <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('training_banner_image')); ?>" class="img-responsive"/></div>
+            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('training_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -86,13 +85,6 @@ get_header('training'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
-                              <div class="col-sm-6 right-block">
-                                <div class="img-right-part">
-                                    <div class="image-green-shadow">
-                                        <img src="<?php echo $section['training_approach_image']; ?>" class="img-responsive" alt=""/>
-                                    </div>
-                                </div>
-                                </div>
                                 <div class="col-sm-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
@@ -108,6 +100,14 @@ get_header('training'); ?>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-sm-6 right-block">
+                                    <div class="img-right-part">
+                                        <div class="image-green-shadow">
+                                            <img src="<?php echo $section['training_approach_image']; ?>" class="img-responsive" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                       <?php $i++; } } } ?>  
@@ -204,7 +204,23 @@ get_header('training'); ?>
             </div>
         </div>
             <div class="container">
-                <div class="row">   
+                <div class="row">
+                    <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
+                        <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
+                            <div class="col-md-6 padding-image">
+                                <div class="solution-gray-box-img">
+                                    <img src="<?php echo ot_get_option('training_product_image'); ?>" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="solution-gray-box-content">
+                                    <h2 class="dg-header-3"><?php echo ot_get_option('training_product_title'); ?></h2>
+                                    <p><?php echo ot_get_option('training_product_desc'); ?></p>
+                                    <a href="<?php echo ot_get_option('training_product_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
                    <div class="coco-images section-margin">
                         <img src="<?php echo ot_get_option('training_product_show_image'); ?>" alt="sample image"/>
                     </div> 
@@ -258,14 +274,14 @@ get_header('training'); ?>
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6 padding-image">
                                 <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('training_product_image'); ?>" class="img-responsive">
+                                    <img src="<?php echo ot_get_option('training_product_image2'); ?>" class="img-responsive">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="solution-gray-box-content">
-                                    <h2 class="dg-header-3"><?php echo ot_get_option('training_product_title'); ?></h2>
-                                    <p><?php echo ot_get_option('training_product_desc'); ?></p>
-                                    <a href="<?php echo ot_get_option('training_product_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
+                                    <h2 class="dg-header-3"><?php echo ot_get_option('training_product_title2'); ?></h2>
+                                    <p><?php echo ot_get_option('training_product_desc2'); ?></p>
+                                    <a href="<?php echo ot_get_option('training_product_playstore_link2'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
                                 </div>
                             </div>
                         </div>

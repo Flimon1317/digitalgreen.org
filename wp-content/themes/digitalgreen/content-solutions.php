@@ -9,7 +9,8 @@
  */
 get_header('globalimpact'); ?>
 
-<div class="page-sub-menu hidden-xs clearfix">
+            <div id="sticky-anchor"></div>
+            <div class="page-sub-menu" id="sticky">
                 <div class="container">
                     <div class="row">
                         <ul class="sub-menu-title">
@@ -31,10 +32,10 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-        </header>
+            </header>
         <!-- Banner Section -->
-        <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('solutions_banner_image')); ?>" class="img-responsive"/></div>
+        <div class="banner-section-sub-menu">
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('solutions_banner_image')); ?>" class="sub-menu-banner"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -107,13 +108,6 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="<?php echo $section['solutions_approach_image']; ?>" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="col-md-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
@@ -126,6 +120,13 @@ get_header('globalimpact'); ?>
                                                     </p>
                                                 </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 right-block">
+                                    <div class="img-right-part">
+                                        <div class="image-green-shadow">
+                                            <img src="<?php echo $section['solutions_approach_image']; ?>" class="img-responsive" alt=""/>
                                         </div>
                                     </div>
                                 </div>

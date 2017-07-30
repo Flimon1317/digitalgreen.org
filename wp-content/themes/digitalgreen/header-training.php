@@ -23,7 +23,7 @@
     </head>
     
     <body class="training">
-        <header class="inner-pageh clearfix">
+        <header class="inner-pageh clearfix custom-header">
             <nav class="navbar navbar-default navbar-background clearfix">
                 <div class="navbar-header">
                     <button class="navbar-toggle green-bordered-button collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
@@ -262,4 +262,5 @@
                 </div>
                 <!-- /.nav-collapse -->
             </nav>
+            </header>
            

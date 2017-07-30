@@ -7,12 +7,13 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('coco'); ?>
+get_header('globalimpact'); ?>
+</header>
 
 
 
  <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('solutionscoco_banner_image')); ?>" class="img-responsive"/></div>
+            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('solutionscoco_banner_image')); ?>" class="sub-menu-banner"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -86,14 +87,7 @@ get_header('coco'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
-                              <div class="col-sm-6 right-block">
-                                <div class="img-right-part">
-                                    <div class="image-green-shadow">
-                                        <img src="<?php echo $section['solutionscoco_approach_image']; ?>" class="img-responsive" alt=""/>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="col-sm-6 left-block">
+                            <div class="col-sm-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
                                             <div class="side-gray-border">
@@ -108,6 +102,14 @@ get_header('coco'); ?>
                                         </div>
                                     </div>
                                 </div>
+                              <div class="col-sm-6 right-block">
+                                <div class="img-right-part">
+                                    <div class="image-green-shadow">
+                                        <img src="<?php echo $section['solutionscoco_approach_image']; ?>" class="img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                                </div>
+                                
                             </div>
                         </div>
                       <?php $i++; } } } ?>  

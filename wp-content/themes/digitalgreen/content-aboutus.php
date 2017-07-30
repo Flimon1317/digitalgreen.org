@@ -7,7 +7,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('about'); ?>
+get_header('globalimpact'); ?>
 
 
 <div class="page-sub-menu hidden-xs clearfix">
@@ -29,9 +29,10 @@ get_header('about'); ?>
                     </div>
                 </div>
             </div>
+            </header>
     <!-- Banner Section -->
-        <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('aboutus_banner_image')); ?>" class="img-responsive"/></div>
+        <div class="banner-section-sub-menu">
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('aboutus_banner_image')); ?>" class="sub-menu-banner w3-image" /></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">

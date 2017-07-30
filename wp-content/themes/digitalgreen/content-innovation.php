@@ -13,7 +13,7 @@ get_header('globalimpact'); ?>
         </header>
         <!-- Banner Section -->
         <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('innovation_banner_image')); ?>" class="img-responsive"/></div>
+            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('innovation_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">

@@ -32,8 +32,8 @@
 <body <?php body_class(); ?>>
 
 <body>
-    <header class="page-menu-container">
-        <nav class="navbar navbar-default navbar-background">
+    <header class="page-menu-container custom-header header-home" >
+        <nav class="navbar navbar-default navbar-background-home nav-down">
             <div class="navbar-header">
                 <button class="navbar-toggle green-bordered-button collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
                     <i class="fa fa-bars menu-icon" aria-hidden="true"></i>
