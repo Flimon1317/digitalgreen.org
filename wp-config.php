@@ -20,7 +20,7 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'db_website');
+define('DB_NAME', 'digitalgreen');
 
 /** MySQL database username */
 define('DB_USER', 'root');
@@ -29,7 +29,7 @@ define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-define('DB_HOST', '127.0.0.1');
+define('DB_HOST', '52.221.218.226');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -37,6 +37,7 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+define( 'UPLOADS', 'wp-content/uploads' );
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -78,7 +79,7 @@ $table_prefix  = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 
 define(‘FS_METHOD’, ‘direct’);
