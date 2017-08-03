@@ -8,6 +8,7 @@
  * @since Twenty Fifteen 1.0
  */
 get_header('globalimpact'); ?>
+</header>
 
 <div class="banner-section">
         <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('casestudy_banner_image')); ?>" 

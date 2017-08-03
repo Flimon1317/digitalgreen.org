@@ -7,7 +7,8 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('donate'); ?>
+get_header('globalimpact'); ?>
+</header>
 
  <!-- Banner Section -->
             

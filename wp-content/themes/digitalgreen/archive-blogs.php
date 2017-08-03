@@ -18,6 +18,7 @@
  */
 
 get_header('globalimpact'); ?>
+</header>
 
    <!-- Banner Section -->
     <div class="custom-class-slideshow banner-slideshow-wrapper">
