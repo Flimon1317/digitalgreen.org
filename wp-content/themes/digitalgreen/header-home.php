@@ -32,7 +32,7 @@
 <body <?php body_class(); ?>>
 
 <body>
-    <header class="page-menu-container custom-header header-home" >
+    <header class="page-menu-container header-home" >
         <nav class="navbar navbar-default navbar-background-home nav-down">
             <div class="navbar-header">
                 <button class="navbar-toggle green-bordered-button collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
@@ -265,10 +265,10 @@
                             </a>
                         </li>
                         <!-- for mobile search and button -->
-                        <li class="dropdown mobile-size-search">
+                        <!-- <li class="dropdown mobile-size-search">
                             <input type="text" placeholder="Search">
                             <span class="mobile-search-icon"><a href="#" class="green-arrow"><i class="icon icon-search" aria-hidden="true"></i></a></span>
-                        </li>
+                        </li> -->
                         <li class="dropdown mobile-size-button">
                             <a href="careers">
                                 <button class="btn">Work With Us</button>

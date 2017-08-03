@@ -191,6 +191,10 @@
   .navbar-background {
     padding: 0; }
 
+  .navbar-background-home {
+    padding: 0;
+  }
+
   .navbar-header {
     padding: 10px 15px;
     float: none;

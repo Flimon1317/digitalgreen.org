@@ -22,7 +22,7 @@ get_header('home'); ?>
             <div class="header-slider">                       
                 <ul class="" id="fullpage">
                     <li class="slide-single section" id="slide1">
-                        <img src="<?php echo esc_url(ot_get_option('home_banner1')); ?>" class="w3-image"/>
+                        <img src="<?php echo esc_url(ot_get_option('home_banner1')); ?>" />
                         <div class="slider-text slider-1">
                             <div class="slider-1-text">
                                 <h2 class="slider-title">
@@ -252,16 +252,13 @@ get_header('home'); ?>
                 afterLoad: function(anchorLink, index){
                     // jQuery('.mega-dropdown-menu').removeClass('disable-submenu');
                     jQuery('body').addClass('fullpage-loaded');
-                    // $.fn.fullpage.setAllowScrolling(true);
 
                     if(index == 3){
                         jQuery('body, html').css({'overflow': 'visible'});
-                        console.log("section 3 loaded");
                         if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
                             $.fn.fullpage.destroy('all');
                             jQuery('.header-slider').css('pointer-events', 'none');
                             jQuery('.slide-single').removeClass('active');
-                            // jQuery('#fullpage').addClass('active').find('#slide2').addClass('active');
                         } else {
                             $.fn.fullpage.setAllowScrolling(false);
                             console.log("Scrolling disabled");

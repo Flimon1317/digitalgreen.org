@@ -67,7 +67,8 @@
                                     <div class="menu-content">
                                         <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
                                         <p class="dg-header-5 text-details"><?php echo $section['global_description']; ?></p>
-                                        <p><a href="<?php echo $section['global_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                        <p><a href="<?php echo $section['global_link']; ?>" class="green-arrow">Learn 
+                                        More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
                                 </li>
       <?php } } } ?>                          
@@ -249,10 +250,10 @@
                             </a>
                         </li>
                         <!-- for mobile search and button -->
-                        <li class="dropdown mobile-size-search">
+                        <!-- <li class="dropdown mobile-size-search">
                             <input type="text" placeholder="Search">
                             <span class="mobile-search-icon"><a href="#" class="green-arrow"><i class="icon icon-search" aria-hidden="true"></i></a></span>
-                        </li>
+                        </li> -->
                         <li class="dropdown mobile-size-button">
                             <a href="<?php echo esc_url(site_url()); ?>/careers">
                                 <button class="btn">Work With Us</button>

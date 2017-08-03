@@ -17,6 +17,7 @@
  */
 
 get_header('globalimpact'); ?>
+</header>
        
        
        <!-- Banner Section -->

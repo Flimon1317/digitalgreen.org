@@ -17,6 +17,7 @@
  */
 
 get_header('globalimpact'); ?>
+</header>
 
  <!-- Banner Section -->
     <div class="custom-class-slideshow banner-slideshow-wrapper">
@@ -32,7 +33,7 @@ get_header('globalimpact'); ?>
       ?>
             <div class="banner-section">
                 <div class="top-banner-section">
-                    <div class="banner-img"><img src="<?php echo $section['news_banner_image']; ?>" class="img-responsive"/></div>
+                    <div class="banner-img-normal"><img src="<?php echo $section['news_banner_image']; ?>" class="img-responsive"/></div>
                     <div class="banner-text">
                         <div class="container text-white">
                             <div class="row banner-inner">
