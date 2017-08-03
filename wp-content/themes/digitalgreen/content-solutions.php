@@ -10,7 +10,7 @@
 get_header('globalimpact'); ?>
 
             <div id="sticky-anchor"></div>
-            <div class="page-sub-menu clearfix hidden-xs" >
+            <div class="page-sub-menu clearfix hidden-xs" id="sticky">
                 <div class="container">
                     <div class="row">
                         <ul class="sub-menu-title">

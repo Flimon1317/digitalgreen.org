@@ -7,7 +7,8 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('training'); ?>
+get_header('globalimpact'); ?>
+</header>
 
 
  <div class="banner-section">
