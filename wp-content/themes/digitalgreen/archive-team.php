@@ -16,7 +16,6 @@
  * @since Twenty Fifteen 1.0
  */
 get_header('globalimpact'); ?>
-</header>
     
         <!-- Banner Section -->
         <div class="banner-section">
@@ -64,8 +63,8 @@ get_header('globalimpact'); ?>
                                 
                                     <div class="main-tab-txt <?php if($i==1) echo 'active-tab'; ?>"><?php echo $term->name; ?></div>
                                     <ul class="sub-tab-list">
-                                        <?php if($term->name=='Team') echo '<li><a href="#" data-index="1" class="active-link" >Executive Leadership</a></li>'; ?>
-                                     <?php if($term->name=='Board') echo '<li><a href="#" data-index="2" >Executive Leadership</a></li>'; ?>
+                                        <?php if($i==1){ ?> <li><a href="#" data-index="1" class="active-link" ><?php echo ot_get_option('team_team_title'); ?></a></li>  <?php } ?>
+                                     <?php if($i==2){ ?> <li><a href="#" data-index="2" ><?php echo ot_get_option('team_board_title'); ?></a></li> <?php } ?>
                                         <li>
                                         <?php
 
@@ -75,6 +74,7 @@ get_header('globalimpact'); ?>
                         $childrens = get_terms( "list_team", array('parent' => $child->term_id));
 
                         ?> 
+                                            
                                             <div class="tab-acc "><?php echo $child->name; ?></div>
                                             
                     
@@ -87,17 +87,17 @@ $j=1;
                         
 
                         ?> 
-                                                <li><a href="#" data-index="<?php echo $child1->description; ?><?php echo $j; ?>"><?php echo $child1->name; ?></a></li>
+                                                <li><a href="#" data-index="<?php echo $child1->term_id; ?><?php echo $j; ?>"><?php echo $child1->name; ?></a></li>
                                                 <?php $j=$j+1;
                     }
                     ?>
                                             </ul>
-                                            <?php $i++; } ?>
+                                            <?php  } ?>
                                         </li>
                                          
                                     </ul>
                                 </li>
-                                <?php }?>
+                                <?php $i++; }?>
                             </ul>
                         </div>
                         <div class="col-md-8 col-md-offset-1">
@@ -113,27 +113,28 @@ $j=1;
           foreach( $team_team as $section ) {
       ?>
                                 
-                                    <div class="team-member clearfix">
+                                    <div class="team-member clearfix" id="<?php echo 'team'; ?><?php echo $i; ?>">
                                         <div class="member-img-wrap">
                                             <div class="image-green-shadow member-img">
                                                 <img src="<?php echo $section['team_image']; ?>" alt="Rikin Gandhi"/>
                                             </div>
                                         </div>
-                                        <div class="member-details">
+                                        
+
+
+                                     <div class="member-details">
                                             <h2><a href="#"><?php echo $section['title']; ?></a></h2>
                                             <span class="member-designation"><?php echo $section['team_designation']; ?></span>
                                             <div class="member-intro">
-                                                <p><?php echo $section['short_team_desc']; ?> </p>
-                                            
-                                            <div class="expand-txt">
-                                                    <p><?php echo $section['expand_team_desc']; ?>
-                                                    </p>
+                                                <div class="member-content">
+                                                    <p><?php echo $section['short_team_desc']; ?></p>
                                                 </div>
-                                            <a href="#" class="link-read read-load-link">Read More <span class="icon icon-down-arrow"></span></a>
-                                       </div> 
-                                      </div>
+                                                <a href="#" class="link-read read-load-link">Read More <span class="icon icon-down-arrow"></span></a>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <?php } } } ?>
+                                    <?php $i++; } } } ?>
                                 </div>
                             </div>
 <div class="filter-details" data-index="2">
@@ -148,19 +149,22 @@ $j=1;
           foreach( $team_board as $section ) {
       ?>
                                 
-                                    <div class="team-member clearfix">
+                                    <div class="team-member clearfix" id="<?php echo 'board'; ?><?php echo $i; ?>">
                                         <div class="member-img-wrap">
                                             <div class="image-green-shadow member-img">
                                                 <img src="<?php echo $section['team_board_image']; ?>" alt="Rikin Gandhi"/>
                                             </div>
                                         </div>
-                                        <div class="member-details">
+                                        
+                                            <div class="member-details">
                                             <h2><a href="#"><?php echo $section['title']; ?></a></h2>
                                             <span class="member-designation"><?php echo $section['team_board_designation']; ?></span>
                                             <div class="member-intro">
-                                                <p><?php echo $section['team_board_desc']; ?> </p>
+                                                <div class="member-content">
+                                                    <p><?php echo $section['team_board_desc']; ?></p>
+                                                </div>
+                                                <a href="#" class="link-read read-load-link">Read More <span class="icon icon-down-arrow"></span></a>
                                             </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
                                         </div>
                                     </div>
                                     <?php } } } ?>
@@ -187,7 +191,7 @@ $j=1;
                         $the_query = new WP_Query( array('post_type' => 'team','tax_query' => array(array ('taxonomy' => 'list_team','field' => 'slug','terms' => $child1->slug))));
                         ?>
                        
-                            <div class="filter-details" data-index="<?php echo $child1->description; ?><?php echo $j; ?>">
+                            <div class="filter-details" data-index="<?php echo $child1->term_id; ?><?php echo $j; ?>">
                                 <div class="main-tab-txt hidden-sm hidden-md hidden-lg"><?php echo $child1->name; ?></div>
  <?php
                         while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -500,11 +504,12 @@ $blog_permalink = get_the_permalink($blog_id);
 
 
                                     <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
-                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -514,4 +519,4 @@ $blog_permalink = get_the_permalink($blog_id);
             </div>
          <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
      
-<?php get_footer('team'); ?>        
+<?php get_footer(); ?>        

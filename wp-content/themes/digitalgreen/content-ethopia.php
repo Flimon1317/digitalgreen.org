@@ -16,13 +16,12 @@
  * @since Twenty Fifteen 1.0
  */
 get_header('globalimpact'); ?>
-</header>
 
 
     
         <!-- Banner Section -->
         <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('ethopia_banner_image')); ?>" alt="ethopia Banner" class="sub-menu-banner w3-image"/></div>
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('ethopia_banner_image')); ?>" alt="ethopia Banner"/></div>
             <div class="banner-text country-banner-txt">
                 <div class="container">
                     <div class="country-banner">
@@ -122,6 +121,13 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
+                                <div class="col-md-6 right-block">
+                                    <div class="img-right-part">
+                                        <div class="image-green-shadow">
+                                            <img src="<?php echo $section['ethopia_approach_image']; ?>" class="img-responsive" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
@@ -137,14 +143,6 @@ get_header('globalimpact'); ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="<?php echo $section['ethopia_approach_image']; ?>" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                             </div>
                             
                             
@@ -255,7 +253,7 @@ get_header('globalimpact'); ?>
                                     <span class="half-squre-before-title"></span>
                                 </h1>
                             </div>
-<!--                             <div class="pull-right">
+                            <!--<div class="pull-right">
                                <div class="dropdown-wrapper">
                                     <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" /></div>
                                     <ul class="dropdown">
@@ -266,7 +264,7 @@ get_header('globalimpact'); ?>
                                         <li><a href="#">Present</a></li>
                                     </ul>
                                 </div>
-                            </div> -->
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -336,7 +334,7 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                         <div class="partners-section">
-                            <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
+                            <a href="#" class="partner-collepse-button hidden-xs" >View Parteners &nbsp;
                                 <span class="icon icon-up-arrow"></span>
                                 <span class="icon icon-down-arrow"></span>
                             </a>
@@ -430,3 +428,4 @@ endwhile; ?>
         <?php } } ?>
         <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
 <?php get_footer(); ?>
+ 

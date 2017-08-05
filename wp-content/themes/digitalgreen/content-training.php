@@ -7,15 +7,15 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
-</header>
+get_header('training'); ?>
+
 
 
  <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('training_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('training_banner_image')); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
-                    <div class="trainning-courseware row banner-inner">
+                    <div class="row banner-inner">
                         <span class="banner-square"></span>
                         <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('training_banner_title'); ?></h1>
                         <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo ot_get_option('training_banner_sub_title'); ?></h4>
@@ -86,6 +86,13 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
+                              <div class="col-sm-6 right-block">
+                                <div class="img-right-part">
+                                    <div class="image-green-shadow">
+                                        <img src="<?php echo $section['training_approach_image']; ?>" class="img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                                </div>
                                 <div class="col-sm-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
@@ -101,14 +108,6 @@ get_header('globalimpact'); ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="<?php echo $section['training_approach_image']; ?>" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                
                             </div>
                         </div>
                       <?php $i++; } } } ?>  
@@ -208,7 +207,7 @@ get_header('globalimpact'); ?>
                 <div class="row">
                     <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
-                            <div class="col-md-6 padding-image">
+                            <div class="col-md-6">
                                 <div class="solution-gray-box-img">
                                     <img src="<?php echo ot_get_option('training_product_image'); ?>" class="img-responsive">
                                 </div>
@@ -267,22 +266,6 @@ get_header('globalimpact'); ?>
                                         <p>
                                         <a href="<?php echo ot_get_option('training_how_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
-                        <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
-                            <div class="col-md-6 padding-image">
-                                <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('training_product_image2'); ?>" class="img-responsive">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="solution-gray-box-content">
-                                    <h2 class="dg-header-3"><?php echo ot_get_option('training_product_title2'); ?></h2>
-                                    <p><?php echo ot_get_option('training_product_desc2'); ?></p>
-                                    <a href="<?php echo ot_get_option('training_product_playstore_link2'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
                                 </div>
                             </div>
                         </div>
@@ -503,11 +486,12 @@ $blog_permalink = get_the_permalink($blog_id);
 
 
                                     <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
-                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

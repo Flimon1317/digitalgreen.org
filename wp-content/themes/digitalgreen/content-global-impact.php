@@ -29,8 +29,8 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
         </header>
- <div class="banner-section-sub-menu">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('global_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
+ <div class="banner-section">
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('global_banner_image')); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -285,11 +285,12 @@ $blog_permalink = get_the_permalink($blog_id);
 
 
                                     <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
-                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

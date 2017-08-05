@@ -8,7 +8,6 @@
  * @since Twenty Fifteen 1.0
  */
 get_header('globalimpact'); ?>
-</header>
 <div class="banner-section">
             <div class="banner-img"><img src="<?php echo ot_get_option('contact_banner_image'); ?>" class="img-responsive"/></div>
             <div class="banner-text">

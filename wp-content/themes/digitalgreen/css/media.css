@@ -120,9 +120,6 @@
     font-size: 25px;
     line-height: 35px; }
 
-  .mega-dropdown-menu .menu-content h2 {
-    min-height: 70px; }
-
   .innovation-lab-section .innovation-lab-wrap .right-block, .innovation-lab-section .innovation-lab-wrap .left-block {
     width: 50%; }
 
@@ -155,7 +152,10 @@
       margin-left: 0 !important; }
 
   .banner-slideshow .banner-inner {
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  .country-partner .gray-box-wrap {
+    width: 322px; } }
 @media (max-width: 1024px) {
   .solution-coco .navbar-default .navbar-toggle {
     border-color: #26a7e0; }
@@ -191,29 +191,28 @@
   .navbar-background {
     padding: 0; }
 
-  .navbar-background-home {
-    padding: 0;
-  }
-
   .navbar-header {
     padding: 10px 15px;
     float: none;
     width: 100%; }
 
   .mega-dropdown-menu {
-    display: none !important; }
+    min-width: 100%;
+    width: 100%;
+    position: relative;
+    top: 10px; }
 
   .navbar-default .navbar-nav {
     margin: 0;
     float: none !important; }
     .navbar-default .navbar-nav > li {
-      margin: 0;
       float: none;
       display: block; }
       .navbar-default .navbar-nav > li.mobile-size-search, .navbar-default .navbar-nav > li.mobile-size-button {
         display: block;
         clear: both;
-        overflow: hidden; }
+        overflow: hidden;
+        margin: 0; }
       .navbar-default .navbar-nav > li > a {
         color: #777; }
     .navbar-default .navbar-nav.page-menu {
@@ -221,7 +220,8 @@
       .navbar-default .navbar-nav.page-menu > li {
         margin: 0;
         padding: 10px 0;
-        position: relative !important; }
+        position: relative !important;
+        clear: both; }
         .navbar-default .navbar-nav.page-menu > li > a {
           line-height: 27px; }
     .navbar-default .navbar-nav .hidden-sm.hidden-xs {

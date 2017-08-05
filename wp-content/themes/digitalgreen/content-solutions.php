@@ -9,8 +9,7 @@
  */
 get_header('globalimpact'); ?>
 
-            <div id="sticky-anchor"></div>
-            <div class="page-sub-menu clearfix hidden-xs" id="sticky">
+<div class="page-sub-menu hidden-xs clearfix">
                 <div class="container">
                     <div class="row">
                         <ul class="sub-menu-title">
@@ -32,10 +31,10 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-            </header>
+        </header>
         <!-- Banner Section -->
-        <div class="banner-section-sub-menu">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('solutions_banner_image')); ?>" class="sub-menu-banner"/></div>
+        <div class="banner-section">
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('solutions_banner_image')); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -108,6 +107,13 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
+                                <div class="col-md-6 right-block">
+                                    <div class="img-right-part">
+                                        <div class="image-green-shadow">
+                                            <img src="<?php echo $section['solutions_approach_image']; ?>" class="img-responsive" alt=""/>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
@@ -120,13 +126,6 @@ get_header('globalimpact'); ?>
                                                     </p>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="<?php echo $section['solutions_approach_image']; ?>" class="img-responsive" alt=""/>
                                         </div>
                                     </div>
                                 </div>
@@ -247,9 +246,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_community_image'); ?>" class="img-responsive">
-
-                    <!-- Hide stats -->
-<!--                                                     <div class="number-count-div text-center">
+                                                    <div class="number-count-div text-center">
                                                         <?php
       if (function_exists('get_option_tree')){
         $solutions_community_image_value1 = ot_get_option( 'solutions_community_image_value1', array() );
@@ -260,7 +257,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_community_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -290,7 +287,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_coco_image'); ?>" class="img-responsive">
-<!--                                                     <div class="number-count-div text-center">
+                                                    <div class="number-count-div text-center">
                                                         <?php
       if (function_exists('get_option_tree')){
         $solutions_coco_image_value1 = ot_get_option( 'solutions_coco_image_value1', array() );
@@ -301,7 +298,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_coco_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -331,7 +328,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_training_image'); ?>" class="img-responsive">
-<!--                                                     <div class="number-count-div text-center">
+                                                    <div class="number-count-div text-center">
                                                          <?php
       if (function_exists('get_option_tree')){
         $solutions_training_image_value1 = ot_get_option( 'solutions_training_image_value1', array() );
@@ -342,7 +339,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_training_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -372,7 +369,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_loop_image'); ?>" class="img-responsive">
-<!--                                                     <div class="number-count-div text-center">
+                                                    <div class="number-count-div text-center">
                                                          <?php
       if (function_exists('get_option_tree')){
         $solutions_loop_image_value1 = ot_get_option( 'solutions_loop_image_value1', array() );
@@ -383,7 +380,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_loop_value1']; ?></p>
        <?php } } } ?>
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -413,7 +410,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_innovation_image'); ?>" class="img-responsive">
-<!--                                                     <div class="number-count-div text-center">
+                                                    <div class="number-count-div text-center">
                                                          <?php
       if (function_exists('get_option_tree')){
         $solutions_innovation_image_value1 = ot_get_option( 'solutions_innovation_image_value1', array() );
@@ -424,7 +421,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_innovation_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div> -->
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -578,12 +575,13 @@ $blog_permalink = get_the_permalink($blog_id);
 
 
                                     <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
-                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -19,10 +19,10 @@ get_header('home'); ?>
 
    <div class="home-page">
         <div class="wrapper">
-            <div class="header-slider">                       
+            <div class="header-slider">
                 <ul class="" id="fullpage">
                     <li class="slide-single section" id="slide1">
-                        <img src="<?php echo esc_url(ot_get_option('home_banner1')); ?>" />
+                        <img src="<?php echo esc_url(ot_get_option('home_banner1')); ?>"/>
                         <div class="slider-text slider-1">
                             <div class="slider-1-text">
                                 <h2 class="slider-title">
@@ -124,7 +124,6 @@ get_header('home'); ?>
       ?>
 
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?>activity-blocks">
-                                <a href="<?php echo $section['solutions_array_link']; ?>" >
                                 <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
                                     <div class="image-green-shadow">
                                         <img src="<?php echo $section['solutions_image']; ?>" class="img-responsive">
@@ -138,7 +137,6 @@ get_header('home'); ?>
                                          <a href="<?php echo $section['solutions_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
-                                </a>
                             </div>
 <?php $i++; } } } ?>
 
@@ -241,45 +239,38 @@ get_header('home'); ?>
             var options = {
                 navigation: true,
                 scrollOverflow: true,
-                css3: true,
-                scrollingSpeed: 1000,
-                easing: 'easeInOutCubic',
-                easingcss3: 'ease',
-                animateAnchor: true,
                 slidesNavigation: true,
                 slidesNavPosition: 'bottom',
                 navigationPosition: 'right',
                 afterLoad: function(anchorLink, index){
-                    // jQuery('.mega-dropdown-menu').removeClass('disable-submenu');
+                    jQuery('.mega-dropdown-menu').removeClass('disable-submenu');
                     jQuery('body').addClass('fullpage-loaded');
-
                     if(index == 3){
                         jQuery('body, html').css({'overflow': 'visible'});
                         if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
                             $.fn.fullpage.destroy('all');
                             jQuery('.header-slider').css('pointer-events', 'none');
                             jQuery('.slide-single').removeClass('active');
+                            jQuery('#fullpage').addClass('active').find('#slide2').addClass('active');
                         } else {
                             $.fn.fullpage.setAllowScrolling(false);
-                            console.log("Scrolling disabled");
-                            // jQuery('.header-slider').css('pointer-events', 'none');
+                            jQuery('.header-slider').css('pointer-events', 'none');
                         }
-                        // jQuery(window).scrollTop(10);
+                        jQuery(window).scrollTop(10);
                     }
 
                     
                     if(jQuery(window).scrollTop() < slideHeight || jQuery(window).scrollTop() == 0){
-                        // $('header').removeClass('set-to-fixed');
+                        $('header').removeClass('set-to-fixed');
                     }
                 },
                 onLeave: function(index, nextIndex, direction){
-                    // jQuery('.mega-dropdown-menu').addClass('disable-submenu');
-                    // jQuery('.home-page-search .search-input').css('top', '-152px')
-
+                    jQuery('.mega-dropdown-menu').addClass('disable-submenu');
+                    jQuery('.home-page-search .search-input').css('top', '-152px')
                 },
                 afterRender: function(){
-                    // jQuery('.header-slider').css({'pointer-events':'auto',});
-                    // jQuery('.header-slider').css('-webkit-pointer-events', 'auto');
+                    jQuery('.header-slider').css({'pointer-events':'auto',});
+                    jQuery('.header-slider').css('-webkit-pointer-events', 'auto');
                     $('#fp-nav').fadeIn();
                     jQuery(window).scrollTop(0);
                 }
@@ -291,10 +282,10 @@ get_header('home'); ?>
                 $.fn.fullpage.moveSectionDown();
             });
 
-            // if(jQuery('.fp-section:first-child').hasClass('active')){
-            //     setTimeout(function(){
-            //         jQuery('body').addClass('fullpage-loaded');
-            //     }, 1000);
-            // }
+            if(jQuery('.fp-section:first-child').hasClass('active')){
+                setTimeout(function(){
+                    jQuery('body').addClass('fullpage-loaded');
+                }, 1000);
+            }
         });
     </script>

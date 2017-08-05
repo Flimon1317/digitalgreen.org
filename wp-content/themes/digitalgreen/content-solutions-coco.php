@@ -7,16 +7,15 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
-</header>
+get_header('coco'); ?>
 
 
 
  <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('solutionscoco_banner_image')); ?>" class="sub-menu-banner"/></div>
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('solutionscoco_banner_image')); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
-                    <div class="solution-coco row banner-inner">
+                    <div class="row banner-inner">
                         <span class="banner-square"></span>
                         <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('solutionscoco_banner_title'); ?></h1>
                         <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo ot_get_option('solutionscoco_banner_sub_title'); ?></h4>
@@ -87,7 +86,14 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
-                            <div class="col-sm-6 left-block">
+                              <div class="col-sm-6 right-block">
+                                <div class="img-right-part">
+                                    <div class="image-green-shadow">
+                                        <img src="<?php echo $section['solutionscoco_approach_image']; ?>" class="img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
                                             <div class="side-gray-border">
@@ -102,14 +108,6 @@ get_header('globalimpact'); ?>
                                         </div>
                                     </div>
                                 </div>
-                              <div class="col-sm-6 right-block">
-                                <div class="img-right-part">
-                                    <div class="image-green-shadow">
-                                        <img src="<?php echo $section['solutionscoco_approach_image']; ?>" class="img-responsive" alt=""/>
-                                    </div>
-                                </div>
-                                </div>
-                                
                             </div>
                         </div>
                       <?php $i++; } } } ?>  
@@ -205,11 +203,11 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
         </div>
-<!--             <div class="container">
+            <div class="container">
                 <div class="row">
                     <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
-                            <div class="col-md-6 padding-image">
+                            <div class="col-md-6">
                                 <div class="solution-gray-box-img">
                                     <img src="<?php echo ot_get_option('solutionscoco_product_image'); ?>" class="img-responsive">
                                 </div>
@@ -273,8 +271,8 @@ get_header('globalimpact'); ?>
                         </div>
                     </div>
                 </div>
-            </div> -->
-<!--             <div class="app-screenshots big-arrow-slider">
+            </div>
+            <div class="app-screenshots big-arrow-slider">
                 <div class="custom-class-slideshow text-center">
                     <div class="container"><h1 class="dg-header-2 mobile-slider-main-title"><?php echo ot_get_option('solutionscoco_screenshots_title'); ?></h1></div>
                     <div id="carousel-mobile-img" class="clearfix">
@@ -291,7 +289,7 @@ get_header('globalimpact'); ?>
                         </div> 
                         <?php $i++; } } } ?>
                         
-                      <div class="slide-item">
+                 <!--      <div class="slide-item">
                              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide2">
                         </div>
                         <div class="slide-item">
@@ -311,11 +309,11 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="slide-item">
                              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide8">
-                        </div>   
+                        </div>  -->  
                         
                     </div>
                 </div>
-            </div> -->
+            </div>
 
 <?php
       if (function_exists('get_option_tree')){ 
@@ -488,11 +486,12 @@ $blog_permalink = get_the_permalink($blog_id);
 
 
                                     <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
-                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

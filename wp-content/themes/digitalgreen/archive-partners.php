@@ -17,7 +17,6 @@
  */
 
 get_header('globalimpact'); ?>
-</header>
  
  <!-- Banner Section -->
         <div class="banner-section">
@@ -71,7 +70,7 @@ get_header('globalimpact'); ?>
                 foreach ( $root_terms as $root_term ) { 
 $children = get_terms( "list_partners", array('parent' => $root_term->term_id ));
 if(count($children)!=0){
-                	?>
+                    ?>
                         <ul class="tab-options-list clearfix" data-id="<?php echo $j?>">
                         <?php
  
@@ -97,15 +96,15 @@ $i=1;
                 <div class="partners-blocks">
                 
                 <?php
-			$root_terms = get_terms("list_partners",array( 'parent' => 0 ));
-			$i=1;
-			foreach ( $root_terms as $root_term ) {
-				$termname = strtolower($root_term->name);
-				$termname = str_replace(' ', '-', $termname);
-				$children = get_terms( "list_partners", array('parent' => $root_term->term_id));
-				if(count($children)==0){
-				
-				?>
+            $root_terms = get_terms("list_partners",array( 'parent' => 0 ));
+            $i=1;
+            foreach ( $root_terms as $root_term ) {
+                $termname = strtolower($root_term->name);
+                $termname = str_replace(' ', '-', $termname);
+                $children = get_terms( "list_partners", array('parent' => $root_term->term_id));
+                if(count($children)==0){
+                
+                ?>
                     <div class="partners-container"  data-index="<?php echo $i; ?>">
                     
                         <div class="gray-box-tabbing" id="<?php  $root_term->term_id; ?>">
@@ -120,26 +119,41 @@ $i=1;
                                         <?php 
                                     $k=1;
 $the_query = new WP_Query( array('post_type' => 'partners','orderby' => 'title',
-				'order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_partners','field' => 'slug','terms' => $root_term->slug))));
+                'order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_partners','field' => 'slug','terms' => $root_term->slug))));
 
                     while ( $the_query->have_posts() ) : $the_query->the_post();
 
 $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
 
-                                    ?>
+                                    ?>     
+
+
                                             <div class="gray-box-wrap">
-                                                <div class="gray-box-title " data-code="<?php echo $root_term->term_id;?><?php echo $k?>">
+                                                <div class="gray-box-title" data-code="<?php echo $root_term->term_id;?><?php echo $k?>">
                                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'Partners image')); ?>
-                                                    <a href="#" class="gray-box-read"><span>Read More <i class="icon icon-down-arrow down-arrow"></i></span></a>
-                                                </div>
-                                                <div class="current-opening-disc container" data-code="<?php echo $root_term->term_id;?><?php echo $k?>">
-                                                    <h3><?php the_title();?></h3>
-                                                    <div class="opening-details">
-                                                        <?php the_content();?>
-                                                        <a href="<?php echo $partners_link; ?>" class="green-arrow learn-more">Visit Website <i class="on-hover-arrow-left"></i></a>
+                                                    <div class="gray-box-read">
+                                                        <div class="partner-title">
+                                                            <h3 class="dg-header-3 text-white"><?php the_title();?></h3>
+                                                            <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div> 
+                                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             <?php $k++; endwhile;?> 
 
                                             
@@ -156,12 +170,12 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                     <?php } 
                     
                     else {
-                    	
+                        
                    foreach ( $children as $child ) {
-						$termname = strtolower($child->name);
-						$termname = str_replace(' ', '-', $termname);
-						
-						 ?>
+                        $termname = strtolower($child->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        
+                         ?>
                     <div class="partners-container country-partner"  data-index="<?php echo $i; ?>">
                         <div class="gray-box-tabbing" id="<?php echo $child->term_id?>">
                             <div class="country-with-opening">
@@ -179,20 +193,21 @@ $the_query = new WP_Query( array('post_type' => 'partners','tax_query' => array(
 $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
 
                                     ?>
-                                        
+
                                             <div class="gray-box-wrap">
-                                                <div class="gray-box-title " data-code="<?php echo $child->term_id?><?php echo $k?>">
+                                                <div class="gray-box-title" data-code="<?php echo $child->term_id?><?php echo $k?>">
                                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'Partners image')); ?>
-                                                    <a href="#" class="gray-box-read"><span>Read More <i class="icon icon-down-arrow down-arrow"></i></span></a>
-                                                </div>
-                                                <div class="current-opening-disc container" data-code="<?php echo $child->term_id?><?php echo $k?>">
-                                                    <h3><?php the_title();?></h3>
-                                                    <div class="opening-details">
-                                                        <?php the_content();?>
-                                                        <a href="<?php echo $partners_link; ?>" class="green-arrow learn-more">Visit Website <i class="on-hover-arrow-left"></i></a>
+                                                    <div class="gray-box-read">
+                                                        <div class="partner-title">
+                                                            <h3 class="dg-header-3 text-white"><?php the_title();?></h3>
+                                                            <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div> 
+                                            </div>
+
+
+
 
                                            <?php $k++; endwhile;?>   
                                             
@@ -210,7 +225,7 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                 <?php }?>
             </div>
         </div>
-
+        </div>
         <div class="stats-container">
                 <div class="container">
                     <div class="row">
@@ -298,11 +313,12 @@ $blog_permalink = get_the_permalink($blog_id);
 
 
                                     <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
-                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

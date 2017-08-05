@@ -40,43 +40,22 @@
                                 </span>
                             </a>
                             <!-- mobile-sub-menu -->
-                            <ul class="dropdown-menu mobile-sub-menu row ">
-                                <li><a href="#">India</a></li>
-                                <li><a href="#">Ethiopia</a></li>
-                                <li><a href="#">Global Initiatives</a></li>
-                                <li><a href="#">Case Studies</a></li>
+                            <ul class="mega-dropdown-menu ">
+                            <li> <a href="#">Global Impact </a></li>
+                                <?php
+      if (function_exists('get_option_tree')){
+        $global_impact = ot_get_option( 'global_impact', array() );
+        if ( ! empty( $global_impact ) ) {
+          /* print_r($home_banner); */
+          $i=1;
+          foreach( $global_impact as $section ) {
+      ?>
+
+                                <li><a href="<?php echo $section['global_link']; ?>"><?php   echo $section['title']; ?></a></li>
+       <?php $i++; } } } ?>
                             </ul>
                             <!-- desktop-sub-menu -->
-                            <ul class="mega-dropdown-menu">
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">India</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">Ethiopia</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">Global Initiatives</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">Case Studies</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                            </ul>
+                            
                         </li>
                         <li class="dropdown mega-dropdown">
                             <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solution
@@ -85,42 +64,20 @@
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu mobile-sub-menu row">
-                                <li><a href="#">India</a></li>
-                                <li><a href="#">Ethiopia</a></li>
-                                <li><a href="#">Global Initiatives</a></li>
-                                <li><a href="#">Case Studies</a></li>
-                            </ul>
                             <ul class="mega-dropdown-menu">
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">Solution</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">Solution</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">Solution</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">Solution</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
+                            <li> <a href="#">Solution</a></li>
+                                 <?php
+      if (function_exists('get_option_tree')){
+        $solution_impact = ot_get_option( 'solution_impact', array() );
+        if ( ! empty( $solution_impact ) ) {
+          /* print_r($home_banner); */
+          $i=1;
+          foreach( $solution_impact as $section ) {
+      ?>
+      <li><a href="<?php  echo $section['solution_link']; ?>"><?php  echo $section['title']; ?></a></li>
+       <?php $i++; } } } ?>
                             </ul>
+                            
                         </li>
                         <li class="dropdown mega-dropdown">
                             <a href="<?php echo esc_url(site_url()); ?>/about-us" class="dropdown-toggle">About Us
@@ -129,47 +86,25 @@
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu mobile-sub-menu row">
-                                <li><a href="#">India</a></li>
-                                <li><a href="#">Ethiopia</a></li>
-                                <li><a href="#">Global Initiatives</a></li>
-                                <li><a href="#">Case Studies</a></li>
-                            </ul>
                             <ul class="mega-dropdown-menu">
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">About Us</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">About Us</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">About Us</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
-                                <li class="col-sm-3">
-                                    <div class="menu-content">
-                                        <h2 class="dg-header-3">About Us</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
-                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
-                                    </div>
-                                </li>
+                            <li> <a href="#">About Us</a></li>
+                                <?php
+      if (function_exists('get_option_tree')){
+        $about_impact = ot_get_option( 'about_impact', array() );
+        if ( ! empty( $about_impact ) ) {
+          /* print_r($home_banner); */
+          $i=1;
+          foreach( $about_impact as $section ) {
+      ?>
+                                <li><a href="<?php echo  $section['about_link']; ?>"><?php echo $section['title']; ?></a></li>
+       <?php $i++; } } } ?>
                             </ul>
+                            
                         </li>
-                        <li class="dropdown mega-dropdown">
+                        <li class="mega-dropdown">
                             <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle" data-toggle="dropdown">News</a>
                         </li>
-                        <li class="dropdown mega-dropdown hidden-sm hidden-xs">
+                        <li class="mega-dropdown hidden-sm hidden-xs">
                             <div class="home-page-search">
                                 <div class="search-button">
                                     <i class="icon icon-search" aria-hidden="true"></i>
@@ -186,7 +121,7 @@
                             <a href="<?php echo esc_url(site_url()); ?>/donate"><span class="green-arrow">Donate</span></a>
                         </li>
                         <li class="dropdown btn-work-with">
-                            <a href="<?php echo esc_url(site_url()); ?>/careers" class="dropdown-toggle header-right-button" data-toggle="dropdown">
+                            <a href="careers" class="dropdown-toggle header-right-button" data-toggle="dropdown">
                                 <button class="green-bordered-button with-bottom-cut">Work With Us</button>
                             </a>
                         </li>
@@ -196,7 +131,7 @@
                             <span class="mobile-search-icon"><a href="#" class="green-arrow"><i class="icon icon-search" aria-hidden="true"></i></a></span>
                         </li>
                         <li class="dropdown mobile-size-button">
-                            <a href="<?php echo esc_url(site_url()); ?>/careers">
+                            <a href="careers">
                                 <button class="btn">Work With Us</button>
                             </a>
                         </li>

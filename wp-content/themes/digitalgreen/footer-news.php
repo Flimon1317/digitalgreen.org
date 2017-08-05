@@ -47,7 +47,14 @@
                                                 <a href="<?php echo ot_get_option('footer_flickr'); ?>"><i class="icon icon-flickr"></i></a>
                                                 <span class="social-tooltip">Flickr</span>
                                             </li>
-                                            
+                                            <li>
+                                                <a href="<?php echo ot_get_option('footer_instagram'); ?>"><i class="icon icon-vimeo"></i></a>
+                                                <span class="social-tooltip">Vimeo</span>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="icon icon-instagram"></i></a>
+                                                <span class="social-tooltip">Instagram</span>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>

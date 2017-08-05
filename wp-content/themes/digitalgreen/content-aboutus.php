@@ -7,33 +7,13 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+get_header('about'); ?>
 
 
-        <div id="sticky-anchor"></div>
-        <div class="page-sub-menu clearfix hidden-xs" id="sticky">                
-            <div class="container">
-                    <div class="row">
-                        <ul class="sub-menu-title">
-                            <li class="activemenu">
-                                <a href="#our_team">Team</a>
-                            </li>
-                            <li>
-                                <a href="#history">History</a></li>
-                            <li>
-                                <a href="#partners">Partners</a>
-                            </li>
-                            <li>
-                                <a href="#documents">Documents</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            </header>
+
     <!-- Banner Section -->
-        <div class="banner-section-sub-menu">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('aboutus_banner_image')); ?>" class="sub-menu-banner w3-image" /></div>
+        <div class="banner-section">
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('aboutus_banner_image')); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -86,10 +66,10 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-            <div id="our_team" class="container our-team-section clearfix">
+            <div class="container our-team-section clearfix">
                 <div class="title-header section-margin ">
                     <h2 class="dg-header-1 main-section-title ">Our Team<span class="half-squre-before-title"></span></h2>
-                    <a href="<?php echo esc_url(site_url()); ?>/our-team" class="green-arrow">View Team Bios<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                    <a href="<?php echo esc_url(site_url()); ?>/team" class="green-arrow">View Team Bios<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                 </div>
                 <div class="custom-class-slideshow clearfix">
                     <div class="activity-details row our-teams-details clearfix">
@@ -109,14 +89,14 @@ get_header('globalimpact'); ?>
                                     </div>
                                 </div>
                                 <div class="our-solution-block">
-                                    <h2 class="fontsize-20-title"><a href="#"><?php echo $section['title']; ?></a></h2>
+                                    <h2 class="fontsize-20-title"><a href="<?php echo esc_url(site_url()); ?>/team#<?php echo 'team'; ?><?php echo $i; ?>"><?php echo $section['title']; ?></a></h2>
                                     <h3 class="text-details"><?php echo $section['team_designation']; ?></h3>
                                 </div>
                             </div>
                         </div>
-<?php } } } ?>
+<?php $i++; } } } ?>
 
-<!-- <?php
+<?php
       if (function_exists('get_option_tree')){
         $team_board = ot_get_option( 'team_board', array() );
         if ( ! empty( $team_board ) ) {
@@ -133,12 +113,16 @@ get_header('globalimpact'); ?>
                                     </div>
                                 </div>
                                 <div class="our-solution-block">
-                                    <h2 class="fontsize-20-title"><a href="#"><?php echo $section['title']; ?> </a></h2>
+                                    <h2 class="fontsize-20-title"><a href="<?php echo esc_url(site_url()); ?>/team#<?php echo 'board'; ?><?php echo $i; ?>"><?php echo $section['title']; ?> </a></h2>
                                     <h3 class="text-details"><?php echo $section['team_board_designation']; ?></h3>
                                 </div>
                             </div>
                         </div>
-<?php } } } ?> -->
+
+
+
+ 
+<?php $i++; } } } ?>
 
                     <!--    <div class="col-sm-3 team-item">
                             <div class="single-activity-details">
@@ -222,7 +206,7 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
             <div class="team-history-wrap section-margin">
-                <div id="history" class="container clearfix">
+                <div class="container clearfix">
                     <div class="title-header section-margin ">
                         <h2 class="dg-header-2 text-center">The History of Digital Green</h2>
                     </div>
@@ -409,7 +393,7 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
             <div class="dg-partners-wrapper">
-                <div id="partners" class="container">
+                <div class="container">
                     <div class="row section-margin ">
                         <div class="col-sm-6">
                             <div class="row title-header">
@@ -467,7 +451,7 @@ get_header('globalimpact'); ?>
 $aboutus_financials_array = ot_get_option( 'aboutus_financials_array', array() );
         if ( ! empty( $aboutus_financials_array ) ) {
  ?>
-            <div id="documents" class="features-list-wrapper">
+            <div class="features-list-wrapper">
                 <div class="features-blocks">
                     <div class="row clearfix features-list">
  <?php 

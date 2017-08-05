@@ -2491,9 +2491,7 @@ array(
       'section'     => 'loop',      
       ),
 
-
-     //
-  
+    
 
   array(
     'id' => 'loop_what_tab',
@@ -2562,51 +2560,6 @@ array(
   array(        
       'id'          => 'loop_how_link',        
       'label'       => __( 'link', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'loop',      
-      ),
-
-
-  //
-           array(
-    'id' => 'loop_product_tab_2',
-    'label' => 'Product Showcase 2',
-    'type' => 'tab',
-    'section' => 'loop'
-    ),
-
-    array(
-        'id'          => 'loop_product_image2',
-        'label'       => __( 'Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'loop',
-      ),
-
-    array(        
-      'id'          => 'loop_product_title2',        
-      'label'       => __( 'Title', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'loop',      
-      ),
-    array(        
-      'id'          => 'loop_product_desc2',        
-      'label'       => __( 'Description', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'loop',      
-      ), 
-
-    array(
-        'id'          => 'loop_product_show_image2',
-        'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'loop',
-      ),
-
-     array(        
-      'id'          => 'loop_product_playstore_link2',        
-      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'loop',      
       ),
@@ -2979,50 +2932,6 @@ array(
       'type'        => 'text',        
       'section'     => 'training',      
       ),
-
-  //
-      array(
-    'id' => 'training_product_tab2',
-    'label' => 'Product Showcase 2',
-    'type' => 'tab',
-    'section' => 'training'
-    ),
-
-    array(
-        'id'          => 'training_product_image2',
-        'label'       => __( 'Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'training',
-      ),
-
-    array(        
-      'id'          => 'training_product_title2',        
-      'label'       => __( 'Title', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'training',      
-      ),
-    array(        
-      'id'          => 'training_product_desc2',        
-      'label'       => __( 'Description', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'training',      
-      ), 
-
-    array(
-        'id'          => 'training_product_show_image2',
-        'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'training',
-      ),
-
-     array(        
-      'id'          => 'training_product_playstore_link2',        
-      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'training',      
-      ),
    
    array(
     'id' => 'training_screenshots_tab',
@@ -3276,48 +3185,48 @@ array(
           )
       ),
 
-    // array(
-    // 'id' => 'communityvideos_product_tab',
-    // 'label' => 'Product Showcase',
-    // 'type' => 'tab',
-    // 'section' => 'communityvideos'
-    // ),
+    array(
+    'id' => 'communityvideos_product_tab',
+    'label' => 'Product Showcase',
+    'type' => 'tab',
+    'section' => 'communityvideos'
+    ),
 
-    // array(
-    //     'id'          => 'communityvideos_product_image',
-    //     'label'       => __( 'Image', 'digitalgreen' ),
-    // 'desc'        => 'Upload',
-    //     'type'        => 'upload',
-    //     'section'     => 'communityvideos',
-    //   ),
+    array(
+        'id'          => 'communityvideos_product_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'communityvideos',
+      ),
 
-    // array(        
-    //   'id'          => 'communityvideos_product_title',        
-    //   'label'       => __( 'Title', 'digitalgreen' ),        
-    //   'type'        => 'text',        
-    //   'section'     => 'communityvideos',      
-    //   ),
-    // array(        
-    //   'id'          => 'communityvideos_product_desc',        
-    //   'label'       => __( 'Description', 'digitalgreen' ),        
-    //   'type'        => 'text',        
-    //   'section'     => 'communityvideos',      
-    //   ), 
+    array(        
+      'id'          => 'communityvideos_product_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'communityvideos',      
+      ),
+    array(        
+      'id'          => 'communityvideos_product_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'communityvideos',      
+      ), 
 
-    // array(
-    //     'id'          => 'communityvideos_product_show_image',
-    //     'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    // 'desc'        => 'Upload',
-    //     'type'        => 'upload',
-    //     'section'     => 'communityvideos',
-    //   ),
+    array(
+        'id'          => 'communityvideos_product_show_image',
+        'label'       => __( 'Show Case Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'communityvideos',
+      ),
 
-    // array(        
-    //   'id'          => 'communityvideos_product_playstore_link',        
-    //   'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
-    //   'type'        => 'text',        
-    //   'section'     => 'communityvideos',      
-    //   ),
+    array(        
+      'id'          => 'communityvideos_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'communityvideos',      
+      ),
 
     
 
@@ -3388,51 +3297,6 @@ array(
   array(        
       'id'          => 'communityvideos_how_link',        
       'label'       => __( 'link', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'communityvideos',      
-      ),
-
-
-  //
-  array(
-    'id' => 'communityvideos_product_tab',
-    'label' => 'Product Showcase',
-    'type' => 'tab',
-    'section' => 'communityvideos'
-    ),
-
-    array(
-        'id'          => 'communityvideos_product_image',
-        'label'       => __( 'Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'communityvideos',
-      ),
-
-    array(        
-      'id'          => 'communityvideos_product_title',        
-      'label'       => __( 'Title', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'communityvideos',      
-      ),
-    array(        
-      'id'          => 'communityvideos_product_desc',        
-      'label'       => __( 'Description', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'communityvideos',      
-      ), 
-
-    array(
-        'id'          => 'communityvideos_product_show_image',
-        'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'communityvideos',
-      ),
-
-    array(        
-      'id'          => 'communityvideos_product_playstore_link',        
-      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'communityvideos',      
       ),
@@ -5164,6 +5028,13 @@ array(
       'section'     => 'team',      
       ),
 
+ array(        
+      'id'          => 'team_team_title',        
+      'label'       => __( 'Team First Category in Team page', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'team',      
+      ),
+
 
   array(
         'id'          => 'team_team',
@@ -5203,14 +5074,16 @@ array(
               'type'        => 'text',
               'section'     => 'team_team',
               ),
-             array(
-              'id'          => 'expand_team_desc',
-              'label'       => __( 'Add Expanded Description', 'digitalgreen' ),
-              'type'        => 'text',
-              'section'     => 'team_team',
-              ),
+             
 
           )
+      ),
+
+  array(        
+      'id'          => 'team_board_title',        
+      'label'       => __( 'Board First Category Title in team page', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'team',      
       ),
 
   array(
