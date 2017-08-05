@@ -22,7 +22,7 @@ get_header('globalimpact'); ?>
        
        <!-- Banner Section -->
         <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo ot_get_option('careers_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
+            <div class="banner-img-normal"><img src="<?php echo ot_get_option('careers_banner_image'); ?>"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">

@@ -16,7 +16,7 @@ get_header('globalimpact'); ?>
             <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('loop_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
                 <div class="container text-white">
-                    <div class="row banner-inner">
+                    <div class="loop row banner-inner">
                         <span class="banner-square"></span>
                         <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('loop_banner_title'); ?></h1>
                         <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo ot_get_option('loop_banner_sub_title'); ?></h4>

@@ -247,7 +247,9 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_community_image'); ?>" class="img-responsive">
-                                                    <div class="number-count-div text-center">
+
+                    <!-- Hide stats -->
+<!--                                                     <div class="number-count-div text-center">
                                                         <?php
       if (function_exists('get_option_tree')){
         $solutions_community_image_value1 = ot_get_option( 'solutions_community_image_value1', array() );
@@ -258,7 +260,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_community_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -288,7 +290,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_coco_image'); ?>" class="img-responsive">
-                                                    <div class="number-count-div text-center">
+<!--                                                     <div class="number-count-div text-center">
                                                         <?php
       if (function_exists('get_option_tree')){
         $solutions_coco_image_value1 = ot_get_option( 'solutions_coco_image_value1', array() );
@@ -299,7 +301,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_coco_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -329,7 +331,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_training_image'); ?>" class="img-responsive">
-                                                    <div class="number-count-div text-center">
+<!--                                                     <div class="number-count-div text-center">
                                                          <?php
       if (function_exists('get_option_tree')){
         $solutions_training_image_value1 = ot_get_option( 'solutions_training_image_value1', array() );
@@ -340,7 +342,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_training_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -370,7 +372,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_loop_image'); ?>" class="img-responsive">
-                                                    <div class="number-count-div text-center">
+<!--                                                     <div class="number-count-div text-center">
                                                          <?php
       if (function_exists('get_option_tree')){
         $solutions_loop_image_value1 = ot_get_option( 'solutions_loop_image_value1', array() );
@@ -381,7 +383,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_loop_value1']; ?></p>
        <?php } } } ?>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -411,7 +413,7 @@ get_header('globalimpact'); ?>
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
                                                     <img src="<?php echo ot_get_option('solutions_innovation_image'); ?>" class="img-responsive">
-                                                    <div class="number-count-div text-center">
+<!--                                                     <div class="number-count-div text-center">
                                                          <?php
       if (function_exists('get_option_tree')){
         $solutions_innovation_image_value1 = ot_get_option( 'solutions_innovation_image_value1', array() );
@@ -422,7 +424,7 @@ get_header('globalimpact'); ?>
       ?>                        
                                                         <p><?php echo $section['solutions_innovation_value1']; ?></p>
        <?php } } } ?> 
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>

@@ -255,7 +255,7 @@ get_header('globalimpact'); ?>
                                     <span class="half-squre-before-title"></span>
                                 </h1>
                             </div>
-                            <div class="pull-right">
+<!--                             <div class="pull-right">
                                <div class="dropdown-wrapper">
                                     <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" /></div>
                                     <ul class="dropdown">
@@ -266,7 +266,7 @@ get_header('globalimpact'); ?>
                                         <li><a href="#">Present</a></li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -336,7 +336,7 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                         <div class="partners-section">
-                            <a href="#" class="partner-collepse-button hidden-xs" >View Parteners &nbsp;
+                            <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
                                 <span class="icon icon-up-arrow"></span>
                                 <span class="icon icon-down-arrow"></span>
                             </a>
