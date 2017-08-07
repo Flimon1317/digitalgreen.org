@@ -218,7 +218,7 @@ input:visited, textarea:visited, input:focus, textarea:focus {
   left: 0;
   width: 100%;
   z-index: 99999;
-  transition: transform 0.3s cubic-bezier(0.25, 0.75, 0.75, 1);
+  transition: all 0.5s ease-in-out;
   backface-visibility: hidden; }
   .page-menu-container .move-top {
     transform: translateY(-100%); }
@@ -244,8 +244,8 @@ input:visited, textarea:visited, input:focus, textarea:focus {
     .navbar-background.set-to-fixed .header-logo .white-logo {
       display: none; }
   .navbar-background.move-top {
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
     transform: translateY(-100%); }
 
 
@@ -270,8 +270,8 @@ input:visited, textarea:visited, input:focus, textarea:focus {
     .navbar-background-home.set-to-fixed .header-logo .white-logo {
       display: none; }
   .navbar-background-home.move-top {
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
     transform: translateY(-100%); }
 
 .header-logo {
