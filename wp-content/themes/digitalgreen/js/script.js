@@ -660,8 +660,25 @@ function hasScrolled() {
                 
             }
             else{
-                $.fn.fullpage.setAllowScrolling(true);
-                jQuery('body, html').css({'overflow': 'hidden'});
+                // $.fn.fullpage.setAllowScrolling(true);
+                // jQuery('body, html').css({'overflow': 'hidden'});
+                if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream && scrollTop <= 50 && !jQuery('html').hasClass('fp-enabled')) {
+                    $('#fullpage').fullpage(options);
+                    jQuery(window).scrollTop(0);
+                    $('#fp-nav').fadeIn();
+                } 
+                else 
+                {
+                    if(jQuery(window).scrollTop() == 0){
+                        $.fn.fullpage.setAllowScrolling(true);
+                        jQuery('body, html').css({'overflow': 'hidden'});
+                    }else{
+                        $.fn.fullpage.setAllowScrolling(false);
+                        jQuery('body, html').css({'overflow': 'visible'});
+                    }
+                    jQuery('.header-slider').css('pointer-events', 'auto');
+                    jQuery('.header-slider').css('-webkit-pointer-events', 'auto');
+                }
                 $('header').css('background-color','rgba(255,255,255,0)');
                 $('.navbar-header a img.gray-logo').css('display','none');
                 $('.navbar-header a img.white-logo').css('display','block');

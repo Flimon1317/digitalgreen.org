@@ -260,10 +260,11 @@ get_header('home'); ?>
                             jQuery('.header-slider').css('pointer-events', 'none');
                             jQuery('.slide-single').removeClass('active');
                         } else {
-                           //$.fn.fullpage.setAllowScrolling(false);
-                            // jQuery('.header-slider').css('pointer-events', 'none');
+                           $.fn.fullpage.setAllowScrolling(false);
+                            jQuery('.header-slider').css('pointer-events', 'none');
+                            jQuery('.header-slider').css('-webkit-pointer-events', 'none');
                         }
-                        // jQuery(window).scrollTop(10);
+                        jQuery(window).scrollTop(10);
                     }
 
                     
