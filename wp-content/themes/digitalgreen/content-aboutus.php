@@ -109,12 +109,12 @@ get_header('globalimpact'); ?>
                                     </div>
                                 </div>
                                 <div class="our-solution-block">
-                                    <h2 class="fontsize-20-title"><a href="#"><?php echo $section['title']; ?></a></h2>
+                                    <h2 class="fontsize-20-title redirect-team-member"><a href="<?php echo esc_url(site_url()); ?>/team#<?php echo 'team'; ?><?php echo $i; ?>"><?php echo $section['title']; ?></a></h2>
                                     <h3 class="text-details"><?php echo $section['team_designation']; ?></h3>
                                 </div>
                             </div>
                         </div>
-<?php } } } ?>
+<?php $i++;} } } ?>
 
 <!-- <?php
       if (function_exists('get_option_tree')){

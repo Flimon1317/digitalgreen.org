@@ -128,15 +128,13 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
 
                                     ?>
                                             <div class="gray-box-wrap">
-                                                <div class="gray-box-title " data-code="<?php echo $root_term->term_id;?><?php echo $k?>">
+                                                <div class="gray-box-title" data-code="<?php echo $root_term->term_id;?><?php echo $k?>">
                                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'Partners image')); ?>
-                                                    <a href="#" class="gray-box-read"><span>Read More <i class="icon icon-down-arrow down-arrow"></i></span></a>
-                                                </div>
-                                                <div class="current-opening-disc container" data-code="<?php echo $root_term->term_id;?><?php echo $k?>">
-                                                    <h3><?php the_title();?></h3>
-                                                    <div class="opening-details">
-                                                        <?php the_content();?>
-                                                        <a href="<?php echo $partners_link; ?>" class="green-arrow learn-more">Visit Website <i class="on-hover-arrow-left"></i></a>
+                                                    <div class="gray-box-read">
+                                                        <div class="partner-title">
+                                                            <h3 class="dg-header-3 text-white"><?php the_title();?></h3>
+                                                            <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div> 
@@ -181,15 +179,13 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                                     ?>
                                         
                                             <div class="gray-box-wrap">
-                                                <div class="gray-box-title " data-code="<?php echo $child->term_id?><?php echo $k?>">
+                                                <div class="gray-box-title" data-code="<?php echo $child->term_id?><?php echo $k?>">
                                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'Partners image')); ?>
-                                                    <a href="#" class="gray-box-read"><span>Read More <i class="icon icon-down-arrow down-arrow"></i></span></a>
-                                                </div>
-                                                <div class="current-opening-disc container" data-code="<?php echo $child->term_id?><?php echo $k?>">
-                                                    <h3><?php the_title();?></h3>
-                                                    <div class="opening-details">
-                                                        <?php the_content();?>
-                                                        <a href="<?php echo $partners_link; ?>" class="green-arrow learn-more">Visit Website <i class="on-hover-arrow-left"></i></a>
+                                                    <div class="gray-box-read">
+                                                        <div class="partner-title">
+                                                            <h3 class="dg-header-3 text-white"><?php the_title();?></h3>
+                                                            <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div> 
@@ -209,6 +205,7 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                  <?php } } $i++;  ?>
                 <?php }?>
             </div>
+        </div>
         </div>
 
         <div class="stats-container">

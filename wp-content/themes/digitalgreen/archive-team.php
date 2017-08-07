@@ -80,7 +80,7 @@ get_header('globalimpact'); ?>
                     
                                             <ul class="child-sub-list sub-tab-list">
                                             <?php
-$j=1;
+                                            $j=1;
                     foreach ( $childrens as $child1 ) {
                         $termname = strtolower($child1->name);
                         $termname = str_replace(' ', '-', $termname);
@@ -113,7 +113,7 @@ $j=1;
           foreach( $team_team as $section ) {
       ?>
                                 
-                                    <div class="team-member clearfix">
+                                <div class="team-member clearfix" id="<?php echo 'team'; ?><?php echo $i; ?>">
                                         <div class="member-img-wrap">
                                             <div class="image-green-shadow member-img">
                                                 <img src="<?php echo $section['team_image']; ?>" alt="Rikin Gandhi"/>
@@ -123,17 +123,15 @@ $j=1;
                                             <h2><a href="#"><?php echo $section['title']; ?></a></h2>
                                             <span class="member-designation"><?php echo $section['team_designation']; ?></span>
                                             <div class="member-intro">
+                                                <div class="member-content">
                                                 <p><?php echo $section['short_team_desc']; ?> </p>
-                                            
-                                            <div class="expand-txt">
-                                                    <p><?php echo $section['expand_team_desc']; ?>
-                                                    </p>
                                                 </div>
+                                        
                                             <a href="#" class="link-read read-load-link">Read More <span class="icon icon-down-arrow"></span></a>
                                        </div> 
-                                      </div>
                                     </div>
-                                    <?php } } } ?>
+                                </div>
+                                    <?php $i++; } } } ?>
                                 </div>
                             </div>
 <div class="filter-details" data-index="2">
@@ -148,7 +146,7 @@ $j=1;
           foreach( $team_board as $section ) {
       ?>
                                 
-                                    <div class="team-member clearfix">
+                                    <div class="team-member clearfix" id="<?php echo 'team'; ?><?php echo $i; ?>">
                                         <div class="member-img-wrap">
                                             <div class="image-green-shadow member-img">
                                                 <img src="<?php echo $section['team_board_image']; ?>" alt="Rikin Gandhi"/>
@@ -158,9 +156,10 @@ $j=1;
                                             <h2><a href="#"><?php echo $section['title']; ?></a></h2>
                                             <span class="member-designation"><?php echo $section['team_board_designation']; ?></span>
                                             <div class="member-intro">
-                                                <p><?php echo $section['team_board_desc']; ?> </p>
+                                                <div class="member-content"><p><?php echo $section['team_board_desc']; ?> </p></div>
+                                                <a href="#" class="link-read read-load-link">Read More <span class="icon icon-down-arrow"></span></a>
                                             </div>
-                                            <a href="#" class="link-read">Read More <span class="icon icon-down-arrow"></span></a>
+                                            
                                         </div>
                                     </div>
                                     <?php } } } ?>

@@ -260,8 +260,7 @@ get_header('home'); ?>
                             jQuery('.header-slider').css('pointer-events', 'none');
                             jQuery('.slide-single').removeClass('active');
                         } else {
-                            $.fn.fullpage.setAllowScrolling(false);
-                            console.log("Scrolling disabled");
+                           //$.fn.fullpage.setAllowScrolling(false);
                             // jQuery('.header-slider').css('pointer-events', 'none');
                         }
                         // jQuery(window).scrollTop(10);

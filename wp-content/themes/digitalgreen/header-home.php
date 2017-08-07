@@ -46,14 +46,15 @@
             </div>
             <div class="navbar-collapse js-navbar-collapse">
                     <ul class="nav navbar-nav page-menu">
-                        <li class="dropdown mega-dropdown">
+                        <li class="dropdown">
                             <a href="<?php echo esc_url(site_url()); ?>/global-impact" class="dropdown-toggle">Global Impact     <span class="pull-right">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
                             <!-- mobile-sub-menu -->
-                            <ul class="dropdown-menu mobile-sub-menu row ">
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></li>
                                 <?php
       if (function_exists('get_option_tree')){
         $global_impact = ot_get_option( 'global_impact', array() );
@@ -66,7 +67,7 @@
        <?php } } } ?>
                             </ul>
                             <!-- desktop-sub-menu -->
-                            <ul class="mega-dropdown-menu">
+<!--                             <ul class="mega-dropdown-menu">
 <?php
       if (function_exists('get_option_tree')){
         $global_impact = ot_get_option( 'global_impact', array() );
@@ -85,7 +86,7 @@
                                 </li>
 <?php } } } ?>
 
-                               <!-- <li class="col-sm-3">
+                               <li class="col-sm-3">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3">Ethiopia</h2>
                                         <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
@@ -105,17 +106,18 @@
                                         <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
                                         <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
-                                </li> -->
-                            </ul>
+                                </li>
+                            </ul> -->
                         </li>
-                        <li class="dropdown mega-dropdown">
+                        <li class="dropdown">
                             <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solution
                                 <span class="pull-right">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu mobile-sub-menu row">
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solution</a></li>
                                  <?php
       if (function_exists('get_option_tree')){
         $solution_impact = ot_get_option( 'solution_impact', array() );
@@ -127,7 +129,7 @@
       <li><a href="<?php echo $section['solution_link']; ?>"><?php echo $section['title']; ?></a></li>
        <?php } } } ?>
                             </ul>
-                            <ul class="mega-dropdown-menu">
+<!--                             <ul class="mega-dropdown-menu">
  <?php
       if (function_exists('get_option_tree')){
         $solution_impact = ot_get_option( 'solution_impact', array() );
@@ -156,7 +158,7 @@
                                 <?php }?>
 <?php } } } ?>
 
-                               <!-- <li class="col-sm-3">
+                               <li class="col-sm-3">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3">Solution</h2>
                                         <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
@@ -176,17 +178,18 @@
                                         <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
                                         <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
-                                </li> -->
-                            </ul>
+                                </li>
+                            </ul> -->
                         </li>
-                        <li class="dropdown mega-dropdown">
+                        <li class="dropdown">
                             <a href="<?php echo esc_url(site_url()); ?>/about-us" class="dropdown-toggle">About Us
                                 <span class="pull-right">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu mobile-sub-menu row">
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo esc_url(site_url()); ?>/about-us">About Us</a></li>
                                 <?php
       if (function_exists('get_option_tree')){
         $about_impact = ot_get_option( 'about_impact', array() );
@@ -198,7 +201,7 @@
                                 <li><a href="<?php echo $section['about_link']; ?>"><?php echo $section['title']; ?></a></li>
        <?php } } } ?>
                             </ul>
-                            <ul class="mega-dropdown-menu">
+                            <!-- <ul class="mega-dropdown-menu">
    <?php
       if (function_exists('get_option_tree')){
         $about_impact = ot_get_option( 'about_impact', array() );
@@ -217,7 +220,7 @@
                                 </li>
 <?php } } } ?>
 
-                              <!--  <li class="col-sm-3">
+                               <li class="col-sm-3">
                                     <div class="menu-content">
                                         <h2 class="dg-header-3">About Us</h2>
                                         <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
@@ -237,8 +240,8 @@
                                         <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
                                         <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
-                                </li> -->
-                            </ul>
+                                </li>
+                            </ul> -->
                         </li>
                         <li class="dropdown mega-dropdown">
                             <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle" data-toggle="dropdown">News</a>

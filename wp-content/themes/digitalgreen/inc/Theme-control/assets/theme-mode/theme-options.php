@@ -5203,12 +5203,6 @@ array(
               'type'        => 'text',
               'section'     => 'team_team',
               ),
-             array(
-              'id'          => 'expand_team_desc',
-              'label'       => __( 'Add Expanded Description', 'digitalgreen' ),
-              'type'        => 'text',
-              'section'     => 'team_team',
-              ),
 
           )
       ),
