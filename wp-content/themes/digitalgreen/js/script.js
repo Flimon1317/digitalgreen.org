@@ -11,6 +11,12 @@ jQuery(document).ready(function(){
             }
         });
 
+        if(location.hash){
+        jQuery('html, body').animate({
+            scrollTop: jQuery(location.hash).offset().top - 50
+        }, 1000, 'linear');
+    }
+
 
         // jQuery('.gray-box-wrap .gray-box-title').mouseenter(function(){
         //     jQuery(this).css('background-color','#000');
