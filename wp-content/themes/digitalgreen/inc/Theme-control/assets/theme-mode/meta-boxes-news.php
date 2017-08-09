@@ -52,6 +52,13 @@ function custom_meta_boxes_news() {
         'type'        => 'textarea'
       ),
 
+     array(
+              'id'          => 'news_attach',
+              'label'       => __( 'upload attachment or add link', 'digitalgreen' ),
+              'type'        => 'upload'
+              
+              ),
+
 	 	
     )
   );

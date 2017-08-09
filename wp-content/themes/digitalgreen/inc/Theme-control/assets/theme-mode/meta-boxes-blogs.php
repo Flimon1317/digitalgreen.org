@@ -54,6 +54,13 @@ function custom_meta_boxes_blogs() {
         'type'        => 'textarea'
       ), 
 
+     array(
+              'id'          => 'blogs_attach',
+              'label'       => __( 'upload attachment or add link', 'digitalgreen' ),
+              'type'        => 'upload'
+              
+              ),
+
     
     /*array(
     'id'          => 'blogs_twitter_count',

@@ -206,6 +206,7 @@ get_header('globalimpact'); ?>
                                         <p><?php the_content(); ?></p>
                                         <div class="team-img"><img src="<?php echo $team_image; ?>" alt="Team Ethiopia"/></div>
                                     </div>
+                                    <?php           if (isset($team_program_team)){ ?>
                                     <div class="teams-section">
                                         <h2 class="dg-header-2 main-section-title">Program Team</h2>
                                         <div class="list-diff-team clearfix">
@@ -239,6 +240,8 @@ get_header('globalimpact'); ?>
                                             </div> -->
                                         </div>
                                     </div>
+                                    <?php } ?>
+                                    <?php           if (isset($team_tech_team)){ ?>
                                     <div class="teams-section clearfix">
                                         <h2 class="dg-header-2 main-section-title">Technology Team</h2>
                                         <div class="list-diff-team clearfix">
@@ -271,7 +274,9 @@ get_header('globalimpact'); ?>
                                                 <span class="designation">Country Director</span>
                                             </div> -->
                                         </div>
-                                    </div>
+                                    </div> 
+                                    <?php } ?>
+                                    <?php           if (isset($team_admin_team)){ ?>
                                      <div class="teams-section clearfix">
                                         <h2 class="dg-header-2 main-section-title">Admin/Finance/HR Team</h2>
                                         <div class="list-diff-team clearfix">
@@ -305,6 +310,7 @@ get_header('globalimpact'); ?>
                                             </div> -->
                                         </div>
                                     </div>
+                                    <?php } ?>
                                 </div>
 <?php
                         endwhile;

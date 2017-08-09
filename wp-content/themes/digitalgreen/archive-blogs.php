@@ -124,10 +124,11 @@ get_header('globalimpact'); ?>
           $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
+                    $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
                     ?>
 
                 <div class="news-list" data-category="<?php echo $termname; ?>">
-                    <a href="<?php the_permalink(); ?>" class="news-hover">
+                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
                         <div class="news-image">
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                             <span class="news-cat"><?php echo $term->name; ?></span>

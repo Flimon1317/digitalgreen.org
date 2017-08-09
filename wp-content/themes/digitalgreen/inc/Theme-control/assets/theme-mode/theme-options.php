@@ -47,10 +47,10 @@ function custom_theme_options() {
         'title'       => __( 'Header Section', 'digitalgreen' ),
       ),
 
-      array(
+      /*array(
         'id'          => 'headermenu',
         'title'       => __( 'Header Menu Section', 'digitalgreen' ),
-      ),
+      ),*/
       
 	  
 	  /*Bannar*/
@@ -88,10 +88,10 @@ function custom_theme_options() {
 
       array(
         'id'          => 'news',
-        'title'       => __( 'News Settings', 'digitalgreen' ),
+        'title'       => __( 'News,Blogs,Resources Settings', 'digitalgreen' ),
       ),
 
-      array(
+     /* array(
         'id'          => 'blogs',
         'title'       => __( 'Blogs Settings', 'digitalgreen' ),
       ),
@@ -104,7 +104,7 @@ function custom_theme_options() {
       array(
         'id'          => 'resources1',
         'title'       => __( 'Resources Settings', 'digitalgreen' ),
-      ),
+      ), */
 
       array(
         'id'          => 'team',
@@ -195,7 +195,12 @@ function custom_theme_options() {
 	//Header Favicon
 	  //logo
 
-
+  array(
+    'id' => 'logo_tab',
+    'label' => 'Logo',
+    'type' => 'tab',
+    'section' => 'header'
+    ),
 	 
 	  
 	  //main logo
@@ -212,7 +217,7 @@ function custom_theme_options() {
     'id' => 'menu_tab',
     'label' => 'Global Impact',
     'type' => 'tab',
-    'section' => 'headermenu'
+    'section' => 'header'
     ),
 
   array(
@@ -221,7 +226,7 @@ function custom_theme_options() {
     'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',
-        'section'     => 'headermenu',
+        'section'     => 'header',
     'settings'    => array(
             //Body Icon details
                            
@@ -253,7 +258,7 @@ function custom_theme_options() {
     'id' => 'menu1_tab',
     'label' => 'solution Impact',
     'type' => 'tab',
-    'section' => 'headermenu'
+    'section' => 'header'
     ),
 
   array(
@@ -262,7 +267,7 @@ function custom_theme_options() {
     'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',
-        'section'     => 'headermenu',
+        'section'     => 'header',
     'settings'    => array(
             //Body Icon details
                            
@@ -294,7 +299,7 @@ function custom_theme_options() {
     'id' => 'menu2_tab',
     'label' => 'about Impact',
     'type' => 'tab',
-    'section' => 'headermenu'
+    'section' => 'header'
     ),
 
   array(
@@ -303,7 +308,7 @@ function custom_theme_options() {
     'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',
-        'section'     => 'headermenu',
+        'section'     => 'header',
     'settings'    => array(
             //Body Icon details
                            
@@ -4351,7 +4356,7 @@ array(
     array(        
         'id'          => 'careers_community_image',        
         'label'       => __( 'Upload image', 'digitalgreen' ),        
-        'type'        => 'text',        
+        'type'        => 'upload',        
         'section'     => 'careers',      
         ), 
 
@@ -4491,7 +4496,7 @@ array(
 
   array(
     'id' => 'banner_news_tab',
-    'label' => 'Banner',
+    'label' => 'News Banner',
     'type' => 'tab',
     'section' => 'news'
     ),  
@@ -4550,9 +4555,9 @@ array(
 
     array(
     'id' => 'banner_blogs_tab',
-    'label' => 'Banner',
+    'label' => 'Blogs Banner',
     'type' => 'tab',
-    'section' => 'blogs'
+    'section' => 'news'
     ),  
 
     array(
@@ -4561,7 +4566,7 @@ array(
     'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',
-        'section'     => 'blogs',
+        'section'     => 'news',
     'settings'    => array(
             //Body Icon details
              array(
@@ -4609,9 +4614,9 @@ array(
 
     array(
     'id' => 'banner_resources1_tab',
-    'label' => 'Banner',
+    'label' => 'Resource Banner',
     'type' => 'tab',
-    'section' => 'resources1'
+    'section' => 'news'
     ),  
 
     array(
@@ -4620,7 +4625,7 @@ array(
     'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',
-        'section'     => 'resources1',
+        'section'     => 'news',
     'settings'    => array(
             //Body Icon details
              array(
@@ -4668,9 +4673,9 @@ array(
 
      array(
     'id' => 'banner_resources_tab',
-    'label' => 'Banner',
+    'label' => 'News Resources Banner',
     'type' => 'tab',
-    'section' => 'resources'
+    'section' => 'news'
     ),  
 
     array(
@@ -4679,7 +4684,7 @@ array(
     'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',
-        'section'     => 'resources',
+        'section'     => 'news',
     'settings'    => array(
             //Body Icon details
              array(

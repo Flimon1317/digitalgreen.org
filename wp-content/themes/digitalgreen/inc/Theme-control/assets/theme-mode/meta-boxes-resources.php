@@ -53,6 +53,13 @@ function custom_meta_boxes_resources() {
       
         'type'        => 'textarea'
       ), 
+
+     array(
+              'id'          => 'resources_attach',
+              'label'       => __( 'upload attachment or add link', 'digitalgreen' ),
+              'type'        => 'upload'
+              
+              ),
     
     /*array(
     'id'          => 'resources_twitter_count',

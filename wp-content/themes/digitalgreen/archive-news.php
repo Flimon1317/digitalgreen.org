@@ -169,6 +169,7 @@ get_header('globalimpact'); ?>
           $news_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
+                    $news_attach = get_post_meta(get_the_ID(),'news_attach', true);
                  ?>
  
                 
@@ -176,7 +177,7 @@ get_header('globalimpact'); ?>
 
           
                 
-                    <a href="<?php the_permalink(); ?>" class="news-hover">
+                    <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover">
                         <div class="news-image">
                         
                              <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
