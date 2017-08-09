@@ -7,7 +7,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+get_header('loop'); ?>
 </header>
 
 
@@ -124,8 +124,8 @@ get_header('globalimpact'); ?>
                                             <img src="" class="img-responsive" alt=""/>
                                         </div>
                                     </div>
-                                </div> -->
-                      <!--           <div class="col-md-6 left-block">
+                                </div> 
+                                <div class="col-md-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
                                             <div class="side-gray-border">
@@ -197,10 +197,10 @@ get_header('globalimpact'); ?>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
-                            </div>
+                                </div> 
+                            </div> 
                            
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>

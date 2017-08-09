@@ -17,12 +17,11 @@
  */
 
 get_header('globalimpact'); ?>
-</header>
        
-       
+  </header>     
        <!-- Banner Section -->
         <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo ot_get_option('careers_banner_image'); ?>"/></div>
+            <div class="banner-img"><img src="<?php echo ot_get_option('careers_banner_image'); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
@@ -509,7 +508,7 @@ get_header('globalimpact'); ?>
                             </div>
 <?php 
 
-$blog_id=ot_get_option('careers_solution_blog');
+$blog_id=ot_get_option('global_solution_blog');
 $auth = get_post($blog_id); // gets author from post
 $blog_title = get_the_title($blog_id);
 
@@ -522,10 +521,11 @@ $blog_permalink = get_the_permalink($blog_id);
 
                             <div class="work-block row clearfix">
                                 <div class="work-inner-block col-sm-7 hidden-sm hidden-xs">
-                                    <div class="blog-post-img-box" style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                    <div class="blog-post-img-box" style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                         <div class="blog-post-img-text">
                                             <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="work-inner-block col-md-5  green-squre-box-title">

@@ -208,13 +208,14 @@ get_header('globalimpact'); ?>
                                     </div>
                                     <?php           if (isset($team_program_team)){ ?>
                                     <div class="teams-section">
-                                        <h2 class="dg-header-2 main-section-title">Program Team</h2>
-                                        <div class="list-diff-team clearfix">
-<?php
+                                    <?php
 
  $temp_i=1;foreach($team_program_team[0] as $key => $value){
 
-?>
+if($temp_i==1) { ?>
+                                        <h2 class="dg-header-2 main-section-title">Program Team</h2>
+                                        
+<?php } $temp_i++; ?>
 
                                             <div class="team-block">
                                                 <h3 class="dg-header-3 main-section-title"><?php echo $value['title'];?></h3>
@@ -238,18 +239,22 @@ get_header('globalimpact'); ?>
                                                 <h3 class="dg-header-3 main-section-title">Lorem ipsum dolor</h3>
                                                 <span class="designation">Country Director</span>
                                             </div> -->
-                                        </div>
+                                        
                                     </div>
                                     <?php } ?>
                                     <?php           if (isset($team_tech_team)){ ?>
                                     <div class="teams-section clearfix">
-                                        <h2 class="dg-header-2 main-section-title">Technology Team</h2>
-                                        <div class="list-diff-team clearfix">
+                                       
+                                        
 <?php
 
  $temp_i=1;foreach($team_tech_team[0] as $key => $value){
 
-?>
+if($temp_i==1) {  ?>
+
+                                      <h2 class="dg-header-2 main-section-title">Technology Team</h2>
+<?php } $temp_i++; ?>
+
 
                                             <div class="team-block">
                                                 <h3 class="dg-header-3 main-section-title"><?php echo $value['title'];?></h3>
@@ -273,18 +278,20 @@ get_header('globalimpact'); ?>
                                                 <h3 class="dg-header-3 main-section-title">Lorem ipsum dolor</h3>
                                                 <span class="designation">Country Director</span>
                                             </div> -->
-                                        </div>
+                                        
                                     </div> 
                                     <?php } ?>
                                     <?php           if (isset($team_admin_team)){ ?>
                                      <div class="teams-section clearfix">
-                                        <h2 class="dg-header-2 main-section-title">Admin/Finance/HR Team</h2>
-                                        <div class="list-diff-team clearfix">
 <?php
 
  $temp_i=1;foreach($team_admin_team[0] as $key => $value){
 
-?>
+if ($temp_i==1) { ?>
+
+                                        <h2 class="dg-header-2 main-section-title">Admin/Finance/HR Team</h2>
+                                       
+<?php } $temp_i++; ?>
 
                                             <div class="team-block">
                                                 <h3 class="dg-header-3 main-section-title"><?php echo $value['title'];?></h3>
@@ -308,7 +315,7 @@ get_header('globalimpact'); ?>
                                                 <h3 class="dg-header-3 main-section-title">Lorem ipsum dolor</h3>
                                                 <span class="designation">Country Director</span>
                                             </div> -->
-                                        </div>
+                                        
                                     </div>
                                     <?php } ?>
                                 </div>
