@@ -454,14 +454,13 @@ nav:hover > .navbar-collapse ul > li > a {
     background: transparent; }
   
 .dropdown-menu{
-
   border-top : solid 3px #65E214 ;
 }
 
 .dropdown-menu > li {
   padding: 15px 15px;
 }
-.dropdown-menu > li > a {
+ul.dropdown-menu > li > a {
   color: #000;
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
@@ -2407,7 +2406,7 @@ a.forward-redirection-green-link:hover {
 
 .gray-box-tabbing {
   margin-top: 57px;
-  display: none; }
+  display: block; }
 
 .gray-box-wrap {
   width: 25%; }
