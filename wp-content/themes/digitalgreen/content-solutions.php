@@ -238,7 +238,7 @@ get_header('globalimpact'); ?>
                             </h1>
                         </div>
                     </div>
-                    <div class="custom-class-slideshow global-impact-blocks hidden-xs hidden-sm">
+                    <div class="custom-class-slideshow">
                         <div class="globalimp-list">
                             <div class="single-img-container" id="community-videos">
                                 <div class="container-fluid">
@@ -451,7 +451,7 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-<?php
+<!-- <?php
       if (function_exists('get_option_tree')){ 
     $solutions_solutions_array = ot_get_option( 'solutions_solutions_array', array() );
         if ( ! empty( $solutions_solutions_array ) ) {
@@ -489,8 +489,9 @@ get_header('globalimpact'); ?>
                         </div>
                     </div>
                 </div>
+            </div>
             </div>  
-<?php } } ?>
+<?php } } ?> -->
             <div class="stats-container">
                 <div class="container">
                     <div class="row">

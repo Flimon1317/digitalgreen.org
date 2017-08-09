@@ -8,10 +8,10 @@
  * @since Twenty Fifteen 1.0
  */
 get_header('globalimpact'); ?>
-
- <div class="page-sub-menu clearfix hidden-xs">
+            <div id="sticky-anchor"></div>
+            <div class="page-sub-menu clearfix hidden-xs" id="sticky">
                 <div class="container">
-                    <div class="row">
+                    <div class="row"> 
                         <ul class="sub-menu-title">
                             <li class="activemenu">
                                 <a href="#india"><?php echo ot_get_option('global_india_title'); ?></a>
@@ -30,7 +30,7 @@ get_header('globalimpact'); ?>
             </div>
         </header>
  <div class="banner-section-sub-menu">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('global_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
+            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('global_banner_image')); ?>" class="sub-menu-banner"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
