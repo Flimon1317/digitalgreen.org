@@ -272,7 +272,7 @@ get_header('globalimpact'); ?>
 
 <?php 
 
-$blog_id=ot_get_option('casestudy_solution_blog');
+$blog_id=ot_get_option('global_solution_blog');
 $auth = get_post($blog_id); // gets author from post
 $blog_title = get_the_title($blog_id);
 
