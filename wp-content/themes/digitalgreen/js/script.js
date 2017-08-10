@@ -407,7 +407,7 @@ jQuery(document).ready(function(){
     });
 
     jQuery('.gray-box-title').click(function(e){
-        e.preventDefault();
+        // e.preventDefault();
         var thisCode = jQuery(this).data('code');
         if(jQuery(this).hasClass('active')){
             jQuery(this).removeClass('active');
