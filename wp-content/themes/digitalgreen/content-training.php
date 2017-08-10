@@ -32,7 +32,7 @@ get_header('globalimpact'); ?>
             </h5>
         </div>
         <!-- Our Approach Section -->
-        <div class="our-approch">
+        <div class="trainning-courseware our-approch">
             <div class="container">
                 <div class="section-margin">
                     <div class="title-header">
