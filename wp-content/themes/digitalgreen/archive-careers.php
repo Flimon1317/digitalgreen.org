@@ -166,7 +166,7 @@ get_header('globalimpact'); ?>
                     </div> 
                 </div> -->
 
-                <div class="gray-box-tabbing work-gray-box-tabbing" id="ethiopia">
+               <!-- <div class="gray-box-tabbing work-gray-box-tabbing" id="ethiopia">
                     <div class="country-with-opening">
                         <h2>Ethiopia</h2>
                         <div class="custom-class-slideshow">
@@ -236,9 +236,9 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                     </div> 
-                </div>
+                </div> -->
  
-                <div class="opening-discription">
+               <!-- <div class="opening-discription">
                     <div class="current-opening-disc" data-code="code5">
                         <h3>Senior Program Manager - Monitoring, Evaluation and Learning.</h3>
                         <div class="opening-details">
@@ -365,7 +365,7 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>  
         </div>

@@ -54,9 +54,17 @@ get_header('globalimpact'); ?>
                                         <div class="image-green-shadow">
                                             <img src="<?php echo ot_get_option('innovation_section1_image'); ?>" class="img-responsive">
                                             <div class="number-count-div text-center">
-                                                <p><?php echo ot_get_option('innovation_section1_image_value1'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section1_image_value2'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section1_image_value3'); ?></p>
+                                                <?php
+      if (function_exists('get_option_tree')){
+        $innovation_section1_image_value1 = ot_get_option( 'innovation_section1_image_value1', array() );
+        if ( ! empty( $innovation_section1_image_value1 ) ) {
+          
+          $i=1;
+          foreach( $innovation_section1_image_value1 as $section ) {
+      ?>  
+
+                                                <p><?php echo $section['innovation_section1_value1']; ?></p>
+<?php } } } ?>
                                             </div>
                                         </div>
                                     </div>
@@ -86,9 +94,20 @@ get_header('globalimpact'); ?>
                                         <div class="image-green-shadow">
                                             <img src="<?php echo ot_get_option('innovation_section2_image'); ?>" class="img-responsive">
                                             <div class="number-count-div text-center">
-                                                <p><?php echo ot_get_option('innovation_section2_image_value1'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section2_image_value2'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section2_image_value3'); ?></p>
+<?php
+      if (function_exists('get_option_tree')){
+        $innovation_section2_image_value1 = ot_get_option( 'innovation_section2_image_value1', array() );
+        if ( ! empty( $innovation_section2_image_value1 ) ) {
+          
+          $i=1;
+          foreach( $innovation_section2_image_value1 as $section ) {
+      ?>  
+
+                                                <p><?php echo $section['innovation_section2_value1']; ?></p>
+<?php } } } ?> 
+
+                                             <!--   <p><?php echo ot_get_option('innovation_section2_image_value2'); ?></p>
+                                                <p><?php echo ot_get_option('innovation_section2_image_value3'); ?></p> -->
                                             </div>
                                         </div>
                                     </div>
@@ -118,9 +137,19 @@ get_header('globalimpact'); ?>
                                         <div class="image-green-shadow">
                                             <img src="<?php echo ot_get_option('innovation_section3_image'); ?>" class="img-responsive">
                                             <div class="number-count-div text-center">
-                                                <p><?php echo ot_get_option('innovation_section3_image_value1'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section3_image_value2'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section3_image_value3'); ?></p>
+                                                <?php
+      if (function_exists('get_option_tree')){
+        $innovation_section3_image_value1 = ot_get_option( 'innovation_section3_image_value1', array() );
+        if ( ! empty( $innovation_section3_image_value1 ) ) {
+          
+          $i=1;
+          foreach( $innovation_section3_image_value1 as $section ) {
+      ?>  
+
+                                                <p><?php echo $section['innovation_section3_value1']; ?></p>
+<?php } } } ?> 
+                                               <!-- <p><?php echo ot_get_option('innovation_section3_image_value2'); ?></p>
+                                                <p><?php echo ot_get_option('innovation_section3_image_value3'); ?></p> -->
                                             </div>
                                         </div>
                                     </div>
@@ -150,9 +179,17 @@ get_header('globalimpact'); ?>
                                         <div class="image-green-shadow">
                                             <img src="<?php echo ot_get_option('innovation_section4_image'); ?>" class="img-responsive">
                                             <div class="number-count-div text-center">
-                                                <p><?php echo ot_get_option('innovation_section4_image_value1'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section4_image_value2'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section4_image_value3'); ?></p>
+                                                <?php
+      if (function_exists('get_option_tree')){
+        $innovation_section4_image_value1 = ot_get_option( 'innovation_section4_image_value1', array() );
+        if ( ! empty( $innovation_section4_image_value1 ) ) {
+          
+          $i=1;
+          foreach( $innovation_section4_image_value1 as $section ) {
+      ?>  
+
+                                                <p><?php echo $section['innovation_section4_value1']; ?></p>
+<?php } } } ?> 
                                             </div>
                                         </div>
                                     </div>

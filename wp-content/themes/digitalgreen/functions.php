@@ -680,3 +680,10 @@ function create_resources_taxonomies() {
 
 	register_taxonomy( 'list_resources', array( 'resources' ) , $args );
 }
+
+
+
+
+
+
+

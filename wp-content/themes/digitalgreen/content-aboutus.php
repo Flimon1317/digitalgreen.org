@@ -67,6 +67,7 @@ get_header('globalimpact'); ?>
                         <div class="col-md-6 right-block">
                             <img src="<?php echo ot_get_option('aboutus_video_image'); ?>" class="img-responsive">
                             <a href="#" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
+
                         </div>
                         <div class="col-md-6 left-block">
                             <div class="row img-details">
@@ -241,7 +242,8 @@ get_header('globalimpact'); ?>
                                <div class="img-right-part">
                                    <div class="image-green-shadow">
                                        <img src="<?php echo $section['aboutus_video_community_image']; ?>" class="img-responsive">
-                                       <a href="<?php echo $section['aboutus_video_community_link']; ?>" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
+                                       
+                                       <a href="#" data-url="<?php echo $section['aboutus_video_community_link']; ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
                                    </div>
                                </div>
                             </div>
@@ -252,6 +254,7 @@ get_header('globalimpact'); ?>
                                    <p class="dg-header-5 text-details"><?php echo $section['aboutus_video_community_desc']; ?>
                                    </p>
                                    <a href="<?php echo $section['aboutus_video_community_link']; ?>" class="green-bordered-button learn-more">Learn More</a>
+
                                </div>
                             </div>
                         </div>  
@@ -353,7 +356,7 @@ get_header('globalimpact'); ?>
 <?php } } } ?>
 
 
-                          <!--  <div class="timeline-date">
+                         <!--   <div class="timeline-date">
                                 <div class="date-wrap">
                                     <p class="date">2003</p>
                                 </div>
@@ -512,5 +515,12 @@ $aboutus_financials_array = ot_get_option( 'aboutus_financials_array', array() )
 
 <?php get_footer(); ?>
 
-
+<div id="my-modal">
+        <div class="modal-lg">
+            <div class="modal-content">
+                <a href="#" class="close-video">X</a>
+                <iframe class="video-player" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
  

@@ -36,33 +36,29 @@ function custom_theme_options() {
       ),
       'sidebar'       => '<p>' . __( 'Sidebar content goes here!', 'digitalgreen' ) . '</p>'
     ),
-	
-	//Option Section
-	
+  
+  //Option Section
+  
     'sections'        => array( 
-	
-	/*Header*/
+  
+  /*Header*/
       array(
         'id'          => 'header',
-        'title'       => __( 'Header Section', 'digitalgreen' ),
+        'title'       => __( 'Header and Header Menu Section', 'digitalgreen' ),
       ),
+  
+    /*Bannar*/
+      
+    
+    /*Home Content*/
 
-      /*array(
-        'id'          => 'headermenu',
-        'title'       => __( 'Header Menu Section', 'digitalgreen' ),
-      ),*/
-      
-	  
-	  /*Bannar*/
-      
-	  
-	  /*Home Content*/
-     
-	  /*Home Meet*/
-      array(
+     array(
         'id'          => 'homepage',
         'title'       => __( 'Homepage Settings', 'digitalgreen' ),
       ),
+     
+    /*Home Meet*/
+      
 
       array(
         'id'          => 'globalimpact',
@@ -88,10 +84,10 @@ function custom_theme_options() {
 
       array(
         'id'          => 'news',
-        'title'       => __( 'News,Blogs,Resources Settings', 'digitalgreen' ),
+        'title'       => __( 'News,blogs,resources Settings', 'digitalgreen' ),
       ),
 
-     /* array(
+      /*array(
         'id'          => 'blogs',
         'title'       => __( 'Blogs Settings', 'digitalgreen' ),
       ),
@@ -104,7 +100,7 @@ function custom_theme_options() {
       array(
         'id'          => 'resources1',
         'title'       => __( 'Resources Settings', 'digitalgreen' ),
-      ), */
+      ),*/
 
       array(
         'id'          => 'team',
@@ -125,7 +121,7 @@ function custom_theme_options() {
         'id'          => 'contact',
         'title'       => __( 'Contact Us Settings', 'digitalgreen' ),
       ),
-	  
+    
 
       array(
         'id'          => 'solutions',
@@ -138,7 +134,7 @@ function custom_theme_options() {
       ),
 
 
-	  array(
+    array(
         'id'          => 'india',
         'title'       => __( 'India Settings', 'digitalgreen' ),
       ),
@@ -161,17 +157,18 @@ function custom_theme_options() {
     array(
         'id'          => 'communityvideos',
         'title'       => __( 'Community Videos Settings', 'digitalgreen' ),
-      ),  
-	
+      ), 
+
+
+   array(
+        'id'          => 'financials',
+        'title'       => __( 'Financials Section', 'digitalgreen' ),
+      ), 
+  
     array(
         'id'          => 'innovation',
         'title'       => __( 'Innovation Settings', 'digitalgreen' ),
       ),  
-
-    array(
-        'id'          => 'financials',
-        'title'       => __( 'Financials Section', 'digitalgreen' ),
-      ),
 
     array(
         'id'          => 'donate',
@@ -183,37 +180,42 @@ function custom_theme_options() {
         'id'          => 'footer',
         'title'       => __( 'Footer Section', 'digitalgreen' ),
       ),
-	  
-	  
-    ),
-	
-	//Option Settings
-	
-    'settings'        => array( 
-	
-	
-	//Header Favicon
-	  //logo
 
-  array(
+      
+    
+    
+    ),
+  
+  //Option Settings
+  
+    'settings'        => array( 
+  
+  
+  //Header Favicon
+    //logo
+
+
+   
+    
+    //main logo
+
+
+ array(
     'id' => 'logo_tab',
     'label' => 'Logo',
     'type' => 'tab',
     'section' => 'header'
     ),
-	 
-	  
-	  //main logo
-	 array(
+   array(
         'id'          => 'header_logo',
         'label'       => __( 'Header Main Logo', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'header',
       ),
-	  
-	    
-	  array(
+    
+      
+    array(
     'id' => 'menu_tab',
     'label' => 'Global Impact',
     'type' => 'tab',
@@ -237,12 +239,7 @@ function custom_theme_options() {
               'section'     => 'global_impact',
               ),
 
-               array(
-              'id'          => 'global_description',
-              'label'       => __( 'Add Description', 'digitalgreen' ),
-              'type'        => 'text',
-              'section'     => 'global_impact',
-              ),
+               
 
                array(
               'id'          => 'global_link',
@@ -278,12 +275,7 @@ function custom_theme_options() {
               'section'     => 'solution_impact',
               ),
 
-               array(
-              'id'          => 'solution_description',
-              'label'       => __( 'Add Description', 'digitalgreen' ),
-              'type'        => 'text',
-              'section'     => 'solution_impact',
-              ),
+              
 
                array(
               'id'          => 'solution_link',
@@ -319,12 +311,7 @@ function custom_theme_options() {
               'section'     => 'about_impact',
               ),
 
-               array(
-              'id'          => 'about_description',
-              'label'       => __( 'Add Description', 'digitalgreen' ),
-              'type'        => 'text',
-              'section'     => 'about_impact',
-              ),
+               
 
                array(
               'id'          => 'about_link',
@@ -337,29 +324,29 @@ function custom_theme_options() {
       ),  
 
 
-	  
-	 
+    
+   
     array(
-		'id' => 'banner_tab',
-		'label' => 'Banner',
-		'type' => 'tab',
-		'section' => 'homepage'
-		),
-	 	
+    'id' => 'banner_tab',
+    'label' => 'Banner',
+    'type' => 'tab',
+    'section' => 'homepage'
+    ),
+    
 
-	  //Banner Image
+    //Banner Image
 
     array(
         'id'          => 'home_banner1',
         'label'       => __( 'Banner Image1', 'digitalgreen' ),
-		'desc'        => 'Upload Banner image 1',
+    'desc'        => 'Upload Banner image 1',
         'type'        => 'upload',
         'section'     => 'homepage',
       ),
     array(
         'id'          => 'home_banner1_text',
         'label'       => __( 'Banner Image1 Description', 'digitalgreen' ),
-		'desc'        => 'Enter Banner Description',
+    'desc'        => 'Enter Banner Description',
         'type'        => 'text',
         'section'     => 'homepage',
       ),
@@ -367,14 +354,14 @@ function custom_theme_options() {
     array(
         'id'          => 'home_banner2',
         'label'       => __( 'Banner Image2', 'digitalgreen' ),
-		'desc'        => 'Upload Banner image 2',
+    'desc'        => 'Upload Banner image 2',
         'type'        => 'upload',
         'section'     => 'homepage',
       ),
     array(
         'id'          => 'home_banner2_text',
         'label'       => __( 'Banner Image2 Description', 'digitalgreen' ),
-		'desc'        => 'Enter Banner Description',
+    'desc'        => 'Enter Banner Description',
         'type'        => 'text',
         'section'     => 'homepage',
       ),
@@ -382,7 +369,7 @@ function custom_theme_options() {
     array(
         'id'          => 'home_banner3',
         'label'       => __( 'Banner Image3', 'digitalgreen' ),
-		'desc'        => 'Upload Banner image 3',
+    'desc'        => 'Upload Banner image 3',
         'type'        => 'upload',
         'section'     => 'homepage',
       ),
@@ -390,7 +377,7 @@ function custom_theme_options() {
     array(
         'id'          => 'home_banner3_text',
         'label'       => __( 'Banner Image3 Description', 'digitalgreen' ),
-		'desc'        => 'Enter Banner Description',
+    'desc'        => 'Enter Banner Description',
         'type'        => 'text',
         'section'     => 'homepage',
       ),
@@ -432,14 +419,14 @@ function custom_theme_options() {
 
           )
       ),
-	 
+   
     
     array(
-		'id' => 'solutions_tab',
-		'label' => 'Our Solutions',
-		'type' => 'tab',
-		'section' => 'homepage'
-		),
+    'id' => 'solutions_tab',
+    'label' => 'Our Solutions',
+    'type' => 'tab',
+    'section' => 'homepage'
+    ),
    
    array(
         'id'          => 'solutions_title',
@@ -453,7 +440,7 @@ function custom_theme_options() {
     array(
         'id'          => 'solutions_description',
         'label'       => __( 'Our Solutions Description', 'digitalgreen' ),
-		'desc'        => 'Enter Description',
+    'desc'        => 'Enter Description',
         'type'        => 'text',
         'section'     => 'homepage',
       ),
@@ -505,19 +492,19 @@ function custom_theme_options() {
 
           )
       ),
-	 
+   
     
     
 
-	array(
-		'id' => 'innovation_tab',
-		'label' => 'Innovation Lab',
-		'type' => 'tab',
-		'section' => 'homepage'
-		),				
+  array(
+    'id' => 'innovation_tab',
+    'label' => 'Innovation Lab',
+    'type' => 'tab',
+    'section' => 'homepage'
+    ),        
 
-	 
-	 array(
+   
+   array(
         'id'          => 'innovation_image',
         'label'       => __( 'Upload', 'digitalgreen' ),
         'type'        => 'upload',
@@ -531,23 +518,23 @@ function custom_theme_options() {
         'section'     => 'homepage',
       ),
 
-	 array(
+   array(
         'id'          => 'innovation_description',
         'label'       => __( 'Innovation Description', 'digitalgreen' ),
         'type'        => 'text',
         'section'     => 'homepage',
       ),
 
-	 
+   
 
-	 array(
+   array(
         'id'          => 'innovation_quote',
         'label'       => __( 'Quote', 'digitalgreen' ),
         'type'        => 'text',
         'section'     => 'homepage',
       ),
 
-	 array(
+   array(
         'id'          => 'innovation_quoter',
         'label'       => __( 'Innovation Quote By', 'digitalgreen' ),
         'type'        => 'text',
@@ -556,55 +543,55 @@ function custom_theme_options() {
 
     
 
-	 
+   
     
     array(
-		'id' => 'awards_tab',
-		'label' => 'Awards',
-		'type' => 'tab',
-		'section' => 'homepage'
-		),
+    'id' => 'awards_tab',
+    'label' => 'Awards',
+    'type' => 'tab',
+    'section' => 'homepage'
+    ),
 
    array(
         'id'          => 'award_title',
         'label'       => __( 'Award Title', 'digitalgreen' ),
         'type'        => 'text',
         'section'     => 'homepage',
-      ),	
+      ),  
 
     array(
         'id'          => 'awards_home',
         'label'       => __( 'Awards Section', 'digitalgreen' ),
-		'desc'        => '',
+    'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',
         'section'     => 'homepage',
-		'settings'	  => array(
-						//Body Icon details
-						 array(
-							'id'          => 'awards_image',
-							'label'       => __( 'Add Award Image', 'digitalgreen' ),
-							'desc'        => 'Upload Picture',
-							'std'         => '',
-							'type'        => 'upload',
-							'section'     => 'awards_home',
-						  ),
-						  
-						   array(
-							'id'          => 'title',
-							'label'       => __( 'Add Name', 'digitalgreen' ),
-							'type'        => 'text',
-							'section'     => 'awards_home',
-						  ),
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'awards_image',
+              'label'       => __( 'Add Award Image', 'digitalgreen' ),
+              'desc'        => 'Upload Picture',
+              'std'         => '',
+              'type'        => 'upload',
+              'section'     => 'awards_home',
+              ),
+              
+               array(
+              'id'          => 'title',
+              'label'       => __( 'Add Name', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'awards_home',
+              ),
 
-						   
+               
 
-						   array(
-							'id'          => 'awards_description',
-							'label'       => __( 'Add Description', 'digitalgreen' ),
-							'type'        => 'text',
-							'section'     => 'awards_home',
-						  ),
+               array(
+              'id'          => 'awards_description',
+              'label'       => __( 'Add Description', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'awards_home',
+              ),
 
                array(
               'id'          => 'awards_link',
@@ -613,30 +600,30 @@ function custom_theme_options() {
               'section'     => 'awards_home',
               ),
 
-					)
+          )
       ),
 
 
       array(
-		'id' => 'example_banner_tab',
-		'label' => 'Banner',
-		'type' => 'tab',
-		'section' => 'example'
-		),	
-	array(
+    'id' => 'example_banner_tab',
+    'label' => 'Banner',
+    'type' => 'tab',
+    'section' => 'example'
+    ),  
+  array(
         'id'          => 'example_banner_image',
         'label'       => __( 'Banner Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'example',
       ),
-	array(        
+  array(        
       'id'          => 'example_banner_title',        
       'label'       => __( 'Title', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'example',      
       ),
-	array(        
+  array(        
       'id'          => 'example_banner_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -644,27 +631,27 @@ function custom_theme_options() {
       ),
 
             
-	
-	array(
-		'id' => 'global_banner_tab',
-		'label' => 'Banner',
-		'type' => 'tab',
-		'section' => 'globalimpact'
-		),	
-	array(
+  
+  array(
+    'id' => 'global_banner_tab',
+    'label' => 'Banner',
+    'type' => 'tab',
+    'section' => 'globalimpact'
+    ),  
+  array(
         'id'          => 'global_banner_image',
         'label'       => __( 'Banner Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalimpact',
       ),
-	array(        
+  array(        
       'id'          => 'global_banner_title',        
       'label'       => __( 'Title', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'globalimpact',      
       ),
-	array(        
+  array(        
       'id'          => 'global_banner_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -678,12 +665,12 @@ function custom_theme_options() {
       'section'     => 'globalimpact',      
       ),
 
-	array(
-		'id' => 'global_india_tab',
-		'label' => 'Section 1',
-		'type' => 'tab',
-		'section' => 'globalimpact'
-		),
+  array(
+    'id' => 'global_india_tab',
+    'label' => 'Section 1',
+    'type' => 'tab',
+    'section' => 'globalimpact'
+    ),
 
   array(        
       'id'          => 'global_india_title',        
@@ -691,8 +678,8 @@ function custom_theme_options() {
       'type'        => 'text',        
       'section'     => 'globalimpact',      
       ),
-	
-	array(        
+  
+  array(        
       'id'          => 'global_india_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -701,11 +688,11 @@ function custom_theme_options() {
       array(
         'id'          => 'global_india_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalimpact',
       ),
-	
+  
 
 
       
@@ -739,16 +726,16 @@ function custom_theme_options() {
       'type'        => 'text',        
       'section'     => 'globalimpact',      
       ),
-		
+    
 
-	
+  
 
-	array(
-		'id' => 'global_ethopia_tab',
-		'label' => 'Section 2',
-		'type' => 'tab',
-		'section' => 'globalimpact'
-		),
+  array(
+    'id' => 'global_ethopia_tab',
+    'label' => 'Section 2',
+    'type' => 'tab',
+    'section' => 'globalimpact'
+    ),
 
   array(        
       'id'          => 'global_ethopia_title',        
@@ -756,21 +743,21 @@ function custom_theme_options() {
       'type'        => 'text',        
       'section'     => 'globalimpact',      
       ),
-	
-	array(        
+  
+  array(        
       'id'          => 'global_ethopia_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'globalimpact',      
       ),
-	array(
+  array(
         'id'          => 'global_ethopia_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalimpact',
       ),
-	array(
+  array(
         'id'          => 'global_ethopia_image_value1',
         'label'       => __( 'Values', 'digitalgreen' ),
     'desc'        => '',
@@ -800,12 +787,12 @@ function custom_theme_options() {
       'section'     => 'globalimpact',      
       ),
 
-	array(
-		'id' => 'global_global_tab',
-		'label' => 'Section 3',
-		'type' => 'tab',
-		'section' => 'globalimpact'
-		),
+  array(
+    'id' => 'global_global_tab',
+    'label' => 'Section 3',
+    'type' => 'tab',
+    'section' => 'globalimpact'
+    ),
 
   array(        
       'id'          => 'global_global_title',        
@@ -813,22 +800,22 @@ function custom_theme_options() {
       'type'        => 'text',        
       'section'     => 'globalimpact',      
       ),
-	
-	array(        
+  
+  array(        
       'id'          => 'global_global_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'globalimpact',      
       ),
-	array(
+  array(
         'id'          => 'global_global_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalimpact',
       ),
-	
-	array(
+  
+  array(
         'id'          => 'global_global_image_value1',
         'label'       => __( 'Values', 'digitalgreen' ),
     'desc'        => '',
@@ -860,11 +847,11 @@ function custom_theme_options() {
       ),
 
       array(
-		'id' => 'global_case_study_tab',
-		'label' => 'Case Studies',
-		'type' => 'tab',
-		'section' => 'globalimpact'
-		), 
+    'id' => 'global_case_study_tab',
+    'label' => 'Case Studies',
+    'type' => 'tab',
+    'section' => 'globalimpact'
+    ), 
 
       array(        
       'id'          => 'global_casestudy_desc',        
@@ -876,18 +863,18 @@ function custom_theme_options() {
       array(
         'id'          => 'global_casestudy_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalimpact',
       ),
 
 
       array(
-		'id' => 'global_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'globalimpact'
-		), 
+    'id' => 'global_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'globalimpact'
+    ), 
 
       array(        
       'id'          => 'global_solution_title',        
@@ -906,7 +893,7 @@ function custom_theme_options() {
       array(
         'id'          => 'global_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalimpact',
       ),
@@ -951,19 +938,19 @@ function custom_theme_options() {
 
 
       array(
-		'id' => 'global_initiatives_banner_tab',
-		'label' => 'Banner',
-		'type' => 'tab',
-		'section' => 'globalinitiatives'
-		),	
-	array(
+    'id' => 'global_initiatives_banner_tab',
+    'label' => 'Banner',
+    'type' => 'tab',
+    'section' => 'globalinitiatives'
+    ),  
+  array(
         'id'          => 'global_initiatives_banner_image',
         'label'       => __( 'Banner Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalinitiatives',
       ),
-	array(        
+  array(        
       'id'          => 'global_initiatives_banner_title',        
       'label'       => __( 'Title', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -971,7 +958,7 @@ function custom_theme_options() {
       ),
 
         
-	array(        
+  array(        
       'id'          => 'global_initiatives_banner_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -985,12 +972,12 @@ function custom_theme_options() {
       'section'     => 'globalinitiatives',      
       ),
 
-	array(
-		'id' => 'global_initiatives_india_tab',
-		'label' => 'Section1',
-		'type' => 'tab',
-		'section' => 'globalinitiatives'
-		),
+  array(
+    'id' => 'global_initiatives_india_tab',
+    'label' => 'Section1',
+    'type' => 'tab',
+    'section' => 'globalinitiatives'
+    ),
 
        array(        
       'id'          => 'global_initiatives_india_title',        
@@ -998,22 +985,22 @@ function custom_theme_options() {
       'type'        => 'text',        
       'section'     => 'globalinitiatives',      
       ),
-	
-	array(        
+  
+  array(        
       'id'          => 'global_initiatives_india_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'globalinitiatives',      
       ),
-	array(
+  array(
         'id'          => 'global_initiatives_india_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalinitiatives',
       ),
-	
-	array(
+  
+  array(
         'id'          => 'global_initiatives_india_image_value1',
         'label'       => __( 'Values', 'digitalgreen' ),
     'desc'        => '',
@@ -1044,14 +1031,14 @@ function custom_theme_options() {
       'section'     => 'globalinitiatives',      
       ),
 
-	
+  
 
-	array(
-		'id' => 'global_initiatives_ethopia_tab',
-		'label' => 'Section2',
-		'type' => 'tab',
-		'section' => 'globalinitiatives'
-		),
+  array(
+    'id' => 'global_initiatives_ethopia_tab',
+    'label' => 'Section2',
+    'type' => 'tab',
+    'section' => 'globalinitiatives'
+    ),
 
        array(        
       'id'          => 'global_initiatives_ethopia_title',        
@@ -1059,22 +1046,22 @@ function custom_theme_options() {
       'type'        => 'text',        
       'section'     => 'globalinitiatives',      
       ),
-	
-	array(        
+  
+  array(        
       'id'          => 'global_initiatives_ethopia_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'globalinitiatives',      
       ),
-	array(
+  array(
         'id'          => 'global_initiatives_ethopia_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalinitiatives',
       ),
-	
-	array(
+  
+  array(
         'id'          => 'global_initiatives_ethopia_image_value1',
         'label'       => __( 'Values', 'digitalgreen' ),
     'desc'        => '',
@@ -1104,12 +1091,12 @@ function custom_theme_options() {
       'section'     => 'globalinitiatives',      
       ),
 
-	array(
-		'id' => 'global_initiatives_global_tab',
-		'label' => 'Section3',
-		'type' => 'tab',
-		'section' => 'globalinitiatives'
-		),
+  array(
+    'id' => 'global_initiatives_global_tab',
+    'label' => 'Section3',
+    'type' => 'tab',
+    'section' => 'globalinitiatives'
+    ),
 
         array(        
       'id'          => 'global_initiatives_global_title',        
@@ -1117,22 +1104,22 @@ function custom_theme_options() {
       'type'        => 'text',        
       'section'     => 'globalinitiatives',      
       ),
-	
-	array(        
+  
+  array(        
       'id'          => 'global_initiatives_global_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'globalinitiatives',      
       ),
-	array(
+  array(
         'id'          => 'global_initiatives_global_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
+    'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalinitiatives',
       ),
-	
-	array(
+  
+  array(
         'id'          => 'global_initiatives_global_image_value1',
         'label'       => __( 'Values', 'digitalgreen' ),
     'desc'        => '',
@@ -1163,11 +1150,11 @@ function custom_theme_options() {
       ),
 
        array(
-		'id' => 'global_initiatives_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'globalinitiatives'
-		), 
+    'id' => 'global_initiatives_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'globalinitiatives'
+    ), 
 
       array(        
       'id'          => 'global_initiatives_solution_title',        
@@ -1186,7 +1173,7 @@ function custom_theme_options() {
       array(
         'id'          => 'global_initiatives_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'globalinitiatives',
       ),
@@ -1933,14 +1920,14 @@ array(
 
           )
       ),
-	 
+   
 
      array(
-		'id' => 'solutions_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'solutions'
-		), 
+    'id' => 'solutions_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'solutions'
+    ), 
 
       array(        
       'id'          => 'solution_solution_title',        
@@ -1959,7 +1946,7 @@ array(
       array(
         'id'          => 'solution_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'solutions',
       ),
@@ -2319,7 +2306,7 @@ array(
     'id' => 'ethopia_quote_tab',
     'label' => 'ethopia Quote Tab',
     'type' => 'tab',
-    'section' => 'india'
+    'section' => 'ethopia'
     ),
 
     array(
@@ -2496,9 +2483,7 @@ array(
       'section'     => 'loop',      
       ),
 
-
-     //
-  
+    
 
   array(
     'id' => 'loop_what_tab',
@@ -2567,51 +2552,6 @@ array(
   array(        
       'id'          => 'loop_how_link',        
       'label'       => __( 'link', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'loop',      
-      ),
-
-
-  //
-           array(
-    'id' => 'loop_product_tab_2',
-    'label' => 'Product Showcase 2',
-    'type' => 'tab',
-    'section' => 'loop'
-    ),
-
-    array(
-        'id'          => 'loop_product_image2',
-        'label'       => __( 'Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'loop',
-      ),
-
-    array(        
-      'id'          => 'loop_product_title2',        
-      'label'       => __( 'Title', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'loop',      
-      ),
-    array(        
-      'id'          => 'loop_product_desc2',        
-      'label'       => __( 'Description', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'loop',      
-      ), 
-
-    array(
-        'id'          => 'loop_product_show_image2',
-        'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'loop',
-      ),
-
-     array(        
-      'id'          => 'loop_product_playstore_link2',        
-      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'loop',      
       ),
@@ -2712,11 +2652,11 @@ array(
 
 
       array(
-		'id' => 'loop_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'loop'
-		), 
+    'id' => 'loop_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'loop'
+    ), 
 
       array(        
       'id'          => 'loop_solution_title',        
@@ -2735,7 +2675,7 @@ array(
       array(
         'id'          => 'loop_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'loop',
       ),
@@ -2984,50 +2924,6 @@ array(
       'type'        => 'text',        
       'section'     => 'training',      
       ),
-
-  //
-      array(
-    'id' => 'training_product_tab2',
-    'label' => 'Product Showcase 2',
-    'type' => 'tab',
-    'section' => 'training'
-    ),
-
-    array(
-        'id'          => 'training_product_image2',
-        'label'       => __( 'Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'training',
-      ),
-
-    array(        
-      'id'          => 'training_product_title2',        
-      'label'       => __( 'Title', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'training',      
-      ),
-    array(        
-      'id'          => 'training_product_desc2',        
-      'label'       => __( 'Description', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'training',      
-      ), 
-
-    array(
-        'id'          => 'training_product_show_image2',
-        'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'training',
-      ),
-
-     array(        
-      'id'          => 'training_product_playstore_link2',        
-      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'training',      
-      ),
    
    array(
     'id' => 'training_screenshots_tab',
@@ -3125,11 +3021,11 @@ array(
 
 
       array(
-		'id' => 'training_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'training'
-		), 
+    'id' => 'training_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'training'
+    ), 
 
       array(        
       'id'          => 'training_solution_title',        
@@ -3148,7 +3044,7 @@ array(
       array(
         'id'          => 'training_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'training',
       ),
@@ -3281,48 +3177,48 @@ array(
           )
       ),
 
-    // array(
-    // 'id' => 'communityvideos_product_tab',
-    // 'label' => 'Product Showcase',
-    // 'type' => 'tab',
-    // 'section' => 'communityvideos'
-    // ),
+    array(
+    'id' => 'communityvideos_product_tab',
+    'label' => 'Product Showcase',
+    'type' => 'tab',
+    'section' => 'communityvideos'
+    ),
 
-    // array(
-    //     'id'          => 'communityvideos_product_image',
-    //     'label'       => __( 'Image', 'digitalgreen' ),
-    // 'desc'        => 'Upload',
-    //     'type'        => 'upload',
-    //     'section'     => 'communityvideos',
-    //   ),
+    array(
+        'id'          => 'communityvideos_product_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'communityvideos',
+      ),
 
-    // array(        
-    //   'id'          => 'communityvideos_product_title',        
-    //   'label'       => __( 'Title', 'digitalgreen' ),        
-    //   'type'        => 'text',        
-    //   'section'     => 'communityvideos',      
-    //   ),
-    // array(        
-    //   'id'          => 'communityvideos_product_desc',        
-    //   'label'       => __( 'Description', 'digitalgreen' ),        
-    //   'type'        => 'text',        
-    //   'section'     => 'communityvideos',      
-    //   ), 
+    array(        
+      'id'          => 'communityvideos_product_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'communityvideos',      
+      ),
+    array(        
+      'id'          => 'communityvideos_product_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'communityvideos',      
+      ), 
 
-    // array(
-    //     'id'          => 'communityvideos_product_show_image',
-    //     'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    // 'desc'        => 'Upload',
-    //     'type'        => 'upload',
-    //     'section'     => 'communityvideos',
-    //   ),
+    array(
+        'id'          => 'communityvideos_product_show_image',
+        'label'       => __( 'Show Case Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'communityvideos',
+      ),
 
-    // array(        
-    //   'id'          => 'communityvideos_product_playstore_link',        
-    //   'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
-    //   'type'        => 'text',        
-    //   'section'     => 'communityvideos',      
-    //   ),
+    array(        
+      'id'          => 'communityvideos_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'communityvideos',      
+      ),
 
     
 
@@ -3396,53 +3292,8 @@ array(
       'type'        => 'text',        
       'section'     => 'communityvideos',      
       ),
-
-
-  //
-  array(
-    'id' => 'communityvideos_product_tab',
-    'label' => 'Product Showcase',
-    'type' => 'tab',
-    'section' => 'communityvideos'
-    ),
-
-    array(
-        'id'          => 'communityvideos_product_image',
-        'label'       => __( 'Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'communityvideos',
-      ),
-
-    array(        
-      'id'          => 'communityvideos_product_title',        
-      'label'       => __( 'Title', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'communityvideos',      
-      ),
-    array(        
-      'id'          => 'communityvideos_product_desc',        
-      'label'       => __( 'Description', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'communityvideos',      
-      ), 
-
-    array(
-        'id'          => 'communityvideos_product_show_image',
-        'label'       => __( 'Show Case Image', 'digitalgreen' ),
-    'desc'        => 'Upload',
-        'type'        => 'upload',
-        'section'     => 'communityvideos',
-      ),
-
-    array(        
-      'id'          => 'communityvideos_product_playstore_link',        
-      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'communityvideos',      
-      ),
    
-   array(
+   /*array(
     'id' => 'communityvideos_screenshots_tab',
     'label' => 'Screenshots',
     'type' => 'tab',
@@ -3476,7 +3327,7 @@ array(
               
 
           )
-      ),
+      ), */
 
 
 array(
@@ -3538,11 +3389,11 @@ array(
 
 
       array(
-		'id' => 'communityvideos_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'communityvideos'
-		), 
+    'id' => 'communityvideos_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'communityvideos'
+    ), 
 
       array(        
       'id'          => 'communityvideos_solution_title',        
@@ -3561,7 +3412,7 @@ array(
       array(
         'id'          => 'communityvideos_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'communityvideos',
       ),
@@ -3663,7 +3514,7 @@ array(
         'type'        => 'upload',
         'section'     => 'innovation',
       ),
-  array(        
+  /*array(        
       'id'          => 'innovation_section1_image_value1',        
       'label'       => __( 'Value 1', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -3680,7 +3531,32 @@ array(
       'label'       => __( 'Value 3', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'innovation',      
+      ), */
+
+  array(
+        'id'          => 'innovation_section1_image_value1',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'innovation',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'innovation_section1_value1',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'innovation_section1_image_value1',
+              ),
+
+              
+
+          )
       ),
+
+
 
   array(        
       'id'          => 'innovation_section1_link',        
@@ -3717,7 +3593,7 @@ array(
         'type'        => 'upload',
         'section'     => 'innovation',
       ),
-  array(        
+  /*array(        
       'id'          => 'innovation_section2_image_value1',        
       'label'       => __( 'Value 1', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -3734,6 +3610,29 @@ array(
       'label'       => __( 'Value 3', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'innovation',      
+      ), */
+
+  array(
+        'id'          => 'innovation_section2_image_value1',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'innovation',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'innovation_section2_value1',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'innovation_section2_image_value1',
+              ),
+
+              
+
+          )
       ),
 
   array(        
@@ -3771,7 +3670,7 @@ array(
         'type'        => 'upload',
         'section'     => 'innovation',
       ),
-  array(        
+ /* array(        
       'id'          => 'innovation_section3_image_value1',        
       'label'       => __( 'Value 1', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -3788,7 +3687,30 @@ array(
       'label'       => __( 'Value 3', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'innovation',      
-      ), 
+      ), */
+
+  array(
+        'id'          => 'innovation_section3_image_value1',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'innovation',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'innovation_section3_value1',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'innovation_section3_image_value1',
+              ),
+
+              
+
+          )
+      ),
 
   array(        
       'id'          => 'innovation_section3_link',        
@@ -3824,7 +3746,7 @@ array(
         'type'        => 'upload',
         'section'     => 'innovation',
       ),
-  array(        
+  /*array(        
       'id'          => 'innovation_section4_image_value1',        
       'label'       => __( 'Value 1', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -3841,6 +3763,29 @@ array(
       'label'       => __( 'Value 3', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'innovation',      
+      ), */
+
+  array(
+        'id'          => 'innovation_section4_image_value1',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'innovation',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'innovation_section4_value1',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'innovation_section4_image_value1',
+              ),
+
+              
+
+          )
       ),
 
   array(        
@@ -4123,7 +4068,7 @@ array(
       'section'     => 'solutionscoco',      
       ),
    
-   array(
+   /*array(
     'id' => 'solutionscoco_screenshots_tab',
     'label' => 'Screenshots',
     'type' => 'tab',
@@ -4157,7 +4102,7 @@ array(
               
 
           )
-      ),
+      ), */
 
 
 array(
@@ -4219,11 +4164,11 @@ array(
 
 
       array(
-		'id' => 'solutionscoco_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'solutionscoco'
-		), 
+    'id' => 'solutionscoco_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'solutionscoco'
+    ), 
 
       array(        
       'id'          => 'solutionscoco_solution_title',        
@@ -4242,7 +4187,7 @@ array(
       array(
         'id'          => 'solutionscoco_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'solutionscoco',
       ),
@@ -4285,7 +4230,7 @@ array(
       'section'     => 'solutionscoco',      
       ),
 
-	   array(
+     array(
     'id' => 'careers_banner_tab',
     'label' => 'Banner',
     'type' => 'tab',
@@ -4427,11 +4372,11 @@ array(
       ),
 
    array(
-		'id' => 'careers_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'careers'
-		), 
+    'id' => 'careers_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'careers'
+    ), 
 
       array(        
       'id'          => 'careers_solution_title',        
@@ -4450,7 +4395,7 @@ array(
       array(
         'id'          => 'careers_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'careers',
       ),
@@ -4614,7 +4559,7 @@ array(
 
     array(
     'id' => 'banner_resources1_tab',
-    'label' => 'Resource Banner',
+    'label' => 'Resources Banner',
     'type' => 'tab',
     'section' => 'news'
     ),  
@@ -4829,11 +4774,11 @@ array(
       ),
 
      array(
-		'id' => 'casestudy_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'casestudy'
-		), 
+    'id' => 'casestudy_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'casestudy'
+    ), 
 
       array(        
       'id'          => 'casestudy_solution_title',        
@@ -4852,7 +4797,7 @@ array(
       array(
         'id'          => 'casestudy_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'casestudy',
       ),
@@ -4897,7 +4842,7 @@ array(
 
 
   
-     //Financials
+     
       
       array(
     'id' => 'financial_tab',
@@ -5003,11 +4948,11 @@ array(
 
 
       array(
-		'id' => 'financial_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'financials'
-		), 
+    'id' => 'financial_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'financials'
+    ), 
 
       array(        
       'id'          => 'financial_solution_title',        
@@ -5026,7 +4971,7 @@ array(
       array(
         'id'          => 'financial_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'financials',
       ),
@@ -5069,18 +5014,12 @@ array(
       'section'     => 'financials',      
       ),
 
-	  //main logo
-	
-     array(
-        'id'          => 'footer_logo',
-        'label'       => __( 'Footer Logo', 'digitalgreen' ),
-		'desc'        => 'Upload Your Logo',
-        'type'        => 'upload',
-        'section'     => 'footer',
-      ),
+    //main logo
+  
+     
 
 
-	 array(        
+   array(        
       'id'          => 'footer_facebook',        
       'label'       => __( 'Facebook Url', 'digitalgreen' ),        
       'type'        => 'text',        
@@ -5088,46 +5027,46 @@ array(
       ),
 
       array(        
-      	'id'          => 'footer_twitter',        
-      	'label'       => __( 'Twitter Url', 'digitalgreen' ),        
-      	'type'        => 'text',        
-      	'section'     => 'footer',      
-      	),
+        'id'          => 'footer_twitter',        
+        'label'       => __( 'Twitter Url', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'footer',      
+        ),
 
       array(        
-      	'id'          => 'footer_linkedIn',        
-      	'label'       => __( 'LinkedIn Url', 'digitalgreen' ),        
-      	'type'        => 'text',        
-      	'section'     => 'footer',      
-      	),
+        'id'          => 'footer_linkedIn',        
+        'label'       => __( 'LinkedIn Url', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'footer',      
+        ),
 
        array(        
-      	'id'          => 'footer_google+',        
-      	'label'       => __( 'Google+ Url', 'digitalgreen' ),        
-      	'type'        => 'text',        
-      	'section'     => 'footer',      
-      	),
+        'id'          => 'footer_google+',        
+        'label'       => __( 'Google+ Url', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'footer',      
+        ),
 
        array(        
-      	'id'          => 'footer_flickr',        
-      	'label'       => __( 'Flickr Url', 'digitalgreen' ),        
-      	'type'        => 'text',        
-      	'section'     => 'footer',      
-      	),
+        'id'          => 'footer_flickr',        
+        'label'       => __( 'Flickr Url', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'footer',      
+        ),
 
       array(        
-      	'id'          => 'footer_vimeo',        
-      	'label'       => __( 'Vimeo Url', 'digitalgreen' ),        
-      	'type'        => 'text',        
-      	'section'     => 'footer',      
-      	),
+        'id'          => 'footer_vimeo',        
+        'label'       => __( 'Vimeo Url', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'footer',      
+        ),
 
        array(        
-      	'id'          => 'footer_instagram',        
-      	'label'       => __( 'Instagram Url', 'digitalgreen' ),        
-      	'type'        => 'text',        
-      	'section'     => 'footer',      
-      	),
+        'id'          => 'footer_instagram',        
+        'label'       => __( 'Instagram Url', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'footer',      
+        ),
       
       array(
     'id' => 'team_banner_tab',
@@ -5165,6 +5104,13 @@ array(
   array(        
       'id'          => 'team_about_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'team',      
+      ),
+
+ array(        
+      'id'          => 'team_team_title',        
+      'label'       => __( 'Team First Category in Team page', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'team',      
       ),
@@ -5208,8 +5154,16 @@ array(
               'type'        => 'text',
               'section'     => 'team_team',
               ),
+             
 
           )
+      ),
+
+  array(        
+      'id'          => 'team_board_title',        
+      'label'       => __( 'Board First Category Title in team page', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'team',      
       ),
 
   array(
@@ -5255,11 +5209,11 @@ array(
       ),
 
     array(
-		'id' => 'team_solutions_tab',
-		'label' => 'Featured tab',
-		'type' => 'tab',
-		'section' => 'team'
-		), 
+    'id' => 'team_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'team'
+    ), 
 
       array(        
       'id'          => 'team_solution_title',        
@@ -5278,7 +5232,7 @@ array(
       array(
         'id'          => 'team_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
-	'desc'        => 'Upload Your Logo',
+  'desc'        => 'Upload Your Logo',
         'type'        => 'upload',
         'section'     => 'team',
       ),
@@ -5321,40 +5275,7 @@ array(
       'section'     => 'team',      
       ),
 
-  array(
-    'id' => 'donate_banner_tab',
-    'label' => 'Banner',
-    'type' => 'tab',
-    'section' => 'donate'
-    ),
-
-  array(
-        'id'          => 'donate_banner_image',
-        'label'       => __( 'Banner Image', 'digitalgreen' ),
-    'desc'        => 'Upload Your Logo',
-        'type'        => 'upload',
-        'section'     => 'donate',
-      ),
-
-  array(        
-      'id'          => 'donate_banner_title',        
-      'label'       => __( 'Title', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'donate',      
-      ),
   
-  array(        
-      'id'          => 'donate_banner_desc',        
-      'label'       => __( 'Description', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'donate',      
-      ),
-  array(        
-      'id'          => 'donate_banner_link',        
-      'label'       => __( 'Link', 'digitalgreen' ),        
-      'type'        => 'text',        
-      'section'     => 'donate',      
-      ),
 
 
   array(
@@ -5474,13 +5395,6 @@ array(
         'section'     => 'contact',
       ),
 
-  array(
-        'id'          => 'contact_heading',
-        'label'       => __( 'Banner Sub Title', 'digitalgreen' ),
-    'desc'        => 'Heading',
-        'type'        => 'text',
-        'section'     => 'contact',
-      ),
 
   array(
         'id'          => 'contact_desc',
@@ -5529,10 +5443,49 @@ array(
           )
       ),
 
+
+
+
+  array(
+        'id'          => 'donate_banner_image',
+        'label'       => __( 'Banner Image', 'digitalgreen' ),
+    'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'donate',
+      ),
+
+  array(        
+      'id'          => 'donate_banner_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'donate',      
+      ),
+  
+  array(        
+      'id'          => 'donate_banner_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'donate',      
+      ),
+  array(        
+      'id'          => 'donate_banner_link',        
+      'label'       => __( 'Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'donate',      
+      ),
+
+
+
+   
+
+
+ 
+
+
       
 
-	  
-		
+    
+    
     )
   );
   
