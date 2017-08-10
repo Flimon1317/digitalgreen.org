@@ -136,6 +136,13 @@ input[type="text"]:focus, input[type="email"]:focus, width input[type="password"
 input:visited, textarea:visited, input:focus, textarea:focus {
   outline: none; }
 
+li > b{
+  font-weight: bolder;
+  padding: 10px 15px;
+  color: #9BA0A7;
+}
+
+
 .dg-header-1, h1 {
   font-size: 45px;
   color: #3D3D3F;
@@ -458,19 +465,15 @@ nav:hover > .navbar-collapse ul > li > a {
   border-top : solid 3px #65E214 ;
 }
 
+
 .dropdown-menu > li {
-  padding: 15px 15px;
+  padding: 10px 15px;
 }
 ul.dropdown-menu > li > a {
-  color: #000;
-}
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-  color: #65E214;
+  color: #9BA0A7;
 }
 
-.dropdown > a:hover {
-  color: #65E214;
-}
+
 
 .mega-dropdown-menu > li > ul {
   padding: 0;
@@ -493,7 +496,7 @@ ul.dropdown-menu > li > a {
   font-weight: bold; }
 
 .inner-pageh .navbar-default .navbar-nav > li > a, .inner-pageh.navbar-default .navbar-nav .open .mobile-sub-menu > li > a {
-  color: #000; }
+  color: #9BA0A7; }
 .inner-pageh .navbar-default .navbar-nav > li:hover > a {
   color: #65E214; }
 .inner-pageh .green-arrow {
