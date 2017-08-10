@@ -132,7 +132,7 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'Partners image')); ?>
                                                     <div class="gray-box-read">
                                                         <div class="partner-title">
-                                                            <h3 class="dg-header-3 text-white"><?php the_title();?></h3>
+                                                            <h5 class="dg-header-6 text-white"><?php the_title();?></h5>
                                                             <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
@@ -183,7 +183,7 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'Partners image')); ?>
                                                     <div class="gray-box-read">
                                                         <div class="partner-title">
-                                                            <h3 class="dg-header-3 text-white"><?php the_title();?></h3>
+                                                            <h5 class="dg-header-6 text-white"><?php the_title();?></h5>
                                                             <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>

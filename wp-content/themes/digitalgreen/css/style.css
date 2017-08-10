@@ -172,6 +172,11 @@ input:visited, textarea:visited, input:focus, textarea:focus {
   letter-spacing: 0.2px;
   line-height: 28px; }
 
+
+.dg-header-6 {
+  font-size: 20px;
+}
+
 .count-global-stat h4 {
   color: #fff;
   font-size: 20px;
