@@ -43,7 +43,7 @@
                             </a>
                             <!-- mobile-sub-menu -->
                             <ul class="dropdown-menu">
-                                <li><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></li>
+                                <li><b><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></b></li>
                                 <?php
       if (function_exists('get_option_tree')){
         $global_impact = ot_get_option( 'global_impact', array() );

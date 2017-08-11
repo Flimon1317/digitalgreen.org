@@ -123,7 +123,7 @@ get_header('home'); ?>
             
       ?>
 
-                            <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?>activity-blocks">
+                            <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12 ';?>activity-blocks">
                                 <a href="<?php echo $section['solutions_array_link']; ?>" >
                                 <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
                                     <div class="image-green-shadow">
@@ -193,8 +193,8 @@ get_header('home'); ?>
                                 <div class="awards-logo"><img src="<?php echo $section['awards_image']; ?>" /></div>
                                 <div class="logo-details hidden-lg hidden-md hidden-sm" data-index="<?php echo $i; ?>">
                                     <span class="triangle-up"></span>
-                                    <h4 class="dg-header-4"><?php echo $section['awards_description']; ?></h4>
-                                    <p class="dg-header-5 text-details"><?php echo $section['awards_description']; ?></p>
+<!--                                     <h4 class="dg-header-4"><?php echo $section['awards_description']; ?></h4>
+ -->                                    <p class="dg-header-5 text-details"><?php echo $section['awards_description']; ?></p>
                                     <a href="<?php echo $section['awards_link']; ?>" class="green-arrow">Read More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                 </div>
                             </li>

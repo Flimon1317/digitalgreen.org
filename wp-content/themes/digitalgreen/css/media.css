@@ -535,8 +535,12 @@
   .slider-section .award-logos-sec, .innovation-lab-section .gray-bgcolor-part .all-side-border, .home-page .activity-blocks {
     opacity: 1; }
 
-  .slider-section .award-logos-sec .logo-details {
+  .slider-section .award-logos-sec .logo-details.hover-on {
     display: block; }
+
+  .dropdown-menu {
+    top:0.2vh;
+  }
 
   .innovation-lab-section .testimonials-details > img {
     opacity: 1;
