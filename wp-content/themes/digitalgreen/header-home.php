@@ -33,7 +33,7 @@
 <body <?php body_class(); ?>>
 
 <body>
-    <header class="page-menu-container header-home" >
+    <header class="page-menu-container header-home">
         <nav class="navbar navbar-default navbar-background-home nav-down">
             <div class="navbar-header">
                 <button class="navbar-toggle green-bordered-button collapsed" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
@@ -54,8 +54,8 @@
                                 </span>
                             </a>
                             <!-- mobile-sub-menu -->
-                            <ul class="dropdown-menu">
-                                <li><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></li>
+                            <ul class="dropdown-menu" style="margin-top: 10px;">
+                                <li><b><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></b></li>
                                 <?php
       if (function_exists('get_option_tree')){
         $global_impact = ot_get_option( 'global_impact', array() );
@@ -117,8 +117,8 @@
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solution</a></li>
+                            <ul class="dropdown-menu" style="margin-top: 10px;">
+                                <li><b><a href="<?php echo esc_url(site_url()); ?>/solutions">Solution</a></b></li>
                                  <?php
       if (function_exists('get_option_tree')){
         $solution_impact = ot_get_option( 'solution_impact', array() );
@@ -189,8 +189,8 @@
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="<?php echo esc_url(site_url()); ?>/about-us">About Us</a></li>
+                            <ul class="dropdown-menu" style="margin-top: 10px;">
+                                <li><b><a href="<?php echo esc_url(site_url()); ?>/about-us">About Us</a></b></li>
                                 <?php
       if (function_exists('get_option_tree')){
         $about_impact = ot_get_option( 'about_impact', array() );
