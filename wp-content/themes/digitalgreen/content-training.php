@@ -125,7 +125,7 @@ get_header('globalimpact'); ?>
             </div>
         </div>
             <div class="container">
-                <div class="row">
+                <div class="trainning-courseware row">
                     <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6 padding-image">
@@ -279,7 +279,7 @@ get_header('globalimpact'); ?>
                                         <img src="<?php echo $section['title_img']; ?>" alt="Community Videos" class="sol-default-img"/>
                                         <img src="<?php echo $section['title_img_hover']; ?>" alt="Community Videos" class="hover-img"/>
                                         <p class="dg-header-5 text-details"><?php echo $section['training_array_description']; ?> </p>
-                                         <a href="<?php echo $section['training_array_link']; ?>" class="purple-bordered-button learn-more">Learn more</a>
+                                         <a href="<?php echo $section['training_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                             </div>
@@ -338,15 +338,15 @@ get_header('globalimpact'); ?>
 <?php } } ?>   
             <div class="stats-container">
                 <div class="container">
-                    <div class="row">
+                    <div class="trainning-courseware row">
                         <div class="col-md-3 work-inner-block">
                             <div class="row our-solution-stats hidden-md hidden-lg">
                                 <div class="col-md-7">
                                     <div class="our-solution-wrap">
                                         <div class="our-solution-box">
-                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('training_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('solution_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title-green"></span>
                                             </h3>
-                                            <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('training_solution_desc'); ?></p>
+                                            <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('solution_solution_desc'); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -383,7 +383,7 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="col-md-9">
                             <div class="stats-right">
-                                <div class="our-solution-stats hidden-sm hidden-xs">
+                                <div class="trainning-courseware our-solution-stats hidden-sm hidden-xs">
                                     <div class="row full-row">
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
@@ -410,7 +410,7 @@ get_header('globalimpact'); ?>
 
 <?php 
 
-$blog_id=ot_get_option('training_solution_blog');
+$blog_id=ot_get_option('solution_solution_blog');
 $auth = get_post($blog_id); // gets author from post
 $blog_title = get_the_title($blog_id);
 
@@ -428,7 +428,7 @@ $blog_permalink = get_the_permalink($blog_id);
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
-                                    </div>
+                                        </div>
                                 </div>
                             </div>
                         </div>

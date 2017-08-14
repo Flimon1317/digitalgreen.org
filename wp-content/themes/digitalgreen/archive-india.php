@@ -342,7 +342,7 @@ get_header('globalimpact'); ?>
                                 <span class="icon icon-up-arrow"></span>
                                 <span class="icon icon-down-arrow"></span>
                             </a>
-                            <div class="collapse-project">
+                            <div class="collapse-projects">
                                 <div class="partners-box">
                                     <h3 class="dg-header-4 news-header">Partner Type</h3>
                                     <div class="row">

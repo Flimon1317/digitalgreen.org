@@ -260,10 +260,10 @@ jQuery(document).ready(function(){
 
     jQuery('.partner-collepse-button').click(function(e){
         e.preventDefault();
-        if(jQuery(this).siblings('.collapse-project').is(':visible')){
-            jQuery(this).siblings('.collapse-project').slideUp();
+        if(jQuery(this).siblings('.collapse-projects').is(':visible')){
+            jQuery(this).siblings('.collapse-projects').slideUp();
         }else{
-            jQuery(this).siblings('.collapse-project').slideDown();
+            jQuery(this).siblings('.collapse-projects').slideDown();
         }
 
         if(jQuery('.partner-collepse-button .icon-down-arrow').is(':visible')){
