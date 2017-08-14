@@ -305,7 +305,7 @@ get_header('globalimpact'); ?>
                         <div class="project-details">
                             <h1 class="dg-header-1"><?php the_title(); ?></h1>
                             <p class="dg-header-5 text-detail hidden-xs"><?php the_content(); ?></p>
-                            <p class="dg-header-5 text-detail hidden-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                            
                         </div>
                         <div class="project-solution">
                             <h3 class="hidden-xs">Solution used</h3>
@@ -316,16 +316,16 @@ get_header('globalimpact'); ?>
   $i=1;  
                                      foreach($ethopia_solutions[0] as $key => $value){  
                                              ?>
-                                    <div class="partner-boxes">
+                                    <!-- <div class="partner-boxes">
                                         <div class="box <?php if($i==1) echo 'blue'; elseif($i==2) echo 'pink'; elseif($i==3) echo 'orange'; elseif($i==4) echo 'purple'; else echo 'pink';?>">
                                             <div class="box-content">
                                             
-                                            <!-- Not Done,should be done by vivek............-->
+                                            
                                                 <img src="<?php echo $value['ethopia_solutions_type1']; ?>" alt="Loop" />
-                                            </div>
+                                            </div> 
                                         </div>
-                                    </div>
-                                    
+                                    </div> -->
+                                    <img src="<?php echo $value['ethopia_solutions_type1']; ?>" alt="Loop" />
                                       <?php  $i++;
                         
                     }

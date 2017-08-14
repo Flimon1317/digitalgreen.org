@@ -689,6 +689,70 @@ ul.dropdown-menu > li > a {
 .fp-scroller {
   height: 100%; }
 
+
+.purple-bordered-button {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px 29px;
+  color: #8f288c;
+  outline: none;
+  margin-top: 30px;
+  transition: all 0.3s;
+  position: relative;
+  border: 0;
+  border-bottom: 2px solid #8f288c;
+  border-right: 2px solid #8f288c;
+  background-position: right bottom;
+  line-height: 14px;
+  min-width: 180px;
+  text-align: center;
+  text-transform: capitalize; }
+  .purple-bordered-button:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-left: 2px solid #8f288c;
+    bottom: 0; }
+  .purple-bordered-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-top: 2px solid #8f288c;
+    right: 0; }
+  .purple-bordered-button:hover {
+    color: #fff;
+    background: linear-gradient(to left, transparent 49%, #8f288c 50%);
+    background-size: 200% 100%;
+    background-position: left bottom; }
+
+.with-bottom-cut {
+  margin-top: 0; }
+
+.purple-bordered-button.with-bottom-cut {
+  border: 0;
+  border-top: 2px solid #421440;
+  border-left: 2px solid #421440;
+  min-width: 160px; }
+  .purple-bordered-button.with-bottom-cut:before, .purple-bordered-button.with-bottom-cut:after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 2px); }
+  .purple-bordered-button.with-bottom-cut:before {
+    right: 10px;
+    border-top: 0;
+    border-bottom: 2px solid #421440;
+    left: 0; }
+  .purple-bordered-button.with-bottom-cut:after {
+    right: 0;
+    left: auto;
+    border: 0;
+    border-right: 2px solid #421440;
+    bottom: 10px;
+    top: 0; }
+
+
+
 .green-bordered-button {
   background-color: rgba(255, 255, 255, 0);
   padding: 20px 29px;
@@ -836,6 +900,16 @@ ul.dropdown-menu > li > a {
   position: relative; }
 
 .half-squre-before-title {
+  background: transparent url(../images/trainning-left-arrow.png) 0 0 no-repeat;
+  position: absolute;
+  left: -32px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  top: 22px;
+  background-size: 100% 100%; }
+
+.half-squre-before-title-green {
   background: transparent url(../images/path.png) 0 0 no-repeat;
   position: absolute;
   left: -32px;
@@ -1474,6 +1548,8 @@ a.forward-redirection-green-link:hover {
       margin-left: -15px; }
   .our-solution-stats:hover {
     background: #65E214; }
+  .our-solution-stats-training:hover {
+    background: #8f288c; }
     .our-solution-stats:hover .our-solution-box .dg-header-2, .our-solution-stats:hover .dg-header-5 {
       color: #fff; }
     .our-solution-stats:hover .half-squre-before-title {
@@ -1755,7 +1831,7 @@ a.forward-redirection-green-link:hover {
     line-height: 52px; }
   .coco-about-blocks .coco-mobile-img img {
     margin: -70px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
     border-radius: 25px;
     max-height: 500px; }
 
@@ -1923,7 +1999,7 @@ a.forward-redirection-green-link:hover {
   min-height: 400px; }
 
 .country-banner {
-  background: url("../images/map.png") no-repeat 0 0;
+  background: url("../images/mapsss.png") no-repeat 0 0;
   min-height: 400px; }
   .country-banner .banner-inner {
     padding-top: 50px; }
@@ -2374,7 +2450,8 @@ a.forward-redirection-green-link:hover {
 .team-block-cont {
   padding: 33px 30px 10px 15px; }
   .team-block-cont p {
-    margin-top: 14px; }
+    margin-top: 14px; 
+    line-height: 21px;}
 
 .current-opening-disc h3, .opening-key-block h4, .country-with-opening h2 {
   color: #000;
@@ -3255,6 +3332,7 @@ figure.pull-left {
   .scroll-top:visited, .scroll-top:focus, .scroll-top:hover {
     color: #fff; }
 
+
 .main-footer {
   background-color: #3d3d3f;
   margin-top: 100px;
@@ -3607,7 +3685,9 @@ figure.pull-left {
 .solution-coco .green-bordered-button {
   border-color: #26a7e0;
   color: #26a7e0; }
-  .solution-coco .green-bordered-button:after, .solution-coco .green-bordered-button:before {
+
+
+.solution-coco .green-bordered-button:after, .solution-coco .green-bordered-button:before {
     border-color: #26a7e0; }
   .solution-coco .green-bordered-button:hover {
     background: linear-gradient(to left, transparent 49%, #26a7e0 50%);
@@ -3707,25 +3787,25 @@ figure.pull-left {
 .trainning-courseware .green-bordered-button {
   border-color: #8f288c;
   color: #8f288c; }
-  .trainning-courseware .green-bordered-button:after, .trainning-courseware .green-bordered-button:before {
+.trainning-courseware .green-bordered-button:after, .trainning-courseware .green-bordered-button:before {
     border-color: #8f288c; }
-  .trainning-courseware .green-bordered-button:hover {
+.trainning-courseware .green-bordered-button:hover {
     background: linear-gradient(to left, transparent 49%, #8f288c 50%);
     background-size: 200% 100%;
     background-position: left bottom;
     color: #fff; }
 .trainning-courseware .inner-pageh .green-bordered-button {
-  border-color: #65E214;
-  color: #65E214; }
+  border-color: #8f288c;
+  color: #8f288c; }
   .trainning-courseware .inner-pageh .green-bordered-button:after, .trainning-courseware .inner-pageh .green-bordered-button:before {
-    border-color: #65E214; }
+    border-color: #8f288c; }
   .trainning-courseware .inner-pageh .green-bordered-button:hover {
-    background: linear-gradient(to left, transparent 49%, #65E214 50%);
+    background: linear-gradient(to left, transparent 49%, #8f288c 50%);
     background-size: 200% 100%;
     background-position: left bottom;
     color: #fff; }
 .trainning-courseware .inner-pageh .green-arrow {
-  color: #65E214; }
+  color: #8f288c; }
 .trainning-courseware .inner-pageh .on-hover-arrow-left {
   background: transparent url(../images/slider-arrow.png) 0 -28px no-repeat; }
 .trainning-courseware .hover-dark-orange:hover .green-bordered-button {
@@ -3766,10 +3846,12 @@ figure.pull-left {
   background-color: #8f288c; }
 .trainning-courseware .green-arrow {
   color: #8f288c; }
-.trainning-courseware .scroll-top {
+
+.scrolll-top {
   background-color: #8f288c; }
-  .trainning-courseware .scroll-top:hover {
-    background-color: #421440; }
+
+.scrolll-top:hover {
+    background-color: #8f288c; }
 .trainning-courseware .big-arrow-slider .slick-arrow {
   background-image: url(../images/trainning-slider-big-arrow.png); }
 .trainning-courseware .green-squre-box-title .on-hover-arrow-left {

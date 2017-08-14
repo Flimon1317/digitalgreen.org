@@ -59,7 +59,7 @@ get_header('globalimpact'); ?>
                 <div class="row section-margin">
                     <div class="title-header">
                         <h1 class="dg-header-1 main-section-title ">Our Approach
-                            <span class="half-squre-before-title"></span>
+                            <span class="half-squre-before-title-green"></span>
                         </h1>
                     </div>
                 </div>
@@ -113,7 +113,7 @@ get_header('globalimpact'); ?>
                                         <div class="single-img">
                                             <div class="side-gray-border">
                                                 <h3 class="dg-header-2 sub-section-title"><?php echo $section['solutions_approach_heading']; ?>
-                                                    <span class="half-squre-before-title"></span>
+                                                    <span class="half-squre-before-title-green"></span>
                                                 </h3>
                                                 <div class="single-img-content">
                                                     <p class="dg-header-5 text-details"><?php echo $section['solutions_approach_description']; ?>
@@ -234,7 +234,7 @@ get_header('globalimpact'); ?>
                     <div class="section-header">
                         <div class="title-header">
                             <h1 class="dg-header-1 main-section-title "><?php echo ot_get_option('solutions_about_heading'); ?>
-                                <span class="half-squre-before-title"></span>
+                                <span class="half-squre-before-title-green"></span>
                             </h1>
                         </div>
                     </div>
@@ -269,7 +269,7 @@ get_header('globalimpact'); ?>
                                                 <div class="single-img">
                                                     <div class="side-gray-border">
                                                         <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('solutions_community_title'); ?>
-                                                            <span class="half-squre-before-title"></span>
+                                                            <span class="half-squre-before-title-green"></span>
                                                         </h3>
                                                         <div class="single-img-content">
                                                             <p class="dg-header-5 text-details"><?php echo ot_get_option('solutions_community_desc'); ?>
@@ -310,7 +310,7 @@ get_header('globalimpact'); ?>
                                                 <div class="single-img">
                                                     <div class="side-gray-border">
                                                         <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('solutions_coco_title'); ?>
-                                                            <span class="half-squre-before-title"></span>
+                                                            <span class="half-squre-before-title-green"></span>
                                                         </h3>
                                                         <div class="single-img-content">
                                                             <p class="dg-header-5 text-details"><?php echo ot_get_option('solutions_coco_desc'); ?>
@@ -351,7 +351,7 @@ get_header('globalimpact'); ?>
                                                 <div class="single-img">
                                                     <div class="side-gray-border">
                                                         <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('solutions_training_title'); ?>
-                                                            <span class="half-squre-before-title"></span>
+                                                            <span class="half-squre-before-title-green"></span>
                                                         </h3>
                                                         <div class="single-img-content">
                                                             <p class="dg-header-5 text-details"><?php echo ot_get_option('solutions_training_desc'); ?>
@@ -392,7 +392,7 @@ get_header('globalimpact'); ?>
                                                 <div class="single-img">
                                                     <div class="side-gray-border">
                                                         <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('solutions_loop_title'); ?>
-                                                            <span class="half-squre-before-title"></span>
+                                                            <span class="half-squre-before-title-green"></span>
                                                         </h3>
                                                         <div class="single-img-content">
                                                             <p class="dg-header-5 text-details"><?php echo ot_get_option('solutions_loop_desc'); ?>
@@ -433,7 +433,7 @@ get_header('globalimpact'); ?>
                                                 <div class="single-img">
                                                     <div class="side-gray-border">
                                                         <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('solutions_innovation_title'); ?>
-                                                            <span class="half-squre-before-title"></span>
+                                                            <span class="half-squre-before-title-green"></span>
                                                         </h3>
                                                         <div class="single-img-content">
                                                             <p class="dg-header-5 text-details"><?php echo ot_get_option('solutions_innovation_desc'); ?>
@@ -500,7 +500,7 @@ get_header('globalimpact'); ?>
                                 <div class="col-md-7">
                                     <div class="our-solution-wrap">
                                         <div class="our-solution-box">
-                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('solution_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('solution_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title-green"></span>
                                             </h3>
                                             <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('solution_solution_desc'); ?></p>
                                         </div>
@@ -544,7 +544,7 @@ get_header('globalimpact'); ?>
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
                                                 <div class="our-solution-box">
-                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('solution_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
+                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('solution_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title-green"></span>
                                                     </h3>
                                                     <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('solution_solution_desc'); ?></p>
                                                 </div>

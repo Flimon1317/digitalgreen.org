@@ -80,7 +80,7 @@ get_header('globalimpact'); ?>
                                             </div>
                                         </div>
                                         <div class="current-opening-disc container" data-code="<?php echo $termname; ?><?php echo $j; ?>">
-                                            <h3>Name of partner goes here</h3>
+                                            <h3 style="padding-left: 3px;">Name of partner goes here</h3>
                                             <div class="opening-details">
                                                  <?php the_content(); ?>
                                                 
@@ -386,7 +386,7 @@ get_header('globalimpact'); ?>
             </div>
         </div>
         <div class="project-block">
-            <div class="container">
+            <!--<div class="container">
                 <div class="row">
                     <div class="single-img-container">
                         <div class="col-md-6 right-block">
@@ -415,7 +415,7 @@ get_header('globalimpact'); ?>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
             <div class="team-section section-margin">
                 <div class="container">

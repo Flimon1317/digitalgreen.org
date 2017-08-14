@@ -318,16 +318,16 @@ get_header('globalimpact'); ?>
   $i=1;  
                                      foreach($india_solutions[0] as $key => $value){  
                                              ?>
-                                    <div class="partner-boxes">
+                                    <!-- <div class="partner-boxes">
                                         <div class="box <?php if($i==1) echo 'blue'; elseif($i==2) echo 'pink'; elseif($i==3) echo 'orange'; elseif($i==4) echo 'purple'; else echo 'pink';?>">
                                             <div class="box-content">
                                             
-                                            <!-- Not Done,should be done by vivek............-->
+                                            
                                                 <img src="<?php echo $value['india_solutions_type1']; ?>" alt="Loop" />
                                             </div>
                                         </div>
-                                    </div>
-                                    
+                                    </div> -->
+                                    <img src="<?php echo $value['india_solutions_type1']; ?>" alt="Loop" />
                                       <?php  $i++;
                         
                     }

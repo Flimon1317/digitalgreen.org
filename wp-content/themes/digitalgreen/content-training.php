@@ -12,41 +12,45 @@ get_header('globalimpact'); ?>
 
 
  <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('training_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
-            <div class="banner-text">
-                <div class="container text-white">
-                    <div class="trainning-courseware row banner-inner">
-                        <span class="banner-square"></span>
-                        <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('training_banner_title'); ?></h1>
-                        <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo ot_get_option('training_banner_sub_title'); ?></h4>
-                        <h5 class="dg-header-5 banner-details hidden-xs">
-                           <?php echo ot_get_option('training_banner_desc'); ?>
-                        </h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
-            <h5 class="dg-header-5 banner-details">
-                <?php echo ot_get_option('training_banner_desc'); ?>
-            </h5>
-        </div>
+    <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('training_banner_image')); ?>" class="sub-menu-banner w3-image"/>
+    </div>
+    
+    <div class="banner-text">
+      <div class="container text-white">
+          <div class="trainning-courseware row banner-inner">
+              <span class="banner-square"></span>
+              <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('training_banner_title'); ?></h1>
+              <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo ot_get_option('training_banner_sub_title'); ?></h4>
+              <h5 class="dg-header-5 banner-details hidden-xs">
+                 <?php echo ot_get_option('training_banner_desc'); ?>
+              </h5>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
+  <h5 class="dg-header-5 banner-details">
+      <?php echo ot_get_option('training_banner_desc'); ?>
+  </h5>
+</div>
         <!-- Our Approach Section -->
-        <div class="trainning-courseware our-approch">
-            <div class="container">
-                <div class="section-margin">
-                    <div class="title-header">
-                        <h1 class="dg-header-1 main-section-title ">Our Approach
-                            <span class="half-squre-before-title"></span>
-                        </h1>
-                    </div>
-                </div>
-            </div>
-            <div class="solution-approach approach-carousel">
-                <div class="our-approach-carousel hidden-sm hidden-xs">
+<div class="trainning-courseware our-approch">
+  <div class="container">
+    <div class="section-margin">
+        <div class="title-header">
+            <h1 class="dg-header-1 main-section-title ">Our Approach
+                <span class="half-squre-before-title"></span>
+            </h1>
+        </div>
+    </div>
+  </div>
+  
+  <div class="solution-approach approach-carousel">
+    <div class="our-approach-carousel hidden-sm hidden-xs">
                 
                                 
-<?php
+    <?php
       if (function_exists('get_option_tree')){
         $training_approach = ot_get_option( 'training_approach', array() );
         if ( ! empty( $training_approach ) ) {
@@ -112,91 +116,7 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                       <?php $i++; } } } ?>  
-                        <!--  <div class="slider-with-tab hidden-lg hidden-md" data-index="2"><h1 class="dg-header-2">02</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container visible-approch" data-index="2">
-                            <div class="row">
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div> -->
-                      <!--           <div class="col-md-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-with-tab hidden-lg hidden-md" data-index="3"><h1 class="dg-header-2">03</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container" data-index="3">
-                            <div class="row">
-                                <div class="col-sm-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="images/img-2.png" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-with-tab hidden-lg hidden-md" data-index="4"><h1 class="dg-header-2">04</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container" data-index="4">
-                            <div class="row">
-                                <div class="col-sm-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="images/img-2.png" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
+      
                             </div>
                            
                         </div>
@@ -231,7 +151,7 @@ get_header('globalimpact'); ?>
                             <div class="col-sm-6 col-sm-push-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('training_what_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('training_what_image'); ?>" class="img-responsive" style="border-radius: 0">
                                         </div>
                                     </div>
                                 </div>   
@@ -243,7 +163,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_what_desc'); ?>
                                         <p>
-                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="purple-bordered-button learn-more">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +173,7 @@ get_header('globalimpact'); ?>
                                 <div class="col-sm-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('training_how_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('training_how_image'); ?>" class="img-responsive" style="border-radius: 0">
                                         </div>
                                     </div>
                                 </div>
@@ -265,7 +185,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_how_desc'); ?>
                                         <p>
-                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="purple-bordered-button learn-more">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -275,7 +195,7 @@ get_header('globalimpact'); ?>
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6 padding-image">
                                 <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('training_product_image2'); ?>" class="img-responsive">
+                                    <img src="<?php echo ot_get_option('training_product_image2'); ?>" style="border-radius: 0" class="img-responsive">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -359,7 +279,7 @@ get_header('globalimpact'); ?>
                                         <img src="<?php echo $section['title_img']; ?>" alt="Community Videos" class="sol-default-img"/>
                                         <img src="<?php echo $section['title_img_hover']; ?>" alt="Community Videos" class="hover-img"/>
                                         <p class="dg-header-5 text-details"><?php echo $section['training_array_description']; ?> </p>
-                                         <a href="<?php echo $section['training_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
+                                         <a href="<?php echo $section['training_array_link']; ?>" class="purple-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                             </div>
@@ -515,7 +435,7 @@ $blog_permalink = get_the_permalink($blog_id);
                     </div>
                 </div>
             </div>
-         <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
+         <a href="#" class="scroll-top hidden-xs" style="background-color: #8f288c"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
        
       
 

@@ -105,7 +105,7 @@ get_header('loop'); ?>
                                 <div class="col-sm-6 right-block">
                                     <div class="img-right-part">
                                         <div class="image-green-shadow">
-                                            <img src="<?php echo $section['loop_approach_image']; ?>" class="img-responsive" alt=""/>
+                                            <img src="<?php echo $section['loop_approach_image']; ?>" class="img-responsive" alt="" style="border-radius: 0" />
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@ get_header('loop'); ?>
                             <div class="col-sm-6 col-sm-push-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('loop_what_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('loop_what_image'); ?>" class="img-responsive" style="border-radius: 0" />
                                         </div>
                                     </div>
                                 </div>   
@@ -254,7 +254,7 @@ get_header('loop'); ?>
                                 <div class="col-sm-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('loop_how_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('loop_how_image'); ?>" class="img-responsive" style="border-radius: 0" />
                                         </div>
                                     </div>
                                 </div>
@@ -275,7 +275,7 @@ get_header('loop'); ?>
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6 padding-image">
                                 <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('loop_product_image2'); ?>" class="img-responsive">
+                                    <img src="<?php echo ot_get_option('loop_product_image2'); ?>" class="img-responsive" style="border-radius: 0">
                                 </div>
                             </div>
                             <div class="col-md-6">

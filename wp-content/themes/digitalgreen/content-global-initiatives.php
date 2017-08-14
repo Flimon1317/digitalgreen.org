@@ -77,7 +77,7 @@ get_header('globalimpact'); ?>
                                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('global_initiatives_india_desc'); ?>
                                                         </p>
                                                     </div>
-                                                    <a href="<?php echo ot_get_option('global_initiatives_india_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                                    <!-- <a href="<?php echo ot_get_option('global_initiatives_india_link'); ?>" class="green-bordered-button learn-more">Learn More</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -118,7 +118,7 @@ get_header('globalimpact'); ?>
                                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('global_initiatives_ethopia_desc'); ?>
                                                         </p>
                                                     </div>
-                                                    <a href="<?php echo ot_get_option('global_initiatives_ethopia_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                                    <!-- <a href="<?php echo ot_get_option('global_initiatives_ethopia_link'); ?>" class="green-bordered-button learn-more">Learn More</a> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -159,7 +159,7 @@ get_header('globalimpact'); ?>
                                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('global_initiatives_global_desc'); ?>
                                                         </p>
                                                     </div>
-                                                    <a href="<?php echo ot_get_option('global_initiatives_global_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                                    <!-- <a href="<?php echo ot_get_option('global_initiatives_global_link'); ?>" class="green-bordered-button learn-more">Learn More</a> -->
                                                 </div>
                                             </div>
                                         </div>

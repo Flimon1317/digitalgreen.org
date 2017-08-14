@@ -102,14 +102,15 @@ get_header('community'); ?>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                              <div class="col-sm-6 right-block">
+                                <div class="col-sm-6 right-block">
                                 <div class="img-right-part">
                                     <div class="image-green-shadow">
-                                        <img src="<?php echo $section['communityvideos_approach_image']; ?>" class="img-responsive" alt=""/>
+                                        <img src="<?php echo $section['communityvideos_approach_image']; ?>" style="border-radius: 0" class="img-responsive" alt=""/>
                                     </div>
                                 </div>
                             </div>
+                            </div>
+                              
                            
                         </div>
                       <?php $i++; } } } ?>  
@@ -216,7 +217,7 @@ get_header('community'); ?>
                             <div class="col-sm-6 col-sm-push-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('communityvideos_what_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('communityvideos_what_image'); ?>" class="img-responsive" style="border-radius: 0">
                                         </div>
                                     </div>
                                 </div>   
@@ -238,7 +239,7 @@ get_header('community'); ?>
                                 <div class="col-sm-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('communityvideos_how_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('communityvideos_how_image'); ?>" class="img-responsive" style="border-radius: 0">
                                         </div>
                                     </div>
                                 </div>
@@ -260,7 +261,7 @@ get_header('community'); ?>
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6 padding-image">
                                 <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('communityvideos_product_image'); ?>" class="img-responsive">
+                                    <img src="<?php echo ot_get_option('communityvideos_product_image'); ?>" class="img-responsive" style="border-radius: 0">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -337,7 +338,7 @@ get_header('community'); ?>
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?> activity-blocks">
                                 <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
                                     <div class="image-green-shadow">
-                                        <img src="<?php echo $section['communityvideos_image']; ?>" class="img-responsive">
+                                        <img src="<?php echo $section['communityvideos_image']; ?>" class="img-responsive" style="border-radius: 0">
                                     </div>
                                     <div class="our-solution-block">
                                         <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 

@@ -66,7 +66,7 @@ get_header('globalimpact'); ?>
                     <div class="row founder-section clearfix">
                         <div class="col-md-6 right-block">
                             <img src="<?php echo ot_get_option('aboutus_video_image'); ?>" class="img-responsive">
-                            <a href="#" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
+                            <a href="#" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span>Watch This Video</a>
 
                         </div>
                         <div class="col-md-6 left-block">
@@ -242,8 +242,8 @@ get_header('globalimpact'); ?>
                                <div class="img-right-part">
                                    <div class="image-green-shadow">
                                        <img src="<?php echo $section['aboutus_video_community_image']; ?>" class="img-responsive">
-                                       
-                                       <a href="#" data-url="<?php echo $section['aboutus_video_community_link']; ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
+                                       <!-- 
+                                       <a href="#" data-url="<?php echo $section['aboutus_video_community_link']; ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video </a>-->
                                    </div>
                                </div>
                             </div>
@@ -253,7 +253,7 @@ get_header('globalimpact'); ?>
                                    </h3>
                                    <p class="dg-header-5 text-details"><?php echo $section['aboutus_video_community_desc']; ?>
                                    </p>
-                                   <a href="<?php echo $section['aboutus_video_community_link']; ?>" class="green-bordered-button learn-more">Learn More</a>
+                                   <!-- <a href="<?php echo $section['aboutus_video_community_link']; ?>" class="green-bordered-button learn-more">Learn More</a> -->
 
                                </div>
                             </div>

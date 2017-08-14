@@ -2483,6 +2483,50 @@ array(
       'section'     => 'loop',      
       ),
 
+
+  array(
+    'id' => 'training_whats_next',
+    'label' => 'Whats Next',
+    'type' => 'tab',
+    'section' => 'training'
+    ),
+
+    array(
+        'id'          => 'training_whats_next_product_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'training',
+      ),
+
+    array(        
+      'id'          => 'training_whats_next_product_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'training',      
+      ),
+    array(        
+      'id'          => 'training_whats_next_product_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'training',      
+      ), 
+
+    array(
+        'id'          => 'training_whats_next_product_show_image',
+        'label'       => __( 'Show Case Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'training',
+      ),
+
+     array(        
+      'id'          => 'training_whats_next_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'training',      
+      ),
+
     
 
   array(

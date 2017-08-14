@@ -209,7 +209,7 @@ get_header('coco'); ?>
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6">
                                 <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('solutionscoco_product_image'); ?>" class="img-responsive">
+                                    <img src="<?php echo ot_get_option('solutionscoco_product_image'); ?>" class="img-responsive" style="border-radius: 0">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -221,16 +221,16 @@ get_header('coco'); ?>
                             </div>
                         </div>
                     </div>   
-                   <div class="coco-images section-margin">
+                   <!-- <div class="coco-images section-margin">
                         <img src="<?php echo ot_get_option('solutionscoco_product_show_image'); ?>" alt="sample image"/>
-                    </div> 
+                    </div>  -->
                     <div class="clearfix about-coco">
                         <div class="single-mobile-container section-margin">
                             <div class="clearfix coco-about-blocks">
                             <div class="col-sm-6 col-sm-push-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('solutionscoco_what_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('solutionscoco_what_image'); ?>" class="img-responsive" style="border-radius: 0">
                                         </div>
                                     </div>
                                 </div>   
@@ -252,7 +252,7 @@ get_header('coco'); ?>
                                 <div class="col-sm-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('solutionscoco_how_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo ot_get_option('solutionscoco_how_image'); ?>" class="img-responsive" style="border-radius: 0">
                                         </div>
                                     </div>
                                 </div>
