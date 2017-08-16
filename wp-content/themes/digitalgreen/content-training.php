@@ -163,7 +163,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_what_desc'); ?>
                                         <p>
-                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="purple-bordered-button learn-more">Learn More</a>
+                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="purple-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_how_desc'); ?>
                                         <p>
-                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="purple-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="purple-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +279,7 @@ get_header('globalimpact'); ?>
                                         <img src="<?php echo $section['title_img']; ?>" alt="Community Videos" class="sol-default-img"/>
                                         <img src="<?php echo $section['title_img_hover']; ?>" alt="Community Videos" class="hover-img"/>
                                         <p class="dg-header-5 text-details"><?php echo $section['training_array_description']; ?> </p>
-                                         <a href="<?php echo $section['training_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
+                                         <a href="<?php echo $section['training_array_link']; ?>" class="trainning-courseware green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                             </div>

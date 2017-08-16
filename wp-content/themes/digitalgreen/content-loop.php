@@ -244,7 +244,7 @@ get_header('loop'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('loop_what_desc'); ?>
                                         <p>
-                                       <a href="<?php echo ot_get_option('loop_what_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                       <a href="<?php echo ot_get_option('loop_what_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -266,7 +266,7 @@ get_header('loop'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('loop_how_desc'); ?>
                                         <p>
-                                        <a href="<?php echo ot_get_option('loop_how_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo ot_get_option('loop_how_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>

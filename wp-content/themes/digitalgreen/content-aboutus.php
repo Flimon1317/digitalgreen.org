@@ -19,13 +19,13 @@ get_header('globalimpact'); ?>
                                 <a href="#our_team">Team</a>
                             </li>
                             <li>
-                                <a href="#history">History</a></li>
+                                <a href="#history">Journey</a></li>
                             <li>
                                 <a href="#partners">Partners</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#documents">Documents</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>

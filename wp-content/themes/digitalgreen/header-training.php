@@ -96,7 +96,7 @@
                             </ul>
                         </li>
                         <li class="dropdown mega-dropdown">
-                            <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solution
+                            <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solutions
                                 <span class="pull-right">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>

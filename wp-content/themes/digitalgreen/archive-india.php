@@ -337,7 +337,7 @@ get_header('globalimpact'); ?>
                                 </div>
                             </div>
                         </div>
-                        <div class="partners-section">
+                        <!-- <div class="partners-section">
                             <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
                                 <span class="icon icon-up-arrow"></span>
                                 <span class="icon icon-down-arrow"></span>
@@ -391,7 +391,7 @@ get_header('globalimpact'); ?>
                                 </div> 
                                
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                      <?php 
 }
