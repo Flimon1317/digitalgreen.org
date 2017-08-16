@@ -13,14 +13,20 @@ get_header('globalimpact'); ?>
                 <div class="container">
                     <div class="row">
                         <ul class="sub-menu-title">
-                            <li class="activemenu">
-                                <a href="#india"><?php echo ot_get_option('global_india_title'); ?></a>
+                        <?php $i=1;
+                                while ( have_rows('global_impact_sections') ) 
+                                {   
+                                    the_row();
+                                    ?>
+                            <li >
+                                <a href="#section<?php echo $i; ?>"><?php echo get_sub_field('global_impact_section_title'); ?></a>
                             </li>
-                            <li>
+                            <?php $i++; } ?>
+                           <!-- <li>
                                 <a href="#ethiopia"><?php echo ot_get_option('global_ethopia_title'); ?></a></li>
                             <li>
                                 <a href="#global-initiatives"><?php echo ot_get_option('global_global_title'); ?></a>
-                            </li>
+                            </li> -->
                             <li>
                                 <a href="#case-studies">Case Studies</a>
                             </li>
@@ -30,14 +36,14 @@ get_header('globalimpact'); ?>
             </div>
         </header>
  <div class="banner-section-sub-menu">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('global_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
+            <div class="banner-img"><img src="<?php echo get_field('global_impact_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
                         <span class="banner-square"></span>
-                        <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('global_banner_title'); ?></h1>
+                        <h1 class="dg-header-1 banner-title"><?php echo get_field('global_impact_banner_image_title'); ?></h1>
                         <h5 class="dg-header-5 banner-details hidden-xs">
-                             <?php echo ot_get_option('global_banner_desc'); ?>
+                             <?php echo get_field('global_impact_banner_image_description'); ?>
                         </h5>
                     </div>
                 </div>
@@ -45,7 +51,7 @@ get_header('globalimpact'); ?>
         </div>
         <div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
             <h5 class="dg-header-5 banner-details">
-                <?php echo esc_url(ot_get_option('global_banner_desc')); ?>
+                <?php echo get_field('global_impact_banner_image_description'); ?>
             </h5>
         </div>
         <!-- Global Immpact Section -->
@@ -54,7 +60,7 @@ get_header('globalimpact'); ?>
                 <div class="row">
                     <div class="section-header">
                         <div class="title-header">
-                            <h1 class="dg-header-1 main-section-title "><?php echo ot_get_option('global_banner_heading'); ?>
+                            <h1 class="dg-header-1 main-section-title "><?php echo get_field('global_impact_about_heading'); ?>
                                 <span class="half-squre-before-title"></span>
                             </h1>
                         </div>
@@ -62,25 +68,30 @@ get_header('globalimpact'); ?>
                 
                     <div class="custom-class-slideshow">
                         <div class="globalimp-list">
-                            <div class="single-img-container" id="india">
+<?php $i=1;
+                                while ( have_rows('global_impact_sections') ) 
+                                {   
+                                    the_row();
+                                    ?>
+
+
+                            <div class="single-img-container" id="section<?php echo $i; ?>">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6 right-block">
                                             <div class="img-right-part">
                                                 <div class="image-green-shadow">
-                                                    <img src="<?php echo ot_get_option('global_india_image'); ?>" class="img-responsive">
+                                                    <img src="<?php echo get_sub_field('global_impact_section_image'); ?>" class="img-responsive">
                                                     <div class="number-count-div text-center">
-                            <?php
-      if (function_exists('get_option_tree')){
-        $global_india_image_value1 = ot_get_option( 'global_india_image_value1', array() );
-        if ( ! empty( $global_india_image_value1 ) ) {
-          
-          $i=1;
-          foreach( $global_india_image_value1 as $section ) {
-      ?>                        
-                                                        <p><?php echo $section['global_india_value']; ?></p>
-       <?php } } } ?>                                                 
-                                                       <!--  <p><span class="count-num">5000</span> Purus Elit Quam</p>
+                                
+      <?php 
+                                while ( have_rows('global_impact_section_values') ) 
+                                {   
+                                    the_row();
+                                    ?>                    
+                                                        <p><span class="count-num"><?php echo get_sub_field('global_impact_section_value'); ?></span> <?php echo get_sub_field('global_impact_section_value_desc'); ?></p>
+       <?php  } ?>                                                 
+                                                       <!--  <p><span class="count-num">5,000</span> Purus Elit Quam</p>
                                                         <p><span class="count-num">40</span> Egestas Tristique</p> -->
                                                     </div>
                                                 </div>
@@ -90,14 +101,14 @@ get_header('globalimpact'); ?>
                                             <div class="row img-details">
                                                 <div class="single-img">
                                                     <div class="side-gray-border">
-                                                        <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('global_india_title'); ?>
+                                                        <h3 class="dg-header-2 sub-section-title"><?php echo get_sub_field('global_impact_section_title'); ?>
                                                             <span class="half-squre-before-title"></span>
                                                         </h3>
                                                         <div class="single-img-content">
-                                                            <p class="dg-header-5 text-details"><?php echo ot_get_option('global_india_desc'); ?>
+                                                            <p class="dg-header-5 text-details"><?php echo get_sub_field('global_impact_section_description'); ?>
                                                             </p>
                                                         </div>
-                                                        <a href="<?php echo ot_get_option('global_india_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                                        <a href="<?php echo get_sub_field('global_impact_section_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -105,7 +116,8 @@ get_header('globalimpact'); ?>
                                     </div>
                                 </div>
                             </div>
-                            <div class="single-img-container" id="ethiopia">
+                             <?php $i++; } ?> 
+                         <!--   <div class="single-img-container" id="ethiopia">
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-6 right-block">
@@ -186,16 +198,16 @@ get_header('globalimpact'); ?>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="case-studies-section" id="case-studies">
+            <div class="case-studies-section" id="case-studies" style="background: url(<?php echo get_field('global_impact_case_study_image'); ?>) 0 0 no-repeat;">
                 <div class="case-studies-details-box text-center">
                     <h4 class="dg-header-1 default-title">Case Studies</h4>
-                    <p class="dg-header-5 text-details"><?php echo ot_get_option('global_casestudy_desc'); ?></p>
-                    <a href="case-studies" class="green-bordered-button learn-more">Learn More</a>
+                    <p class="dg-header-5 text-details"><?php echo get_field('global_impact_case_study_description'); ?></p>
+                    <a href="<?php echo esc_url(site_url()); ?>/case-studies" class="green-bordered-button learn-more">Learn More</a>
                 </div>
             </div>
             <div class="stats-container">
@@ -206,9 +218,9 @@ get_header('globalimpact'); ?>
                                 <div class="col-md-7">
                                     <div class="our-solution-wrap">
                                         <div class="our-solution-box">
-                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('global_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('global_impact_solutions_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
                                             </h3>
-                                            <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('global_solution_desc'); ?></p>
+                                            <p class="dg-header-5 on-hover-title-color"><?php echo get_field('global_impact_solutions_description'); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -216,21 +228,18 @@ get_header('globalimpact'); ?>
                             <!-- for-Desktop-size-count-globel-impact-stat -->
                             <div class="custom-class-slideshow stats-slider-wrap">
                                 <div class="stats-values stat-slider">
-                                   <?php
-      if (function_exists('get_option_tree')){
-        $global_solution_values = ot_get_option( 'global_solution_values', array() );
-        if ( ! empty( $global_solution_values ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $global_solution_values as $section ) {
-            
-      ?>
+                                  
+      <?php $i=1;
+                                while ( have_rows('global_impact_solutions_values') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
                                     <div class="count-global-stat text-center">
-                                        <h1 class="dg-header-1"><?php echo $section['global_solution_value']; ?></h1>
-                                        <h4 class="dg-header-5"><?php echo $section['global_solution_text']; ?></h4>
+                                        <h1 class="dg-header-1"><?php echo get_sub_field('global_impact_solutions_value'); ?></h1>
+                                        <h4 class="dg-header-5"><?php echo get_sub_field('global_impact_solutions_value_desc'); ?></h4>
                                     </div>
-<?php } } } ?>
+<?php }  ?>
 
                                    <!-- <div class="count-global-stat text-center">
                                         <h1 class="dg-header-2">270,000</h1>
@@ -250,15 +259,15 @@ get_header('globalimpact'); ?>
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
                                                 <div class="our-solution-box">
-                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('global_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
+                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('global_impact_solutions_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
                                                     </h3>
-                                                    <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('global_solution_desc'); ?></p>
+                                                    <p class="dg-header-5 on-hover-title-color"><?php echo get_field('global_impact_solutions_description'); ?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-5 full-col solution-img-wrap">
                                             <div class="our-solution-img">
-                                                <img src="<?php echo ot_get_option('global_solution_image'); ?>">
+                                                <img src="<?php echo get_field('global_impact_solutions_image'); ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +281,7 @@ get_header('globalimpact'); ?>
 
 <?php 
 
-$blog_id=ot_get_option('global_solution_blog');
+$blog_id= get_field('global_impact_featured_blog');
 $auth = get_post($blog_id); // gets author from post
 $blog_title = get_the_title($blog_id);
 

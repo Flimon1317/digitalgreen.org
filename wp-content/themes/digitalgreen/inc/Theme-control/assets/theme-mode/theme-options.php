@@ -50,14 +50,14 @@ function custom_theme_options() {
     /*Bannar*/
       
     
-    /*Home Content*/
+    /*Home Content
 
      array(
         'id'          => 'homepage',
         'title'       => __( 'Homepage Settings', 'digitalgreen' ),
-      ),
+      ), */
      
-    /*Home Meet*/
+    /*Home Meet
       
 
       array(
@@ -75,7 +75,7 @@ function custom_theme_options() {
       array(
         'id'          => 'aboutus',
         'title'       => __( 'About Us Settings', 'digitalgreen' ),
-      ),
+      ),*/
 
       array(
         'id'          => 'careers',
@@ -112,7 +112,7 @@ function custom_theme_options() {
         'title'       => __( 'Partners Settings', 'digitalgreen' ),
       ),
 
-      array(
+      /*array(
         'id'          => 'casestudy',
         'title'       => __( 'Case Studies Settings', 'digitalgreen' ),
       ),
@@ -131,7 +131,7 @@ function custom_theme_options() {
       array(
         'id'          => 'solutionscoco',
         'title'       => __( 'Solutions Coco Settings', 'digitalgreen' ),
-      ),
+      ),*/
 
 
     array(
@@ -144,7 +144,7 @@ function custom_theme_options() {
         'title'       => __( 'Ethopia Settings', 'digitalgreen' ),
       ),
 
-    array(
+    /*array(
         'id'          => 'loop',
         'title'       => __( 'Loop Settings', 'digitalgreen' ),
       ),
@@ -173,7 +173,7 @@ function custom_theme_options() {
     array(
         'id'          => 'donate',
         'title'       => __( 'Donate Section', 'digitalgreen' ),
-      ),
+      ), */
         
 
       array(

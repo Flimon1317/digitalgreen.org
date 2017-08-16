@@ -33,12 +33,12 @@ get_header('globalimpact'); ?>
             </header>
     <!-- Banner Section -->
         <div class="banner-section-sub-menu">
-            <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('aboutus_banner_image')); ?>" class="sub-menu-banner w3-image" /></div>
+            <div class="banner-img"><img src="<?php echo get_field('about_us_banner_image'); ?>" class="sub-menu-banner w3-image" /></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
                         <span class="banner-square"></span>
-                        <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('aboutus_banner_title'); ?></h1>
+                        <h1 class="dg-header-1 banner-title"><?php echo get_field('about_us_banner_title'); ?></h1>
                     </div>
                 </div>
             </div>
@@ -50,13 +50,13 @@ get_header('globalimpact'); ?>
                         <div class="col-sm-5 team-head-left">
                             <div class="title-header">
                                 <h2 class="dg-header-3 main-section-title ">
-                               <?php echo ot_get_option('aboutus_about_title'); ?>
+                               <?php echo get_field('about_us_about_heading'); ?>
                                     <span class="half-squre-before-title"></span>
                                 </h2>
                             </div>
                         </div>
                         <div class="col-sm-6 col-sm-offset-1 team-head-right">
-                            <?php echo ot_get_option('aboutus_about_desc'); ?>
+                            <?php echo get_field('about_us_about_description'); ?>
                         </div>
                     </div>
                 </div>   
@@ -65,7 +65,7 @@ get_header('globalimpact'); ?>
                 <div class="container">
                     <div class="row founder-section clearfix">
                         <div class="col-md-6 right-block">
-                            <img src="<?php echo ot_get_option('aboutus_video_image'); ?>" class="img-responsive">
+                            <img src="<?php echo get_field('about_us_video_image'); ?>" class="img-responsive">
                             <a href="#" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
 
                         </div>
@@ -73,13 +73,13 @@ get_header('globalimpact'); ?>
                             <div class="row img-details">
                                 <div class="single-img">
                                     <div class="side-gray-border">
-                                        <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('aboutus_video_title'); ?>
+                                        <h3 class="dg-header-2 sub-section-title"><?php echo get_field('about_us_video_title'); ?>
                                         </h3>
                                         <div class="single-img-content hidden-sm hidden-xs">
-                                            <p class="dg-header-5"><?php echo ot_get_option('aboutus_video_desc'); ?>
+                                            <p class="dg-header-5"><?php echo get_field('about_us_video_description'); ?>
                                             </p>
                                         </div>
-                                        <a href="<?php echo ot_get_option('aboutus_video_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo get_field('about_us_video_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -228,37 +228,35 @@ get_header('globalimpact'); ?>
                         <h2 class="dg-header-2 text-center">The History of Digital Green</h2>
                     </div>
                     <div class="clearfix timeline-info-slider">
-<?php
-      if (function_exists('get_option_tree')){
-        $aboutus_video_community = ot_get_option( 'aboutus_video_community', array() );
-        if ( ! empty( $aboutus_video_community ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $aboutus_video_community as $section ) {
-      ?>
+
+      <?php $i=1;
+                                while ( have_rows('about_us_history_section') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
                         <div class="timeline-info">
                             <div class="left-block">
                                <div class="img-right-part">
                                    <div class="image-green-shadow">
-                                       <img src="<?php echo $section['aboutus_video_community_image']; ?>" class="img-responsive">
+                                       <img src="<?php echo get_sub_field('about_us_history_image'); ?>" class="img-responsive">
                                        
-                                       <a href="#" data-url="<?php echo $section['aboutus_video_community_link']; ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
+                                       <a href="#" data-url="<?php echo get_sub_field('about_us_watch_video_link'); ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
                                    </div>
                                </div>
                             </div>
                             <div class="right-block">
                                <div class="side-gray-border">
-                                   <h3 class="dg-header-3 sub-section-title"><?php echo $section['aboutus_video_community_title']; ?> <?php echo $section['aboutus_video_community_year']; ?>
+                                   <h3 class="dg-header-3 sub-section-title"><?php echo get_sub_field('about_us_history_title'); ?> <?php echo get_sub_field('about_us_history_year'); ?>
                                    </h3>
-                                   <p class="dg-header-5 text-details"><?php echo $section['aboutus_video_community_desc']; ?>
+                                   <p class="dg-header-5 text-details"><?php echo get_sub_field('about_us_history_description'); ?>
                                    </p>
-                                   <a href="<?php echo $section['aboutus_video_community_link']; ?>" class="green-bordered-button learn-more">Learn More</a>
+                                   <a href="<?php echo get_sub_field('about_us_history_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
 
                                </div>
                             </div>
                         </div>  
-<?php $i++; } } } ?>
+<?php $i++; }  ?>
 
                         <!--<div class="timeline-info">
                             <div class="left-block">
@@ -339,21 +337,18 @@ get_header('globalimpact'); ?>
                     </div>
                     <div class="timeline-dates-container">
                         <div class="timeline-dates-slider">
-<?php
-      if (function_exists('get_option_tree')){
-        $aboutus_video_community = ot_get_option( 'aboutus_video_community', array() );
-        if ( ! empty( $aboutus_video_community ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $aboutus_video_community as $section ) {
-      ?>
+<?php $i=1;
+                                while ( have_rows('about_us_history_section') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
                             <div class="timeline-date">
                                 <div class="date-wrap">
-                                    <p class="date"><?php echo $section['aboutus_video_community_year']; ?></p>
+                                    <p class="date"><?php echo get_sub_field('about_us_history_year'); ?></p>
                                 </div>
                             </div>
-<?php } } } ?>
+<?php $i++; } ?>
 
 
                          <!--   <div class="timeline-date">
@@ -417,28 +412,25 @@ get_header('globalimpact'); ?>
                         <div class="col-sm-6">
                             <div class="row title-header">
                                 <h2 class="dg-header-3 main-section-title ">
-                                    <?php echo ot_get_option('aboutus_partners_title'); ?>
+                                    <?php echo get_field('about_us_partners_title'); ?>
                                     <span class="half-squre-before-title"></span>
                                 </h2>
                                 <div class="partner-content">
-                                   <p> <?php echo ot_get_option('aboutus_partners_desc'); ?></p>
-                                    <a href="<?php echo ot_get_option('aboutus_partners_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                   <p> <?php echo get_field('about_us_partners_description'); ?></p>
+                                    <a href="<?php echo get_field('about_us_partners_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-5 custom-class-slideshow col-sm-offset-1">
                            <div class="row partners-slider">
-                               <?php
-      if (function_exists('get_option_tree')){
-        $aboutus_partners = ot_get_option( 'aboutus_partners', array() );
-        if ( ! empty( $aboutus_partners ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $aboutus_partners as $section ) {
-      ?>
+                               <?php $i=1;
+                                while ( have_rows('about_us_partners') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
-                           <div class="col-sm-6 partners-logo"><img src="<?php echo $section['aboutus_partner_image']; ?>" /></div> 
-<?php } } } ?>
+                           <div class="col-sm-6 partners-logo"><img src="<?php echo get_sub_field('about_us_partners_image'); ?>" /></div> 
+<?php }  ?>
                               <!-- <div class="col-sm-6 partners-logo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" /></div> 
                                <div class="col-sm-6 partners-logo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" /></div>  
                                <div class="col-sm-6 partners-logo"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/img1.png" /></div> 
@@ -451,40 +443,37 @@ get_header('globalimpact'); ?>
             </div>
             <div class="career-link-wrapper clearfix">
                 <div class="left-block">
-                    <img src="<?php echo esc_url(ot_get_option('aboutus_careers_image')); ?>" class="img-responsive">
+                    <img src="<?php echo get_field('about_us_careers_image'); ?>" class="img-responsive">
                 </div>
                 <div class="right-block">
                     <div class="career-link">
                         <div class="side-gray-border">
-                            <h3 class="dg-header-1 sub-section-title"><?php echo ot_get_option('aboutus_careers_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i>
+                            <h3 class="dg-header-1 sub-section-title"><?php echo get_field('about_us_careers_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i>
                                <span class="half-squre-before-title"></span>
                            </h3>
-                           <a href="<?php echo ot_get_option('aboutus_careers_link'); ?>" class="green-bordered-button learn-more">View Careers</a>
+                           <a href="<?php echo get_field('about_us_careers_link'); ?>" class="green-bordered-button learn-more">View Careers</a>
                         </div>
                     </div>
                 </div>
             </div>
-<?php
-      if (function_exists('get_option_tree')){
-
-$aboutus_financials_array = ot_get_option( 'aboutus_financials_array', array() );
-        if ( ! empty( $aboutus_financials_array ) ) {
- ?>
+ <?php 
+        if( have_rows('about_us_financials_section') ) 
+        {
+            ?>
             <div id="documents" class="features-list-wrapper">
                 <div class="features-blocks">
                     <div class="row clearfix features-list">
- <?php 
-        
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $aboutus_financials_array as $section ) {
-      ?> 
+ <?php $i=1;
+                                while ( have_rows('about_us_financials_section') ) 
+                                {   
+                                    the_row();
+                                    ?> 
 
                         <div class="col-md-4">
                             <div class="features-item">
-                                <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
-                                <p class="dg-header-5 text-details"><?php echo $section['aboutus_desc']; ?></p>
-                                <p><a href="<?php echo $section['aboutus_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                <h2 class="dg-header-3"><?php echo get_sub_field('about_us_financials_title'); ?></h2>
+                                <p class="dg-header-5 text-details"><?php echo get_sub_field('about_us_financials_description'); ?></p>
+                                <p><a href="<?php echo get_sub_field('about_us_financials_link'); ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                             </div>
                         </div>
 
@@ -507,7 +496,7 @@ $aboutus_financials_array = ot_get_option( 'aboutus_financials_array', array() )
                     </div>
                </div>
             </div>
-<?php } } ?>
+<?php }  ?>
         </div>
          <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
 

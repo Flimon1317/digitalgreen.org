@@ -409,9 +409,9 @@ get_header('community'); ?>
                                 <div class="col-md-7">
                                     <div class="our-solution-wrap">
                                         <div class="our-solution-box">
-                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('communityvideos_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('community_videos_featured_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
                                             </h3>
-                                            <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('communityvideos_solution_desc'); ?></p>
+                                            <p class="dg-header-5 on-hover-title-color"><?php echo get_field('community_videos_featured_description'); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -419,21 +419,17 @@ get_header('community'); ?>
                             <!-- for-Desktop-size-count-globel-impact-stat -->
                             <div class="custom-class-slideshow stats-slider-wrap">
                                 <div class="stats-values stat-slider">
-                                   <?php
-      if (function_exists('get_option_tree')){
-        $communityvideos_solution_values = ot_get_option( 'communityvideos_solution_values', array() );
-        if ( ! empty( $communityvideos_solution_values ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $communityvideos_solution_values as $section ) {
-            
-      ?>
+                                   <?php $i=1;
+                                while ( have_rows('community_videos_featured_values') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
                                     <div class="count-global-stat text-center">
-                                        <h1 class="dg-header-1"><?php echo $section['communityvideos_solution_value']; ?></h1>
-                                        <h4 class="dg-header-5"><?php echo $section['communityvideos_solution_text']; ?></h4>
+                                        <h1 class="dg-header-1"><?php echo get_sub_field('community_videos_featured_value'); ?></h1>
+                                        <h4 class="dg-header-5"><?php echo get_sub_field('community_videos_featured_value_desc'); ?></h4>
                                     </div>
-<?php } } } ?>
+<?php } ?>
 
                                    <!-- <div class="count-global-stat text-center">
                                         <h1 class="dg-header-2">270,000</h1>
@@ -453,15 +449,15 @@ get_header('community'); ?>
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
                                                 <div class="our-solution-box">
-                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('communityvideos_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
+                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('community_videos_featured_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
                                                     </h3>
-                                                    <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('communityvideos_solution_desc'); ?></p>
+                                                    <p class="dg-header-5 on-hover-title-color"><?php echo get_field('community_videos_featured_description'); ?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-5 full-col solution-img-wrap">
                                             <div class="our-solution-img">
-                                                <img src="<?php echo ot_get_option('communityvideos_solution_image'); ?>">
+                                                <img src="<?php echo get_field('community_videos_featured_image'); ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -475,7 +471,7 @@ get_header('community'); ?>
 
 <?php 
 
-$blog_id=ot_get_option('communityvideos_solution_blog');
+$blog_id=get_field('community_videos_featured_blog');
 $auth = get_post($blog_id); // gets author from post
 $blog_title = get_the_title($blog_id);
 
@@ -488,11 +484,12 @@ $blog_permalink = get_the_permalink($blog_id);
 
 
                                     <div class="col-sm-7 work-inner-block hidden-sm hidden-xs">
-                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;"></div>
+                                        <div class="blog-post-img-box"  style="background: url(<?php echo $blog_image; ?>) 0 0 no-repeat;">
                                             <div class="blog-post-img-text">
                                                 <h4 class="dg-header-4 text-white"><?php echo $blog_title; ?></h4>
                                                 <a href="<?php echo $blog_permalink; ?>" class="green-arrow link-read-post">Read This Post<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
