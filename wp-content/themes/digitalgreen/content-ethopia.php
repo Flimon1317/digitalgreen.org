@@ -342,7 +342,7 @@ get_header('globalimpact'); ?>
                             </a> -->
                             <div class="collapse-projects">
                                 <div class="partners-box">
-                                    <h3 class="dg-header-4 news-header">Partner Type</h3>
+                                    <h3 class="dg-header-4 news-header">Partners</h3>
                                     <div class="row">
                                      <?php       
                         if (isset($ethopia_partners1)){   

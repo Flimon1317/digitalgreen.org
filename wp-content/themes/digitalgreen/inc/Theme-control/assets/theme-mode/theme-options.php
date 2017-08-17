@@ -118,6 +118,16 @@ function custom_theme_options() {
       ),
 
       array(
+        'id'          => 'press',
+        'title'       => __( 'Press Kit Settings', 'digitalgreen' ),
+      ),
+
+      array(
+        'id'          => 'annualreport',
+        'title'       => __( 'Annual Report Settings', 'digitalgreen' ),
+      ),
+
+      array(
         'id'          => 'contact',
         'title'       => __( 'Contact Us Settings', 'digitalgreen' ),
       ),
@@ -2350,6 +2360,7 @@ array(
           )
       ),
 
+
     array(
     'id' => 'loop_banner_tab',
     'label' => 'Banner',
@@ -2483,50 +2494,50 @@ array(
       'section'     => 'loop',      
       ),
 
-
-  array(
-    'id' => 'training_whats_next',
+     array(
+    'id' => 'loop_whats_next',
     'label' => 'Whats Next',
     'type' => 'tab',
-    'section' => 'training'
+    'section' => 'loop'
     ),
 
     array(
-        'id'          => 'training_whats_next_product_image',
+        'id'          => 'loop_whats_next_product_image',
         'label'       => __( 'Image', 'digitalgreen' ),
     'desc'        => 'Upload',
         'type'        => 'upload',
-        'section'     => 'training',
+        'section'     => 'loop',
       ),
 
     array(        
-      'id'          => 'training_whats_next_product_title',        
+      'id'          => 'loop_whats_next_product_title',        
       'label'       => __( 'Title', 'digitalgreen' ),        
       'type'        => 'text',        
-      'section'     => 'training',      
+      'section'     => 'loop',      
       ),
     array(        
-      'id'          => 'training_whats_next_product_desc',        
+      'id'          => 'loop_whats_next_product_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
       'type'        => 'text',        
-      'section'     => 'training',      
+      'section'     => 'loop',      
       ), 
 
     array(
-        'id'          => 'training_whats_next_product_show_image',
+        'id'          => 'loop_whats_next_product_show_image',
         'label'       => __( 'Show Case Image', 'digitalgreen' ),
     'desc'        => 'Upload',
         'type'        => 'upload',
-        'section'     => 'training',
+        'section'     => 'loop',
       ),
 
      array(        
-      'id'          => 'training_whats_next_product_playstore_link',        
+      'id'          => 'loop_whats_next_product_playstore_link',        
       'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
       'type'        => 'text',        
-      'section'     => 'training',      
+      'section'     => 'loop',      
       ),
 
+  
     
 
   array(
@@ -2853,6 +2864,7 @@ array(
           )
       ),
 
+
     array(
     'id' => 'training_product_tab',
     'label' => 'Product Showcase',
@@ -2895,6 +2907,55 @@ array(
       'type'        => 'text',        
       'section'     => 'training',      
       ),
+
+
+    array(
+    'id' => 'training_whats_next',
+    'label' => 'Whats Next',
+    'type' => 'tab',
+    'section' => 'training'
+    ),
+
+    array(
+        'id'          => 'training_whats_next_product_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'training',
+      ),
+
+    array(        
+      'id'          => 'training_whats_next_product_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'training',      
+      ),
+    array(        
+      'id'          => 'training_whats_next_product_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'training',      
+      ), 
+
+    array(
+        'id'          => 'training_whats_next_product_show_image',
+        'label'       => __( 'Show Case Image', 'digitalgreen' ),
+    'desc'        => 'Upload',
+        'type'        => 'upload',
+        'section'     => 'training',
+      ),
+
+     array(        
+      'id'          => 'training_whats_next_product_playstore_link',        
+      'label'       => __( 'Product Playstore Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'training',      
+      ),
+
+
+
+
+    
 
     
 
@@ -4883,6 +4944,515 @@ array(
       'type'        => 'custom-post-blog-select',        
       'section'     => 'casestudy',      
       ),
+
+
+       array(
+    'id' => 'casestudy_banner_tab',
+    'label' => 'Banner',
+    'type' => 'tab',
+    'section' => 'casestudy'
+    ),  
+  array(
+        'id'          => 'casestudy_banner_image',
+        'label'       => __( 'Banner Image', 'digitalgreen' ),
+    'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'casestudy',
+      ),
+  array(        
+      'id'          => 'casestudy_banner_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'casestudy',      
+      ),
+  array(        
+      'id'          => 'casestudy_banner_heading',        
+      'label'       => __( 'Heading', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'casestudy',      
+      ),
+  array(        
+      'id'          => 'casestudy_banner_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'casestudy',      
+      ),
+
+  array(
+    'id' => 'casestudy_casestudy_tab',
+    'label' => 'casestudies Tab',
+    'type' => 'tab',
+    'section' => 'casestudy'
+    ),
+
+    array(        
+      'id'          => 'casestudy_casestudy_title',        
+      'label'       => __( 'Heading', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'casestudy',      
+      ),
+  
+
+    array(
+        'id'          => 'casestudy_casestudy',
+        'label'       => __( 'Approach Section', 'digitalgreen' ),
+    'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'section'     => 'casestudy',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'casestudy_title',
+              'label'       => __( 'Title', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'casestudy_casestudy',
+              ),
+              
+               array(
+              'id'          => 'casestudy_area',
+              'label'       => __( 'Add place', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'casestudy_casestudy',
+              ),
+
+               array(
+              'id'          => 'casestudy_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'casestudy_casestudy',
+              ),
+
+               array(
+              'id'          => 'casestudy_desc',
+              'label'       => __( 'Add Description', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'casestudy_casestudy',
+              ),
+      
+              
+
+              array(
+              'id'          => 'casestudy_attach',
+              'label'       => __( 'upload attachment or add link', 'digitalgreen' ),
+              'type'        => 'upload',
+              'section'     => 'casestudy_casestudy',
+              ),
+
+          )
+      ),
+
+     array(
+    'id' => 'casestudy_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'casestudy'
+    ), 
+
+      array(        
+      'id'          => 'casestudy_solution_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'casestudy',      
+      ),
+
+      array(        
+      'id'          => 'casestudy_solution_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'casestudy',      
+      ),
+
+      array(
+        'id'          => 'casestudy_solution_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+  'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'casestudy',
+      ),
+
+      
+      array(
+        'id'          => 'casestudy_solution_values',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'casestudy',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'casestudy_solution_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'casestudy_solution_values',
+              ),
+             array(
+              'id'          => 'casestudy_solution_text',
+              'label'       => __( 'Add heading', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'casestudy_solution_values',
+              ),
+              
+
+          )
+      ),
+
+      array(        
+      'id'          => 'casestudy_solution_blog',        
+      'label'       => __( 'Featured Blog', 'digitalgreen' ),        
+      'type'        => 'custom-post-blog-select',        
+      'section'     => 'casestudy',      
+      ),
+
+
+//////////
+array(
+    'id' => 'press_banner_tab',
+    'label' => 'Banner',
+    'type' => 'tab',
+    'section' => 'press'
+    ),  
+  array(
+        'id'          => 'press_banner_image',
+        'label'       => __( 'Banner Image', 'digitalgreen' ),
+    'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'press',
+      ),
+  array(        
+      'id'          => 'press_banner_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'press',      
+      ),
+  array(        
+      'id'          => 'press_banner_heading',        
+      'label'       => __( 'Heading', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'press',      
+      ),
+  array(        
+      'id'          => 'press_banner_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'press',      
+      ),
+
+  array(
+    'id' => 'press_tab',
+    'label' => 'Press Tab',
+    'type' => 'tab',
+    'section' => 'press'
+    ),
+
+    array(        
+      'id'          => 'press_title',        
+      'label'       => __( 'Heading', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'press',      
+      ),
+  
+
+    array(
+        'id'          => 'press_press',
+        'label'       => __( 'Approach Section', 'digitalgreen' ),
+    'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'section'     => 'press',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'press_title',
+              'label'       => __( 'Title', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'press_press',
+              ),
+              
+               array(
+              'id'          => 'press_area',
+              'label'       => __( 'Add place', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'press_press',
+              ),
+
+               array(
+              'id'          => 'press_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'press_press',
+              ),
+
+               array(
+              'id'          => 'press_desc',
+              'label'       => __( 'Add Description', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'press_press',
+              ),
+      
+              
+
+              array(
+              'id'          => 'press_attach',
+              'label'       => __( 'upload attachment or add link', 'digitalgreen' ),
+              'type'        => 'upload',
+              'section'     => 'press_press',
+              ),
+
+          )
+      ),
+
+     array(
+    'id' => 'press_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'press'
+    ), 
+
+      array(        
+      'id'          => 'press_solution_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'press',      
+      ),
+
+      array(        
+      'id'          => 'press_solution_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'press',      
+      ),
+
+      array(
+        'id'          => 'press_solution_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+  'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'press',
+      ),
+
+      
+      array(
+        'id'          => 'press_solution_values',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'press',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'press_solution_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'press_solution_values',
+              ),
+             array(
+              'id'          => 'press_solution_text',
+              'label'       => __( 'Add heading', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'press_solution_values',
+              ),
+              
+
+          )
+      ),
+
+      array(        
+      'id'          => 'press_solution_blog',        
+      'label'       => __( 'Featured Blog', 'digitalgreen' ),        
+      'type'        => 'custom-post-blog-select',        
+      'section'     => 'press',      
+      ),
+/////////
+
+
+
+/**/
+
+//////////
+array(
+    'id' => 'annualreport_banner_tab',
+    'label' => 'Banner',
+    'type' => 'tab',
+    'section' => 'annualreport'
+    ),  
+  array(
+        'id'          => 'annualreport_banner_image',
+        'label'       => __( 'Banner Image', 'digitalgreen' ),
+    'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'annualreport',
+      ),
+  array(        
+      'id'          => 'annualreport_banner_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'annualreport',      
+      ),
+  array(        
+      'id'          => 'annualreport_banner_heading',        
+      'label'       => __( 'Heading', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'annualreport',      
+      ),
+  array(        
+      'id'          => 'annualreport_banner_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'annualreport',      
+      ),
+
+  array(
+    'id' => 'annualreport_tab',
+    'label' => 'Press Tab',
+    'type' => 'tab',
+    'section' => 'annualreport'
+    ),
+
+    array(        
+      'id'          => 'annualreport_title',        
+      'label'       => __( 'Heading', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'annualreport',      
+      ),
+  
+
+    array(
+        'id'          => 'annualreport_annualreport',
+        'label'       => __( 'Approach Section', 'digitalgreen' ),
+    'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'section'     => 'annualreport',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'annualreport_title',
+              'label'       => __( 'Title', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'annualreport_annualreport',
+              ),
+              
+               array(
+              'id'          => 'annualreport_area',
+              'label'       => __( 'Add place', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'annualreport_annualreport',
+              ),
+
+               array(
+              'id'          => 'annualreport_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'annualreport_annualreport',
+              ),
+
+               array(
+              'id'          => 'annualreport_desc',
+              'label'       => __( 'Add Description', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'annualreport_annualreport',
+              ),
+      
+              
+
+              array(
+              'id'          => 'annualreport_attach',
+              'label'       => __( 'upload attachment or add link', 'digitalgreen' ),
+              'type'        => 'upload',
+              'section'     => 'annualreport_annualreport',
+              ),
+
+          )
+      ),
+
+     array(
+    'id' => 'annualreport_solutions_tab',
+    'label' => 'Featured tab',
+    'type' => 'tab',
+    'section' => 'annualreport'
+    ), 
+
+      array(        
+      'id'          => 'annualreport_solution_title',        
+      'label'       => __( 'Title', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'annualreport',      
+      ),
+
+      array(        
+      'id'          => 'annualreport_solution_desc',        
+      'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'annualreport',      
+      ),
+
+      array(
+        'id'          => 'annualreport_solution_image',
+        'label'       => __( 'Image', 'digitalgreen' ),
+  'desc'        => 'Upload Your Logo',
+        'type'        => 'upload',
+        'section'     => 'annualreport',
+      ),
+
+      
+      array(
+        'id'          => 'annualreport__solution_values',
+        'label'       => __( 'Values', 'digitalgreen' ),
+    'desc'        => '',
+        
+        'type'        => 'list-item',
+        'section'     => 'annualreport',
+    'settings'    => array(
+            //Body Icon details
+             array(
+              'id'          => 'annualreport_solution_value',
+              'label'       => __( 'Add Value', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'annualreport_solution_values',
+              ),
+             array(
+              'id'          => 'annualreport_solution_text',
+              'label'       => __( 'Add heading', 'digitalgreen' ),
+              'desc'        => '',
+              'std'         => '',
+              'type'        => 'text',
+              'section'     => 'annualreport_solution_values',
+              ),
+              
+
+          )
+      ),
+
+      array(        
+      'id'          => 'annualreport_solution_blog',        
+      'label'       => __( 'Featured Blog', 'digitalgreen' ),        
+      'type'        => 'custom-post-blog-select',        
+      'section'     => 'annualreport',      
+      ),
+/////////
+
+/**/
+
+
 
 
   

@@ -90,7 +90,7 @@ get_header('globalimpact'); ?>
             <div id="our_team" class="container our-team-section clearfix">
                 <div class="title-header section-margin ">
                     <h2 class="dg-header-1 main-section-title ">Our Team<span class="half-squre-before-title"></span></h2>
-                    <a href="<?php echo esc_url(site_url()); ?>/our-team" class="green-arrow">View Team Bios<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                    <a href="<?php echo esc_url(site_url()); ?>/team" target="_blank" class="green-arrow">View Team Bios<i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                 </div>
                 <div class="custom-class-slideshow clearfix">
                     <div class="activity-details row our-teams-details clearfix">

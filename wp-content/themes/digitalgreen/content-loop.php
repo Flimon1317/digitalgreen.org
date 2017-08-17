@@ -275,14 +275,14 @@ get_header('loop'); ?>
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6 padding-image">
                                 <div class="solution-gray-box-img">
-                                    <img src="<?php echo ot_get_option('loop_product_image2'); ?>" class="img-responsive" style="border-radius: 0">
+                                    <img src="<?php echo ot_get_option('loop_whats_next_product_image'); ?>" class="img-responsive" style="border-radius: 0">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="solution-gray-box-content">
-                                    <h2 class="dg-header-3"><?php echo ot_get_option('loop_product_title2'); ?></h2>
-                                    <p><?php echo ot_get_option('loop_product_desc2'); ?></p>
-                                    <a href="<?php echo ot_get_option('loop_product_playstore_link2'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
+                                    <h2 class="dg-header-3"><?php echo ot_get_option('loop_whats_next_product_title'); ?></h2>
+                                    <p><?php echo ot_get_option('loop_whats_next_product_desc'); ?></p>
+                                    <a href="<?php echo ot_get_option('loop_whats_next_product_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
                                 </div>
                             </div>
                         </div>
