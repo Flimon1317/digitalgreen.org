@@ -98,42 +98,42 @@ function custom_meta_boxes_india() {
                      
              array(
               'id'          => 'india_partners1_title',
-              'label'       => __( 'Add partner', 'digitalgreen' ),
+              'label'       => __( 'Add partner image', 'digitalgreen' ),
               'desc'        => '',
               'std'         => '',
-              'type'        => 'text',
+              'type'        => 'upload',
               'section'     => 'india_partners1',
               ),
           )
       ),
 
-        array(
-              'id'          => 'india_partner_type2',
-              'label'       => __( 'Add Partner type 2', 'digitalgreen' ),
-              'type'        => 'text',
+     //    array(
+     //          'id'          => 'india_partner_type2',
+     //          'label'       => __( 'Add Partner type 2', 'digitalgreen' ),
+     //          'type'        => 'text',
               
-              ),
+     //          ),
 
-        array(
-        'id'          => 'india_partners2',
-        'label'       => __( 'Partners2 Section', 'digitalgreen' ),
-    	'desc'        => '',
-        'std'         => '',
-        'type'        => 'list-item',
+     //    array(
+     //    'id'          => 'india_partners2',
+     //    'label'       => __( 'Partners2 Section', 'digitalgreen' ),
+    	// 'desc'        => '',
+     //    'std'         => '',
+     //    'type'        => 'list-item',
         
-    	'settings'    => array(
-            //Body Icon details
+    	// 'settings'    => array(
+     //        //Body Icon details
                      
-             array(
-              'id'          => 'india_partners2_title',
-              'label'       => __( 'Add partner', 'digitalgreen' ),
-              'desc'        => '',
-              'std'         => '',
-              'type'        => 'text',
-              'section'     => 'india_partners2',
-              ),
-          )
-      ),
+     //         array(
+     //          'id'          => 'india_partners2_title',
+     //          'label'       => __( 'Add partner', 'digitalgreen' ),
+     //          'desc'        => '',
+     //          'std'         => '',
+     //          'type'        => 'text',
+     //          'section'     => 'india_partners2',
+     //          ),
+     //      )
+     //  ),
 
     )
   );

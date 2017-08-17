@@ -336,10 +336,10 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                         <div class="partners-section">
-                            <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
+                            <!-- <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
                                 <span class="icon icon-up-arrow"></span>
                                 <span class="icon icon-down-arrow"></span>
-                            </a>
+                            </a> -->
                             <div class="collapse-projects">
                                 <div class="partners-box">
                                     <h3 class="dg-header-4 news-header">Partner Type</h3>
@@ -348,13 +348,14 @@ get_header('globalimpact'); ?>
                         if (isset($ethopia_partners1)){   
                                      foreach($ethopia_partners1[0] as $key => $value){  
                                              ?>
-                                        <div class="col-sm-3">
+                                        <!-- <div class="col-sm-3">
                                             <div class="box gray">
                                                 <div class="box-content">
                                                     <?php echo $value['ethopia_partners1_title']; ?>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
+                                        <img src="<?php echo $value['ethopia_partners1_title']; ?>" alt="Partner Image" />
                                         
                                          <?php 
                         
@@ -363,7 +364,7 @@ get_header('globalimpact'); ?>
                                         
                                     </div>
                                 </div>
-                                 <div class="partners-box">
+                                 <!-- <div class="partners-box">
                                     <h3 class="dg-header-4 news-header">Partner Type</h3>
                                     <div class="row">
                                     
@@ -386,7 +387,7 @@ get_header('globalimpact'); ?>
                 } ?>
                                         
                                     </div>
-                                </div> 
+                                </div>  -->
                                
                             </div>
                         </div>

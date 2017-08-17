@@ -97,42 +97,42 @@ function custom_meta_boxes_ethopia() {
                      
              array(
               'id'          => 'ethopia_partners1_title',
-              'label'       => __( 'Add partner', 'digitalgreen' ),
+              'label'       => __( 'Add partner image', 'digitalgreen' ),
               'desc'        => '',
               'std'         => '',
-              'type'        => 'text',
+              'type'        => 'upload',
               'section'     => 'ethopia_partners1',
               ),
           )
       ),
 
-        array(
-              'id'          => 'ethopia_partner_type2',
-              'label'       => __( 'Add Partner type 2', 'digitalgreen' ),
-              'type'        => 'text',
+     //    array(
+     //          'id'          => 'ethopia_partner_type2',
+     //          'label'       => __( 'Add Partner type 2', 'digitalgreen' ),
+     //          'type'        => 'text',
               
-              ),
+     //          ),
 
-        array(
-        'id'          => 'ethopia_partners2',
-        'label'       => __( 'Partners2 Section', 'digitalgreen' ),
-    	'desc'        => '',
-        'std'         => '',
-        'type'        => 'list-item',
+     //    array(
+     //    'id'          => 'ethopia_partners2',
+     //    'label'       => __( 'Partners2 Section', 'digitalgreen' ),
+    	// 'desc'        => '',
+     //    'std'         => '',
+     //    'type'        => 'list-item',
         
-    	'settings'    => array(
-            //Body Icon details
+    	// 'settings'    => array(
+     //        //Body Icon details
                      
-             array(
-              'id'          => 'ethopia_partners2_title',
-              'label'       => __( 'Add partner', 'digitalgreen' ),
-              'desc'        => '',
-              'std'         => '',
-              'type'        => 'text',
-              'section'     => 'ethopia_partners2',
-              ),
-          )
-      ),
+     //         array(
+     //          'id'          => 'ethopia_partners2_title',
+     //          'label'       => __( 'Add partner', 'digitalgreen' ),
+     //          'desc'        => '',
+     //          'std'         => '',
+     //          'type'        => 'text',
+     //          'section'     => 'ethopia_partners2',
+     //          ),
+     //      )
+     //  ),
 
     )
   );

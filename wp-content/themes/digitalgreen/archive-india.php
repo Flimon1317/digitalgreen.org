@@ -97,15 +97,6 @@ get_header('globalimpact'); ?>
                   
       <?php $i++; } } } ?>
       
-              <!--  <div class="slider-with-tab active-tab" data-index="2"><h1 class="dg-header-1">02</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                  <div class="slider-with-tab" data-index="3"><h1 class="dg-header-1">03</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>
-                  <div class="slider-with-tab" data-index="4"><h1 class="dg-header-1">270,000</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                  </div>  --> 
                 </div>
                 <div class="approach-content">
                     <div class="container">
@@ -148,98 +139,7 @@ get_header('globalimpact'); ?>
                                 </div>
                                 
                             </div>
-                            
-                            
                         </div>
-                    <!--  <div class="slider-with-tab hidden-lg hidden-md" data-index="2"><h1 class="dg-header-2">02</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container visible-approch" data-index="2">
-                            <div class="row">
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="images/img-2.png" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-with-tab hidden-lg hidden-md" data-index="3"><h1 class="dg-header-2">03</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container" data-index="3">
-                            <div class="row">
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="images/img-2.png" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-with-tab hidden-lg hidden-md" data-index="4"><h1 class="dg-header-2">04</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container" data-index="4">
-                            <div class="row">
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="images/img-2.png" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                           
-                        </div> -->
-                        
                         <?php $i++; } } } ?>
                     </div>
                 </div>
@@ -337,26 +237,27 @@ get_header('globalimpact'); ?>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="partners-section">
-                            <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
+                        <div class="partners-section">
+                            <!-- <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
                                 <span class="icon icon-up-arrow"></span>
                                 <span class="icon icon-down-arrow"></span>
-                            </a>
+                            </a> -->
                             <div class="collapse-projects">
                                 <div class="partners-box">
-                                    <h3 class="dg-header-4 news-header">Partner Type</h3>
+                                    <h3 class="dg-header-4 news-header">Partners</h3>
                                     <div class="row">
                                      <?php       
                         if (isset($india_partners1)){   
                                      foreach($india_partners1[0] as $key => $value){  
                                              ?>
-                                        <div class="col-sm-3">
+                                        <!-- <div class="col-sm-3">
                                             <div class="box gray">
                                                 <div class="box-content">
                                                     <?php echo $value['india_partners1_title']; ?>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
+                                        <img src="<?php echo $value['india_partners1_title']; ?>" alt="Partner Image" />
                                         
                                          <?php 
                         
@@ -365,7 +266,7 @@ get_header('globalimpact'); ?>
                                         
                                     </div>
                                 </div>
-                                 <div class="partners-box">
+                                 <!-- <div class="partners-box">
                                     <h3 class="dg-header-4 news-header">Partner Type</h3>
                                     <div class="row">
                                     
@@ -388,10 +289,10 @@ get_header('globalimpact'); ?>
                 } ?>
                                         
                                     </div>
-                                </div> 
+                                </div>  -->
                                
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                      <?php 
 }

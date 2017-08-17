@@ -4002,7 +4002,7 @@ figure.pull-left {
   color: #65E214; }
 .trainning-courseware.green-bordered-button:after, .trainning-courseware .green-bordered-button:before {
     border-color: #65E214; }
-.trainning-courseware .green-bordered-button:hover {
+.trainning-courseware.green-bordered-button:hover {
     background: linear-gradient(to left, transparent 49%, #65E214 50%);
     background-size: 200% 100%;
     background-position: left bottom;
