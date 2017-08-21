@@ -416,7 +416,7 @@ get_header('globalimpact'); ?>
                                     <span class="half-squre-before-title"></span>
                                 </h2>
                                 <div class="partner-content">
-                                   <p> <?php echo get_field('about_us_partners_description'); ?></p>
+                                   <p> <?php echo get_field('about_us_partners_descripton'); ?></p>
                                     <a href="<?php echo get_field('about_us_partners_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                 </div>
                             </div>
