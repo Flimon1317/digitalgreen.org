@@ -7,7 +7,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('community'); ?>
+get_header('globalimpact'); ?>
 </header>
 
 

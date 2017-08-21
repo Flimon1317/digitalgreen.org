@@ -7,7 +7,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('loop'); ?>
+get_header('globalimpact'); ?>
 </header>
  <div class="banner-section">
             <div class="banner-img"><img src="<?php echo get_field('loop_banner_image'); ?>" class="img-responsive"/></div>
