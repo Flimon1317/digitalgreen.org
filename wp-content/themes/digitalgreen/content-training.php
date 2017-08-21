@@ -13,7 +13,7 @@ get_header('globalimpact'); ?>
 
  <div class="banner-section">
             <div class="banner-img"><img src="<?php echo get_field('training_banner_image'); ?>" class="img-responsive"/></div>
-            <div class="banner-text">
+            <div class="banner-text trainning-courseware">
                 <div class="container text-white">
                     <div class="row banner-inner">
                         <span class="banner-square"></span>
@@ -32,7 +32,7 @@ get_header('globalimpact'); ?>
             </h5>
         </div>
         <!-- Our Approach Section -->
-        <div class="our-approch">
+        <div class="trainning-courseware our-approch">
             <div class="container">
                 <div class="section-margin">
                     <div class="title-header">
@@ -198,7 +198,7 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
         </div>
-            <div class="container">
+            <div class="container trainning-courseware">
                 <div class="row">
                     <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
@@ -329,17 +329,17 @@ get_header('globalimpact'); ?>
                                     ?>
 
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?> activity-blocks">
-                            <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
+                            <div class="single-activity-details trainning-courseware-array">
                                     <div class="image-green-shadow">
                                         <img src="<?php echo get_sub_field('training_solutions_image'); ?>" class="img-responsive">
                                     </div>
                                     <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
+                                        <h2 class="dg-header-4 trainning-courseware-array fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
                                         <img src="<?php echo get_sub_field('training_solutions_title_image'); ?>" alt="Community Videos" class="sol-default-img"/>
                                         <img src="<?php echo get_sub_field('training_solutions_title_hover_image'); ?>" alt="Community Videos" class="hover-img"/>
                                         </h2>
                                         <p class="dg-header-5 text-details"><?php echo get_sub_field('training_solutions_description'); ?> </p>
-                                         <a href="<?php echo get_sub_field('training_solutions_link'); ?>" class="green-bordered-button learn-more">Learn more</a>
+                                         <a href="<?php echo get_sub_field('training_solutions_link'); ?>" class="trainning-courseware-array green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                             </div>
@@ -351,7 +351,7 @@ get_header('globalimpact'); ?>
                 </div>
             </div>  
 <?php }  ?>   
-            <div class="stats-container">
+            <div class="trainning-courseware stats-container">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 work-inner-block">
@@ -446,7 +446,7 @@ $blog_permalink = get_the_permalink($blog_id);
                     </div>
                 </div>
             </div>
-         <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
+         <a href="#" class="trainning-courseware scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
        
       
 
