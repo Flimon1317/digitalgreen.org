@@ -1757,8 +1757,8 @@ a.forward-redirection-green-link:hover {
     line-height: 52px; }
   .coco-about-blocks .coco-mobile-img img {
     margin: -70px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border-radius: 25px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);*/
+    /*border-radius: 25px;*/
     max-height: 500px; }
 
 .what-coco-content {
@@ -1776,8 +1776,9 @@ a.forward-redirection-green-link:hover {
     margin: 23px auto 0 auto; }
     .app-screenshots #carousel-mobile-img .slick-slide img {
       max-height: 525px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-      border-radius: 25px; }
+      /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border-radius: 25px; */
+    }
     .app-screenshots #carousel-mobile-img .slick-list {
       max-width: 1170px;
       margin: 0 auto; }
@@ -3567,9 +3568,9 @@ figure.pull-left {
   background-color: #f05a29; }
 .loop .green-arrow {
   color: #f05a29; }
-.loop .scroll-top {
+.loop.scroll-top {
   background-color: #f05a29; }
-  .loop .scroll-top:hover {
+  .loop.scroll-top:hover {
     background-color: #8e3214; }
 .loop .big-arrow-slider .slick-arrow {
   background-image: url(../images/coco-slider-big-arrow.png); }
@@ -3667,9 +3668,9 @@ figure.pull-left {
   background-color: #26a7e0; }
 .solution-coco .green-arrow {
   color: #26a7e0; }
-.solution-coco .scroll-top {
+.solution-coco.scroll-top {
   background-color: #26a7e0; }
-  .solution-coco .scroll-top:hover {
+  .solution-coco.scroll-top:hover {
     background-color: #1b5771; }
 .solution-coco .big-arrow-slider .slick-arrow {
   background-image: url(../images/loop-slider-big-arrow.png); }

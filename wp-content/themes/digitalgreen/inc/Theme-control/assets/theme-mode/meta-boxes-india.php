@@ -101,7 +101,7 @@ function custom_meta_boxes_india() {
               'label'       => __( 'Add partner', 'digitalgreen' ),
               'desc'        => '',
               'std'         => '',
-              'type'        => 'text',
+              'type'        => 'upload',
               'section'     => 'india_partners1',
               ),
           )

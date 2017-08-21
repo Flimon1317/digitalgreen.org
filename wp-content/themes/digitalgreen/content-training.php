@@ -7,7 +7,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('training'); ?>
+get_header('globalimpact'); ?>
 </header>
 
 
@@ -237,7 +237,7 @@ get_header('training'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo get_field('training_what_is_coco_desc'); ?>
                                         <p>
-                                       <a href="<?php echo get_field('training_what_is_coco_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                       <a href="<?php echo get_field('training_what_is_coco_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -259,14 +259,36 @@ get_header('training'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo get_field('training_how_is_coco_description'); ?>
                                         <p>
-                                        <a href="<?php echo get_field('training_how_is_coco_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo get_field('training_how_is_coco_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="row">
+                    <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
+                        <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
+                            <div class="col-md-6">
+                                <div class="solution-gray-box-img">
+                                    <img src="<?php echo get_field('whats_next_image'); ?>" class="img-responsive">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="solution-gray-box-content">
+                                    <h2 class="dg-header-3"><?php echo get_field('whats_next_heading'); ?></h2>
+                                    <p><?php echo get_field('whats_next_description'); ?></p>
+                                    <a href="<?php echo get_field('whats_next_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
+
+
                 </div>
             </div>
+            
             <?php 
         if( have_rows('training_screenshots') ) 
         {
@@ -290,6 +312,7 @@ get_header('training'); ?>
                     </div>
                 </div>
             </div> <?php } ?>
+
 
 <?php 
         if( have_rows('training_solutions_section') ) 

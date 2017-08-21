@@ -15,7 +15,7 @@ get_header('globalimpact'); ?>
             <div class="banner-img"><img src="<?php echo get_field('solutions_coco_banner_image'); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
-                    <div class="row banner-inner">
+                    <div class="solution-coco row banner-inner">
                         <span class="banner-square"></span>
                         <h1 class="dg-header-1 banner-title"><?php echo get_field('solutions_coco_banner_heading'); ?></h1>
                         <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo get_field('solutions_coco_banner_sub_heading'); ?></h4>
@@ -36,13 +36,13 @@ get_header('globalimpact'); ?>
             <div class="container">
                 <div class="section-margin">
                     <div class="title-header">
-                        <h1 class="dg-header-1 main-section-title ">Our Approach
+                        <h1 class="solution-coco dg-header-1 main-section-title ">Our Approach
                             <span class="half-squre-before-title"></span>
                         </h1>
                     </div>
                 </div>
             </div>
-            <div class="solution-approach approach-carousel">
+            <div class="solution-coco solution-approach approach-carousel">
                 <div class="our-approach-carousel hidden-sm hidden-xs">
                 
                                 
@@ -199,7 +199,7 @@ get_header('globalimpact'); ?>
         </div>
             <div class="container">
                 <div class="row">
-                    <div class="clearfix solution-coco-welcome solution-single-gray-box section-margin">
+                    <div class="solution-coco clearfix solution-coco-welcome solution-single-gray-box section-margin">
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6">
                                 <div class="solution-gray-box-img">
@@ -215,9 +215,9 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                     </div>   
-                   <div class="coco-images section-margin">
+                   <!-- <div class="coco-images section-margin">
                         <img src="<?php echo get_field('solutions_coco_product_showcase_image'); ?>" alt="sample image"/>
-                    </div> 
+                    </div>  -->
                     <div class="clearfix about-coco">
                         <div class="single-mobile-container section-margin">
                             <div class="clearfix coco-about-blocks">
@@ -228,7 +228,7 @@ get_header('globalimpact'); ?>
                                         </div>
                                     </div>
                                 </div>   
-                                <div class="col-sm-6 col-sm-pull-6 coco-mobile-content">
+                                <div class="solution-coco col-sm-6 col-sm-pull-6 coco-mobile-content">
                                     <div class="what-coco-content">
                                         <h3 class="dg-header-2 sub-section-title">
                                             <?php echo get_field('solutions_coco_what_is_coco_title'); ?>
@@ -236,12 +236,12 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo get_field('solutions_coco_what_is_coco_desc'); ?>
                                         <p>
-                                       <a href="<?php echo get_field('solutions_coco_what_is_coco_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                       <a href="<?php echo get_field('solutions_coco_what_is_coco_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="single-mobile-container section-margin">
+                        <div class="solution-coco single-mobile-container section-margin">
                             <div class="clearfix coco-about-blocks">
                                 <div class="col-sm-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
@@ -258,7 +258,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo get_field('solutions_coco_how_is_coco_description'); ?>
                                         <p>
-                                        <a href="<?php echo get_field('solutions_coco_how_is_coco_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo get_field('solutions_coco_how_is_coco_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -323,7 +323,7 @@ get_header('globalimpact'); ?>
                 </div>
             </div>  
 <?php }  ?>  
-            <div class="stats-container">
+            <div class="solution-coco stats-container">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3 work-inner-block">
@@ -419,7 +419,7 @@ $blog_permalink = get_the_permalink($blog_id);
                     </div>
                 </div>
             </div>
-         <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
+         <a href="#" class="solution-coco scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
        
       
 
