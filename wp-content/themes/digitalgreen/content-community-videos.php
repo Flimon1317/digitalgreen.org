@@ -13,15 +13,15 @@ get_header('community'); ?>
 
 
  <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('communityvideos_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
+            <div class="banner-img-normal"><img src="<?php echo get_field('community_videos_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="community row banner-inner">
                         <span class="banner-square"></span>
-                        <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('communityvideos_banner_title'); ?></h1>
-                        <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo ot_get_option('communityvideos_banner_sub_title'); ?></h4>
+                        <h1 class="dg-header-1 banner-title"><?php echo get_field('community_videos_banner_heading'); ?></h1>
+                        <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo get_field('community_videos_banner_sub_heading'); ?></h4>
                         <h5 class="dg-header-5 banner-details hidden-xs">
-                           <?php echo ot_get_option('communityvideos_banner_desc'); ?>
+                           <?php echo get_field('community_videos_banner_description'); ?>
                         </h5>
                     </div>
                 </div>
@@ -29,7 +29,7 @@ get_header('community'); ?>
         </div>
         <div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
             <h5 class="dg-header-5 banner-details">
-                <?php echo ot_get_option('communityvideos_banner_desc'); ?>
+                <?php echo get_field('community_videos_banner_description'); ?>
             </h5>
         </div>
         <!-- Our Approach Section -->
@@ -47,19 +47,16 @@ get_header('community'); ?>
                 <div class="our-approach-carousel hidden-sm hidden-xs">
                 
                                 
-<?php
-      if (function_exists('get_option_tree')){
-        $communityvideos_approach = ot_get_option( 'communityvideos_approach', array() );
-        if ( ! empty( $communityvideos_approach ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $communityvideos_approach as $section ) {
-      ?>
+<?php $i=1;
+                                while ( have_rows('community_videos_approach') ) 
+                                {   
+                                    the_row();
+                                    ?>
                 
-                  <div class="slider-with-tab <?php if($i==1) echo 'active-tab'; ?>" data-index="<?php echo $i; ?>"><h1 class="dg-header-1"><?php echo $section['communityvideos_approach_title']; ?></h1>
-                    <p><?php echo $section['communityvideos_approach_short_desc']; ?></p>
+                  <div class="slider-with-tab <?php if($i==1) echo 'active-tab'; ?>" data-index="<?php echo $i; ?>"><h1 class="dg-header-1"><?php echo get_sub_field('community_videos_approach_title'); ?></h1>
+                    <p><?php echo get_sub_field('community_videos_approach_short_description'); ?></p>
                   </div>
-                  <?php $i++; } } } ?>
+                  <?php $i++; } ?>
             <!--    <div class="slider-with-tab active-tab" data-index="2"><h1 class="dg-header-1">02</h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                   </div>
@@ -73,29 +70,33 @@ get_header('community'); ?>
                 <div class="approach-content">
                     <div class="container">
                     
-                                    <?php
-      if (function_exists('get_option_tree')){
-        $communityvideos_approach = ot_get_option( 'communityvideos_approach', array() );
-        if ( ! empty( $communityvideos_approach ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $communityvideos_approach as $section ) {
-      ?>
+                                    <?php $i=1;
+                                while ( have_rows('community_videos_approach') ) 
+                                {   
+                                    the_row();
+                                    ?>
                     
-                        <div class="slider-with-tab hidden-lg hidden-md" data-index="<?php echo $i; ?>"><h1 class="dg-header-2"><?php echo $section['communityvideos_approach_title']; ?></h1>
-                            <p><?php echo $section['communityvideos_approach_short_desc']; ?></p>
+                        <div class="slider-with-tab hidden-lg hidden-md" data-index="<?php echo $i; ?>"><h1 class="dg-header-2"><?php echo get_sub_field('community_videos_approach_title'); ?></h1>
+                            <p><?php echo get_sub_field('community_videos_approach_short_description'); ?></p>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
+                              <div class="col-sm-6 right-block">
+                                <div class="img-right-part">
+                                    <div class="image-green-shadow">
+                                        <img src="<?php echo get_sub_field('community_videos_approach_image'); ?>" class="img-responsive" alt=""/>
+                                    </div>
+                                </div>
+                                </div>
                                 <div class="col-sm-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
                                             <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title"><?php echo $section['communityvideos_approach_heading']; ?>
+                                                <h3 class="dg-header-2 sub-section-title"><?php echo get_sub_field('community_videos_approach_heading'); ?>
                                                     <span class="half-squre-before-title"></span>
                                                 </h3>
                                                 <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details"><?php echo $section['communityvideos_approach_description']; ?>
+                                                    <p class="dg-header-5 text-details"><?php echo get_sub_field('community_videos_approach_description'); ?>
                                                 </p>
                                                 </div>
                                             </div>
@@ -103,16 +104,8 @@ get_header('community'); ?>
                                     </div>
                                 </div>
                             </div>
-                              <div class="col-sm-6 right-block">
-                                <div class="img-right-part">
-                                    <div class="image-green-shadow">
-                                        <img src="<?php echo $section['communityvideos_approach_image']; ?>" class="img-responsive" alt=""/>
-                                    </div>
-                                </div>
-                            </div>
-                           
                         </div>
-                      <?php $i++; } } } ?>  
+                      <?php $i++; } ?> 
                         <!--  <div class="slider-with-tab hidden-lg hidden-md" data-index="2"><h1 class="dg-header-2">02</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </div>
@@ -208,7 +201,7 @@ get_header('community'); ?>
             <div class="container">
                 <div class="row">   
                    <div class="coco-images section-margin">
-                        <img src="<?php echo ot_get_option('communityvideos_product_show_image'); ?>" alt="sample image"/>
+                        <img src="<?php echo get_field('community_videos_product_showcase_image'); ?>" alt="sample image"/>
                     </div> 
                     <div class="clearfix about-coco">
                         <div class="single-mobile-container section-margin">
@@ -216,19 +209,19 @@ get_header('community'); ?>
                             <div class="col-sm-6 col-sm-push-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('communityvideos_what_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo get_field('community_videos_what_is_coco_image'); ?>" class="img-responsive">
                                         </div>
                                     </div>
                                 </div>   
                                 <div class="col-sm-6 col-sm-pull-6 coco-mobile-content">
                                     <div class="what-coco-content">
                                         <h3 class="dg-header-2 sub-section-title">
-                                            <?php echo ot_get_option('communityvideos_what_title'); ?>
+                                            <?php echo get_field('community_videos_what_is_coco_title'); ?>
                                             <span class="half-squre-before-title"></span>
                                         </h3>
-                                        <p class="dg-header-5 text-details"><?php echo ot_get_option('communityvideos_what_desc'); ?>
+                                        <p class="dg-header-5 text-details"><?php echo get_field('community_videos_what_is_coco_desc'); ?>
                                         <p>
-                                       <a href="<?php echo ot_get_option('communityvideos_what_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                       <a href="<?php echo get_field('community_videos_what_is_coco_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -238,19 +231,19 @@ get_header('community'); ?>
                                 <div class="col-sm-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
                                         <div class="solution-gray-box-white-border">
-                                            <img src="<?php echo ot_get_option('communityvideos_how_image'); ?>" class="img-responsive">
+                                            <img src="<?php echo get_field('community_videos_how_is_coco_image'); ?>" class="img-responsive">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-sm-5 col-sm-offset-1 coco-mobile-content">
                                     <div class="single-mobile-text-content">
                                         <h3 class="dg-header-2 sub-section-title">
-                                            <?php echo ot_get_option('communityvideos_how_title'); ?>
+                                            <?php echo get_field('community_videos_how_is_coco_title'); ?>
                                             <span class="half-squre-before-title"></span>
                                         </h3>
-                                        <p class="dg-header-5 text-details"><?php echo ot_get_option('communityvideos_how_desc'); ?>
+                                        <p class="dg-header-5 text-details"><?php echo get_field('community_videos_how_is_coco_description'); ?>
                                         <p>
-                                        <a href="<?php echo ot_get_option('communityvideos_how_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo get_field('community_videos_how_is_coco_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -274,133 +267,68 @@ get_header('community'); ?>
                     </div>
                 </div>
             </div>
-<!--             <div class="app-screenshots big-arrow-slider">
+<?php 
+        if( have_rows('community_videos_screenshots') ) 
+        {
+            ?> 
+            <div class="app-screenshots big-arrow-slider">
                 <div class="custom-class-slideshow text-center">
-                    <div class="container"><h1 class="dg-header-2 mobile-slider-main-title"><?php echo ot_get_option('communityvideos_screenshots_title'); ?></h1></div>
+                    <div class="container"><h1 class="dg-header-2 mobile-slider-main-title"><?php echo get_field('community_videos_screenshots_heading'); ?></h1></div>
                     <div id="carousel-mobile-img" class="clearfix">
-                    <?php
-      if (function_exists('get_option_tree')){
-        $communityvideos_screenshots = ot_get_option( 'communityvideos_screenshots', array() );
-        if ( ! empty( $communityvideos_screenshots ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $communityvideos_screenshots as $section ) {
-      ?>
+                    <?php $i=1;
+                                while ( have_rows('community_videos_screenshots') ) 
+                                {   
+                                    the_row();
+                                    ?>
                         <div class="slide-item">
-                             <img src="<?php echo $section['communityvideos_screenshot_image']; ?>" alt="slide1">
+                             <img src="<?php echo get_sub_field('community_videos_screenshots_image'); ?>" alt="slide1">
                         </div> 
-                        <?php $i++; } } } ?>
+                        <?php $i++; } ?>
                         
-                      <div class="slide-item">
-                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide2">
-                        </div>
-                        <div class="slide-item">
-                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide3">
-                        </div>
-                        <div class="slide-item">
-                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide4">
-                        </div>
-                        <div class="slide-item">
-                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide5">
-                        </div>
-                        <div class="slide-item">
-                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide6">
-                        </div>
-                        <div class="slide-item">
-                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide7">
-                        </div>
-                        <div class="slide-item">
-                             <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/iphone-5.png" alt="slide8">
-                        </div>   
+                      
                         
                     </div>
                 </div>
-            </div> -->
+            </div> 
+            <?php } ?>
 
-<?php
-      if (function_exists('get_option_tree')){ 
-    $communityvideos_solutions_array = ot_get_option( 'communityvideos_solutions_array', array() );
-        if ( ! empty( $communityvideos_solutions_array ) ) {
-?>
+<?php 
+        if( have_rows('community_videos_solutions_section') ) 
+        {
+            ?>  
             <div class="container section-padding our-solution">
                 <div class="activity-details-section">
                     <div class="row custom-class-slideshow">
                         <div class="activity-details clearfix">
-<?php 
-        
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $communityvideos_solutions_array as $section ) {
-            
-      ?>
+<?php $i=1;
+                                while ( have_rows('community_videos_solutions_section') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?> activity-blocks">
-                                <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
+                            <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
                                     <div class="image-green-shadow">
-                                        <img src="<?php echo $section['communityvideos_image']; ?>" class="img-responsive">
+                                        <img src="<?php echo get_sub_field('community_videos_solutions_image'); ?>" class="img-responsive">
                                     </div>
                                     <div class="our-solution-block">
                                         <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
-                                        <img src="<?php echo $section['title_img']; ?>" alt="Community Videos" class="sol-default-img"/>
-                                        <img src="<?php echo $section['title_img_hover']; ?>" alt="Community Videos" class="hover-img"/>
-                                        <p class="dg-header-5 text-details"><?php echo $section['communityvideos_array_description']; ?> </p>
-                                         <a href="<?php echo $section['communityvideos_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
+                                        <img src="<?php echo get_sub_field('community_videos_solutions_title_image'); ?>" alt="Community Videos" class="sol-default-img"/>
+                                        <img src="<?php echo get_sub_field('community_videos_solutions_title_hover_image'); ?>" alt="Community Videos" class="hover-img"/>
+                                        </h2>
+                                        <p class="dg-header-5 text-details"><?php echo get_sub_field('community_videos_solutions_description'); ?> </p>
+                                         <a href="<?php echo get_sub_field('community_videos_solutions_link'); ?>" class="green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                             </div>
-<?php $i++; } ?>
+<?php $i++; } ?> 
 
-                           <!-- <div class="col-sm-3 activity-blocks">
-                                <div class="single-activity-details hover-dark-orange">
-                                    <div class="image-green-shadow">
-                                        <img src="images/img1.png" class="img-responsive">
-                                    </div>
-                                    <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
-                                            <img src="images/coco-gray.png" alt="CoCo" class="sol-default-img">
-                                            <img src="images/coco-orange.png" alt="CoCo" class="hover-img">
-                                        </h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <a href="solutions-coco.html" class="green-bordered-button learn-more">Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 activity-blocks">
-                                <div class="single-activity-details hover-dark-Purple">
-                                    <div class="image-green-shadow">
-                                        <img src="images/img1.png" class="img-responsive">
-                                    </div>
-                                    <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
-                                            <img src="images/trainning-gray.png" alt="communityvideos Courseware" class="sol-default-img">
-                                            <img src="images/trainning-purple.png" alt="communityvideos Courseware" class="hover-img">
-                                        </h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                         <a href="case-studies.html" class="green-bordered-button learn-more">Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12 activity-blocks">
-                                <div class="single-activity-details hover-dark-blue">
-                                    <div class="image-green-shadow">
-                                        <img src="images/img1.png" class="img-responsive">
-                                    </div>
-                                    <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
-                                            <img src="images/loop.png" alt="Loop" class="sol-default-img">
-                                            <img src="images/loop-blue.png" alt="Loop" class="hover-img">
-                                        </h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <a href="case-studies.html" class="green-bordered-button learn-more">Learn more</a>
-                                    </div>
-                                </div>
-                            </div> -->
+                            
                         </div>
                     </div>
                 </div>
-            </div> 
-
-<?php } } ?>   
+            </div>  
+<?php }  ?>   
             <div class="stats-container">
                 <div class="container">
                     <div class="row">
