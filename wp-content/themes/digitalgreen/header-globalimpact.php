@@ -98,14 +98,14 @@
                             </ul> -->
                         </li>
                         <li class="dropdown">
-                            <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solution
+                            <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solutions
                                 <span class="pull-right">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solution</a></li>
+                                <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solutions</a></li>
                                  <?php
       if (function_exists('get_option_tree')){
         $solution_impact = ot_get_option( 'solution_impact', array() );

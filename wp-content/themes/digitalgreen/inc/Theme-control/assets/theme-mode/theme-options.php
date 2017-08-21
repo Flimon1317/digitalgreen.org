@@ -260,7 +260,7 @@ function custom_theme_options() {
 
   array(
         'id'          => 'solution_impact',
-        'label'       => __( 'solution', 'digitalgreen' ),
+        'label'       => __( 'solutions', 'digitalgreen' ),
     'desc'        => '',
         'std'         => '',
         'type'        => 'list-item',

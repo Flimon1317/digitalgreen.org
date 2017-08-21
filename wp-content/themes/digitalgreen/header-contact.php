@@ -80,7 +80,7 @@
                             </ul>
                         </li>
                         <li class="dropdown mega-dropdown">
-                            <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solution
+                            <a href="<?php echo esc_url(site_url()); ?>/solutions" class="dropdown-toggle">Solutions
                                 <span class="pull-right">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
@@ -95,7 +95,7 @@
                             <ul class="mega-dropdown-menu">
                                 <li class="col-sm-3">
                                     <div class="menu-content">
-                                        <h2 class="dg-header-3">Solution</h2>
+                                        <h2 class="dg-header-3">Solutions</h2>
                                         <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
                                         <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
                                     </div>
