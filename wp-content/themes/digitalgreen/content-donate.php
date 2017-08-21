@@ -13,16 +13,16 @@ get_header('globalimpact'); ?>
  <!-- Banner Section -->
             
         <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo ot_get_option('donate_banner_image'); ?>" class="img-responsive"/></div>
+            <div class="banner-img"><img src="<?php echo get_field('donate_banner_image'); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
                         <span class="banner-square"></span>
-                        <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('donate_banner_title'); ?></h1>
+                        <h1 class="dg-header-1 banner-title"><?php echo get_field('donate_banner_heading'); ?></h1>
                         <h5 class="dg-header-5 banner-details hidden-xs">
-                            <?php echo ot_get_option('donate_banner_desc'); ?>
+                            <?php echo get_field('donate_banner_description'); ?>
                         </h5>
-                        <a href="<?php echo ot_get_option('donate_banner_link'); ?>">
+                        <a href="<?php echo get_field('donate_banner_link'); ?>">
                             <button class="green-bordered-button with-bottom-cut btn-donate">Donate</button>
                         </a>
                     </div>
@@ -32,7 +32,7 @@ get_header('globalimpact'); ?>
         </div>
         <div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
                 <h5 class="dg-header-5 banner-details">
-                    <?php echo ot_get_option('donate_banner_desc'); ?>
+                    <?php echo get_field('donate_banner_description'); ?>
                 </h5>
             </div>
 

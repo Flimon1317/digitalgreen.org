@@ -11,15 +11,15 @@ get_header('globalimpact'); ?>
 </header>
 
  <div class="banner-section">
-        <div class="banner-img"><img src="<?php echo esc_url(ot_get_option('financial_banner_image')); ?>" class="img-responsive"/></div>
+        <div class="banner-img"><img src="<?php echo get_field('financials_banner_image'); ?>" class="img-responsive"/></div>
         <div class="banner-text">
             <div class="container text-white">
                 <div class="row banner-inner">
                     <span class="banner-square"></span>
-                    <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('financial_banner_title'); ?></h1>
-                    <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo ot_get_option('financial_heading'); ?></h4>
+                    <h1 class="dg-header-1 banner-title"><?php echo get_field('financials_banner_title'); ?></h1>
+                    <h4 class="dg-header-3 text-white header-img-text-single-line hidden-xs"><?php echo get_field('financials_banner_heading'); ?></h4>
                     <h5 class="dg-header-5 banner-details hidden-xs">
-                        <?php echo ot_get_option('financial_description'); ?>
+                        <?php echo get_field('financials_banner_description'); ?>
                     </h5>
                 </div>
             </div>
@@ -27,7 +27,7 @@ get_header('globalimpact'); ?>
     </div>
     <div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
         <h5 class="dg-header-5 banner-details">
-            <?php echo ot_get_option('financial_description'); ?>
+            <?php echo get_field('financials_banner_description'); ?>
         </h5>
     </div>
     <!-- Global Immpact Section -->
@@ -37,7 +37,7 @@ get_header('globalimpact'); ?>
                 <div class="section-header container-sectionH">
                     <div class="title-row">
                         <div class="title-header">
-                            <h1 class="dg-header-1 main-section-title "><?php echo ot_get_option('title_speaks'); ?>
+                            <h1 class="dg-header-1 main-section-title "><?php echo get_field('financials_financials_heading'); ?>
                                 <span class="half-squre-before-title"></span>
                             </h1>
                         </div>
@@ -50,41 +50,38 @@ get_header('globalimpact'); ?>
     <div class="gray-boxes-container">
         <div class="container">
             <div class="case-study-boxes">
-            <?php
-      if (function_exists('get_option_tree')){
-        $financials_financial = ot_get_option( 'financials_financial', array() );
-        if ( ! empty( $financials_financial ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $financials_financial as $section ) {
-      ?>
+            <?php $i=1;
+                                while ( have_rows('financials_section') ) 
+                                {   
+                                    the_row();
+                                    ?>
                 <div class="col-sm-4">
                     <div class="single-boxes-card">
                         <div class="gray-boxes">
                             <div class="box-inner-white-border">
                                 <div class="gray-boxes-text-content">
-                                    <h2 class="card-title"><?php echo $section['financial_title']; ?>
+                                    <h2 class="card-title"><?php echo get_sub_field('financials_title'); ?> </h2>
                                     <p class="hidden-sm hidden-md hidden-lg ">
-                                        <a href="<?php echo $section['financial_link']; ?>" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                        <a href="<?php echo get_sub_field('financials_file'); ?>" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="hover-card-details hidden-xs">
                             <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white"><?php echo $section['financial_area']; ?></h3>
+                                <h3 class="dg-header-3 text-white"><?php echo get_sub_field('financials_place'); ?></h3>
                                 <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link"><?php echo $section['financial_value']; ?></h1>
-                                    <h4 class=" text-white"><?php echo $section['financial_desc']; ?></h4>
+                                    <h1 class="dg-header-1 forward-redirection-green-link"><?php echo get_sub_field('financials_value'); ?></h1>
+                                    <h4 class=" text-white"><?php echo get_sub_field('financials_description'); ?></h4>
                                 </div>
                                 <p>
-                                    <a href="<?php echo $section['financial_attach']; ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                    <a href="<?php echo get_sub_field('financials_file'); ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div> 
- <?php } } } ?>
+ <?php } ?>
                <!--  <div class="col-sm-4">
                     <div class="single-boxes-card">
                         <div class="gray-boxes">
@@ -315,9 +312,9 @@ get_header('globalimpact'); ?>
                                 <div class="col-md-7">
                                     <div class="our-solution-wrap">
                                         <div class="our-solution-box">
-                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('financial_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('financials_featured_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
                                             </h3>
-                                            <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('financial_solution_desc'); ?></p>
+                                            <p class="dg-header-5 on-hover-title-color"><?php echo get_field('financials_featured_description'); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -325,21 +322,17 @@ get_header('globalimpact'); ?>
                             <!-- for-Desktop-size-count-globel-impact-stat -->
                             <div class="custom-class-slideshow stats-slider-wrap">
                                 <div class="stats-values stat-slider">
-                                   <?php
-      if (function_exists('get_option_tree')){
-        $financial_solution_values = ot_get_option( 'financial_solution_values', array() );
-        if ( ! empty( $financial_solution_values ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $financial_solution_values as $section ) {
-            
-      ?>
+                                    <?php $i=1;
+                                while ( have_rows('financials_featured_values') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
                                     <div class="count-global-stat text-center">
-                                        <h1 class="dg-header-1"><?php echo $section['financial_solution_value']; ?></h1>
-                                        <h4 class="dg-header-5"><?php echo $section['financial_solution_text']; ?></h4>
+                                        <h1 class="dg-header-1"><?php echo get_sub_field('financials_featured_value'); ?></h1>
+                                        <h4 class="dg-header-5"><?php echo get_sub_field('financials_featured_value_desc'); ?></h4>
                                     </div>
-<?php } } } ?>
+<?php } ?>
 
                                    <!-- <div class="count-global-stat text-center">
                                         <h1 class="dg-header-2">270,000</h1>
@@ -359,15 +352,15 @@ get_header('globalimpact'); ?>
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
                                                 <div class="our-solution-box">
-                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('financial_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
+                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('financials_featured_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
                                                     </h3>
-                                                    <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('financial_solution_desc'); ?></p>
+                                                    <p class="dg-header-5 on-hover-title-color"><?php echo get_field('financials_featured_description'); ?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-5 full-col solution-img-wrap">
                                             <div class="our-solution-img">
-                                                <img src="<?php echo ot_get_option('financial_solution_image'); ?>">
+                                                <img src="<?php echo get_field('financials_featured_image'); ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -381,7 +374,7 @@ get_header('globalimpact'); ?>
 
 <?php 
 
-$blog_id=ot_get_option('financial_solution_blog');
+$blog_id=get_field('financials_featured_blog');
 $auth = get_post($blog_id); // gets author from post
 $blog_title = get_the_title($blog_id);
 

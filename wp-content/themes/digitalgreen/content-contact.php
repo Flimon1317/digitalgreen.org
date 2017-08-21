@@ -10,15 +10,15 @@
 get_header('globalimpact'); ?>
 </header>
 <div class="banner-section">
-            <div class="banner-img"><img src="<?php echo ot_get_option('contact_banner_image'); ?>" class="img-responsive"/></div>
+            <div class="banner-img"><img src="<?php echo get_field('contact_banner_image'); ?>" class="img-responsive"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
                         <span class="banner-square"></span>
-                        <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('contact_title'); ?></h1>
-                        <h4 class="dg-header-3 text-white hidden-xs"><?php echo ot_get_option('contact_heading'); ?></h4>
+                        <h1 class="dg-header-1 banner-title"><?php echo get_field('contact_banner_heading'); ?></h1>
+                        
                         <h5 class="dg-header-5 banner-details hidden-xs">
-                        <?php echo ot_get_option('contact_desc'); ?>
+                        <?php echo get_field('contact_banner_description'); ?>
                         </h5>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ get_header('globalimpact'); ?>
         </div>
         <div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
             <h5 class="dg-header-5 banner-details">
-                <?php echo ot_get_option('contact_desc'); ?>
+                <?php echo get_field('contact_banner_description'); ?>
             </h5>
         </div>
         <div class="contact-section">
@@ -51,27 +51,33 @@ get_header('globalimpact'); ?>
                     </form>
                 </div>
             </div>
+<?php 
+        if( have_rows('contact_offices') ) 
+        {
+            ?> 
+
             <section id="offices" class="section-padding">
                 <div class="container">
                     <h3 class="dg-header-2 sub-section-title">Our Offices
                         <span class="half-squre-before-title"></span>
                     </h3>
                     <div class="address-wrapper">
-                      <?php
-      if (function_exists('get_option_tree')){
-        $contact_offices = ot_get_option( 'contact_offices', array() );
-        if ( ! empty( $contact_offices ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $contact_offices as $section ) {
-      ?>
+                      
+
+      <?php 
+                                while ( have_rows('contact_offices') ) 
+                                {   
+                                    the_row();
+                                    ?>
                         <div class="address-block">
-                            <h3><?php echo $section['title']; ?></h3>
+                            <h3><?php echo get_sub_field('contact_office_address_title'); ?></h3>
                             <ul class="address-lines">
-                                   <?php echo $section['contact_office']; ?>
+                                   <?php echo get_sub_field('contact_office_address'); ?>
                             </ul>
                         </div> 
-     <?php } } } ?> 
+      <?php
+                                }
+                            ?>
                        <!--  <div class="address-block">
                             <h3>Digital Green Foundation (Berkeley)</h3>
                             <ul class="address-lines">
@@ -172,6 +178,10 @@ get_header('globalimpact'); ?>
                     </div> 
                 </div>
              </section>
+<?php
+        }
+    ?>
+
         </div>
         
         

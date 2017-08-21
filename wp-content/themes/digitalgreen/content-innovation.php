@@ -12,14 +12,14 @@ get_header('globalimpact'); ?>
         </header>
         <!-- Banner Section -->
         <div class="banner-section">
-            <div class="banner-img-normal"><img src="<?php echo esc_url(ot_get_option('innovation_banner_image')); ?>" class="sub-menu-banner w3-image"/></div>
+            <div class="banner-img-normal"><img src="<?php echo get_field('innovation_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
                 <div class="container text-white">
                     <div class="row banner-inner">
                         <span class="banner-square"></span>
-                        <h1 class="dg-header-1 banner-title"><?php echo ot_get_option('innovation_banner_title'); ?></</h1>
+                        <h1 class="dg-header-1 banner-title"><?php echo get_field('innovation_banner_heading'); ?></</h1>
                         <h5 class="dg-header-5 banner-details hidden-xs">
-                            <?php echo ot_get_option('innovation_banner_desc'); ?></
+                            <?php echo get_field('innovation_banner_description'); ?></
                         </h5>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ get_header('globalimpact'); ?>
         </div>
         <div class="mobile-banner-text hidden-lg hidden-md hidden-sm">
             <h5 class="dg-header-5 banner-details">
-                <?php echo ot_get_option('innovation_banner_desc'); ?>
+                <?php echo get_field('innovation_banner_description'); ?>
             </h5>
         </div>
        
@@ -38,7 +38,7 @@ get_header('globalimpact'); ?>
             <div class="container">
                 <div class="section-header">
                     <div class="title-header">
-                        <h1 class="dg-header-1 main-section-title ">Title that speaks to your global impact
+                        <h1 class="dg-header-1 main-section-title "><?php echo get_field('innovation_about_heading'); ?>
                             <span class="half-squre-before-title"></span>
                         </h1>
                     </div>
@@ -46,47 +46,53 @@ get_header('globalimpact'); ?>
             </div>
             <div class="custom-class-slideshow global-impact-blocks hidden-xs hidden-sm">
                 <div class="globalimp-list">
+<?php $i=1;
+                                while ( have_rows('innovation_sections') ) 
+                                {   
+                                    the_row();
+                                    ?>
+
                     <div class="single-img-container" id="community-videos">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 right-block">
                                     <div class="img-right-part">
                                         <div class="image-green-shadow">
-                                            <img src="<?php echo ot_get_option('innovation_section1_image'); ?>" class="img-responsive">
+                                             <img src="<?php echo get_sub_field('innovation_section_image'); ?>" class="img-responsive">
                                             <div class="number-count-div text-center">
-                                                <?php
-      if (function_exists('get_option_tree')){
-        $innovation_section1_image_value1 = ot_get_option( 'innovation_section1_image_value1', array() );
-        if ( ! empty( $innovation_section1_image_value1 ) ) {
-          
-          $i=1;
-          foreach( $innovation_section1_image_value1 as $section ) {
-      ?>  
+                                                <?php 
+                                while ( have_rows('innovation_section_values') ) 
+                                {   
+                                    the_row();
+                                    ?>  
 
-                                                <p><?php echo $section['innovation_section1_value1']; ?></p>
-<?php } } } ?>
+                                                <p><span class="count-num"><?php echo get_sub_field('innovation_section_value'); ?></span> <?php echo get_sub_field('innovation_section_values_desc'); ?></p>
+<?php }  ?>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title"><?php echo ot_get_option('innovation_section1_title'); ?>
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <p class="dg-header-5 text-details"><?php echo ot_get_option('innovation_section1_desc'); ?>
-                                                </p>
-                                                <a href="<?php echo ot_get_option('innovation_section1_link'); ?>" class="green-bordered-button learn-more">Learn more</a>
+                                            <div class="row img-details">
+                                                <div class="single-img">
+                                                    <div class="side-gray-border">
+                                                        <h3 class="dg-header-2 sub-section-title"><?php echo get_sub_field('innovation_section_title'); ?>
+                                                            <span class="half-squre-before-title"></span>
+                                                        </h3>
+                                                        <div class="single-img-content">
+                                                            <p class="dg-header-5 text-details"><?php echo get_sub_field('innovation_section_description'); ?>
+                                                            </p>
+                                                        </div>
+                                                        <a href="<?php echo get_sub_field('innovation_section_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="single-img-container" id="coco">
+                             <?php $i++; } ?> 
+                   <!--<div class="single-img-container" id="coco">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-6 right-block">
@@ -106,8 +112,7 @@ get_header('globalimpact'); ?>
                                                 <p><?php echo $section['innovation_section2_value1']; ?></p>
 <?php } } } ?> 
 
-                                             <!--   <p><?php echo ot_get_option('innovation_section2_image_value2'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section2_image_value3'); ?></p> -->
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -148,8 +153,7 @@ get_header('globalimpact'); ?>
 
                                                 <p><?php echo $section['innovation_section3_value1']; ?></p>
 <?php } } } ?> 
-                                               <!-- <p><?php echo ot_get_option('innovation_section3_image_value2'); ?></p>
-                                                <p><?php echo ot_get_option('innovation_section3_image_value3'); ?></p> -->
+                                               
                                             </div>
                                         </div>
                                     </div>
@@ -210,65 +214,10 @@ get_header('globalimpact'); ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-          <!--  <div class="container our-solution">
-                <div class="activity-details-section">
-                    <div class="row custom-class-slideshow">
-                        <div class="activity-details">
-                            <div class="col-sm-3">
-                                <div class="single-activity-details hover-dark-pink">
-                                    <div class="image-green-shadow">
-                                        <img src="images/img1.png" class="img-responsive">
-                                    </div>
-                                    <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> Community Videos</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                                        <a href="solutions-coco.html" class="green-bordered-button learn-more">Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="single-activity-details hover-dark-orange">
-                                    <div class="image-green-shadow">
-                                        <img src="images/img1.png" class="img-responsive">
-                                    </div>
-                                    <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> Coco</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <a href="solutions-coco.html" class="green-bordered-button learn-more">Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3">
-                                <div class="single-activity-details hover-dark-Purple">
-                                    <div class="image-green-shadow">
-                                        <img src="images/img1.png" class="img-responsive">
-                                    </div>
-                                    <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> Training Courseware</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <a href="solutions-coco.html" class="green-bordered-button learn-more">Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-3 col-xs-12">
-                                <div class="single-activity-details hover-dark-blue">
-                                    <div class="image-green-shadow">
-                                        <img src="images/img1.png" class="img-responsive">
-                                    </div>
-                                    <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> Loop</h2>
-                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        <a href="solutions-coco.html" class="green-bordered-button learn-more">Learn more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+          
              <div class="stats-container">
                 <div class="container">
                     <div class="row">
