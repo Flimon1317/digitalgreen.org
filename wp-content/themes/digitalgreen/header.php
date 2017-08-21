@@ -9,7 +9,7 @@
  * @since Twenty Fifteen 1.0
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js"> 
 <head>
 	<title>Digital Green</title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
