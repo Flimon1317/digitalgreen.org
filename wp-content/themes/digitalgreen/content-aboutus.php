@@ -238,7 +238,7 @@ get_header('globalimpact'); ?>
                         <div class="timeline-info">
                             <div class="left-block">
                                <div class="img-right-part">
-                                   <div class="image-green-shadow">
+                                   <div class="image-green-shadow"> 
                                        <img src="<?php echo get_sub_field('about_us_history_image'); ?>" class="img-responsive">
                                        
                                        <a href="#" data-url="<?php echo get_sub_field('about_us_watch_video_link'); ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
