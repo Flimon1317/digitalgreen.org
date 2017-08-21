@@ -4042,20 +4042,40 @@ figure.pull-left {
   background-size: 200% 100%;
   background-position: left bottom; }
 
+.trainning-courseware:hover .trainning-courseware.green-bordered-button {
+  background: linear-gradient(to left, transparent 49%, #65E214 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+
+}
+
+.solution-coco-array:hover .solution-coco-array.green-bordered-button {
+  background: linear-gradient(to left, transparent 49%, #65E214 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: #fff;
+
+}
+
+.loop-array:hover .loop-array.green-bordered-button {
+  background: linear-gradient(to left, transparent 49%, #65E214 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+  color: #fff;
+}
 
 
-.trainning-courseware .green-bordered-button {
+.trainning-courseware .purple-bordered-button {
     border-color: #8f288c;
     color: #8f288c;
 }
-
-  .trainning-courseware .green-bordered-button:hover {
+  .trainning-courseware .purple-bordered-button:hover {
     background: linear-gradient(to left, transparent 49%, #8f288c 50%);
     background-size: 200% 100%;
     background-position: left bottom;
     color: #fff; }
 
-.trainning-courseware .green-bordered-button:after, .trainning-courseware .green-bordered-button:before {
+.trainning-courseware .purple-bordered-button:after, .trainning-courseware .purple-bordered-button:before {
     border-color: #8f288c;
 }
 

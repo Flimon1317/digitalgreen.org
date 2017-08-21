@@ -163,7 +163,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_what_desc'); ?>
                                         <p>
-                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
+                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="purple-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -185,7 +185,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_how_desc'); ?>
                                         <p>
-                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
+                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="purple-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -270,16 +270,16 @@ get_header('globalimpact'); ?>
       ?>
 
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?> activity-blocks">
-                                <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
+                                <div class="single-activity-details trainning-courseware">
                                     <div class="image-green-shadow">
                                         <img src="<?php echo $section['training_image']; ?>" class="img-responsive">
                                     </div>
                                     <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
+                                        <h2 class="dg-header-4 trainning-courseware fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
                                         <img src="<?php echo $section['title_img']; ?>" alt="Community Videos" class="sol-default-img"/>
                                         <img src="<?php echo $section['title_img_hover']; ?>" alt="Community Videos" class="hover-img"/>
                                         <p class="dg-header-5 text-details"><?php echo $section['training_array_description']; ?> </p>
-                                         <a href="<?php echo $section['training_array_link']; ?>" class="trainning-courseware green-bordered-button learn-more">Learn more</a>
+                                         <a href="<?php echo $section['training_array_link']; ?>" class=" trainning-courseware green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                             </div>

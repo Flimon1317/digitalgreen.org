@@ -7,7 +7,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('loop'); ?>
+get_header('globalimpact'); ?>
 </header>
 
 
@@ -351,16 +351,16 @@ get_header('loop'); ?>
       ?>
 
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?> activity-blocks">
-                                <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
+                                <div class="single-activity-details loop-array">
                                     <div class="image-green-shadow">
                                         <img src="<?php echo $section['loop_image']; ?>" class="img-responsive">
                                     </div>
                                     <div class="our-solution-block">
-                                        <h2 class="dg-header-4 fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
+                                        <h2 class="dg-header-4 loop-array fontsize-20-title"><span class="hidden-sm hidden-md hidden-lg mobile-half-squre-before-title"></span> 
                                         <img src="<?php echo $section['title_img']; ?>" alt="Community Videos" class="sol-default-img"/>
                                         <img src="<?php echo $section['title_img_hover']; ?>" alt="Community Videos" class="hover-img"/>
                                         <p class="dg-header-5 text-details"><?php echo $section['loop_array_description']; ?> </p>
-                                         <a href="<?php echo $section['loop_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
+                                         <a href="<?php echo $section['loop_array_link']; ?>" class="loop-array green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                             </div>
