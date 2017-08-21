@@ -156,14 +156,14 @@ get_header('globalimpact'); ?>
                                     </div>
                                 </div>   
                                 <div class="col-sm-6 col-sm-pull-6 coco-mobile-content">
-                                    <div class="what-coco-content">
+                                    <div class="what-coco-content trainning-courseware">
                                         <h3 class="dg-header-2 sub-section-title">
                                             <?php echo ot_get_option('training_what_title'); ?>
                                             <span class="half-squre-before-title"></span>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_what_desc'); ?>
                                         <p>
-                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="purple-bordered-button learn-more">Explore Now</a>
+                                       <a href="<?php echo ot_get_option('training_what_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -177,7 +177,7 @@ get_header('globalimpact'); ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-5 col-sm-offset-1 coco-mobile-content">
+                                <div class="col-sm-5 col-sm-offset-1 coco-mobile-content trainning-courseware" >
                                     <div class="single-mobile-text-content">
                                         <h3 class="dg-header-2 sub-section-title">
                                             <?php echo ot_get_option('training_how_title'); ?>
@@ -185,7 +185,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo ot_get_option('training_how_desc'); ?>
                                         <p>
-                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="purple-bordered-button learn-more">Explore Now</a>
+                                        <a href="<?php echo ot_get_option('training_how_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
                                     </div>
                                 </div>
                             </div>

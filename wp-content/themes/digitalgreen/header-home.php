@@ -54,7 +54,7 @@
                                 </span>
                             </a>
                             <!-- mobile-sub-menu -->
-                            <ul class="dropdown-menu" style="margin-top: 10px;">
+                            <ul class="dropdown-menu">
                                 <li><b><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></b></li>
                                 <?php
       if (function_exists('get_option_tree')){
@@ -117,7 +117,7 @@
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu" style="margin-top: 10px;">
+                            <ul class="dropdown-menu">
                                 <li><b><a href="<?php echo esc_url(site_url()); ?>/solutions">Solutions</a></b></li>
                                  <?php
       if (function_exists('get_option_tree')){
@@ -189,7 +189,7 @@
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
-                            <ul class="dropdown-menu" style="margin-top: 10px;">
+                            <ul class="dropdown-menu">
                                 <li><b><a href="<?php echo esc_url(site_url()); ?>/about-us">About Us</a></b></li>
                                 <?php
       if (function_exists('get_option_tree')){

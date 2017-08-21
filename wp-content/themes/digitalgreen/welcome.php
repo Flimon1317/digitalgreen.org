@@ -126,7 +126,7 @@ get_header('home'); ?>
                             <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12 ';?>activity-blocks">
                                 <a href="<?php echo $section['solutions_array_link']; ?>" >
                                 <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
-                                    <div class="homepage image-green-shadow">
+                                    <div class="image-green-shadow">
                                         <img src="<?php echo $section['solutions_image']; ?>" class="img-responsive">
                                     </div>
                                     <div class="our-solution-block">
@@ -135,7 +135,7 @@ get_header('home'); ?>
                                         <img src="<?php echo $section['title_img_hover']; ?>" alt="Community Videos" class="hover-img"/>
                                         </h2>
                                         <p class="dg-header-5 text-details"><?php echo $section['solutions_array_description']; ?> </p>
-                                         <a href="<?php echo $section['solutions_array_link']; ?>" class="homepage green-bordered-button learn-more">Learn more</a>
+                                         <a href="<?php echo $section['solutions_array_link']; ?>" class="green-bordered-button learn-more">Learn more</a>
                                     </div>
                                 </div>
                                 </a>
