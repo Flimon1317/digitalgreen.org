@@ -100,7 +100,7 @@ function custom_meta_boxes_ethopia() {
               'label'       => __( 'Add partner', 'digitalgreen' ),
               'desc'        => '',
               'std'         => '',
-              'type'        => 'text',
+              'type'        => 'upload',
               'section'     => 'ethopia_partners1',
               ),
           )
@@ -128,7 +128,7 @@ function custom_meta_boxes_ethopia() {
               'label'       => __( 'Add partner', 'digitalgreen' ),
               'desc'        => '',
               'std'         => '',
-              'type'        => 'text',
+              'type'        => 'upload',
               'section'     => 'ethopia_partners2',
               ),
           )
