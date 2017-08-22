@@ -311,6 +311,32 @@ get_header('globalimpact'); ?>
     <div class="stats-container">
             <div class="container">
                 <div class="row">
+                    <div class="col-sm-3">
+                        <div class="custom-class-slideshow stats-slider-wrap">
+                            <div class="stats-values stat-slider">
+ <?php $i=1;
+                                while ( have_rows('annual_report_featured_values') ) 
+                                {   
+                                    the_row();
+                                    ?>
+
+                                <div class="count-global-stat text-center">
+                                    <h1 class="dg-header-1"><?php echo get_sub_field('annual_report_featured_value'); ?></h1>
+                                    <h4 class="dg-header-5"><?php echo get_sub_field('annual_report_featured_value_desc'); ?></h4>
+                                </div>
+<?php }  ?>
+
+                               <!-- <div class="count-global-stat text-center">
+                                    <h1 class="dg-header-2">270,000</h1>
+                                    <h4 class="dg-header-5">Global impact stat</h4>
+                                </div>
+                                <div class="count-global-stat text-center">
+                                    <h1 class="dg-header-2">1 Million</h1>
+                                    <h4 class="dg-header-5">Global impact stat</h4>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-sm-9">
                         <div class="stats-right">
                             <div class="our-solution-stats">
@@ -360,32 +386,7 @@ $blog_permalink = get_the_permalink($blog_id);
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
-                        <div class="custom-class-slideshow stats-slider-wrap">
-                            <div class="stats-values stat-slider">
- <?php $i=1;
-                                while ( have_rows('annual_report_featured_values') ) 
-                                {   
-                                    the_row();
-                                    ?>
-
-                                <div class="count-global-stat text-center">
-                                    <h1 class="dg-header-1"><?php echo get_sub_field('annual_report_featured_value'); ?></h1>
-                                    <h4 class="dg-header-5"><?php echo get_sub_field('annual_report_featured_value_desc'); ?></h4>
-                                </div>
-<?php }  ?>
-
-                               <!-- <div class="count-global-stat text-center">
-                                    <h1 class="dg-header-2">270,000</h1>
-                                    <h4 class="dg-header-5">Global impact stat</h4>
-                                </div>
-                                <div class="count-global-stat text-center">
-                                    <h1 class="dg-header-2">1 Million</h1>
-                                    <h4 class="dg-header-5">Global impact stat</h4>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
