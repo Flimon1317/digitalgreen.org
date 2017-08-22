@@ -64,8 +64,8 @@ get_header('globalimpact'); ?>
                                 
                                     <div class="main-tab-txt <?php if($i==1) echo 'active-tab'; ?>"><?php echo $term->name; ?></div>
                                     <ul class="sub-tab-list">
-                                        <?php if($term->name=='Team') echo '<li><a href="#" data-index="1" class="active-link" >Executive Leadership</a></li>'; ?>
-                                     <?php if($term->name=='Board') echo '<li><a href="#" data-index="2" >Executive Leadership</a></li>'; ?>
+                                        <?php if($term->name=='Team') echo '<li><a href="#" data-index="1" class="active-link" >Global Leadership Group</a></li>'; ?>
+                                     <?php if($term->name=='Board Members') echo '<li><a href="#" data-index="2" >Global Leadership Group</a></li>'; ?>
                                         <li>
                                         <?php
 
