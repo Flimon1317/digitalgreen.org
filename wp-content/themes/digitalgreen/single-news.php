@@ -133,10 +133,19 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
         $the_query = new WP_query(array( 'post_type=news&posts_per_page=4','tax_query' => array(array ('taxonomy' => 'list_news','field' => 'slug','terms' => $term->slug))));
         
         if ($the_query->have_posts()) {
-           while ( $the_query->have_posts() ) : $the_query->the_post();
+           $i=1;
+           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
           $news_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $news_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
 
                 <div class="news-list  purple-cat">
@@ -147,13 +156,13 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
                         </div>
                         <span class="date"><?php echo $news_date; ?></span>
                         <div class="info">
-                            <h3 class="title"><?php the_title(); ?></h3>
-                            <p class="description"><?php echo $news_short_desc; ?></p>
+                            <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
                         </div>
                         <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
                     </a>
                 </div>
-<?php
+<?php $i++;
           endwhile; 
         }
         wp_reset_query();

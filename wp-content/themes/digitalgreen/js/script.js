@@ -605,6 +605,32 @@ jQuery(document).ready(function(){
     });
      
      // $(window).scroll( $.throttle( 250, pageScroll ) );
+
+     function getVideoid(url) {
+       var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+       var match = url.match(regExp);
+
+        if (match && match[2].length == 11) {
+           return match[2];
+        } else {
+           return 'error';
+        }
+    }
+
+   // play video in popup
+    jQuery('.watch-link').click(function(){
+        jQuery('#my-modal').addClass('in');
+        var videoUrl = jQuery(this).data('url');
+        var videoId = getVideoid(videoUrl);
+        var videoSrc = "https://www.youtube.com/embed/"+videoId+"?autoplay=1";
+        jQuery('.video-player').attr("src", videoSrc);
+        jQuery('body').css('overflow', 'hidden');
+    });
+    jQuery('.close-video').click(function(){
+        jQuery('#my-modal').removeClass('in');
+        jQuery('.video-player').attr("src", '');
+        jQuery('body').css('overflow', 'visible');
+    });
 });
 
 // Hide Header on on scroll down

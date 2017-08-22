@@ -125,6 +125,15 @@ get_header('globalimpact'); ?>
                     
                     $resources_short_desc = get_post_meta(get_the_ID(),'resources_short_desc', true);
                     $resources_attach = get_post_meta(get_the_ID(),'resources_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $resources_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+
                     ?>
 
                 <div class="news-list" data-category="<?php echo $termname; ?>">
@@ -135,8 +144,8 @@ get_header('globalimpact'); ?>
                         </div>
                         <span class="date"><?php echo $resources_date; ?></span>
                         <div class="info">
-                            <h3 class="title"><?php the_title(); ?></h3>
-                            <p class="description"><?php echo $resources_short_desc; ?></p>
+                            <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
                         </div>
                         <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
                     </a>
