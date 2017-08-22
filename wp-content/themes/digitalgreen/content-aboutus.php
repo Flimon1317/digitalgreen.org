@@ -66,7 +66,8 @@ get_header('globalimpact'); ?>
                     <div class="row founder-section clearfix">
                         <div class="col-md-6 right-block">
                             <img src="<?php echo get_field('about_us_video_image'); ?>" class="img-responsive">
-                            <a href="#" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
+                            <!-- <a href="#" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a> -->
+                            <a href="#" data-url="<?php echo get_sub_field('about_us_watch_video_link'); ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
 
                         </div>
                         <div class="col-md-6 left-block">
@@ -504,12 +505,12 @@ get_header('globalimpact'); ?>
 
 <?php get_footer(); ?>
 
-<!-- <div id="my-modal">
+<div id="my-modal">
         <div class="modal-lg">
             <div class="modal-content">
                 <a href="#" class="close-video">X</a>
                 <iframe class="video-player" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-    </div> -->
+    </div>
  
