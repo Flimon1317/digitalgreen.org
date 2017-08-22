@@ -83,7 +83,11 @@ get_header('globalimpact'); ?>
                                                             <p class="dg-header-5 text-details"><?php echo get_sub_field('innovation_section_description'); ?>
                                                             </p>
                                                         </div>
+                                                        <?php if($i > 3) { ?>
                                                         <a href="<?php echo get_sub_field('innovation_section_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                                        <?php } ?>
+                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -226,9 +230,9 @@ get_header('globalimpact'); ?>
                                 <div class="col-md-7">
                                     <div class="our-solution-wrap">
                                         <div class="our-solution-box">
-                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('innovation_solution_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                            <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('innovation_featured_title'); ?><i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
                                             </h3>
-                                            <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('innovation_solution_desc'); ?></p>
+                                            <p class="dg-header-5 on-hover-title-color"><?php echo get_field('innovation_featured_description'); ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -236,21 +240,17 @@ get_header('globalimpact'); ?>
                             <!-- for-Desktop-size-count-globel-impact-stat -->
                             <div class="custom-class-slideshow stats-slider-wrap">
                                 <div class="stats-values stat-slider">
-                                   <?php
-      if (function_exists('get_option_tree')){
-        $innovation_solution_values = ot_get_option( 'innovation_solution_values', array() );
-        if ( ! empty( $innovation_solution_values ) ) {
-          /* print_r($home_banner); */
-          $i=1;
-          foreach( $innovation_solution_values as $section ) {
-            
-      ?>
+                                    <?php $i=1;
+                                while ( have_rows('innovation_featured_values') ) 
+                                {   
+                                    the_row();
+                                    ?>
 
                                     <div class="count-global-stat text-center">
-                                        <h1 class="dg-header-1"><?php echo $section['innovation_solution_value']; ?></h1>
-                                        <h4 class="dg-header-5"><?php echo $section['innovation_solution_text']; ?></h4>
+                                        <h1 class="dg-header-1"><?php echo get_sub_field('innovation_featured_value'); ?></h1>
+                                        <h4 class="dg-header-5"><?php echo get_sub_field('innovation_featured_value_desc'); ?></h4>
                                     </div>
-<?php } } } ?>
+<?php } ?>
 
                                    <!-- <div class="count-global-stat text-center">
                                         <h1 class="dg-header-2">270,000</h1>
@@ -270,15 +270,15 @@ get_header('globalimpact'); ?>
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
                                                 <div class="our-solution-box">
-                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('innovation_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
+                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('innovation_featured_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
                                                     </h3>
-                                                    <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('innovation_solution_desc'); ?></p>
+                                                    <p class="dg-header-5 on-hover-title-color"><?php echo get_field('innovation_featured_description'); ?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-5 full-col solution-img-wrap">
                                             <div class="our-solution-img">
-                                                <img src="<?php echo ot_get_option('innovation_solution_image'); ?>">
+                                                <img src="<?php echo get_field('innovation_featured_image'); ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -292,7 +292,7 @@ get_header('globalimpact'); ?>
 
 <?php 
 
-$blog_id=ot_get_option('innovation_solution_blog');
+$blog_id=get_field('innovation_featured_blog');
 $auth = get_post($blog_id); // gets author from post
 $blog_title = get_the_title($blog_id);
 
