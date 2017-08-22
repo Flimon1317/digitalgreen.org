@@ -722,6 +722,43 @@ nav:hover > .navbar-collapse ul > li > a {
     background-size: 200% 100%;
     background-position: left bottom; }
 
+
+.blank-bordered-button {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 20px 29px;
+  color: #fff;
+  outline: none;
+  margin-top: 60px;
+  transition: all 0.3s;
+  position: relative;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  background-position: right bottom;
+  line-height: 14px;
+  min-width: 180px;
+  text-align: center;
+  text-transform: capitalize; }
+  .blank-bordered-button:after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0;
+    border-left: 2px solid #fff;
+    bottom: 0; }
+  .blank-bordered-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-top: 2px solid #fff;
+    right: 0; }
+  .blank-bordered-button:hover {
+    color: #fff;
+    background: linear-gradient(to left, transparent 49%, #fff 50%);
+    background-size: 200% 100%;
+    background-position: left bottom; }
+
 .with-bottom-cut {
   margin-top: 0; }
 
