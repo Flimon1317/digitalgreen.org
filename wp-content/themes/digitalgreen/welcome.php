@@ -127,7 +127,7 @@ get_header('home'); ?>
                                     the_row();
                                     ?>
 
-                            <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?>activity-blocks">
+                            <div class="col-sm-3 <?php if($i==4) echo 'col-xs-12';?> activity-blocks">
                                 <a href="<?php echo get_sub_field('home_page_solutions_link'); ?>" >
                                 <div class="single-activity-details hover-dark-<?php if($i==1) echo 'pink'; elseif($i==2) echo 'orange'; elseif($i==3) echo 'Purple'; elseif($i==4) echo 'blue'; else echo 'pink';?>">
                                     <div class="image-green-shadow">
