@@ -504,12 +504,12 @@ get_header('globalimpact'); ?>
 
 <?php get_footer(); ?>
 
-<div id="my-modal">
+<!-- <div id="my-modal">
         <div class="modal-lg">
             <div class="modal-content">
                 <a href="#" class="close-video">X</a>
                 <iframe class="video-player" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
-    </div>
+    </div> -->
  
