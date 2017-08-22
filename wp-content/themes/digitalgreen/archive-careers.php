@@ -385,7 +385,7 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
         </div>
-        <div class="project-block">
+        <!-- <div class="project-block">
             <div class="container">
                 <div class="row">
                     <div class="single-img-container">
@@ -416,7 +416,7 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
             <div class="team-section section-margin">
                 <div class="container">
                     <div class="text-center section-title">

@@ -217,7 +217,7 @@ get_header('home'); ?>
                          <div class="logo-details" data-index="<?php echo $i; ?>">
                                 <h4 class="dg-header-4"><?php echo get_sub_field('home_page_awards_title'); ?></h4>
                                 <p class="dg-header-5 text-details"><?php echo get_sub_field('home_page_awards_description'); ?></p>
-                                <a href="<?php echo get_sub_field('home_page_awards_link'); ?>" class="green-arrow">Read More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                <!-- <a href="<?php echo get_sub_field('home_page_awards_link'); ?>" class="green-arrow">Read More <i class="on-hover-arrow-left" aria-hidden="true"></i></a> -->
                             </div>
 <?php $i++;  } ?>
                          

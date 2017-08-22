@@ -19,13 +19,13 @@ get_header('globalimpact'); ?>
                                 <a href="#our_team">Team</a>
                             </li>
                             <li>
-                                <a href="#history">History</a></li>
+                                <a href="#history">Journey</a></li>
                             <li>
                                 <a href="#partners">Partners</a>
                             </li>
-                            <li>
+                            <!-- <li>
                                 <a href="#documents">Documents</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ get_header('globalimpact'); ?>
                                             <p class="dg-header-5"><?php echo get_field('about_us_video_description'); ?>
                                             </p>
                                         </div>
-                                        <a href="<?php echo get_field('about_us_video_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <!-- <a href="<?php echo get_field('about_us_video_link'); ?>" class="green-bordered-button learn-more">Learn More</a> -->
                                     </div>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@ get_header('globalimpact'); ?>
                                    <div class="image-green-shadow"> 
                                        <img src="<?php echo get_sub_field('about_us_history_image'); ?>" class="img-responsive">
                                        
-                                       <a href="#" data-url="<?php echo get_sub_field('about_us_watch_video_link'); ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
+                                       <!-- <a href="#" data-url="<?php echo get_sub_field('about_us_watch_video_link'); ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a> -->
                                    </div>
                                </div>
                             </div>
@@ -251,7 +251,7 @@ get_header('globalimpact'); ?>
                                    </h3>
                                    <p class="dg-header-5 text-details"><?php echo get_sub_field('about_us_history_description'); ?>
                                    </p>
-                                   <a href="<?php echo get_sub_field('about_us_history_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                   <!-- <a href="<?php echo get_sub_field('about_us_history_link'); ?>" class="green-bordered-button learn-more">Learn More</a> -->
 
                                </div>
                             </div>

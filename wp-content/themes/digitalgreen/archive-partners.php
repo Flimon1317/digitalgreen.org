@@ -64,7 +64,7 @@ get_header('globalimpact'); ?>
                         <li data-index="3">Technology Partners</li>  -->
                     </ul>
                     
-                    <div class="tab-list-options">
+                    <!-- <div class="tab-list-options">
                     <?php $j=1;
  $root_terms = get_terms("list_partners",array( 'parent' => 0 ));
                
@@ -83,16 +83,16 @@ $i=1;
                         ?>
                             <li><a href="#" data-id="<?php echo $child->term_id; ?>" <?php if ($i==1) echo'class="active"'?>><?php echo $child->name; ?></a></li>
                             <?php $i++; } ?>
-                            <!-- <li><a href="#" data-id="ethiopia1">Ethiopia</a></li>
+                            <li><a href="#" data-id="ethiopia1">Ethiopia</a></li>
                             <li><a href="#" data-id="kenya1">Kenya</a></li>
                             <li><a href="#" data-id="ghana1">Ghana</a></li>
                             <li><a href="#" data-id="niger1">Niger</a></li>
                             <li><a href="#" data-id="tanzania1">Tanzania</a></li>
-                            <li><a href="#" data-id="afghanistan1">Afghanistan</a></li>  -->
+                            <li><a href="#" data-id="afghanistan1">Afghanistan</a></li> 
                         </ul>
                         <?php } $j++;} ?>
                         
-                    </div>
+                    </div> -->
                 </div>
                 <div class="partners-blocks">
                 

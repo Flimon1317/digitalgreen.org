@@ -81,13 +81,6 @@ get_header('globalimpact'); ?>
                         </div>
                         <div class="single-img-container <?php if($i==1) echo'visible-approch'; ?>" data-index="<?php echo $i; ?>">
                             <div class="row">
-                              <div class="col-sm-6 right-block">
-                                <div class="img-right-part">
-                                    <div class="image-green-shadow">
-                                        <img src="<?php echo get_sub_field('community_videos_approach_image'); ?>" class="img-responsive" alt=""/>
-                                    </div>
-                                </div>
-                                </div>
                                 <div class="col-sm-6 left-block">
                                     <div class="row img-details">
                                         <div class="single-img">
@@ -102,6 +95,13 @@ get_header('globalimpact'); ?>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="col-sm-6 right-block">
+                                <div class="img-right-part">
+                                    <div class="image-green-shadow">
+                                        <img src="<?php echo get_sub_field('community_videos_approach_image'); ?>" class="img-responsive" alt=""/>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>

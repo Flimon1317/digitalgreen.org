@@ -36,5 +36,5 @@ get_header('globalimpact'); ?>
                 </h5>
             </div>
 
-<?php  get_footer(); ?>
+<?php  get_footer('donate'); ?>
  

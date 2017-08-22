@@ -99,7 +99,7 @@ a {
 
 p {
   margin: 20px 0 0 0;
-  line-height: 1.8; }
+  line-height: 1.5; }
 
 ul {
   margin: 0;
@@ -457,6 +457,7 @@ nav:hover > .navbar-collapse ul > li > a {
   .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
     color: #65E214;
     background: transparent; }
+
   
 .dropdown-menu{
 
@@ -466,15 +467,9 @@ nav:hover > .navbar-collapse ul > li > a {
 .dropdown-menu > li {
   padding: 15px 15px;
 }
-.dropdown-menu > li > a {
-  color: #000;
-}
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{
-  color: #65E214;
-}
 
-.dropdown > a:hover {
-  color: #65E214;
+.dropdown-menu > li > a {
+  color: #9BA0A7;
 }
 
 .mega-dropdown-menu > li > ul {
@@ -498,7 +493,7 @@ nav:hover > .navbar-collapse ul > li > a {
   font-weight: bold; }
 
 .inner-pageh .navbar-default .navbar-nav > li > a, .inner-pageh.navbar-default .navbar-nav .open .mobile-sub-menu > li > a {
-  color: #000; }
+  color: #9BA0A7; }
 .inner-pageh .navbar-default .navbar-nav > li:hover > a {
   color: #65E214; }
 .inner-pageh .green-arrow {
@@ -1926,7 +1921,7 @@ a.forward-redirection-green-link:hover {
   min-height: 400px; }
 
 .country-banner {
-  background: url("../images/map.png") no-repeat 0 0;
+/*  background: url("../images/map.png") no-repeat 0 0;*/
   min-height: 400px; }
   .country-banner .banner-inner {
     padding-top: 50px; }
@@ -2352,7 +2347,7 @@ a.forward-redirection-green-link:hover {
 
 .team-section {
   background-color: #f7f7f7;
-  padding: 120px 0 140px 0; }
+  padding: 60px 0 60px 0; }
 
 .section-title h2, .team-block-cont h3 {
   margin: 0;
@@ -2381,7 +2376,16 @@ a.forward-redirection-green-link:hover {
 
 .current-opening-disc h3, .opening-key-block h4, .country-with-opening h2 {
   color: #000;
-  margin: 0; }
+  margin: 0;
+ }
+
+ .country-with-opening h2 {
+  font-size: 25px;
+ }
+
+ .country-with-opening .custom-class-slideshow {
+  margin-top: -25px;
+ }
 
 .opening-block {
   margin-top: 92px; }
@@ -3260,6 +3264,11 @@ figure.pull-left {
 .main-footer {
   background-color: #3d3d3f;
   margin-top: 100px;
+   }
+
+   .donate-footer {
+  background-color: #3d3d3f;
+  
    }
   .main-footer > .container {
     opacity: 0;
