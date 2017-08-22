@@ -129,11 +129,20 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
 
         
         if ($the_query->have_posts()) {
-           while ( $the_query->have_posts() ) : $the_query->the_post();
+            $i=1;
+           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
           $news_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
                     $news_attach = get_post_meta(get_the_ID(),'news_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $news_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
         
                             <div class="news-list">
@@ -144,13 +153,13 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
                                     </div>
                                     <span class="date"><?php echo $news_date; ?></span>
                                     <div class="info">
-                                        <h3 class="title"><?php the_title(); ?></h3>
-                            <p class="description"><?php echo $news_short_desc; ?></p>
+                                         <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
                                     </div>
                                     <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
                                 </a>
                             </div>
-<?php
+<?php $i++;
           endwhile; 
         } 
         wp_reset_query();
@@ -223,11 +232,20 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
         $the_query = new WP_query(array( 'post_type=blogs&posts_per_page=4','tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
 
         if ($the_query->have_posts()) {
-           while ( $the_query->have_posts() ) : $the_query->the_post();
+           $i=1;
+           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
           $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
                     $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $blogs_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
                             <div class="news-list">
                                 <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
@@ -237,13 +255,13 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
                                     </div>
                                     <span class="date"><?php echo $blog_date; ?></span>
                                     <div class="info">
-                                        <h3 class="title"><?php the_title(); ?></h3>
-                                        <p class="description"><?php echo $blogs_short_desc; ?></p>
+                                         <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
                                     </div>
                                     <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
                                 </a>
                             </div>
-                           <?php
+                           <?php $i++;
           endwhile; 
         }
         wp_reset_query();
@@ -316,11 +334,20 @@ $terms = get_terms("list_resources",array( 'parent' => 0 ));
         $the_query = new WP_query(array( 'post_type=resources&posts_per_page=4','tax_query' => array(array ('taxonomy' => 'list_resources','field' => 'slug','terms' => $term->slug))));
         
         if ($the_query->have_posts()) {
-           while ( $the_query->have_posts() ) : $the_query->the_post();
+           $i=1;
+           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
           $resources_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $resources_short_desc = get_post_meta(get_the_ID(),'resources_short_desc', true);
                     $resources_attach = get_post_meta(get_the_ID(),'resources_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $resources_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
                             <div class="news-list">
                                 <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover">
@@ -330,13 +357,13 @@ $terms = get_terms("list_resources",array( 'parent' => 0 ));
                                     </div>
                                     <span class="date"><?php echo $resources_date; ?> </span>
                                     <div class="info">
-                                        <h3 class="title"><?php the_title(); ?></h3>
-                                        <p class="description"><?php echo $resources_short_desc; ?></p>
+                                         <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
                                     </div>
                                     <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
                                 </a>
                             </div>
- <?php
+ <?php $i++;
           endwhile; 
         }
         wp_reset_query();
