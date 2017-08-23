@@ -271,14 +271,14 @@ get_header('globalimpact'); ?>
                         <div class="clearfix solution-gray-box-white-border solution-welcome-inner">
                             <div class="col-md-6">
                                 <div class="solution-gray-box-img">
-                                    <img src="<?php echo get_field('whats_next_image'); ?>" class="img-responsive">
+                                    <img src="<?php echo get_field('training_whats_next_image'); ?>" class="img-responsive">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="solution-gray-box-content">
-                                    <h2 class="dg-header-3"><?php echo get_field('whats_next_heading'); ?></h2>
-                                    <p><?php echo get_field('whats_next_description'); ?></p>
-                                    <a href="<?php echo get_field('whats_next_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a>
+                                    <h2 class="dg-header-3"><?php echo get_field('training_whats_next_heading'); ?></h2>
+                                    <p><?php echo get_field('training_whats_next_description'); ?></p>
+                                    <!-- <a href="<?php echo get_field('whats_next_playstore_link'); ?>" class="btn-google-play"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/google-play.png" class=" hidden-sm hidden-md hidden-lg"></a> -->
                                 </div>
                             </div>
                         </div>
