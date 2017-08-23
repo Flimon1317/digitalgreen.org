@@ -67,16 +67,17 @@
                                 </span></h4>
 
 
-                                <form id="signup" method="post" action="action.php">
+                                <form id="signup" method="post" action="/digitalgreen.org/mail/action.php">
                                     <div class="footer-list dg-header-5 text-details">
                                         <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Full Name" name="fname" id="fname">
                                         <!-- <span class="error-msg">Your Full Name Required</span>  --></div>
-                                        <div class="inp-wrapper"><input class="footer-input-box" type="email" placeholder="Email Address" name="email" id="email">
+                                        <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Email Address" name="email" id="email_id">
                                         <!-- <span class="error-msg">Your Email Is Required</span> --></div>
                                         <p>
                                         <input name="submit" type="submit" class="green-arrow btn btn-link" id="mc-embedded-subscribe"><i class="on-hover-arrow-left"></i></p>
                                     </div>
                                 </form>
+                                <div id="response"></div>
 
 
                             </div>
@@ -118,7 +119,7 @@
             $("#signup").validate({
                 // if valid, post data via AJAX
                 submitHandler: function(form) {
-                    $.post("action.php", { fname: $("#fname").val(), email: $("#email").val() }, function(data) {
+                    $.post("/digitalgreen.org/mail/action.php", { fname: $("#fname").val(), email: $("#email_id").val() }, function(data) {
                         $('#response').html(data);
                     });
                 },
@@ -130,6 +131,7 @@
                     email: {
                         required: true,
                         email: true
+                        
                     }
                 }
             });
