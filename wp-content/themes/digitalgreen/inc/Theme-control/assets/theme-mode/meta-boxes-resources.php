@@ -47,13 +47,13 @@ function custom_meta_boxes_resources() {
     'type'        => 'upload'
       ),
      
-     array(
+    /* array(
       'id'          => 'resources_description',
       'label'       => __( 'resources Description', 'digitalgreen' ),
       
         'type'        => 'textarea'
-      ), 
-
+      ), */
+ 
      array(
               'id'          => 'resources_attach',
               'label'       => __( 'upload attachment or add link', 'digitalgreen' ),

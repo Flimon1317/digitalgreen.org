@@ -45,12 +45,12 @@ function custom_meta_boxes_news() {
 		'type'        => 'upload'
       ),
 
-     array(
+    /* array(
       'id'          => 'news_description',
       'label'       => __( 'News Description', 'digitalgreen' ),
       
         'type'        => 'textarea'
-      ),
+      ), */
 
      array(
               'id'          => 'news_attach',

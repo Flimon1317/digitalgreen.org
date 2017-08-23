@@ -47,12 +47,12 @@ function custom_meta_boxes_blogs() {
     'type'        => 'upload'
       ),
 
-     array(
+     /*array(
       'id'          => 'blogs_description',
       'label'       => __( 'Blogs Description', 'digitalgreen' ),
       
         'type'        => 'textarea'
-      ), 
+      ),  */
 
      array(
               'id'          => 'blogs_attach',
@@ -62,12 +62,7 @@ function custom_meta_boxes_blogs() {
               ),
 
     
-    /*array(
-    'id'          => 'blogs_twitter_count',
-    'label'       => __( 'Number of Twitter Show', 'digitalgreen' ),
-    'desc'        => 'Number of Twitter Show',
-    'type'        => 'text'
-    ),*/
+    
     )
   );
   /**
