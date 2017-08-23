@@ -1,7 +1,7 @@
 jQuery(document).ready(function(){
         jQuery('body').addClass('page-animate');
         jQuery(".home-page-search").hide();
-        jQuery('.icon-vimeo, .icon-instagram').hide();
+        jQuery('.icon-vimeo').hide();
         jQuery(".search-button").click(function() {
             var top = jQuery(".search-input").css("top");
              if (top == '-152px'){

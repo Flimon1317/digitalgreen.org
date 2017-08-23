@@ -526,4 +526,4 @@ $blog_permalink = get_the_permalink($blog_id);
             </div>
          <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
      
-<?php get_footer('team'); ?>        
+<?php get_footer(); ?>        

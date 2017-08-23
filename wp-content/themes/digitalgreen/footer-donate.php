@@ -26,15 +26,15 @@
                                     <li><a href="<?php echo esc_url(site_url()); ?>/contact">Contact Us</a></li>
                                     <li>
                                          <ul class="social-icon">
-                                            <li><a href="<?php echo ot_get_option('footer_facebook'); ?>"><i class="icon icon-facebook"></i></a><span class="social-tooltip">Facebook</span></li>
+                                            <li><a href="<?php echo ot_get_option('footer_facebook'); ?>"><i class="icon icon-facebook"></i></a></li>
                                             <li><a href="<?php echo ot_get_option('footer_twitter'); ?>"><i class="icon icon-twitter"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_linkedin'); ?>"><i class="icon icon-linkedin"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_linkedIn'); ?>"><i class="icon icon-linkedin"></i></a></li>
                                             <li><a href="<?php echo ot_get_option('footer_google+'); ?>"><i class="icon icon-gplus"></i></a></li>
                                             <li><a href="<?php echo ot_get_option('footer_flickr'); ?>"><i class="icon icon-flickr"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_instagram'); ?>"><i class="icon icon-instagram"></i></a></li>
                                         
 <!--                                                 <a href="#"><i class="icon icon-facebook"></i></a>
                                                 <span class="social-tooltip">Facebook</span> -->
-                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -51,7 +51,7 @@
                                 <ul class="footer-list dg-header-5 text-details">
                                     <li><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></li>
                                     <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solution</a></li>
-                                    <li><a href="<?php echo esc_url(site_url()); ?>/ careers">Work With Us</a></li>
+                                    <li><a href="<?php echo esc_url(site_url()); ?>/careers">Work With Us</a></li>
                                     <li><a href="<?php echo esc_url(site_url()); ?>/partners">Financials</a></li>
                                     <li><a href="<?php echo esc_url(site_url()); ?>/newsresource">Resources &amp; Publications</a></li>
                                 </ul>
