@@ -5067,6 +5067,13 @@ array(
         'type'        => 'text',        
         'section'     => 'footer',      
         ),
+
+       array(        
+        'id'          => 'footer_youtube',        
+        'label'       => __( 'Youtube Url', 'digitalgreen' ),        
+        'type'        => 'text',        
+        'section'     => 'footer',      
+        ),
       
       array(
     'id' => 'team_banner_tab',

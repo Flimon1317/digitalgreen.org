@@ -59,7 +59,7 @@ get_header('globalimpact'); ?>
                                     <div class="img-right-part">
                                         <div class="image-green-shadow">
                                              <img src="<?php echo get_sub_field('innovation_section_image'); ?>" class="img-responsive">
-                                            <div class="number-count-div text-center">
+                                            <!-- <div class="number-count-div text-center">
                                                 <?php 
                                 while ( have_rows('innovation_section_values') ) 
                                 {   
@@ -68,7 +68,7 @@ get_header('globalimpact'); ?>
 
                                                 <p><span class="count-num"><?php echo get_sub_field('innovation_section_value'); ?></span> <?php echo get_sub_field('innovation_section_values_desc'); ?></p>
 <?php }  ?>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

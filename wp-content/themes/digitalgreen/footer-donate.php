@@ -26,12 +26,13 @@
                                     <li><a href="<?php echo esc_url(site_url()); ?>/contact">Contact Us</a></li>
                                     <li>
                                          <ul class="social-icon">
-                                            <li><a href="<?php echo ot_get_option('footer_facebook'); ?>" target="_blank"><i class="icon icon-facebook"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_twitter'); ?>" target="_blank"><i class="icon icon-twitter"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_linkedIn'); ?>" target="_blank"><i class="icon icon-linkedin"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_google+'); ?>" target="_blank"><i class="icon icon-gplus"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_flickr'); ?>" target="_blank"><i class="icon icon-flickr"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_instagram'); ?>" target="_blank"><i class="icon icon-instagram"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_twitter'); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_linkedIn'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_google+'); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_flickr'); ?>" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_instagram'); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_youtube'); ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
                                         
 <!--                                                 <a href="#"><i class="icon icon-facebook"></i></a>
                                                 <span class="social-tooltip">Facebook</span> -->

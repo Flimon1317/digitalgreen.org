@@ -26,12 +26,13 @@
                                     <li><a href="<?php echo esc_url(site_url()); ?>/contact">Contact Us</a></li>
                                     <li>
                                          <ul class="social-icon">
-                                            <li><a href="<?php echo ot_get_option('footer_facebook'); ?>" target="_blank"><i class="icon icon-facebook"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_twitter'); ?>" target="_blank"><i class="icon icon-twitter"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_linkedIn'); ?>" target="_blank"><i class="icon icon-linkedin"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_google+'); ?>" target="_blank"><i class="icon icon-gplus"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_flickr'); ?>" target="_blank"><i class="icon icon-flickr"></i></a></li>
-                                            <li><a href="<?php echo ot_get_option('footer_instagram'); ?>" target="_blank"><i class="icon icon-instagram"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_twitter'); ?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_linkedIn'); ?>" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_google+'); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_flickr'); ?>" target="_blank"><i class="fa fa-flickr"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_instagram'); ?>" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="<?php echo ot_get_option('footer_youtube'); ?>" target="_blank"><i class="fa fa-youtube"></i></a></li>
                                         
 <!--                                                 <a href="#"><i class="icon icon-facebook"></i></a>
                                                 <span class="social-tooltip">Facebook</span> -->
@@ -64,15 +65,23 @@
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span></h4>
-                                <div class="footer-list dg-header-5 text-details">
-                                    <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Full Name">
-                                    <!--<span class="error-msg">Your Full Name Required</span> --></div>
-                                    <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Email Address">
-                                    <!--<span class="error-msg">Your Email Is Required</span>--></div>
-                                    <p><a href="javascript:void;" class="green-arrow">Submit<i class="on-hover-arrow-left"></i></a></p>
-                                </div>
+
+
+                                <form id="signup" method="post" action="action.php">
+                                    <div class="footer-list dg-header-5 text-details">
+                                        <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Full Name" name="fname" id="fname">
+                                        <!-- <span class="error-msg">Your Full Name Required</span>  --></div>
+                                        <div class="inp-wrapper"><input class="footer-input-box" type="email" placeholder="Email Address" name="email" id="email">
+                                        <!-- <span class="error-msg">Your Email Is Required</span> --></div>
+                                        <p>
+                                        <input name="submit" type="submit" class="green-arrow btn btn-link" id="mc-embedded-subscribe"><i class="on-hover-arrow-left"></i></p>
+                                    </div>
+                                </form>
+
+
                             </div>
                         </div>
+
                     </div>
                 </div>
                 <div class="footer-bottom">
@@ -100,6 +109,33 @@
     <script type='text/javascript' src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/slick.min.js"></script>
     <script type='text/javascript' src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/script.js"></script>
     <script type='text/javascript' src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/jquery.ba-throttle-debounce.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // jQuery Validation
+            $("#signup").validate({
+                // if valid, post data via AJAX
+                submitHandler: function(form) {
+                    $.post("action.php", { fname: $("#fname").val(), email: $("#email").val() }, function(data) {
+                        $('#response').html(data);
+                    });
+                },
+                // all fields are required
+                rules: {
+                    fname: {
+                        required: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    }
+                }
+            });
+        });
+    </script>
+
     
 
 </body>
