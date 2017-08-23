@@ -67,13 +67,20 @@ get_header('globalimpact'); ?>
                         <a href="<?php echo get_sub_field('case_study_casestudies_file'); ?>" target="_blank" class="forward-redirection-green-link">
                             <div class="hover-card-details hidden-xs">
                                 <div class="hover-card-text-content">
-                                    <h3 class="dg-header-3 text-white"><?php echo get_sub_field('case_study_casestudies_place'); ?></h3>
+                                    <h5 class="dg-header-6 text-white"><?php echo get_sub_field('case_study_casestudies_place'); ?></h5>
                                     <div class="count-globel-impact-stat text-center">
                                         <h1 class="dg-header-1 forward-redirection-green-link"><?php echo get_sub_field('case_study_casestudies_value'); ?></h1>
                                         <h4 class=" text-white"><?php echo get_sub_field('case_study_casestudies_description'); ?></h4>
                                     </div>
                                    <p>
-                                        <a href="<?php echo get_sub_field('case_study_casestudies_file'); ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                        <?php if(get_sub_field('case_study_casestudies_file') == '') { ?>
+                                                        <a href="<?php echo get_sub_field('case_study_casestudies_link'); ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                                        <?php } 
+
+                                                    else { ?>
+                                                    <a href="<?php echo get_sub_field('case_study_casestudies_file'); ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                                    <?php } ?>
+                                        <!-- <a href="<?php echo get_sub_field('case_study_casestudies_file'); ?>" target="_blank" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a> -->
                                     </p> 
                                 </div>
                             </div>
