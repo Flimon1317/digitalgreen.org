@@ -624,7 +624,7 @@ jQuery(document).ready(function(){
             }, 500);
         e.preventDefault();
         jQuery('#my-modal').addClass('in');
-        var videoUrl = jQuery(this).data('url');
+        var videoUrl = jQuery(this).attr('data-url');
         var videoId = getVideoid(videoUrl);
         var iframe=document.getElementById("iframeYoutube");
         iframe.src="https://www.youtube.com/embed/"+videoId+"?autoplay=1";
