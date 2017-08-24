@@ -395,7 +395,7 @@ get_header('globalimpact'); ?>
                      <?php 
 }
 endwhile; ?>  
-                    <div class="text-center"><a href="#" class="learn-more hidden-xs green-bordered-button">Learn More</a></div>
+                    <!-- <div class="text-center"><a href="#" class="learn-more hidden-xs green-bordered-button">Learn More</a></div> -->
                 </div>
             </div>
         </div>

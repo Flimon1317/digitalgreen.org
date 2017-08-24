@@ -106,7 +106,7 @@ get_header('globalimpact'); ?>
                                                             <p class="dg-header-5 text-details"><?php echo get_sub_field('global_initiatives_section_description'); ?>
                                                             </p>
                                                         </div>
-                                                        <a href="<?php echo get_sub_field('global_initiatives_section_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                                        <!-- <a href="<?php echo get_sub_field('global_initiatives_section_link'); ?>" class="green-bordered-button learn-more">Learn More</a> -->
                                                     </div>
                                                 </div>
                                             </div>
