@@ -219,7 +219,7 @@ input:visited, textarea:visited, input:focus, textarea:focus {
 
 
   #my-modal {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.85);
