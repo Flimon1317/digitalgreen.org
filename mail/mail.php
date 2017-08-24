@@ -8,7 +8,7 @@ $mail->isSMTP();                                   // Set mailer to use SMTP
 $mail->Host = 'smtp.gmail.com';                    // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                            // Enable SMTP authentication
 $mail->Username = 'server@digitalgreen.org';          // SMTP username
-$mail->Password = 'virtuala'
+$mail->Password = 'virtuala';
 $mail->SMTPSecure = 'tsl';                         // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;                             // TCP port to connect to
 $firstname = $_POST["name"];
@@ -24,11 +24,11 @@ $msg .= "<tr><th>Feedback</th><th>:</th><td>$feedback</td></tr>";
 $subject = 'DigitalGreen - Feedback';
 $message = $msg;
 $headers = "MIME-Version: 1.0" . "\r\n" . "Content-type:text/html;charset=UTF-8" . "\r\n" . "From: " . $receiver_mail . "\r\n" . "Reply-To: " . $receiver_mail . "\r\n" . "X-Mailer: PHP/" . phpversion();
-		 $mail->setFrom('server@digitalgreen.org', 'Digital Green');
-		 $mail->addReplyTo('server@digitalgreen.org', 'Digital Green');
+		 $mail->setFrom('server@digitalgreen.org', 'DigitalGreen');
+		 $mail->addReplyTo('server@digitalgreen.org', 'DigitalGreen');
 		 $mail->addAddress($receiver_mail);   // Add a recipient
 		 $mail->isHTML(true);
-		 $mail->Subject = 'Feedback from'. $email ;
+		 $mail->Subject = 'Feedback from:'. $email ;
 		 $mail->Body    = $message;
 		 if($mail->send()) 
 			 {
