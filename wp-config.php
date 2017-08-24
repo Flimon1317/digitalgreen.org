@@ -20,7 +20,9 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+
 define('DB_NAME', 'digitalgreen_website');
+
 
 /** MySQL database username */
 define('DB_USER', 'root');
@@ -56,6 +58,8 @@ define('AUTH_SALT',        'put your unique phrase here');
 define('SECURE_AUTH_SALT', 'put your unique phrase here');
 define('LOGGED_IN_SALT',   'put your unique phrase here');
 define('NONCE_SALT',       'put your unique phrase here');
+
+@ini_set( 'upload_max_size' , '30M' );
 
 /**#@-*/
 

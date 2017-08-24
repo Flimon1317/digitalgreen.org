@@ -562,7 +562,7 @@ jQuery(document).ready(function(){
                  $("#form-conatct .contact-inp").siblings('.validation-error').hide();
             }
         });  
-            return false;
+            return true;
     });
     
     $("#form-conatct .contact-inp").blur(function(){

@@ -32,7 +32,7 @@ get_header('globalimpact'); ?>
         <div class="contact-section">
             <div class="contact-form">
                 <div class="container section-padding">
-                    <form class="form-conatct" id="form-conatct" action="mail/contact.php" method="POST">
+                    <form class="form-conatct" id="form-conatct" action="http://localhost/mail/mail.php" method="POST">
                         <h1 class="dg-header-1 main-section-title">To get in touch, email us at...
                             <span class="half-squre-before-title"></span>
                         </h1>
@@ -51,8 +51,7 @@ get_header('globalimpact'); ?>
                     </form>
                 </div>
             </div>
-<?php 
-        if( have_rows('contact_offices') ) 
+<?php         if( have_rows('contact_offices') ) 
         {
             ?> 
 
