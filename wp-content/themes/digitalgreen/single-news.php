@@ -16,6 +16,7 @@ get_header('globalimpact'); ?>
 <?php $news_description= get_post_meta(get_the_ID(),'news_description', true); ?>
 
  <div class="banner-section news-banner">
+ <?php while ( have_posts() ) : the_post(); ?>
         <div class="container">
             <div class="row">
                 <div class="news-single text-center">
@@ -43,7 +44,7 @@ get_header('globalimpact'); ?>
     </div>
     <div class="news-page-content page-content">
         <div class="container">
-        <?php echo $news_description; ?>
+        <?php  the_content(); ?>
          <!--   <div class="row">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam risus felis, varius vel sollicitudin vitae, tincidunt et sapien. Fusce tincidunt orci eget neque malesuada, nec molestie enim laoreet. Vivamus elementum nulla elit, in interdum leo imperdiet eu. Duis odio elit, laoreet eget ligula ac, vehicula vehicula turpis. Pellentesque tincidunt nisl non nunc venenatis luctus. Vestibulum vestibulum tellus orci, id venenatis elit fermentum ut. Nullam euismod magna nec purus tristique, non ultricies ex auctor.</p>
                 <p>Etiam sit amet sollicitudin turpis, quis varius quam. Nulla dui quam, ultricies vel metus blandit, lacinia finibus felis. Duis sed risus blandit, laoreet tortor egestas, cursus mauris. Suspendisse finibus lacus quis dolor pulvinar, sit amet ullamcorper orci lobortis. Cras auctor risus et arcu faucibus, vitae ullamcorper velit tempor. Sed ac lorem dolor. In tincidunt gravida lorem, mollis rhoncus felis sagittis sed. Praesent eu tellus volutpat odio congue aliquet. Pellentesque ut faucibus nulla.</p>
@@ -114,6 +115,7 @@ get_header('globalimpact'); ?>
             </div>-->
         </div>
     </div>
+<?php endwhile; ?>
     <div class="gray-boxes-container section-margin">
         <div class="container news-container">
              <div class="title-header news-title-header text-left">

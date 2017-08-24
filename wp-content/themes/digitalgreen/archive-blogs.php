@@ -73,12 +73,13 @@ get_header('globalimpact'); ?>
                     </div>
                     <div class="cat-search-wrap pull-right">
                         <div class="search-category hidden-xs">
-                            <form>
-                                <div class="custom-input-field">
-                                    <input type="text" name="search" class="custom-inp" placeholder="Search">
-                                    <input type="submit" value="" name="">
-                                </div>
-                            </form>
+                            <form method="get" role="search"  action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<div class="custom-input-field">
+                  <input id="search" type="text" placeholder="Search keywords" class="custom-inp" name="s"/>
+          <input type="hidden" name="post_type" value="blogs" />
+          <input type="submit" value="" name="">
+          </div>
+                </form>
                         </div>
                         <div class="dropdown-wrapper">
                             <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" /></div>
