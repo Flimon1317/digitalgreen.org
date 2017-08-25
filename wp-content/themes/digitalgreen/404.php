@@ -7,24 +7,16 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header(); ?>
+get_header('globalimpact'); ?>
+</header>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div class="banner-section">
+        <div class="banner-img-404">
+        	<h1 class="dg-header-1-copy">Looks like the page does not exist</h1>
+        	<h4 class="dg-header-4">Go to <a href="/" class="green-bordered-button learn-more">Home</a></h4>
+        </div>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyfifteen' ); ?></h1>
-				</header><!-- .page-header -->
 
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfifteen' ); ?></p>
+    </div>
 
-					<?php get_search_form(); ?>
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
-
-<?php get_footer(); ?>
+<?php get_footer('donate'); ?>

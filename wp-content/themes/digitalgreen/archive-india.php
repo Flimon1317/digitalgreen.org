@@ -277,7 +277,9 @@ get_header('globalimpact'); ?>
                 <div class="project-inner-wrap">
                 
                 <?php
+
  $the_query = new WP_Query( array('post_type' => 'india'));
+                $count = 1;
                   while ( $the_query->have_posts() ) : $the_query->the_post();
 { 
                     
@@ -299,13 +301,32 @@ get_header('globalimpact'); ?>
                     $india_partners2 = get_post_meta(get_the_ID(),'india_partners2',array());
 
                      ?>
-                    <div class="single-project-details">
-                        <ul class="project-head-list clearfix present-project">
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-target="#collapse<?php echo $count; ?>" aria-expanded="false">
+                                <div>
+                                    <ul class="project-head-list clearfix present-project">
+                                        <li><?php echo $india_solutions_place;?></li>
+                                        <li class="hidden-xs"><?php echo $india_solutions_duration;?></li>
+                                    </ul>
+                                    <div class="expand-project"></div>
+                                </div>
+                                    <div class="project-details">
+                                        <h5 class="dg-header-5-copy"><?php the_title(); ?></h5>                                       
+                                    </div>
+                                </a>
+                            </h5>
+                        </div>
+
+ 
+                    <div class="single-project-details collapse in" id="collapse<?php echo $count; ?>">
+                        <!-- <ul class="project-head-list clearfix present-project">
                             <li><?php echo $india_solutions_place;?></li>
                             <li class="hidden-xs"><?php echo $india_solutions_duration;?></li>
-                        </ul>
+                        </ul> -->
                         <div class="project-details">
-                            <h1 class="dg-header-1"><?php the_title(); ?></h1>
+                            <!-- <h1 class="dg-header-1"><?php the_title(); ?></h1> -->
                             <p class="dg-header-5 text-detail hidden-xs"><?php the_content(); ?></p>
                             
                         </div>
@@ -393,11 +414,12 @@ get_header('globalimpact'); ?>
                             </div>
                         </div>
                     </div>
+                </div>
                      <?php 
 }
+$count++;
 endwhile; ?>  
                     <!-- <div class="text-center"><a href="#" class="learn-more hidden-xs green-bordered-button">Learn More</a></div> -->
-                </div>
             </div>
         </div>
 <?php
@@ -430,4 +452,12 @@ endwhile; ?>
         <?php } } ?>
         <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
 <?php get_footer(); ?>
+
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            // jQuery Validation
+            $(".collapse").collapse('toggle');
+        });
+    </script>
  
