@@ -250,7 +250,7 @@
                         </li>
                         <li class="dropdown btn-work-with">
                             <a href="<?php echo esc_url(site_url()); ?>/careers" class="dropdown-toggle header-right-button" data-toggle="dropdown">
-                                <button class="green-bordered-button with-bottom-cut">Work With Us</button>
+                                <button onclick="redirect_link('<?php echo esc_url(site_url()); ?>/careers')" class="green-bordered-button with-bottom-cut">Work With Us</button>
                             </a>
                         </li>
                         <!-- for mobile search and button -->
@@ -260,11 +260,18 @@
                         </li> -->
                         <li class="dropdown mobile-size-button">
                             <a href="<?php echo esc_url(site_url()); ?>/careers">
-                                <button class="btn">Work With Us</button>
+                                <button onclick="redirect_link('<?php echo esc_url(site_url()); ?>/careers')" class="btn">Work With Us</button>
                             </a>
                         </li>
                     </ul>
                 </div>
                 <!-- /.nav-collapse -->
             </nav>
+
+
+        <script type="text/javascript">
+        function redirect_link(url) {
+            window.location.href = url;
+        }
+    </script>
            

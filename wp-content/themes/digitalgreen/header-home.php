@@ -264,8 +264,8 @@
                             <a href="<?php echo esc_url(site_url()); ?>/donate"><span class="green-arrow">Donate</span></a>
                         </li>
                         <li class="dropdown btn-work-with">
-                            <a href="careers" class="dropdown-toggle header-right-button" data-toggle="dropdown">
-                                <button class="green-bordered-button with-bottom-cut">Work With Us</button>
+                            <a href="<?php echo esc_url(site_url()); ?>/careers" class="dropdown-toggle header-right-button" data-toggle="dropdown">
+                                <button onclick="redirect_link('<?php echo esc_url(site_url()); ?>/careers')" class="green-bordered-button with-bottom-cut">Work With Us</button>
                             </a>
                         </li>
                         <!-- for mobile search and button -->
@@ -274,8 +274,8 @@
                             <span class="mobile-search-icon"><a href="#" class="green-arrow"><i class="icon icon-search" aria-hidden="true"></i></a></span>
                         </li> -->
                         <li class="dropdown mobile-size-button">
-                            <a href="careers">
-                                <button class="btn">Work With Us</button>
+                            <a href="<?php echo esc_url(site_url()); ?>/careers">
+                                <button onclick="redirect_link('<?php echo esc_url(site_url()); ?>/careers')" class="btn">Work With Us</button>
                             </a>
                         </li>
                     </ul>
@@ -284,3 +284,9 @@
         </nav>
         <!-- </div> -->
     </header>
+
+    <script type="text/javascript">
+        function redirect_link(url) {
+            window.location.href = url;
+        }
+    </script>
