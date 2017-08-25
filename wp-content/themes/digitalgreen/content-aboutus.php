@@ -65,7 +65,7 @@ get_header('globalimpact'); ?>
                 <div class="container">
                     <div class="row founder-section clearfix">
                         <div class="col-md-6 right-block">
-                            <img src="<?php echo get_field('about_us_video_image'); ?>" class="img-responsive">
+                            <img src="<?php echo get_field('about_us_video_image'); ?>" id="watch-link-image" class="img-responsive">
                             <!-- <a href="#" class="watch-link" tabindex="0"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a> -->
                             <a href="#" data-url="<?php echo get_field('about_us_video_link'); ?>" class="watch-link"><span><i class="fa fa-chevron-right"></i></span> Watch This Video</a>
 
@@ -504,6 +504,20 @@ get_header('globalimpact'); ?>
 
 
 <?php get_footer(); ?>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var img = jQuery('#watch-link-image');
+        var video_link = "<?php echo get_field('about_us_video_link'); ?>";
+        var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+        var match = video_link.match(regExp);
+        var video_id;
+
+        if (match && match[2].length == 11) 
+                video_id = match[2];
+        img.attr('src', "https://img.youtube.com/vi/"+video_id+"/maxresdefault.jpg");
+    });
+</script>
 
 <div id="my-modal">
     <div class="modal-lg">

@@ -230,7 +230,7 @@
                             </ul> -->
                         </li>
                         <li class="dropdown mega-dropdown">
-                            <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle" data-toggle="dropdown">News</a>
+                            <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle" data-toggle="dropdown" onclick="redirect_link('<?php echo esc_url(site_url()); ?>/newsresource')">News</a>
                         </li>
                         <li class="dropdown mega-dropdown hidden-sm hidden-xs">
                             <div class="home-page-search">
