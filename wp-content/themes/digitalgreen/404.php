@@ -13,7 +13,7 @@ get_header('globalimpact'); ?>
 	<div class="banner-section">
         <div class="banner-img-404">
         	<h1 class="dg-header-1-copy">Looks like the page does not exist</h1>
-        	<h4 class="dg-header-4">Go to <a href="/" class="green-bordered-button learn-more">Home</a></h4>
+        	<h5 class="dg-header-5">Go to <a href="/" class="green-bordered-button learn-more">Home</a></h5>
         </div>
 
 
