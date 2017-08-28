@@ -184,7 +184,7 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                                                     <div class="gray-box-read">
                                                         <div class="partner-title">
                                                             <h5 class="dg-header-6 text-white"><?php the_title();?></h5>
-                                                            <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
+                                                            <a href="<?php echo $partners_link; ?>" class="forward-redirection-green-link" target="_blank">View Website <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                                         </div>
                                                     </div>
                                                 </div>

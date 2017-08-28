@@ -246,7 +246,7 @@
                     </ul>
                     <ul class="nav navbar-nav pull-right">
                         <li class="dropdown link-donate">
-                            <a href="<?php echo esc_url(site_url()); ?>/donate"><span class="green-arrow">Donate</span></a>
+                            <a href="<?php echo esc_url(site_url()); ?>/donate" target="_blank"><span class="green-arrow">Donate</span></a>
                         </li>
                         <li class="dropdown btn-work-with">
                             <a href="<?php echo esc_url(site_url()); ?>/careers" class="dropdown-toggle header-right-button" data-toggle="dropdown">

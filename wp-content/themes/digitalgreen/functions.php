@@ -682,6 +682,312 @@ function create_resources_taxonomies() {
 }
 
 
+//function to load more post types
+add_action( 'wp_enqueue_scripts', 'load_more_script_and_styles', 1 );
+
+function load_more_script_and_styles() {
+	global $wp_query;
+
+	// register our main script but do not enqueue it yet
+	wp_register_script( 'loadmore_scripts', get_template_directory_uri() . '/js/loadmore.js', array('jquery'), time() );
+ 
+	// now the most interesting part
+	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
+	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
+	wp_localize_script( 'loadmore_scripts', 'loadmore_params', array(
+		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+		'posts' => serialize( $wp_query->query_vars ), // everything about your loop is here
+		'current_page' => $wp_query->query_vars['paged'] ? $wp_query->query_vars['paged'] : 1,
+		'max_page' => $wp_query->max_num_pages
+	) );
+ 
+ 	wp_enqueue_script( 'loadmore_scripts' );
+}
+
+
+//Load more India Ajax Handler
+add_action('wp_ajax_loadmoreindia', 'loadmoreindia_ajax_handler'); // wp_ajax_{action}
+add_action('wp_ajax_nopriv_loadmoreindia', 'loadmoreindia_ajax_handler'); // wp_ajax_nopriv_{action}
+ 
+function loadmoreindia_ajax_handler(){
+ 
+	// prepare our arguments for the query
+	$args = unserialize( stripslashes( $_POST['query'] ) );
+	$args['paged'] = $_POST['page'] + 1; // we need next page to be loaded
+	$args['post_status'] = 'publish';
+	$count = $_POST['counter'];
+	$args['post_type'] = 'india';
+ 
+	// it is always better to use WP_Query but not here
+	$the_query = new WP_Query($args);
+  
+		// run the loop
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+			{	 
+                    
+                    
+                    $india_solutions_place = get_post_meta(get_the_ID(),'india_solutions_place', true);
+            
+                    $india_solutions_duration = get_post_meta(get_the_ID(),'india_solutions_duration', true);
+                    
+                    
+                    
+                    $india_partner_type1 = get_post_meta(get_the_ID(),'india_partner_type1', true);
+
+                    $india_partner_type2 = get_post_meta(get_the_ID(),'india_partner_type2', true);
+
+                    $india_solutions = get_post_meta(get_the_ID(),'india_solutions',array());
+                    
+                    $india_partners1 = get_post_meta(get_the_ID(),'india_partners1',array());
+
+                    $india_partners2 = get_post_meta(get_the_ID(),'india_partners2',array());
+
+                     ?>
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-target="#collapse<?php echo $count; ?>" aria-expanded="false">
+                                <div>
+                                    <ul class="project-head-list clearfix present-project">
+                                        <li><?php echo $india_solutions_place;?></li>
+                                        <li class="hidden-xs"><?php echo $india_solutions_duration;?></li>
+                                    </ul>
+                                    <div class="expand-project"></div>
+                                </div>
+                                    <div class="project-details">
+                                        <h5 class="dg-header-5-copy"><?php the_title(); ?></h5>                                       
+                                    </div>
+                                </a>
+                            </h5>
+                        </div>
+
+ 
+                    <div class="single-project-details collapse" id="collapse<?php echo $count; ?>">
+                        <!-- <ul class="project-head-list clearfix present-project">
+                            <li><?php echo $india_solutions_place;?></li>
+                            <li class="hidden-xs"><?php echo $india_solutions_duration;?></li>
+                        </ul> -->
+                        <div class="project-details">
+                            <!-- <h1 class="dg-header-1"><?php the_title(); ?></h1> -->
+                            <p class="dg-header-5 text-detail hidden-xs"><?php the_content(); ?></p>
+                            
+                        </div>
+                        <div class="project-solution">
+                            <h3 class="hidden-xs">Solution used</h3>
+                            <div class="box-container hidden-xs">
+                                <div class="row">
+                                <?php          
+                        if (isset($india_solutions)){ 
+  $i=1;  
+                                     foreach($india_solutions[0] as $key => $value){  
+                                             ?>
+                                    <div class="partner-boxes">
+                                        <div class="box">
+                                            <div class="box-content">
+                                            
+                                            <!-- Not Done,should be done by vivek............-->
+                                                <img src="<?php echo $value['india_solutions_type1']; ?>" alt="Loop" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                      <?php  $i++;
+                        
+                    }
+                } ?>
+                                     
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partners-section">
+                            <!-- <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
+                                <span class="icon icon-up-arrow"></span>
+                                <span class="icon icon-down-arrow"></span>
+                            </a> -->
+                            <div class="collapse-projects">
+                                <div class="partners-box">
+                                    <h3 class="dg-header-4 news-header">Partners</h3>
+                                    <div class="row">
+                                     <?php       
+                        if (isset($india_partners1)){   
+                                     foreach($india_partners1[0] as $key => $value){  
+                                             ?>
+                                        <div class="col-sm-3">
+                                            <div class="box gray">
+                                                <div class="box-content">
+                                                    <img src="<?php echo $value['india_partners1_title']; ?>" alt="Loop" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                         <?php 
+                        
+                    }
+                } ?>
+                                        
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                     <?php 
+		}
+	$count++;
+	endwhile; ?>
+	<?php echo '||'; ?><?php echo $count;?>
+ <?php
+	die; // here we exit the script and even no wp_reset_query() required!
+}
+
+
+//Load More Ethopia Ajax Handler
+add_action('wp_ajax_loadmoreethopia', 'loadmoreethopia_ajax_handler'); // wp_ajax_{action}
+add_action('wp_ajax_nopriv_loadmoreethopia', 'loadmoreethopia_ajax_handler'); // wp_ajax_nopriv_{action}
+ 
+function loadmoreethopia_ajax_handler(){
+ 
+	// prepare our arguments for the query
+	$args1 = unserialize( stripslashes( $_POST['query'] ) );
+	$args1['paged'] = $_POST['page'] + 1; // we need next page to be loaded
+	$args1['post_status'] = 'publish';
+	$count = $_POST['counter'];
+	$args1['post_type'] = 'ethopia';
+ 
+	// it is always better to use WP_Query but not here
+	$the_query1 = new WP_Query($args1);
+
+		// run the loop
+          while ( $the_query1->have_posts() ) : $the_query1->the_post();
+			{	 
+                    
+                    
+                    $ethopia_solutions_place = get_post_meta(get_the_ID(),'ethopia_solutions_place', true);
+            
+                    $ethopia_solutions_duration = get_post_meta(get_the_ID(),'ethopia_solutions_duration', true);
+                    
+                    
+                    
+                    $ethopia_partner_type1 = get_post_meta(get_the_ID(),'ethopia_partner_type1', true);
+
+                    $ethopia_partner_type2 = get_post_meta(get_the_ID(),'ethopia_partner_type2', true);
+
+                    $ethopia_solutions = get_post_meta(get_the_ID(),'ethopia_solutions',array());
+                    
+                    $ethopia_partners1 = get_post_meta(get_the_ID(),'ethopia_partners1',array());
+
+                    $ethopia_partners2 = get_post_meta(get_the_ID(),'ethopia_partners2',array());
+
+                     ?>
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-target="#collapse<?php echo $count; ?>" aria-expanded="false">
+                                <div>
+                                    <ul class="project-head-list clearfix present-project">
+                                        <li><?php echo $ethopia_solutions_place;?></li>
+                                        <li class="hidden-xs"><?php echo $ethopia_solutions_duration;?></li>
+                                    </ul>
+                                    <div class="expand-project"></div>
+                                </div>
+                                    <div class="project-details">
+                                        <h5 class="dg-header-5-copy"><?php the_title(); ?></h5>                                       
+                                    </div>
+                                </a>
+                            </h5>
+                        </div>
+
+ 
+                    <div class="single-project-details collapse" id="collapse<?php echo $count; ?>">
+                        <!-- <ul class="project-head-list clearfix present-project">
+                            <li><?php echo $ethopia_solutions_place;?></li>
+                            <li class="hidden-xs"><?php echo $ethopia_solutions_duration;?></li>
+                        </ul> -->
+                        <div class="project-details">
+                            <!-- <h1 class="dg-header-1"><?php the_title(); ?></h1> -->
+                            <p class="dg-header-5 text-detail hidden-xs"><?php the_content(); ?></p>
+                            
+                        </div>
+                        <div class="project-solution">
+                            <h3 class="hidden-xs">Solution used</h3>
+                            <div class="box-container hidden-xs">
+                                <div class="row">
+                                <?php          
+                        if (isset($ethopia_solutions)){ 
+  $i=1;  
+                                     foreach($ethopia_solutions[0] as $key => $value){  
+                                             ?>
+                                    <div class="partner-boxes">
+                                        <div class="box">
+                                            <div class="box-content">
+                                            
+                                            <!-- Not Done,should be done by vivek............-->
+                                                <img src="<?php echo $value['ethopia_solutions_type1']; ?>" alt="Loop" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                      <?php  $i++;
+                        
+                    }
+                } ?>
+                                     
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partners-section">
+                            <!-- <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
+                                <span class="icon icon-up-arrow"></span>
+                                <span class="icon icon-down-arrow"></span>
+                            </a> -->
+                            <div class="collapse-projects">
+                                <div class="partners-box">
+                                    <h3 class="dg-header-4 news-header">Partners</h3>
+                                    <div class="row">
+                                     <?php       
+                        if (isset($ethopia_partners1)){   
+                                     foreach($ethopia_partners1[0] as $key => $value){  
+                                             ?>
+                                        <div class="col-sm-3">
+                                            <div class="box gray">
+                                                <div class="box-content">
+                                                    <img src="<?php echo $value['ethopia_partners1_title']; ?>" alt="Loop" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                         <?php 
+                        
+                    }
+                } ?>
+                                        
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                     <?php 
+		}
+	$count++;
+	endwhile; ?>
+	<?php echo '||'; ?><?php echo $count;?>
+ <?php
+	die; // here we exit the script and even no wp_reset_query() required!
+}
+
+
+
+
+
 
 
 

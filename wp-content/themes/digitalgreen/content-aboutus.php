@@ -226,7 +226,7 @@ get_header('globalimpact'); ?>
             <div class="team-history-wrap section-margin">
                 <div id="history" class="container clearfix">
                     <div class="title-header section-margin ">
-                        <h2 class="dg-header-2 text-center">The History of Digital Green</h2>
+                        <h2 class="dg-header-2 text-center">The Journey of Digital Green</h2>
                     </div>
                     <div class="clearfix timeline-info-slider">
 

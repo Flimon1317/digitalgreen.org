@@ -204,7 +204,7 @@ get_header('globalimpact'); ?>
                         <img src="<?php echo get_field('community_videos_product_showcase_image'); ?>" alt="sample image"/>
                     </div> 
                     <div class="clearfix about-coco">
-                        <div class="single-mobile-container section-margin">
+                        <!-- <div class="single-mobile-container section-margin">
                             <div class="clearfix coco-about-blocks">
                             <div class="col-sm-6 col-sm-push-6 coco-mobile-img">
                                     <div class="solution-single-gray-box">
@@ -225,7 +225,7 @@ get_header('globalimpact'); ?>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="single-mobile-container section-margin">
                             <div class="clearfix coco-about-blocks">
                                 <div class="col-sm-6 coco-mobile-img">
@@ -243,7 +243,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo get_field('community_videos_how_is_coco_description'); ?>
                                         <p>
-                                        <a href="<?php echo get_field('community_videos_how_is_coco_link'); ?>" class="green-bordered-button learn-more">Learn More</a>
+                                        <a href="<?php echo get_field('community_videos_how_is_coco_link'); ?>" class="green-bordered-button learn-more" target="_blank">Learn More</a>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +267,7 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-<?php 
+<!-- <?php 
         if( have_rows('community_videos_screenshots') ) 
         {
             ?> 
@@ -290,7 +290,7 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div> 
-            <?php } ?>
+            <?php } ?> -->
 
 <?php 
         if( have_rows('community_videos_solutions_section') ) 

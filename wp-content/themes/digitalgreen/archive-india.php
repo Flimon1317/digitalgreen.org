@@ -274,12 +274,16 @@ get_header('globalimpact'); ?>
                 </div>
             </div>
             <div class="container">
-                <div class="project-inner-wrap">
                 
                 <?php
+                                $count = 1;
 
  $the_query = new WP_Query( array('post_type' => 'india'));
-                $count = 1;
+                ?>
+             <div class="project-inner-wrap project-list">
+
+             <?php 
+
                   while ( $the_query->have_posts() ) : $the_query->the_post();
 { 
                     
@@ -304,7 +308,7 @@ get_header('globalimpact'); ?>
                     <div class="card">
                         <div class="card-header" role="tab">
                             <h5 class="mb-0">
-                                <a data-toggle="collapse" data-target="#collapse<?php echo $count; ?>" aria-expanded="false">
+                                <a data-toggle="collapse" onclick="toggleCollapse();" data-target="#collapse<?php echo $count; ?>" aria-expanded="false">
                                 <div>
                                     <ul class="project-head-list clearfix present-project">
                                         <li><?php echo $india_solutions_place;?></li>
@@ -320,7 +324,7 @@ get_header('globalimpact'); ?>
                         </div>
 
  
-                    <div class="single-project-details collapse in" id="collapse<?php echo $count; ?>">
+                    <div class="single-project-details collapse" id="collapse<?php echo $count; ?>">
                         <!-- <ul class="project-head-list clearfix present-project">
                             <li><?php echo $india_solutions_place;?></li>
                             <li class="hidden-xs"><?php echo $india_solutions_duration;?></li>
@@ -415,13 +419,23 @@ get_header('globalimpact'); ?>
                         </div>
                     </div>
                 </div>
+
                      <?php 
 }
 $count++;
 endwhile; ?>  
                     <!-- <div class="text-center"><a href="#" class="learn-more hidden-xs green-bordered-button">Learn More</a></div> -->
             </div>
+
+           <?php  
+            if ($the_query->max_num_pages > 1):
+                echo '<button data-count='.${count}.' onclick="load_more_post(\'india\',\'.project-list\');" class="green-bordered-button load-more" id="load-more-button">More posts</button>'; // you can use <a> as well
+                endif;
+                 ?>
+
+
         </div>
+    </div>
 <?php
       if (function_exists('get_option_tree')){
         $india_quote_array = ot_get_option( 'india_quote_array', array() );
@@ -457,7 +471,6 @@ endwhile; ?>
 <script type="text/javascript">
         $(document).ready(function() {
             // jQuery Validation
-            $(".collapse").collapse('toggle');
+            $(".collapse").collapse('hide');
         });
     </script>
- 
