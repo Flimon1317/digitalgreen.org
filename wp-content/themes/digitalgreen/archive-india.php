@@ -468,9 +468,11 @@ endwhile; ?>
 <?php get_footer(); ?>
 
 
+
 <script type="text/javascript">
         $(document).ready(function() {
             // jQuery Validation
             $(".collapse").collapse('hide');
         });
     </script>
+

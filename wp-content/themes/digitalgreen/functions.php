@@ -681,6 +681,447 @@ function create_resources_taxonomies() {
 	register_taxonomy( 'list_resources', array( 'resources' ) , $args );
 }
 
+add_action('wp_ajax_load_posts_by_ajax', 'load_posts_by_ajax_callback');
+add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
+
+
+function load_posts_by_ajax_callback() {
+	check_ajax_referer('load_more_posts', 'security');
+	$paged = $_POST['page'];
+    
+    $terms = get_terms("list_blogs",array( 'parent' => 0 ));
+        $i=1;
+        foreach ( $terms as $term ) { 
+        $termname = strtolower($term->name);
+        $termname = str_replace(' ', '-', $termname);
+
+	$the_query = new WP_Query( array('post_type' => 'blogs','posts_per_page'=>'8','paged'=> $paged,'tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+
+          //echo "--".$term->slug;
+          $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
+                    
+                    $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
+                    $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $blogs_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+                    ?>
+
+                <div class="news-list" data-category="<?php echo $termname; ?>">
+                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
+                        <div class="news-image">
+                            <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                            <span class="news-cat"><?php echo $term->name; ?></span>
+                        </div>
+                        <span class="date"><?php echo $blogs_date; ?></span>
+                        <div class="info">
+                           <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
+                        </div>
+                        <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
+                    </a>
+                </div> 
+<?php endwhile; 
+$i++;
+} 
+
+	wp_die();
+}
+
+/*add_action('wp_ajax_load_india_by_ajax', 'load_india_by_ajax_callback');
+add_action('wp_ajax_nopriv_load_india_by_ajax', 'load_india_by_ajax_callback');
+
+
+function load_india_by_ajax_callback() {
+	check_ajax_referer('load_more_posts', 'security');
+	$paged = $_POST['page'];
+    
+  
+ $the_query = new WP_Query( array('post_type' => 'india','posts_per_page'=>'2','paged'=> $paged));
+     
+                  while ( $the_query->have_posts() ) : $the_query->the_post();
+{ 
+                    
+                    
+                    $india_solutions_place = get_post_meta(get_the_ID(),'india_solutions_place', true);
+            
+                    $india_solutions_duration = get_post_meta(get_the_ID(),'india_solutions_duration', true);
+                    
+                    
+                    
+                    $india_partner_type1 = get_post_meta(get_the_ID(),'india_partner_type1', true);
+
+                    $india_partner_type2 = get_post_meta(get_the_ID(),'india_partner_type2', true);
+
+                    $india_solutions = get_post_meta(get_the_ID(),'india_solutions',array());
+                    
+                    $india_partners1 = get_post_meta(get_the_ID(),'india_partners1',array());
+
+                    $india_partners2 = get_post_meta(get_the_ID(),'india_partners2',array());
+
+                     ?>
+                    <div class="single-project-details">
+                        <ul class="project-head-list clearfix present-project">
+                            <li><?php echo $india_solutions_place;?></li>
+                            <li class="hidden-xs"><?php echo $india_solutions_duration;?></li>
+                        </ul>
+                        <div class="project-details">
+                            <h1 class="dg-header-1"><?php the_title(); ?></h1>
+                            <p class="dg-header-5 text-detail hidden-xs"><?php the_content(); ?></p>
+                            
+                        </div>
+                        <div class="project-solution">
+                            <h3 class="hidden-xs">Solution used</h3>
+                            <div class="box-container hidden-xs">
+                                <div class="row">
+                                <?php          
+                        if (isset($india_solutions)){ 
+  $i=1;  
+                                     foreach($india_solutions[0] as $key => $value){  
+                                             ?>
+                                    <div class="partner-boxes">
+                                        <div class="box <?php if($i==1) echo 'blue'; elseif($i==2) echo 'pink'; elseif($i==3) echo 'orange'; elseif($i==4) echo 'purple'; else echo 'pink';?>">
+                                            <div class="box-content">
+                                            
+                                            <!-- Not Done,should be done by vivek............-->
+                                                <img src="<?php echo $value['india_solutions_type1']; ?>" alt="Loop" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                      <?php  $i++;
+                        
+                    }
+                } ?>
+                                     
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partners-section">
+                            <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
+                                <span class="icon icon-up-arrow"></span>
+                                <span class="icon icon-down-arrow"></span>
+                            </a>
+                            <div class="collapse-project">
+                                <div class="partners-box">
+                                    <h3 class="dg-header-4 news-header">Partner Type</h3>
+                                    <div class="row">
+                                     <?php       
+                        if (isset($india_partners1)){   
+                                     foreach($india_partners1[0] as $key => $value){  
+                                             ?>
+                                        <div class="col-sm-3">
+                                            <div class="box gray">
+                                                <div class="box-content">
+                                                    <?php echo $value['india_partners1_title']; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                         <?php 
+                        
+                    }
+                } ?>
+                                        
+                                    </div>
+                                </div>
+                                 <div class="partners-box">
+                                    <h3 class="dg-header-4 news-header">Partner Type</h3>
+                                    <div class="row">
+                                    
+                                     <?php       
+                        if (isset($india_partners2)){   
+                                     foreach($india_partners2[0] as $key => $value){  
+                                             ?>
+                                        <div class="col-sm-3">
+                                            <div class="box gray">
+                                                <div class="box-content">
+                                                     <?php echo $value['india_partners2_title']; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                                                      
+ <?php 
+                        
+                    }
+                } ?>
+                                        
+                                    </div>
+                                </div> 
+                               
+                            </div>
+                        </div>
+                    </div>
+                     <?php 
+}
+endwhile;   
+ 
+
+	wp_die();
+}
+?>
+
+<?php add_action('wp_ajax_load_ethiopia_by_ajax', 'load_ethiopia_by_ajax_callback');
+add_action('wp_ajax_nopriv_load_ethiopia_by_ajax', 'load_ethiopia_by_ajax_callback');
+
+
+function load_ethiopia_by_ajax_callback() {
+	check_ajax_referer('load_more_posts', 'security');
+	$paged = $_POST['page'];
+    
+  
+ $the_query = new WP_Query( array('post_type' => 'ethopia','posts_per_page'=>'2','paged'=> $paged));
+     
+                  while ( $the_query->have_posts() ) : $the_query->the_post();
+{ 
+                    
+                    
+                    $ethopia_solutions_place = get_post_meta(get_the_ID(),'ethopia_solutions_place', true);
+            
+                    $ethopia_solutions_duration = get_post_meta(get_the_ID(),'ethopia_solutions_duration', true);
+                    
+                    
+                    
+                    $ethopia_partner_type1 = get_post_meta(get_the_ID(),'ethopia_partner_type1', true);
+
+                    $ethopia_partner_type2 = get_post_meta(get_the_ID(),'ethopia_partner_type2', true);
+
+                    $ethopia_solutions = get_post_meta(get_the_ID(),'ethopia_solutions',array());
+                    
+                    $ethopia_partners1 = get_post_meta(get_the_ID(),'ethopia_partners1',array());
+
+                    $ethopia_partners2 = get_post_meta(get_the_ID(),'ethopia_partners2',array());
+
+                     ?>
+                    <div class="single-project-details">
+                        <ul class="project-head-list clearfix present-project">
+                            <li><?php echo $ethopia_solutions_place;?></li>
+                            <li class="hidden-xs"><?php echo $ethopia_solutions_duration;?></li>
+                        </ul>
+                        <div class="project-details">
+                            <h1 class="dg-header-1"><?php the_title(); ?></h1>
+                            <p class="dg-header-5 text-detail hidden-xs"><?php the_content(); ?></p>
+                            <p class="dg-header-5 text-detail hidden-xs">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                        </div>
+                        <div class="project-solution">
+                            <h3 class="hidden-xs">Solution used</h3>
+                            <div class="box-container hidden-xs">
+                                <div class="row">
+                                <?php          
+                        if (isset($ethopia_solutions)){ 
+  $i=1;  
+                                     foreach($ethopia_solutions[0] as $key => $value){  
+                                             ?>
+                                    <div class="partner-boxes">
+                                        <div class="box <?php if($i==1) echo 'blue'; elseif($i==2) echo 'pink'; elseif($i==3) echo 'orange'; elseif($i==4) echo 'purple'; else echo 'pink';?>">
+                                            <div class="box-content">
+                                            
+                                            <!-- Not Done,should be done by vivek............-->
+                                                <img src="<?php echo $value['ethopia_solutions_type1']; ?>" alt="Loop" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                      <?php  $i++;
+                        
+                    }
+                } ?>
+                                     
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="partners-section">
+                            <a href="#" class="partner-collepse-button hidden-xs" >View Partners &nbsp;
+                                <span class="icon icon-up-arrow"></span>
+                                <span class="icon icon-down-arrow"></span>
+                            </a>
+                            <div class="collapse-project">
+                                <div class="partners-box">
+                                    <h3 class="dg-header-4 news-header">Partner Type</h3>
+                                    <div class="row">
+                                     <?php       
+                        if (isset($ethopia_partners1)){   
+                                     foreach($ethopia_partners1[0] as $key => $value){  
+                                             ?>
+                                        <div class="col-sm-3">
+                                            <div class="box gray">
+                                                <div class="box-content">
+                                                    <?php echo $value['ethopia_partners1_title']; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                         <?php 
+                        
+                    }
+                } ?>
+                                        
+                                    </div>
+                                </div>
+                                 <div class="partners-box">
+                                    <h3 class="dg-header-4 news-header">Partner Type</h3>
+                                    <div class="row">
+                                    
+                                     <?php       
+                        if (isset($ethopia_partners2)){   
+                                     foreach($ethopia_partners2[0] as $key => $value){  
+                                             ?>
+                                        <div class="col-sm-3">
+                                            <div class="box gray">
+                                                <div class="box-content">
+                                                     <?php echo $value['ethopia_partners2_title']; ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                                                      
+ <?php 
+                        
+                    }
+                } ?>
+                                        
+                                    </div>
+                                </div> 
+                               
+                            </div>
+                        </div>
+                    </div>
+                     <?php 
+}
+endwhile;   
+ 
+
+	wp_die();
+} */ ?>
+
+<?php 
+
+add_action('wp_ajax_load_news_by_ajax', 'load_news_by_ajax_callback');
+add_action('wp_ajax_nopriv_load_news_by_ajax', 'load_news_by_ajax_callback');
+
+
+function load_news_by_ajax_callback() {
+	check_ajax_referer('load_more_posts', 'security');
+	$paged = $_POST['page'];
+    
+    $terms = get_terms("list_news",array( 'parent' => 0 ));
+        $i=1;
+        foreach ( $terms as $term ) { 
+        $termname = strtolower($term->name);
+        $termname = str_replace(' ', '-', $termname);
+        
+
+ 
+                $the_query = new WP_Query( array('post_type' => 'news','posts_per_page'=>'8','paged'=> $paged,'orderby' => 'publish_date',
+    'order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_news','field' => 'slug','terms' => $term->slug))));
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+
+          
+          $news_date = get_the_date( 'F d, Y', get_the_ID() );
+                    
+                    $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
+                    $news_attach = get_post_meta(get_the_ID(),'news_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $news_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+                 ?>
+ 
+                
+                <div class="news-list" data-category="<?php echo $term->description; ?><?php echo $i; ?>">
+
+          
+                
+                    <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover">
+                        <div class="news-image">
+                        
+                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                            <span class="news-cat"><?php echo $term->name; ?></span>
+                        </div>
+                        <span class="date"><?php echo $news_date; ?></span>
+                        <div class="info">
+                            <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
+                        </div>
+                        <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
+                    </a> 
+                </div>
+                <?php endwhile;  
+                
+$i++;
+} 
+
+	wp_die();
+}
+
+add_action('wp_ajax_load_resources_by_ajax', 'load_resources_by_ajax_callback');
+add_action('wp_ajax_nopriv_load_resources_by_ajax', 'load_resources_by_ajax_callback');
+
+
+function load_resources_by_ajax_callback() {
+	check_ajax_referer('load_more_posts', 'security');
+	$paged = $_POST['page'];
+    
+    $terms = get_terms("list_resources",array( 'parent' => 0 ));
+        $i=1;
+        foreach ( $terms as $term ) { 
+        $termname = strtolower($term->name);
+        $termname = str_replace(' ', '-', $termname);
+        
+
+ 
+ $the_query = new WP_Query( array('post_type' => 'resources','posts_per_page'=>'7','paged'=> $paged,'tax_query' => array(array ('taxonomy' => 'list_resources','field' => 'slug','terms' => $term->slug))));
+          while ( $the_query->have_posts() ) : $the_query->the_post();
+
+          
+          $resources_date = get_the_date( 'F d, Y', get_the_ID() );
+                    
+                    $resources_short_desc = get_post_meta(get_the_ID(),'resources_short_desc', true);
+                    $resources_attach = get_post_meta(get_the_ID(),'resources_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $resources_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+
+                    ?>
+
+                <div class="news-list" data-category="<?php echo $termname; ?>">
+                    <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover">
+                        <div class="news-image">
+                            <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                            <span class="news-cat"><?php echo $term->name; ?></span>
+                        </div>
+                        <span class="date"><?php echo $resources_date; ?></span>
+                        <div class="info">
+                            <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
+                        </div>
+                        <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
+                    </a>
+                </div> 
+<?php endwhile; 
+$i++;
+}
+
+	wp_die();
+}
 
 //function to load more post types
 add_action( 'wp_enqueue_scripts', 'load_more_script_and_styles', 1 );

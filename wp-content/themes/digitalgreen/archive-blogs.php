@@ -108,7 +108,7 @@ get_header('globalimpact'); ?>
 
     <div class="gray-boxes-container">
         <div class="container news-container">
-            <div class="row">
+            <div class="row blogs-append">
 <?php
         $terms = get_terms("list_blogs",array( 'parent' => 0 ));
         $i=1;
@@ -118,7 +118,7 @@ get_header('globalimpact'); ?>
         
 
  
- $the_query = new WP_Query( array('post_type' => 'blogs','tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
+ $the_query = new WP_Query( array('post_type' => 'blogs','posts_per_page'=>'7','paged'=> 1,'tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
           while ( $the_query->have_posts() ) : $the_query->the_post();
 
           
@@ -137,7 +137,7 @@ get_header('globalimpact'); ?>
                     ?>
 
                 <div class="news-list" data-category="<?php echo $termname; ?>">
-                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
+                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
                         <div class="news-image">
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                             <span class="news-cat"><?php echo $term->name; ?></span>
@@ -507,7 +507,7 @@ $i++;
                     </a>
                 </div> -->
            </div>
-           <a href="case-studies.html" class="green-bordered-button load-more">Load more</a>
+           <a  class="green-bordered-button load-more">Load more</a>
         </div>
     </div>
     <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
@@ -515,6 +515,26 @@ $i++;
 
 <?php get_footer(); ?>
 
- 
+<script type="text/javascript">
+var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
+var page = 2;
+jQuery(function($) {
+
+    $('body').on('click', '.load-more', function() {
+        var data = {
+
+            'action': 'load_posts_by_ajax',
+            'page': page,
+            'security': '<?php echo wp_create_nonce("load_more_posts"); ?>'
+        };
+
+        $.post(ajaxurl, data, function(response) {
+            $('.blogs-append').append(response);
+            page++;
+            
+        });
+    });
+});
+</script> 
 
 

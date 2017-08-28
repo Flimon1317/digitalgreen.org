@@ -67,18 +67,19 @@ get_header('globalimpact'); ?>
             <div class="section-header container-sectionH news-section-header">
                 <div class="row">
                     <div class="title-header news-title-header pull-left">
-                        <h1 class="dg-header-1 main-section-title ">Latest News
+                        <h1 class="dg-header-1 main-section-title ">Latest Resources
                             <span class="half-squre-before-title"></span>
                         </h1>
                     </div>
                     <div class="cat-search-wrap pull-right">
                         <div class="search-category hidden-xs">
-                            <form>
-                                <div class="custom-input-field">
-                                    <input type="text" name="search" class="custom-inp" placeholder="Search">
-                                    <input type="submit" value="" name="">
-                                </div>
-                            </form>
+                            <form method="get" role="search"  action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<div class="custom-input-field">
+                  <input id="search" type="text" placeholder="Search keywords" class="custom-inp" name="s"/>
+          <input type="hidden" name="post_type" value="resources" />
+          <input type="submit" value="" name="">
+          </div>
+                </form>
                         </div>
                         <div class="dropdown-wrapper">
                             <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" /></div>
@@ -107,9 +108,9 @@ get_header('globalimpact'); ?>
 
     <div class="gray-boxes-container">
         <div class="container news-container">
-            <div class="row">
+            <div class="row resources-append">
 <?php
-        $terms = get_terms("list_resources",array( 'parent' => 0 ));
+         $terms = get_terms("list_resources",array( 'parent' => 0 ));
         $i=1;
         foreach ( $terms as $term ) { 
         $termname = strtolower($term->name);
@@ -117,7 +118,7 @@ get_header('globalimpact'); ?>
         
 
  
- $the_query = new WP_Query( array('post_type' => 'resources','tax_query' => array(array ('taxonomy' => 'list_resources','field' => 'slug','terms' => $term->slug))));
+ $the_query = new WP_Query( array('post_type' => 'resources','posts_per_page'=>'7','paged'=> 1,'tax_query' => array(array ('taxonomy' => 'list_resources','field' => 'slug','terms' => $term->slug))));
           while ( $the_query->have_posts() ) : $the_query->the_post();
 
           
@@ -507,7 +508,7 @@ $i++;
                     </a>
                 </div> -->
            </div>
-           <a href="case-studies.html" class="green-bordered-button load-more">Load more</a>
+           <a class="green-bordered-button load-more">Load more</a>
         </div>
     </div>
     <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
@@ -515,6 +516,26 @@ $i++;
 
 <?php get_footer(); ?>
 
- 
+ <script type="text/javascript">
+var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
+var page = 2;
+jQuery(function($) {
+
+    $('body').on('click', '.load-more', function() {
+        var data = {
+
+            'action': 'load_posts_by_ajax',
+            'page': page,
+            'security': '<?php echo wp_create_nonce("load_more_posts"); ?>'
+        };
+
+        $.post(ajaxurl, data, function(response) {
+            $('.resources-append').append(response);
+            page++;
+            
+        });
+    });
+});
+</script> 
 
 
