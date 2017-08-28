@@ -26,10 +26,14 @@ get_header('globalimpact'); ?>
                     <div class="share-section">
                         <span class="text-share"><i class="fa fa-share-alt" aria-hidden="true"></i> Share This</span>
                         <ul class="social-icon-share clearfix">
-                            <li><a href="#"><i class="icon icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon icon-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                            <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon icon-facebook"></i></a></li>
+                            <li><a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon icon-twitter"></i></a></li>
+                            <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon icon-linkedin"></i></a></li>
+                            <li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
                     </div>
                 </div>

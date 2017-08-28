@@ -153,7 +153,7 @@ get_header('globalimpact'); ?>
 
     <div class="gray-boxes-container">
         <div class="container news-container">
-            <div class="row news-section">
+            <div class="row news-section news-append">
             <?php
         $terms = get_terms("list_news",array( 'parent' => 0 ));
         $i=1;
@@ -163,7 +163,8 @@ get_header('globalimpact'); ?>
         
 
  
-                $the_query = new WP_Query( array('post_type' => 'news','tax_query' => array(array ('taxonomy' => 'list_news','field' => 'slug','terms' => $term->slug))));
+                $the_query = new WP_Query( array('post_type' => 'news','posts_per_page'=>'6','paged'=> 1,'orderby' => 'publish_date',
+    'order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_news','field' => 'slug','terms' => $term->slug))));
           while ( $the_query->have_posts() ) : $the_query->the_post();
 
           
@@ -186,7 +187,7 @@ get_header('globalimpact'); ?>
 
           
                 
-                    <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
+                    <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover">
                         <div class="news-image">
                         
                              <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
@@ -362,7 +363,7 @@ $i++;
                 </div> -->
            </div>
             <div class="text-center">
-                <a href="case-studies.html" class="green-bordered-button load-more">Load more</a>
+                <a class="green-bordered-button load-more">Load more</a>
             </div>
         </div>
     </div>
@@ -371,4 +372,24 @@ $i++;
 <?php get_footer(); ?>
 
  
+<script type="text/javascript">
+var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
+var page = 2;
+jQuery(function($) {
 
+    $('body').on('click', '.load-more', function() {
+        var data = {
+
+            'action': 'load_posts_by_ajax',
+            'page': page,
+            'security': '<?php echo wp_create_nonce("load_more_posts"); ?>'
+        };
+
+        $.post(ajaxurl, data, function(response) {
+            $('.news-append').append(response);
+            page++;
+            
+        });
+    });
+});
+</script> 

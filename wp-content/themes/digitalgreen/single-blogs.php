@@ -26,10 +26,14 @@ get_header('globalimpact'); ?>
                     <div class="share-section">
                         <span class="text-share"><i class="fa fa-share-alt" aria-hidden="true"></i> Share This</span>
                         <ul class="social-icon-share clearfix">
-                            <li><a href="#"><i class="icon icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon icon-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                            <li><a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon icon-facebook"></i></a></li>
+                            <li><a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon icon-twitter"></i></a></li>
+                            <li><a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="icon icon-linkedin"></i></a></li>
+                            <li><a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,
+  '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -136,7 +140,7 @@ $terms = get_terms("list_blogs",array( 'parent' => 0 ));
         
         if ($the_query->have_posts()) {
            $i=1;
-           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
+           while ( $the_query->have_posts() && $i < 4 ) : $the_query->the_post();
           $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
