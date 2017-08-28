@@ -118,7 +118,7 @@ get_header('globalimpact'); ?>
         
 
  
- $the_query = new WP_Query( array('post_type' => 'blogs','posts_per_page'=>'7','paged'=> 1,'tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
+ $the_query = new WP_Query( array('post_type' => 'blogs','posts_per_page'=>'4','paged'=> 1,'tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
           while ( $the_query->have_posts() ) : $the_query->the_post();
 
           
@@ -137,7 +137,7 @@ get_header('globalimpact'); ?>
                     ?>
 
                 <div class="news-list" data-category="<?php echo $termname; ?>">
-                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
+                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                         <div class="news-image">
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                             <span class="news-cat"><?php echo $term->name; ?></span>

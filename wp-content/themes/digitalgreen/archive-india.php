@@ -375,7 +375,7 @@ get_header('globalimpact'); ?>
                         if (isset($india_partners1)){   
                                      foreach($india_partners1[0] as $key => $value){  
                                              ?>
-                                        <div class="col-sm-3">
+                                        <div class="col-sm-3 project-partners">
                                             <div class="box gray">
                                                 <div class="box-content">
                                                     <img src="<?php echo $value['india_partners1_title']; ?>" alt="Loop" />
@@ -429,7 +429,7 @@ endwhile; ?>
 
            <?php  
             if ($the_query->max_num_pages > 1):
-                echo '<button data-count='.${count}.' onclick="load_more_post(\'india\',\'.project-list\');" class="green-bordered-button load-more" id="load-more-button">More posts</button>'; // you can use <a> as well
+                echo '<button data-count='.${count}.' onclick="load_more_post(\'india\',\'.project-list\');" class="green-bordered-button load-more-projects" id="load-more-button">More posts</button>'; // you can use <a> as well
                 endif;
                  ?>
 

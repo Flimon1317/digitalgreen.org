@@ -427,7 +427,7 @@ endwhile; ?>
 
            <?php  
             if ($the_query->max_num_pages > 1):
-                echo '<button data-count='.${count}.' onclick="load_more_post(\'ethopia\',\'.project-list\');" class="green-bordered-button load-more" id="load-more-button">More posts</button>'; // you can use <a> as well
+                echo '<button data-count='.${count}.' onclick="load_more_post(\'ethopia\',\'.project-list\');" class="green-bordered-button load-more-projects" id="load-more-button">More posts</button>'; // you can use <a> as well
                 endif;
                  ?>
 

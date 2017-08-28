@@ -11,28 +11,28 @@
 				'action': 'loadmore'+post_type, // the parameter for admin-ajax.php
 				'query': loadmore_params.posts, // loop parameters passed by wp_localize_script()
 				'page' : loadmore_params.current_page,
-				'counter': parseInt(jQuery('.load-more').attr('data-count'))  // current page
+				'counter': parseInt(jQuery('.load-more-projects').attr('data-count'))  // current page
 			},
 			type : 'POST',
 			beforeSend : function ( xhr ) {
-				$('.load-more').text('Loading...'); // some type of preloader
+				$('.load-more-projects').text('Loading...'); // some type of preloader
 			},
 			success : function( data ){
 				if( data ) {
  
-					$('.load-more').text( 'More posts' );
+					$('.load-more-projects').text( 'More posts' );
 					result = data.split("||");
 					html_content = result[0];
-					jQuery('.load-more').attr('data-count', parseInt(result[1].trim()));
+					jQuery('.load-more-projects').attr('data-count', parseInt(result[1].trim()));
 					$(parent_div).append(html_content);
 		            $(".collapse").collapse('hide');
 					loadmore_params.current_page++;
  
 					if ( loadmore_params.current_page == loadmore_params.max_page ) 
-						$('.load-more').text('No More Post'); // if last page, HIDE the button
+						$('.load-more-projects').text('No More Post'); // if last page, HIDE the button
  
 				} else {
-					$('.load-more').hide(); // if no data, HIDE the button as well
+					$('.load-more-projects').hide(); // if no data, HIDE the button as well
 				}
 			},
 			error : function(response) {

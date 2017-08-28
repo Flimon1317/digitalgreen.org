@@ -684,6 +684,29 @@ function create_resources_taxonomies() {
 add_action('wp_ajax_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 add_action('wp_ajax_nopriv_load_posts_by_ajax', 'load_posts_by_ajax_callback');
 
+//function to load more post types
+add_action( 'wp_enqueue_scripts', 'load_more_script_and_styles', 1 );
+
+function load_more_script_and_styles() {
+	global $wp_query;
+
+	// register our main script but do not enqueue it yet
+	wp_register_script( 'loadmore_scripts', get_template_directory_uri() . '/js/loadmore.js', array('jquery'), time() );
+ 
+	// now the most interesting part
+	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
+	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
+	wp_localize_script( 'loadmore_scripts', 'loadmore_params', array(
+		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
+		'posts' => serialize( $wp_query->query_vars ), // everything about your loop is here
+		'current_page' => $wp_query->query_vars['paged'] ? $wp_query->query_vars['paged'] : 1,
+		'max_page' => $wp_query->max_num_pages
+	) );
+ 
+ 	wp_enqueue_script( 'loadmore_scripts' );
+}
+
+
 
 function load_posts_by_ajax_callback() {
 	check_ajax_referer('load_more_posts', 'security');
@@ -1121,28 +1144,6 @@ $i++;
 }
 
 	wp_die();
-}
-
-//function to load more post types
-add_action( 'wp_enqueue_scripts', 'load_more_script_and_styles', 1 );
-
-function load_more_script_and_styles() {
-	global $wp_query;
-
-	// register our main script but do not enqueue it yet
-	wp_register_script( 'loadmore_scripts', get_template_directory_uri() . '/js/loadmore.js', array('jquery'), time() );
- 
-	// now the most interesting part
-	// we have to pass parameters to myloadmore.js script but we can get the parameters values only in PHP
-	// you can define variables directly in your HTML but I decided that the most proper way is wp_localize_script()
-	wp_localize_script( 'loadmore_scripts', 'loadmore_params', array(
-		'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php', // WordPress AJAX
-		'posts' => serialize( $wp_query->query_vars ), // everything about your loop is here
-		'current_page' => $wp_query->query_vars['paged'] ? $wp_query->query_vars['paged'] : 1,
-		'max_page' => $wp_query->max_num_pages
-	) );
- 
- 	wp_enqueue_script( 'loadmore_scripts' );
 }
 
 

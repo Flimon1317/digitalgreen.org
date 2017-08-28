@@ -827,12 +827,15 @@ nav:hover > .navbar-collapse ul > li > a {
     background-position: left bottom; }
 
 
-  .green-bordered-button.load-more { 
+  .green-bordered-button.load-more-projects { 
     display: inline-block;
     margin-top:60px;
     left:40%;
     right:40%;}
 
+.project-partners {
+  margin-top: 20px;
+}
 
 .blank-bordered-button {
   background-color: rgba(255, 255, 255, 0);
