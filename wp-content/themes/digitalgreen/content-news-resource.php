@@ -146,7 +146,7 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
                     ?>
         
                             <div class="news-list">
-                                <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover">
+                                <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                                     <div class="news-image">
                                         <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                                         <span class="news-cat"><?php echo $term->name; ?></span>
@@ -248,7 +248,7 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
             $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
                             <div class="news-list">
-                                <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
+                                <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                                     <div class="news-image">
                                         <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                                         <span class="news-cat"><?php echo $term->name; ?></span>
@@ -350,7 +350,7 @@ $terms = get_terms("list_resources",array( 'parent' => 0 ));
             $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
                             <div class="news-list">
-                                <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover">
+                                <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                                     <div class="news-image">
                                      <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                                         <span class="news-cat"><?php echo $term->name; ?></span>

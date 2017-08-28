@@ -279,6 +279,11 @@ input:visited, textarea:visited, input:focus, textarea:focus {
   top: 10px;
   z-index: 9; }
 
+
+.btn-link:hover {
+  text-decoration: none;
+}
+
 .expand-project {
   position: relative;
   z-index: 100;

@@ -51,16 +51,16 @@
                                 </span></h4>
                                 <ul class="footer-list dg-header-5 text-details">
                                     <li><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></li>
-                                    <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solution</a></li>
+                                    <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solutions</a></li>
                                     <li><a href="<?php echo esc_url(site_url()); ?>/careers">Work With Us</a></li>
-                                    <li><a href="<?php echo esc_url(site_url()); ?>/partners">Financials</a></li>
+                                    <li><a href="<?php echo esc_url(site_url()); ?>/financials">Financials</a></li>
                                     <li><a href="<?php echo esc_url(site_url()); ?>/newsresource">Resources &amp; Publications</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col-sm-3 footer-blocks">
                             <div class="connect-footer">
-                                <h4 class="footer-section-title text-details">Newletter Sign Up
+                                <h4 class="footer-section-title text-details">Newsletter Sign Up
                                  <span class="pull-right hidden-sm hidden-md hidden-lg">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>

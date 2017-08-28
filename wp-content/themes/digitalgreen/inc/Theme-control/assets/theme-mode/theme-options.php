@@ -321,7 +321,43 @@ function custom_theme_options() {
               ),
 
           )
-      ),  
+      ), 
+
+      array(
+    'id' => 'news_tab',
+    'label' => 'News',
+    'type' => 'tab',
+    'section' => 'header'
+    ),
+
+  array(
+        'id'          => 'news',
+        'label'       => __( 'News', 'digitalgreen' ),
+    'desc'        => '',
+        'std'         => '',
+        'type'        => 'list-item',
+        'section'     => 'header',
+    'settings'    => array(
+            //Body Icon details
+                           
+               array(
+              'id'          => 'title',
+              'label'       => __( 'Add Name', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'news',
+              ),
+
+               
+
+               array(
+              'id'          => 'news_link',
+              'label'       => __( 'Add Link', 'digitalgreen' ),
+              'type'        => 'text',
+              'section'     => 'news',
+              ),
+
+          )
+      ) ,
 
 
     

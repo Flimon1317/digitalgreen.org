@@ -229,8 +229,72 @@
                                 </li>
                             </ul> -->
                         </li>
-                        <li class="dropdown mega-dropdown">
-                            <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle" data-toggle="dropdown" onclick="redirect_link('<?php echo esc_url(site_url()); ?>/newsresource')">News</a>
+
+                        <li class="dropdown">
+                            <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle">News     <span class="pull-right">
+                                    <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
+                                    <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                            <!-- mobile-sub-menu -->
+                            <ul class="dropdown-menu">
+                                <li><a href="<?php echo esc_url(site_url()); ?>/newsresource">News</a></li>
+                                <?php
+      if (function_exists('get_option_tree')){
+        $news = ot_get_option( 'news', array() );
+        if ( ! empty( $news ) ) {
+          /* print_r($home_banner); */
+          
+          foreach( $news as $section ) {
+      ?>
+                                <li><a href="<?php echo $section['news_link']; ?>"><?php echo $section['title']; ?></a></li>
+       <?php } } } ?>
+                            </ul>
+                            <!-- desktop-sub-menu -->
+<!--                             <ul class="mega-dropdown-menu">
+<?php
+      if (function_exists('get_option_tree')){
+        $global_impact = ot_get_option( 'news', array() );
+        if ( ! empty( $global_impact ) ) {
+          /* print_r($home_banner); */
+          
+          foreach( $global_impact as $section ) {
+      ?>
+
+                                <li class="col-sm-3">
+                                    <div class="menu-content">
+                                        <h2 class="dg-header-3"><?php echo $section['title']; ?></h2>
+                                        <p class="dg-header-5 text-details"><?php echo $section['global_description']; ?></p>
+                                        <p><a href="<?php echo $section['global_link']; ?>" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                    </div>
+                                </li>
+<?php } } } ?>
+
+                               <li class="col-sm-3">
+                                    <div class="menu-content">
+                                        <h2 class="dg-header-3">Ethiopia</h2>
+                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
+                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3">
+                                    <div class="menu-content">
+                                        <h2 class="dg-header-3">Global Initiatives</h2>
+                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
+                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                    </div>
+                                </li>
+                                <li class="col-sm-3">
+                                    <div class="menu-content">
+                                        <h2 class="dg-header-3">Case Studies</h2>
+                                        <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula. Praesent nisi ligula, tincidunt a accumsan in, posuere eget justo. Suspendisse potenti.</p>
+                                        <p><a href="#" class="green-arrow">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></p>
+                                    </div>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <!-- <li class="dropdown mega-dropdown">
+                            <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle" data-toggle="dropdown" onclick="redirect_link('<?php echo esc_url(site_url()); ?>/newsresource')">News</a> -->
                         </li>
                         <li class="dropdown mega-dropdown hidden-sm hidden-xs">
                             <div class="home-page-search">
