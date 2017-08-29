@@ -24,18 +24,6 @@ get_header('globalimpact'); ?>
                                 <a href="#section<?php echo $i; ?>"><?php echo get_sub_field('solutions_section_title'); ?></a>
                             </li>
 <?php $i++; } ?>
-
-                            <!--<li>
-                                <a href="#coco"><?php echo ot_get_option('solutions_coco_title'); ?></a></li>
-                            <li>
-                                <a href="#training-courseware"><?php echo ot_get_option('solutions_training_title'); ?></a>
-                            </li>
-                            <li>
-                                <a href="#loop"><?php echo ot_get_option('solutions_loop_title'); ?></a>
-                            </li>
-                             <li>
-                                <a href="#innovation">Innovation Lab</a>
-                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -151,7 +139,7 @@ get_header('globalimpact'); ?>
                             </h1>
                         </div>
                     </div>
-                    <div class="custom-class-slideshow global-impact-blocks hidden-xs hidden-sm">
+                    <div class="custom-class-slideshow global-impact-blocks">
                         <div class="globalimp-list">
 
 <?php $i=1;
