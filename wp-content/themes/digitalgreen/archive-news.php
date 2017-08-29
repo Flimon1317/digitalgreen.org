@@ -186,11 +186,12 @@ get_header('globalimpact'); ?>
 
           
                 
+                    <!-- <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover" target="_blank"> -->
                     <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                         <div class="news-image">
                         
-                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
-                            <span class="news-cat"><?php echo $term->name; ?></span>
+                             <!-- <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?> -->
+                            <!-- <span class="news-cat"><?php echo $term->name; ?></span> -->
                         </div>
                         <span class="date"><?php echo $news_date; ?></span>
                         <div class="info">
