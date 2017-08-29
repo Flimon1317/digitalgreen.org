@@ -2181,10 +2181,21 @@ a.forward-redirection-green-link:hover {
     position: relative;
     border-bottom: 5px solid #65E214;
     margin-bottom: 38px;
-    height: 10px;
+    height: 0px;
     width: 100%;
     background-color: #fff; }
     .news-list .news-image img {
+      height: 100%;
+      width: 100%; }
+
+      .news-list .blogs-image {
+    position: relative;
+    border-bottom: 5px solid #65E214;
+    margin-bottom: 38px;
+    height: 240px;
+    width: 100%;
+    background-color: #fff; }
+    .news-list .blogs-image img {
       height: 100%;
       width: 100%; }
   .news-list .news-cat {
