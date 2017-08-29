@@ -473,6 +473,7 @@ endwhile; ?>
         $(document).ready(function() {
             // jQuery Validation
             $(".collapse").collapse('hide');
+            $("#collapse1").collapse('show');
         });
     </script>
 

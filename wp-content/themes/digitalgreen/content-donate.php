@@ -22,7 +22,7 @@ get_header('globalimpact'); ?>
                         <h5 class="dg-header-5 banner-details hidden-xs">
                             <?php echo get_field('donate_banner_description'); ?>
                         </h5>
-                        <a href="<?php echo get_field('donate_banner_link'); ?>">
+                        <a href="<?php echo get_field('donate_banner_link'); ?>" target="_blank">
                             <button class="green-bordered-button with-bottom-cut btn-donate">Donate</button>
                         </a>
                     </div>

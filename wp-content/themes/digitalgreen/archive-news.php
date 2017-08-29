@@ -182,7 +182,7 @@ get_header('globalimpact'); ?>
                  ?>
  
                 
-                <div class="news-list" data-category="<?php echo $term->description; ?><?php echo $i; ?>">
+                <div class="col-lg-3 news-list" data-category="<?php echo $term->description; ?><?php echo $i; ?>">
 
           
                 

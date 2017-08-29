@@ -490,15 +490,17 @@ get_header('globalimpact'); ?>
                         <div class="stats-right">
                             <div class="our-solution-stats">
                                 <div class="row full-row clearfix">
-                                    <div class="full-col col-sm-7">
-                                        <div class="our-solution-wrap">
-                                            <div class="our-solution-box">
-                                                <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('careers_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('careers_solution_desc'); ?></p>
+                                        <div class="full-col col-sm-7">
+                                            <div class="our-solution-wrap">
+                                                <a href="<?php echo esc_url(site_url()); ?>/solutions">
+                                                    <div class="our-solution-box">
+                                                        <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('careers_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i><span class="half-squre-before-title"></span>
+                                                        </h3>
+                                                        <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('careers_solution_desc'); ?></p>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
-                                    </div>
                                     <div class="full-col col-sm-5 solution-img-wrap hidden-xs">
                                         <div class="our-solution-img">
                                             <img src="<?php echo ot_get_option('careers_solution_image'); ?>">

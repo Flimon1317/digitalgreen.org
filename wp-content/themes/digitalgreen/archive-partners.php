@@ -259,11 +259,13 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                                     <div class="row full-row">
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
-                                                <div class="our-solution-box">
-                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('partners_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
-                                                    </h3>
-                                                    <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('partners_solution_desc'); ?></p>
-                                                </div>
+                                                <a href="<?php echo esc_url(site_url()); ?>/solutions">
+                                                    <div class="our-solution-box">
+                                                        <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('partners_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
+                                                        </h3>
+                                                        <p class="dg-header-5 on-hover-title-color"><?php echo ot_get_option('partners_solution_desc'); ?></p>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-sm-5 full-col solution-img-wrap">

@@ -250,11 +250,13 @@ get_header('globalimpact'); ?>
                                     <div class="row full-row">
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
-                                                <div class="our-solution-box">
-                                                    <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('global_initiatives_solutions_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
-                                                    </h3>
-                                                    <p class="dg-header-5 on-hover-title-color"><?php echo get_field('global_initiatives_solutions_description'); ?></p>
-                                                </div>
+                                                <a href="<?php echo esc_url(site_url()); ?>/solutions">
+                                                    <div class="our-solution-box">
+                                                        <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('global_initiatives_solutions_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
+                                                        </h3>
+                                                        <p class="dg-header-5 on-hover-title-color"><?php echo get_field('global_initiatives_solutions_description'); ?></p>
+                                                    </div>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-sm-5 full-col solution-img-wrap">

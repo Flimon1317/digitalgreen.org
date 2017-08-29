@@ -322,7 +322,7 @@ get_header('globalimpact'); ?>
                         </div>
 
  
-                    <div class="single-project-details collapse in" id="collapse<?php echo $count; ?>">
+                    <div class="single-project-details collapse" id="collapse<?php echo $count; ?>">
                         <!-- <ul class="project-head-list clearfix present-project">
                             <li><?php echo $ethopia_solutions_place;?></li>
                             <li class="hidden-xs"><?php echo $ethopia_solutions_duration;?></li>
@@ -471,5 +471,7 @@ endwhile; ?>
         $(document).ready(function() {
             // jQuery Validation
             $(".collapse").collapse('hide');
+            $("#collapse1").collapse('show');
+
         });
     </script>
