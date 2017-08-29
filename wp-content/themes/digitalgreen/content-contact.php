@@ -1,5 +1,5 @@
 <?php /* Template name: Contact Us  */ ?>
-<?php 
+<?php
 /**
  * The template used for displaying page content
  *
@@ -16,7 +16,7 @@ get_header('globalimpact'); ?>
                     <div class="row banner-inner">
                         <span class="banner-square"></span>
                         <h1 class="dg-header-1 banner-title"><?php echo get_field('contact_banner_heading'); ?></h1>
-                        
+                       
                         <h5 class="dg-header-5 banner-details hidden-xs">
                         <?php echo get_field('contact_banner_description'); ?>
                         </h5>
@@ -32,40 +32,40 @@ get_header('globalimpact'); ?>
         <div class="contact-section">
             <div class="contact-form">
                 <div class="container section-padding">
-                    <form class="form-conatct" id="form-conatct" action="http://192.168.11.132/digitalgreen.org/mail/mail.php" method="POST">
+                    <form class="form-conatct" onsubmit="return submitContact()" id="form-conatct" action="" method="POST">
                         <h1 class="dg-header-1 main-section-title">To get in touch, email us at...
                             <span class="half-squre-before-title"></span>
                         </h1>
                         <ul class="contact-inner-wrap">
-                            <li class="clearfix"><label for="name">Name:</label><input type="text" name="name" id="name" class="contact-inp">
-                            <span class="validation-error">Please enter your name.</span></li>
-                            <li class="clearfix"><label for="email">Email:</label><input type="email" name="email" id="email" class="contact-inp">
-                            <span class="validation-error">Please enter your email address.</span></li>
-                            <li class="clearfix"><label for="feedback">Feedback:</label><textarea name="feedback" id="feedback" class="contact-inp"></textarea>
-                            <span class="validation-error">Please enter feedback.</span></li>
+                            <li class="clearfix"><label for="name">Name:</label><input type="text" name="name" id="name_val" class="contact-inp">
+                            <span class="validation-error" id="name_val">Please enter your name.</span></li>
+                            <li class="clearfix"><label for="email">Email:</label><input type="email" name="email_val" id="email_val" class="contact-inp">
+                            <span class="validation-error" id="email_val">Please enter your email address.</span></li>
+                            <li class="clearfix"><label for="feedback">Feedback:</label><textarea name="feedback" id="feedback_val" class="contact-inp"></textarea>
+                            <span class="validation-error" id="feedback_val">Please enter feedback.</span></li>
                         </ul>
                         <div class="green-bordered-button  with-bottom-cut learn-more">
-                            <input type="submit" value="Submit"/>
+                            <input type="submit" value="Submit" onclick="" />
                            <!-- <button type="submit" class="green-bordered-button with-bottom-cut">Submit</button> -->
                         </div>
                     </form>
                 </div>
             </div>
-<?php         if( have_rows('contact_offices') ) 
+<?php         if( have_rows('contact_offices') )
         {
-            ?> 
-
+            ?>
+ 
             <section id="offices" class="section-padding">
                 <div class="container">
                     <h3 class="dg-header-2 sub-section-title">Our Offices
                         <span class="half-squre-before-title"></span>
                     </h3>
                     <div class="address-wrapper">
-                      
-
-      <?php 
-                                while ( have_rows('contact_offices') ) 
-                                {   
+                     
+ 
+      <?php
+                                while ( have_rows('contact_offices') )
+                                {  
                                     the_row();
                                     ?>
                         <div class="address-block">
@@ -73,7 +73,7 @@ get_header('globalimpact'); ?>
                             <ul class="address-lines">
                                    <?php echo get_sub_field('contact_office_address'); ?>
                             </ul>
-                        </div> 
+                        </div>
       <?php
                                 }
                             ?>
@@ -85,7 +85,7 @@ get_header('globalimpact'); ?>
                                 <li>CA 94704</li>
                                 <li>United States of America</li>
                             </ul>
-                        </div> 
+                        </div>
                         <div class="address-block">
                             <h3>Digital Green Trust (Bangalore)</h3>
                             <ul class="address-lines">
@@ -96,7 +96,7 @@ get_header('globalimpact'); ?>
                                 <li>Karnataka, India</li>
                                 <li>+91 80 41527080</li>
                             </ul>
-                        </div> 
+                        </div>
                         <div class="address-block">
                             <h3>Head Office (Delhi)</h3>
                             <ul class="address-lines">
@@ -107,7 +107,7 @@ get_header('globalimpact'); ?>
                                 <li>+91 11 41881037</li>
                                 <li>+91 11 41881038</li>
                             </ul>
-                        </div> 
+                        </div>
                         <div class="address-block">
                             <h3>Washington DC, USA</h3>
                             <ul class="address-lines">
@@ -116,7 +116,7 @@ get_header('globalimpact'); ?>
                                 <li>DC 20001</li>
                                 <li>United States of America</li>
                             </ul>
-                        </div> 
+                        </div>
                         <div class="address-block">
                             <h3>Ethiopia</h3>
                             <ul class="address-lines">
@@ -127,7 +127,7 @@ get_header('globalimpact'); ?>
                                 <li>Haile G/Silassie Avenue,</li>
                                 <li>Addis Ababa, Ethiopia</li>
                                 <li>+251 116 672960</li>
-                            </ul>                                 
+                            </ul>                                
                         </div>
                         <div class="address-block">
                             <h3>Andhra Pradesh &amp; Telangana</h3>
@@ -139,7 +139,7 @@ get_header('globalimpact'); ?>
                                 <li>Andhra Pradesh, India</li>
                                 <li>+91 40 66664958</li>
                             </ul>
-                        </div> 
+                        </div>
                         <div class="address-block">
                             <h3>Bihar</h3>
                             <ul class="address-lines">
@@ -163,7 +163,7 @@ get_header('globalimpact'); ?>
                                 <li>Odisha, India</li>
                                 <li>+91 674 6009800</li>
                             </ul>
-                        </div> 
+                        </div>
                         <div class="address-block">
                             <h3>Jharkhand</h3>
                             <ul class="address-lines">
@@ -174,14 +174,48 @@ get_header('globalimpact'); ?>
                                 <li>+91 651 2245817</li>
                             </ul>
                         </div> -->
-                    </div> 
+                    </div>
                 </div>
              </section>
 <?php
         }
     ?>
-
+ 
         </div>
-        
-        
+       
+       
 <?php  get_footer(); ?>
+ 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+ 
+    <script>
+      function submitContact(){
+      var state="true";
+            if($("#name").val()==""){
+                document.getElementById("name_val").style.display="block";
+             
+                state=false;
+            }
+            if($("#email_val").val()==""){
+                document.getElementById("email_val").style.display="block";
+             
+                state=false;
+            }if($("#feedback").val()==""){
+                document.getElementById("feedback_val").style.display="block";
+             
+                state=false;
+            }
+ 
+          $.ajax({
+            type: 'post',
+            url: '/mail/mail.php',
+            data: $('form').serialize(),
+            success: function () {
+              $(".main-section-title").text("Feed Back Sent Successfully");
+              $('#form-conatct').trigger('reset');
+            }
+          });
+          return false;
+}
+     
+    </script>
