@@ -32,20 +32,20 @@ get_header('globalimpact'); ?>
         <div class="contact-section">
             <div class="contact-form">
                 <div class="container section-padding">
-                    <form class="form-conatct" id="form-conatct" action="http://13.229.61.64/mail/mail.php" method="POST">
+                    <form class="form-conatct" onsubmit="return submitContact()" id="form-conatct" action="" method="POST">
                         <h1 class="dg-header-1 main-section-title">To get in touch, email us at...
                             <span class="half-squre-before-title"></span>
                         </h1>
                         <ul class="contact-inner-wrap">
                             <li class="clearfix"><label for="name">Name:</label><input type="text" name="name" id="name" class="contact-inp">
-                            <span class="validation-error">Please enter your name.</span></li>
+                            <span class="validation-error" id="name_val">Please enter your name.</span></li>
                             <li class="clearfix"><label for="email">Email:</label><input type="email" name="email" id="email" class="contact-inp">
-                            <span class="validation-error">Please enter your email address.</span></li>
+                            <span class="validation-error" id="email_val">Please enter your email address.</span></li>
                             <li class="clearfix"><label for="feedback">Feedback:</label><textarea name="feedback" id="feedback" class="contact-inp"></textarea>
-                            <span class="validation-error">Please enter feedback.</span></li>
+                            <span class="validation-error" id="feedback_val">Please enter feedback.</span></li>
                         </ul>
                         <div class="green-bordered-button  with-bottom-cut learn-more">
-                            <input type="submit" value="Submit"/>
+                            <input type="submit" value="Submit" onclick="" />
                            <!-- <button type="submit" class="green-bordered-button with-bottom-cut">Submit</button> -->
                         </div>
                     </form>
@@ -185,3 +185,38 @@ get_header('globalimpact'); ?>
         
         
 <?php  get_footer(); ?>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+    <script>
+      function submitContact(){
+
+      var state="true";
+            if($("#name").val()==""){
+                document.getElementById("name_val").style.display="block";
+              
+                state=false;
+            }
+            if($("#email").val()==""){
+                document.getElementById("email_val").style.display="block";
+              
+                state=false;
+            }if($("#feedback").val()==""){
+                document.getElementById("feedback_val").style.display="block";
+              
+                state=false;
+            }
+ 
+          $.ajax({
+            type: 'post',
+            url: 'mail/mail.php',
+            data: $('form').serialize(),
+            success: function () {
+              $(".main-section-title").text("Feed Back Sent Successfully");
+              $('#form-conatct').trigger('reset');
+            }
+          });
+          return false;
+}
+      
+    </script>
