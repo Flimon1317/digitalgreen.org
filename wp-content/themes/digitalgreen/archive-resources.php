@@ -137,7 +137,7 @@ get_header('globalimpact'); ?>
 
                     ?>
 
-                <div class="news-list" data-category="<?php echo $termname; ?>">
+                <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
                     <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover"  target="_blank">
                         <div class="news-image">
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
