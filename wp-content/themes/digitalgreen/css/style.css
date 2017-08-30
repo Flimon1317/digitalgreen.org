@@ -822,6 +822,7 @@ nav:hover > .navbar-collapse ul > li > a {
     right: 0; }
   .green-bordered-button:hover {
     color: #fff;
+    cursor: pointer;
     background: linear-gradient(to left, transparent 49%, #65E214 50%);
     background-size: 200% 100%;
     background-position: left bottom; }
@@ -831,7 +832,11 @@ nav:hover > .navbar-collapse ul > li > a {
     display: inline-block;
     margin-top:60px;
     left:40%;
-    right:40%;}
+    right:40%;
+    }
+    .green-bordered-button.load-more-projects:hover{
+      cursor: pointer;
+    }
 
 .project-partners {
   margin-top: 20px;
@@ -2161,6 +2166,10 @@ a.forward-redirection-green-link:hover {
 
 .common-news-sections .section-header {
   padding-top: 0; }
+
+.india-card:hover, .ethopia-card:hover {
+  cursor: pointer;
+}  
 
 .news-list {
   width: 24.5%;

@@ -293,13 +293,13 @@ get_header('globalimpact'); ?>
             </div>
             <div class="text-center">
                 <!-- for desktop -->
-                <a href="#" class="hidden-xs">
+               <!--  <a href="#" class="hidden-xs">
                     <button class="green-bordered-button">Load More</button>
-                </a>
+                </a> -->
                 <!-- for mobile -->
-                <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link" role="button" data-toggle="collapse" href="#">Load More &nbsp;
+                <!-- <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link" role="button" data-toggle="collapse" href="#">Load More &nbsp;
                 <span class="icon icon-down-arrow"></span>
-                </a>
+                </a> -->
             </div>
         </div>
     </div>

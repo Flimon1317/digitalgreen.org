@@ -304,7 +304,7 @@ get_header('globalimpact'); ?>
 
                      ?>
                     <div class="card">
-                        <div class="card-header" role="tab">
+                        <div class="card-header ethopia-card" role="tab">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" onclick="toggleCollapse();" data-target="#collapse<?php echo $count; ?>" aria-expanded="false">
                                 <div>

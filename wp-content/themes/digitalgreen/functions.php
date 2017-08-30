@@ -739,7 +739,7 @@ function load_posts_by_ajax_callback() {
                 <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
                     <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
                         <div class="blogs-image">
-                            <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                            <img src='<?php echo $blogs_blog_image;?>'>
                             <span class="news-cat"><?php echo $term->name; ?></span>
                         </div>
                         <span class="date"><?php echo $blogs_date; ?></span>
