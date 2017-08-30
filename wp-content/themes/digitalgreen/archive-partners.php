@@ -119,7 +119,7 @@ $i=1;
                                         
                                         <?php 
                                     $k=1;
-$the_query = new WP_Query( array('post_type' => 'partners','orderby' => 'title',
+$the_query = new WP_Query( array('post_type' => 'partners','orderby' => 'ID',
 				'order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_partners','field' => 'slug','terms' => $root_term->slug))));
 
                     while ( $the_query->have_posts() ) : $the_query->the_post();

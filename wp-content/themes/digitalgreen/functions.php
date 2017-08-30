@@ -736,9 +736,9 @@ function load_posts_by_ajax_callback() {
             $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
 
-                <div class="news-list" data-category="<?php echo $termname; ?>">
+                <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
                     <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
-                        <div class="news-image">
+                        <div class="blogs-image">
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                             <span class="news-cat"><?php echo $term->name; ?></span>
                         </div>
@@ -1125,7 +1125,7 @@ function load_resources_by_ajax_callback() {
 
                     ?>
 
-                <div class="news-list" data-category="<?php echo $termname; ?>">
+                <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
                     <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover">
                         <div class="news-image">
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
