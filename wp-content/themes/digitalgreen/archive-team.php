@@ -207,7 +207,7 @@ get_header('globalimpact'); ?>
                                         <div class="team-img"><img src="<?php echo $team_image; ?>" alt="Team Ethiopia"/></div>
                                     </div>
                                     <?php           if (isset($team_program_team)){ ?>
-                                    <div class="teams-section">
+                                    <div class="teams-section clearfix">
                                     <?php
 
  $temp_i=1;foreach($team_program_team[0] as $key => $value){
