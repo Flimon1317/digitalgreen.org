@@ -240,10 +240,10 @@ get_header('globalimpact'); ?>
 
           
                 
-                    <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover">
+                    <a href="<?php if($news_attach!="") echo $news_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                         <div class="news-image">
                         
-                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                             <!-- <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?> -->
                             <span class="news-cat"><?php echo $term->name; ?></span>
                         </div>
                         <span class="date"><?php echo $news_date; ?></span>
@@ -269,11 +269,11 @@ get_header('globalimpact'); ?>
     
             $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
           ?>
-          <!----Loop-->
+          <!--Loop-->
 <div class="news-list" data-category="<?php echo $termname; ?>">
-                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover">
-                        <div class="news-image">
-                            <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                    <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
+                        <div class="blogs-image">
+                            <img src='<?php echo $blogs_blog_image;?>'>
                             <span class="news-cat"><?php echo $term->name; ?></span>
                         </div>
                         <span class="date"><?php echo $blogs_date; ?></span>
@@ -305,7 +305,7 @@ get_header('globalimpact'); ?>
                     ?>
 
                 <div class="news-list" data-category="<?php echo $termname; ?>">
-                    <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover">
+                    <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                         <div class="news-image">
                             <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
                             <span class="news-cat"><?php echo $term->name; ?></span>

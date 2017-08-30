@@ -234,7 +234,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo get_field('loop_what_is_coco_desc'); ?>
                                         <p>
-                                       <a href="<?php echo get_field('loop_what_is_coco_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
+                                       <a href="<?php echo get_field('loop_what_is_coco_link'); ?>" class="green-bordered-button learn-more" target="_blank">Explore Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +256,7 @@ get_header('globalimpact'); ?>
                                         </h3>
                                         <p class="dg-header-5 text-details"><?php echo get_field('loop_how_is_coco_description'); ?>
                                         <p>
-                                        <a href="<?php echo get_field('loop_how_is_coco_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
+                                        <a href="<?php echo get_field('loop_how_is_coco_link'); ?>" class="green-bordered-button learn-more" target="_blank">Explore Now</a>
                                     </div>
                                 </div>
                             </div>

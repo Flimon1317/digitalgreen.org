@@ -84,7 +84,7 @@ get_header('globalimpact'); ?>
                                                             </p>
                                                         </div>
                                                         <?php if($i > 3) { ?>
-                                                        <a href="<?php echo get_sub_field('innovation_section_link'); ?>" class="green-bordered-button learn-more">Explore Now</a>
+                                                        <a href="<?php echo get_sub_field('innovation_section_link'); ?>" class="green-bordered-button learn-more" target="_blank">Explore Now</a>
                                                         <?php } 
 
                                                     else { ?>
