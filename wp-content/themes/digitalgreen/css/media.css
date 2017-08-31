@@ -143,9 +143,7 @@
     .slide-single .banner-square {
       display: none; }
     .slide-single img {
-      height: 100vh;
-      width: auto;
-      max-width: none; }
+      height: 100vh; }
 
   .gray-boxes-container {
     padding: 0 20px; }
@@ -179,8 +177,7 @@
 
   .page-menu-container {
     z-index: 101;
-    background-color: #3d3d3f;
-    position: relative; }
+    background-color: #fff; }
     .page-menu-container .navbar-default .navbar-nav.page-menu > li > a {
       color: #fff; }
       .page-menu-container .navbar-default .navbar-nav.page-menu > li > a:hover {
@@ -227,8 +224,7 @@
     .navbar-default .navbar-nav .hidden-sm.hidden-xs {
       display: none; }
     .navbar-default .navbar-nav > li.link-donate {
-      margin-left: 15px;
-      margin-bottom: 15px; }
+      margin-left: 15px; }
     .navbar-default .navbar-nav > li.btn-work-with {
       display: none; }
   .navbar-default .navbar-toggle {
@@ -289,8 +285,8 @@
       .navbar-default .dropdown-menu li a:hover {
         background-color: transparent;
         color: #65E214; }
-  .navbar-default .dropdown:hover > .dropdown-menu {
-    display: block; }
+ /* .navbar-default .dropdown:hover > .dropdown-menu {
+    display: block; }*/
 
   .btn-work-with {
     display: none; }
@@ -384,6 +380,9 @@
 
   .inner-pageh .navbar-default .navbar-nav > li > a {
     color: #000; }
+  .navbar-default .navbar-nav.page-menu > li > a, .navbar-background-home .navbar-nav.page-menu > li > a, .navbar-default .page-menu.navbar-nav > li .icon{
+    color: #fff !important;
+  }
 
   .innovation-lab-section .innovation-lab-wrap {
     display: block; }
@@ -460,7 +459,26 @@
 
   .page-donate .banner-inner .green-bordered-button.with-bottom-cut {
     padding: 10px;
-    min-width: auto; } }
+    min-width: auto; }
+  .navbar-default .navbar-collapse{
+    background-color: #000;
+  }
+  .navbar-default .dropdown > .dropdown-menu{
+    margin-top: 0 !important;
+  }
+  .navbar-default .page-menu.navbar-nav > li .icon{
+    top: 6px;
+  }
+  .navbar-default .dropdown-menu li{
+    padding: 10px 15px;
+    margin-top: 0 !important;
+  }
+  .navbar-default .dropdown-menu li:last-child{
+    padding-bottom: 0;
+  }
+
+}
+
 @media(max-width: 991px) {
   .our-solution-stats {
     margin: 15px 0 0 0; }
@@ -1175,6 +1193,11 @@
     margin: 0; }
 
   .project-inner-wrap .main-section-title {
-    margin-left: 48% !important; } }
+    margin-left: 48% !important; } 
+  .slide-single img {
+    width: auto;
+  }
+
+  }
 
 /*# sourceMappingURL=media.css.map */

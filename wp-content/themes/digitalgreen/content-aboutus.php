@@ -7,7 +7,7 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+get_header(); ?>
 
 
         <div id="sticky-anchor"></div>
@@ -30,7 +30,7 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-            </header>
+    </header>
     <!-- Banner Section -->
         <div class="banner-section-sub-menu">
             <div class="banner-img"><img src="<?php echo get_field('about_us_banner_image'); ?>" class="sub-menu-banner w3-image" /></div>

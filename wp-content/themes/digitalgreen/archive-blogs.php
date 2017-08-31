@@ -17,7 +17,7 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header('globalimpact'); ?>
+get_header(); ?>
 </header>
 
    <!-- Banner Section -->

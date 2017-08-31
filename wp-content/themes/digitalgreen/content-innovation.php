@@ -7,9 +7,8 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
-
-        </header>
+get_header(); ?>
+</header>
         <!-- Banner Section -->
         <div class="banner-section">
             <div class="banner-img-normal"><img src="<?php echo get_field('innovation_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>

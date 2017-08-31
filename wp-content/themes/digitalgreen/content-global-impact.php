@@ -7,34 +7,35 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
-
- <div class="page-sub-menu clearfix hidden-xs">
-                <div class="container">
-                    <div class="row">
-                        <ul class="sub-menu-title">
-                        <?php $i=1;
-                                while ( have_rows('global_impact_sections') ) 
-                                {   
-                                    the_row();
-                                    ?>
-                            <li >
-                                <a href="#section<?php echo $i; ?>"><?php echo get_sub_field('global_impact_section_title'); ?></a>
-                            </li>
-                            <?php $i++; } ?>
-                           <!-- <li>
-                                <a href="#ethiopia"><?php echo ot_get_option('global_ethopia_title'); ?></a></li>
-                            <li>
-                                <a href="#global-initiatives"><?php echo ot_get_option('global_global_title'); ?></a>
-                            </li> -->
-                            <li>
-                                <a href="#case-studies">Case Studies</a>
-                            </li>
-                        </ul>
-                    </div>
+get_header(); ?>
+        <div id="sticky-anchor"></div>
+        <div class="page-sub-menu clearfix hidden-xs" id="sticky">
+            <div class="container">
+                <div class="row">
+                    <ul class="sub-menu-title">
+                    <?php $i=1;
+                            while ( have_rows('global_impact_sections') ) 
+                            {   
+                                the_row();
+                                ?>
+                        <li >
+                            <a href="#section<?php echo $i; ?>"><?php echo get_sub_field('global_impact_section_title'); ?></a>
+                        </li>
+                        <?php $i++; } ?>
+                       <!-- <li>
+                            <a href="#ethiopia"><?php echo ot_get_option('global_ethopia_title'); ?></a></li>
+                        <li>
+                            <a href="#global-initiatives"><?php echo ot_get_option('global_global_title'); ?></a>
+                        </li> -->
+                        <li>
+                            <a href="#case-studies">Case Studies</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
+    
  <div class="banner-section-sub-menu">
             <div class="banner-img"><img src="<?php echo get_field('global_impact_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">

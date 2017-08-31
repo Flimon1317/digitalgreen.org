@@ -16,7 +16,7 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header('globalimpact'); ?>
+get_header(); ?>
 </header>
 
  <!-- Banner Section -->
@@ -368,10 +368,7 @@ $i++;
         </div>
     </div>
     <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
-    
-<?php get_footer(); ?>
 
- 
 <script type="text/javascript">
 var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
 var page = 2;
@@ -393,3 +390,7 @@ jQuery(function($) {
     });
 });
 </script> 
+
+
+<?php get_footer(); ?>
+

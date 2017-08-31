@@ -7,9 +7,9 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+get_header(); ?>
 
- <div class="page-sub-menu clearfix hidden-xs">
+            <div class="page-sub-menu clearfix hidden-xs">
                 <div class="container">
                     <div class="row">
                         <ul class="sub-menu-title">
@@ -32,7 +32,7 @@ get_header('globalimpact'); ?>
                     </div>
                 </div>
             </div>
-        </header>
+    </header>
  <div class="banner-section-sub-menu">
             <div class="banner-img"><img src="<?php echo get_field('global_initiatives_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
