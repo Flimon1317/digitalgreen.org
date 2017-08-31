@@ -37,7 +37,7 @@ get_header('globalimpact'); ?>
                         </ul>
                     </div>
                 </div>
-                <div class="banner-img">
+                <div class="banner-img blog-banner">
                     <figure>
                         <img src="<?php echo $blogs_blog_image; ?>" alt="blogs"/>
                         
@@ -46,11 +46,13 @@ get_header('globalimpact'); ?>
             </div>
         </div>
     </div>
-    <div class="news-page-content page-content">
         <div class="container">
-        <?php  the_content(); ?>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <?php  the_content(); ?>
+                </div>
+            </div>
         </div>
-    </div>
 <?php endwhile; ?>
     <div class="gray-boxes-container section-margin">
         <div class="container news-container">

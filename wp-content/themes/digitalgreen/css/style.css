@@ -2931,8 +2931,7 @@ a.forward-redirection-green-link:hover {
     display: block;
     color: #65e212;
     cursor: pointer; }
-  .share-section:hover .social-icon-share {
-    display: block; }
+  
 
 .news-single h1 {
   margin: 13px 0 20px 0; }
@@ -2942,14 +2941,14 @@ a.forward-redirection-green-link:hover {
   padding: 22px 24px;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
-  display: inline-block;
+  display: block;
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
   margin-top: 17px;
   position: absolute;
   bottom: -83px;
   left: 50%;
   transform: translateX(-50%);
-  display: none; }
+   }
   .social-icon-share:after {
     content: "";
     display: block;
@@ -2974,6 +2973,9 @@ a.forward-redirection-green-link:hover {
       vertical-align: middle; }
     .social-icon-share li a:hover {
       color: #65e212; }
+    .blog-banner {
+      margin-top:95px;
+    }
 
 .page-content figure {
   margin-top: 36px; }
