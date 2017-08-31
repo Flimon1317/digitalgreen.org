@@ -2,7 +2,7 @@
 	/*
 	 * Load More
 	 */
-
+	
 	function load_more_post(post_type, parent_div){
 		$.ajax({
 
@@ -45,6 +45,24 @@
 	function toggleCollapse(){
             jQuery(this).collapse('toggle');
         }
+
+
+    size_li = jQuery("#case-studies-div > div").length;
+    x=3;
+    jQuery('#case-studies-div div.col-sm-4:lt('+x+')').show();
+
+
+
+    jQuery('#load-more').click(function (e) {
+    	e.preventDefault();
+        x= (x+3 <= size_li) ? x+3 : size_li;
+        jQuery('#case-studies-div div.col-sm-4:lt('+x+')').show();
+        jQuery('#case-studies-div div')
+        if(x == size_li){
+            $('#load-more').hide();
+        }
+        
+    });
  
 	/*
 	 * Filter
