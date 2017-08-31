@@ -67,7 +67,7 @@
                                 </span></h4>
 
 
-                                <form id="signup" method="post" action="/digitalgreen.org/mail/action.php">
+                                <form id="signup" method="post" action="/mail/action.php">
                                     <div class="footer-list dg-header-5 text-details">
                                         <div class="inp-wrapper"><input class="footer-input-box" type="text" placeholder="Full Name" name="fname" id="fname">
                                         <!-- <span class="error-msg">Your Full Name Required</span>  --></div>
@@ -123,7 +123,7 @@
             $("#signup").validate({
                 // if valid, post data via AJAX
                 submitHandler: function(form) {
-                    $.post("/digitalgreen.org/mail/action.php", { fname: $("#fname").val(), email: $("#email_id").val() }, function(data) {
+                    $.post("/mail/action.php", { fname: $("#fname").val(), email: $("#email_id").val() }, function(data) {
                         $('#response').html(data);
                     });
                 },

@@ -5,7 +5,7 @@
     $list_id = '944c549f98';
  
     // Let's start by including the MailChimp API wrapper
-    include('MailChimp.php');
+    include('Mailchimp.php');
     // Then call/use the class
     use \DrewM\MailChimp\MailChimp;
     $MailChimp = new MailChimp($api_key);
@@ -21,7 +21,7 @@
  
     if ($MailChimp->success()) {
         // Success message
-        echo "<h4>Thank you, you have been added to our mailing list.</h4>";
+        echo "<a>Thank you, you have been added to our mailing list.</a>";
     } else {
         // Display error
         echo $MailChimp->getLastError();
