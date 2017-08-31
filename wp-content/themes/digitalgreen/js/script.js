@@ -619,19 +619,19 @@ jQuery(document).ready(function(){
 
    // play video in popup
     jQuery('.watch-link').click(function(e){
-        jQuery('html, body').animate({
-        scrollTop: jQuery("#my-modal").offset().top - 100
-            }, 500);
+        // jQuery('html, body').animate({
+        // scrollTop: jQuery("#my-modal").offset().top - 100
+        //     }, 500);
         e.preventDefault();
-        jQuery('#my-modal').addClass('in');
+        // jQuery('#my-modal').addClass('in');
         var videoUrl = jQuery(this).attr('data-url');
         var videoId = getVideoid(videoUrl);
         var iframe=document.getElementById("iframeYoutube");
         iframe.src="https://www.youtube.com/embed/"+videoId+"?autoplay=1";
         jQuery('body').css('overflow', 'hidden');
     });
-    jQuery('.close-video').click(function(){
-        jQuery('#my-modal').removeClass('in');
+    jQuery('.close').click(function(){
+        // jQuery('#my-modal').removeClass('in');
         jQuery('.video-player').attr("src", '');
         jQuery('body').css('overflow', 'visible');
     });

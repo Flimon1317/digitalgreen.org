@@ -49,13 +49,13 @@ get_header('globalimpact'); ?>
 
     <div class="gray-boxes-container">
         <div class="container">
-            <div class="case-study-boxes">
+            <div class="case-study-boxes" id="case-studies-div">
             <?php $i=1;
                                 while ( have_rows('financials_section') ) 
                                 {   
                                     the_row();
                                     ?>
-                <div class="col-sm-4">
+                <div class="col-sm-4" id="<?php echo $i;?>" style="display:none;">
                     <div class="single-boxes-card">
                         <div class="gray-boxes">
                             <div class="box-inner-white-border">
@@ -81,225 +81,18 @@ get_header('globalimpact'); ?>
                         </div>
                     </div>
                 </div> 
- <?php } ?>
-               <!--  <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <b><a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></b>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <b><a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></b>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="single-boxes-card">
-                        <div class="gray-boxes">
-                            <div class="box-inner-white-border">
-                                <div class="gray-boxes-text-content">
-                                    <h2 class="card-title">Lesson learned from locally produced videos </h2>
-                                    <p class="hidden-sm hidden-md hidden-lg ">
-                                        <b><a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a></b>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="hover-card-details hidden-xs">
-                            <div class="hover-card-text-content">
-                                <h3 class="dg-header-3 text-white">Ethiopia</h3>
-                                <div class="count-globel-impact-stat text-center">
-                                    <h1 class="dg-header-1 forward-redirection-green-link">120,000</h1>
-                                    <h4 class=" text-white">Global impact stat</h4>
-                                </div>
-                                <p>
-                                    <a href="#" class="forward-redirection-green-link">Learn More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
+ <?php $i++; } ?>
+
             </div>
             <div class="text-center">
                 <!-- for desktop -->
-               <!--  <a href="#" class="hidden-xs">
-                    <button class="green-bordered-button">Load More</button>
-                </a> -->
+                <a href="#" class="hidden-xs">
+                    <button class="green-bordered-button" id="load-more">Load More</button>
+                </a>
                 <!-- for mobile -->
-                <!-- <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link" role="button" data-toggle="collapse" href="#">Load More &nbsp;
+                <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link" role="button" data-toggle="collapse" href="#" id="load-more">Load More &nbsp;
                 <span class="icon icon-down-arrow"></span>
-                </a> -->
+                </a>
             </div>
         </div>
     </div>
