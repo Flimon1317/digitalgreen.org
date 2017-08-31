@@ -246,14 +246,14 @@
                         </li>
 
                         <li class="dropdown">
-                            <a href="<?php echo esc_url(site_url()); ?>/newsresource" class="dropdown-toggle">News     <span class="pull-right">
+                            <a href="<?php echo esc_url(site_url()); ?>/media" class="dropdown-toggle">Media     <span class="pull-right">
                                     <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i>
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span>
                             </a>
                             <!-- mobile-sub-menu -->
                             <ul class="dropdown-menu">
-                                <li><a href="<?php echo esc_url(site_url()); ?>/newsresource">News</a></li>
+                                <li><a href="<?php echo esc_url(site_url()); ?>/media">Media</a></li>
                                 <?php
       if (function_exists('get_option_tree')){
         $news = ot_get_option( 'news', array() );
