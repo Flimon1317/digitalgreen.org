@@ -718,7 +718,7 @@ function load_posts_by_ajax_callback() {
         $termname = strtolower($term->name);
         $termname = str_replace(' ', '-', $termname);
 
-	$the_query = new WP_Query( array('post_type' => 'blogs','posts_per_page'=>'4','paged'=> $paged,'tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
+	$the_query = new WP_Query( array('post_type' => 'blogs','post_status'=>'publish','posts_per_page'=>'4','paged'=> $paged,'tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
           while ( $the_query->have_posts() ) : $the_query->the_post();
 
           //echo "--".$term->slug;

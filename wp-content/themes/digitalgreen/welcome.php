@@ -197,7 +197,7 @@ get_header('home'); ?>
                                 <div class="logo-details hidden-lg hidden-md hidden-sm" data-index="<?php echo $i; ?>">
                                     <span class="triangle-up"></span>
                                     <h4 class="dg-header-4"><?php echo get_sub_field('home_page_awards_title'); ?></h4>
-                                    <p class="dg-header-5 text-details"><?php echo get_sub_field('home_page_awards_description'); ?></p>
+                                    <!-- <p class="dg-header-5 text-details"><?php echo get_sub_field('home_page_awards_description'); ?></p> -->
                                     <a href="<?php echo get_sub_field('home_page_awards_link'); ?>" class="green-arrow">Read More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
                                 </div>
                             </li>
@@ -207,7 +207,7 @@ get_header('home'); ?>
                         </ul>
 
 
-                        <div class="award-content hidden-xs">
+                        <div class="award-content hidden-xs hidden-sm hidden-md">
 <?php $i=1;
                                 while ( have_rows('home_page_awards') ) 
                                 {   
