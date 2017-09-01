@@ -53,8 +53,8 @@
                                     <li><a href="<?php echo esc_url(site_url()); ?>/global-impact">Global Impact</a></li>
                                     <li><a href="<?php echo esc_url(site_url()); ?>/solutions">Solutions</a></li>
                                     <li><a href="<?php echo esc_url(site_url()); ?>/careers">Work With Us</a></li>
-                                    <li><a href="<?php echo esc_url(site_url()); ?>/financials">Financials</a></li>
-                                    <li><a href="<?php echo esc_url(site_url()); ?>/newsresource">Resources &amp; Publications</a></li>
+                                    <li><a href="<?php echo esc_url(site_url()); ?>/blogs">Blog</a></li>
+                                    <!-- <li><a href="<?php echo esc_url(site_url()); ?>/newsresource">Resources &amp; Publications</a></li> -->
                                 </ul>
                             </div>
                         </div>
