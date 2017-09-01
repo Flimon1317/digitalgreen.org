@@ -118,6 +118,127 @@ include 'header-globalimpact.php'; ?>
                 <div class="common-news-sections">
                     <div class="section-header container-sectionH clearfix">
                         <div class="title-header">
+                            <h1 class="dg-header-1 main-section-title ">Blogs
+                                <span class="half-squre-before-title"></span>
+                            </h1>
+                        </div>
+                        <a href="<?php echo esc_url(site_url()); ?>/blogs" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
+                    </div>
+                    <div class="gray-boxes-container clearfix">
+                        <div class="news-resource-container clearfix">
+
+                        <?php 
+        $terms = get_terms("list_blogs",array( 'parent' => 0 ));
+        $i=1;
+        foreach ( $terms as $term ) { 
+        $termname = strtolower($term->name);
+        $termname = str_replace(' ', '-', $termname);
+        $the_query = new WP_query(array( 'post_type=blogs&posts_per_page=4','tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
+
+        if ($the_query->have_posts()) {
+           $i=1;
+           while ( $the_query->have_posts() && $i < 5 ) : $the_query->the_post();
+          $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
+                    
+                    $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
+                    $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $blogs_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+                    ?>
+                            <div class="news-list">
+                                <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
+                                    <div class="news-image">
+                                        <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                                        <span class="news-cat"><?php echo $term->name; ?></span>
+                                    </div>
+                                    <span class="date"><?php echo $blog_date; ?></span>
+                                    <div class="info">
+                                         <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
+                                    </div>
+                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
+                                </a>
+                            </div>
+                           <?php $i++;
+          endwhile; 
+        }
+        wp_reset_query();
+}
+        ?> 
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="common-news-sections">
+                    <div class="section-header container-sectionH clearfix">
+                        <div class="title-header">
+                            <h1 class="dg-header-1 main-section-title ">Press Kit
+                                <span class="half-squre-before-title"></span>
+                            </h1>
+                        </div>
+                        <a href="<?php echo esc_url(site_url()); ?>/resources" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
+                    </div>
+                    <div class="gray-boxes-container clearfix">
+                        <div class="news-resource-container clearfix">
+
+<?php 
+
+$terms = get_terms("list_resources",array( 'parent' => 0 ));
+        $i=1;
+        foreach ( $terms as $term ) { 
+        $termname = strtolower($term->name);
+        $termname = str_replace(' ', '-', $termname);
+        $the_query = new WP_query(array( 'post_type=resources&posts_per_page=4','tax_query' => array(array ('taxonomy' => 'list_resources','field' => 'slug','terms' => $term->slug))));
+        
+        if ($the_query->have_posts()) {
+           $i=1;
+           while ( $the_query->have_posts() && $i < 5 ) : $the_query->the_post();
+          $resources_date = get_the_date( 'F d, Y', get_the_ID() );
+                    
+                    $resources_short_desc = get_post_meta(get_the_ID(),'resources_short_desc', true);
+                    $resources_attach = get_post_meta(get_the_ID(),'resources_attach', true);
+                    $trimtitle = get_the_title();
+    
+            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
+            
+
+            $trimdesc = $resources_short_desc;
+    
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+                    ?>
+                            <div class="news-list">
+                                <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
+                                    <div class="news-image">
+                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                                        <span class="news-cat"><?php echo $term->name; ?></span>
+                                    </div>
+                                    <span class="date"><?php echo $resources_date; ?> </span>
+                                    <div class="info">
+                                         <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="description"><?php echo $shortdesc; ?></p>
+                                    </div>
+                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
+                                </a>
+                            </div>
+ <?php $i++;
+          endwhile; 
+        }
+        wp_reset_query();
+}
+        ?> 
+                        </div>
+                    </div>
+                </div>
+                <div class="common-news-sections">
+                    <div class="section-header container-sectionH clearfix">
+                        <div class="title-header">
                             <h1 class="dg-header-1 main-section-title ">News
                                 <span class="half-squre-before-title"></span>
                             </h1>
@@ -140,7 +261,7 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
         
         if ($the_query->have_posts()) {
             $i=1;
-           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
+           while ( $the_query->have_posts() && $i < 5 ) : $the_query->the_post();
           $news_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
@@ -176,253 +297,6 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
 }
         ?>
 
-                          <!--  <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img-2.png" alt="news image 1" />
-                                        <span class="news-cat">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
-                            <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img1.png" alt="news image 1" />
-                                        <span class="news-cat pur">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
-                            <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img1.png" alt="news image 1" />
-                                        <span class="news-cat">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="common-news-sections">
-                    <div class="section-header container-sectionH clearfix">
-                        <div class="title-header">
-                            <h1 class="dg-header-1 main-section-title ">Blogs
-                                <span class="half-squre-before-title"></span>
-                            </h1>
-                        </div>
-                        <a href="<?php echo esc_url(site_url()); ?>/blogs" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
-                    </div>
-                    <div class="gray-boxes-container clearfix">
-                        <div class="news-resource-container clearfix">
-
-                        <?php 
-        $terms = get_terms("list_blogs",array( 'parent' => 0 ));
-        $i=1;
-        foreach ( $terms as $term ) { 
-        $termname = strtolower($term->name);
-        $termname = str_replace(' ', '-', $termname);
-        $the_query = new WP_query(array( 'post_type=blogs&posts_per_page=4','tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
-
-        if ($the_query->have_posts()) {
-           $i=1;
-           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
-          $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
-                    
-                    $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
-                    $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
-                    $trimtitle = get_the_title();
-    
-            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
-            
-
-            $trimdesc = $blogs_short_desc;
-    
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
-                    ?>
-                            <div class="news-list">
-                                <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
-                                    <div class="news-image">
-                                        <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
-                                        <span class="news-cat"><?php echo $term->name; ?></span>
-                                    </div>
-                                    <span class="date"><?php echo $blog_date; ?></span>
-                                    <div class="info">
-                                         <h3 class="title"><?php echo $shorttitle; ?></h3>
-                            <p class="description"><?php echo $shortdesc; ?></p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
-                           <?php $i++;
-          endwhile; 
-        }
-        wp_reset_query();
-}
-        ?> 
-                           <!-- <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img-2.png" alt="news image 1" />
-                                        <span class="news-cat">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
-                            <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img1.png" alt="news image 1" />
-                                        <span class="news-cat pur">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
-                            <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img1.png" alt="news image 1" />
-                                        <span class="news-cat">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="common-news-sections">
-                    <div class="section-header container-sectionH clearfix">
-                        <div class="title-header">
-                            <h1 class="dg-header-1 main-section-title ">Resources
-                                <span class="half-squre-before-title"></span>
-                            </h1>
-                        </div>
-                        <a href="<?php echo esc_url(site_url()); ?>/resources" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
-                    </div>
-                    <div class="gray-boxes-container clearfix">
-                        <div class="news-resource-container clearfix">
-
-<?php 
-
-$terms = get_terms("list_resources",array( 'parent' => 0 ));
-        $i=1;
-        foreach ( $terms as $term ) { 
-        $termname = strtolower($term->name);
-        $termname = str_replace(' ', '-', $termname);
-        $the_query = new WP_query(array( 'post_type=resources&posts_per_page=4','tax_query' => array(array ('taxonomy' => 'list_resources','field' => 'slug','terms' => $term->slug))));
-        
-        if ($the_query->have_posts()) {
-           $i=1;
-           while ( $the_query->have_posts() && $i < 3 ) : $the_query->the_post();
-          $resources_date = get_the_date( 'F d, Y', get_the_ID() );
-                    
-                    $resources_short_desc = get_post_meta(get_the_ID(),'resources_short_desc', true);
-                    $resources_attach = get_post_meta(get_the_ID(),'resources_attach', true);
-                    $trimtitle = get_the_title();
-    
-            $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
-            
-
-            $trimdesc = $resources_short_desc;
-    
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
-                    ?>
-                            <div class="news-list">
-                                <a href="<?php if($resources_attach!="") echo $resources_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
-                                    <div class="news-image">
-                                     <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
-                                        <span class="news-cat"><?php echo $term->name; ?></span>
-                                    </div>
-                                    <span class="date"><?php echo $resources_date; ?> </span>
-                                    <div class="info">
-                                         <h3 class="title"><?php echo $shorttitle; ?></h3>
-                            <p class="description"><?php echo $shortdesc; ?></p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
- <?php $i++;
-          endwhile; 
-        }
-        wp_reset_query();
-}
-        ?> 
-
-
-                        <!--    <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img-2.png" alt="news image 1" />
-                                        <span class="news-cat">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
-                            <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img1.png" alt="news image 1" />
-                                        <span class="news-cat pur">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div>
-                            <div class="news-list">
-                                <a href="#" class="news-hover">
-                                    <div class="news-image">
-                                        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images//img1.png" alt="news image 1" />
-                                        <span class="news-cat">Category</span>
-                                    </div>
-                                    <span class="date">March 24th, 2017</span>
-                                    <div class="info">
-                                        <h3 class="title">Digital Classrooms for Farmers</h3>
-                                        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum leo at nibh vehicula elementum vel semper massa.</p>
-                                    </div>
-                                    <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
-                                </a>
-                            </div> -->
                         </div>
                     </div>
                 </div>
