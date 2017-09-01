@@ -17,7 +17,7 @@ include 'header-globalimpact.php'; ?>
                     <div class="row">
                         <ul class="sub-menu-title">
                             <li class="activemenu">
-                                <a href="#our_team">Team</a>
+                                <a href="#our_team">Team</a> 
                             </li>
                             <li>
                                 <a href="#history">Journey</a></li>
