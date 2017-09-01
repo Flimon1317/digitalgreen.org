@@ -7,7 +7,7 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header('globalimpact'); ?>
+get_header(); ?>
 </header>
 
 <?php $resources_short_desc = get_post_meta(get_the_ID(),'resources_short_desc', true); ?>

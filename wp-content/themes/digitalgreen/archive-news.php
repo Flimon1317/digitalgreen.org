@@ -16,8 +16,10 @@
  * @since Twenty Fifteen 1.0
  */
 
+
 $title = "News"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
 
  <<!-- Banner Section -->
@@ -429,8 +431,31 @@ $terms = get_terms("list_resources",array( 'parent' => 0 ));
             </div>
         </div>
     </div>
-    
-<?php get_footer(); ?>
 
- 
+    <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
+
+<script type="text/javascript">
+var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
+var page = 2;
+jQuery(function($) {
+
+    $('body').on('click', '.load-more', function() {
+        var data = {
+
+            'action': 'load_news_by_ajax',
+            'page': page,
+            'security': '<?php echo wp_create_nonce("load_more_posts"); ?>'
+        };
+
+        $.post(ajaxurl, data, function(response) {
+            $('.news-append').append(response);
+            page++;
+            
+        });
+    });
+});
+</script> 
+
+
+<?php get_footer(); ?>
 

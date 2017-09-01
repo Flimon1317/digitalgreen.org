@@ -7,8 +7,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "Donate"; 
-include 'header-globalimpact.php'; ?>
+include 'header'; ?>
+
 </header>
 
  <!-- Banner Section -->

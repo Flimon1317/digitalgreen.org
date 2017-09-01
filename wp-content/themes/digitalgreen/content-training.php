@@ -7,9 +7,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "Training"; 
-include 'header-globalimpact.php'; ?>
-</header>
+include 'header.php'; ?>
+
 
 
  <div class="banner-section">

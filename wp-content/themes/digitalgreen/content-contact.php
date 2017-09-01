@@ -7,8 +7,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "Contact Us"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
 <div class="banner-section">
             <div class="banner-img"><img src="<?php echo get_field('contact_banner_image'); ?>" class="img-responsive"/></div>

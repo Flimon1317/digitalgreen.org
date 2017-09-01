@@ -7,8 +7,10 @@
  * @since Twenty Fifteen 1.0
  */
 
+
 $title = "Not Found"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
 
 	<div class="banner-section">

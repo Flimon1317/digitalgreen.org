@@ -7,10 +7,12 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-$title = "Global Initiatives"; 
-include 'header-globalimpact.php'; ?>
 
- <div class="page-sub-menu clearfix hidden-xs">
+$title = "Global Initiatives"; 
+include 'header.php'; ?>
+
+
+            <div class="page-sub-menu clearfix hidden-xs">
                 <div class="container">
                     <div class="row">
                         <ul class="sub-menu-title">
@@ -33,7 +35,7 @@ include 'header-globalimpact.php'; ?>
                     </div>
                 </div>
             </div>
-        </header>
+    </header>
  <div class="banner-section-sub-menu">
             <div class="banner-img"><img src="<?php echo get_field('global_initiatives_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
             <div class="banner-text">
