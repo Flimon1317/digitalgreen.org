@@ -471,10 +471,13 @@
   }
   .navbar-default .dropdown-menu li{
     padding: 10px 15px;
-    margin-top: 0 !important;
+    margin: 0 !important;
   }
   .navbar-default .dropdown-menu li:last-child{
     padding-bottom: 0;
+  }
+  .dropdown-menu > li > a{
+    color: #fff;
   }
 
 }
