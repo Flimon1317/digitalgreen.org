@@ -595,12 +595,12 @@ jQuery(document).ready(function(){
         e.preventDefault();
         //jQuery(this).parents('.member-intro').find('.expand-txt').slideToggle();
         var paraHeight = jQuery(this).parents('.member-intro').find('p').height();
-        if(jQuery(this).siblings('.member-content').height() == 144){
+        if(jQuery(this).siblings('.member-content').height() == 154){
             jQuery(this).html('Read Less <span class="icon icon-up-arrow"></span>');
             jQuery(this).parents('.member-intro').find('.member-content').animate({'height':paraHeight + 30}, 500);
         }else{
             jQuery(this).html('Read More <span class="icon icon-down-arrow"></span>');
-            jQuery(this).parents('.member-intro').find('.member-content').animate({'height':'144px'}, 500);
+            jQuery(this).parents('.member-intro').find('.member-content').animate({'height':'154px'}, 500);
         }
     });
      
