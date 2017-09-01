@@ -2224,7 +2224,8 @@ a.forward-redirection-green-link:hover {
     transition: color 0.4s;
     margin-top: 10px; }
   .news-list .info {
-    min-height: 245px; }
+    min-height: 245px;
+    max-height: 245px; }
   .news-list .green-arrow {
     position: relative;
     padding: 10px;

@@ -91,7 +91,7 @@
                             <p>&copy;<?php echo date('Y'); ?> Digital Green. All rights reserved. <span class="text-white">Privacy Policy</span></p>
                         </div>
                         <div class="col-sm-6">
-                            <p class="text-right">Site designed & developed by <a href="http://codebele.com" target="_blank"><span class="text-white">CodeBele</span></a></p>
+                            <p class="text-right"> <a href="#" target="_blank"><span class="text-white"></span></a></p>
                         </div>
                     </div>
                 </div>
