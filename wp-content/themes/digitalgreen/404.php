@@ -7,7 +7,8 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header('globalimpact'); ?>
+$title = "Not Found"; 
+include 'header-globalimpact.php'; ?>
 </header>
 
 	<div class="banner-section">

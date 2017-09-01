@@ -11,7 +11,7 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
  <head>
-        <title>Digital Green - GLobal Impact</title>
+        <title>Digital Green - <?php echo $title;?></title>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />

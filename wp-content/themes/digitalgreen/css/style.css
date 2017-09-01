@@ -2304,6 +2304,16 @@ a.forward-redirection-green-link:hover {
     width: auto;
     height: 100%; }
 
+/*.filter-details[data-index="2"] .team-member:nth-child(2n) .member-img-wrap {
+   
+    float: left;
+   }*/
+
+.filter-details[data-index="2"] .team-member:nth-child(2n) .member-details {
+
+    margin: 0 0 0 40px; 
+} 
+
 .team-member {
   margin-top: 82px; }
   .team-member .member-img-wrap {

@@ -16,7 +16,8 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+$title = "Ethiopia"; 
+include 'header-globalimpact.php'; ?>
 </header>
 
 
@@ -472,7 +473,8 @@ endwhile; ?>
         $(document).ready(function() {
             // jQuery Validation
             $(".collapse").collapse('hide');
-            $("#collapse1").collapse('show');
+            if(jQuery(window).width() > 767)
+                $("#collapse1").collapse('show');
 
         });
     </script>

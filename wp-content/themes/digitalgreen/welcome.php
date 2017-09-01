@@ -194,8 +194,8 @@ get_header('home'); ?>
 
                             <li data-index="<?php echo $i; ?>">
                                 <div class="awards-logo"><img src="<?php echo get_sub_field('home_page_awards_image'); ?>" /></div>
-                                <div class="logo-details hidden-lg hidden-md hidden-sm" data-index="<?php echo $i; ?>">
-                                    <span class="triangle-up"></span>
+                                <div class="logo-details hidden-lg hidden-md hidden-sm hidden-xs" data-index="<?php echo $i; ?>">
+                                    <span class="triangle-up hidden-sm hidden-md hidden-xs hidden-sm"></span>
                                     <h4 class="dg-header-4"><?php echo get_sub_field('home_page_awards_title'); ?></h4>
                                     <!-- <p class="dg-header-5 text-details"><?php echo get_sub_field('home_page_awards_description'); ?></p> -->
                                     <a href="<?php echo get_sub_field('home_page_awards_link'); ?>" class="green-arrow">Read More <i class="on-hover-arrow-left" aria-hidden="true"></i></a>
@@ -216,7 +216,7 @@ get_header('home'); ?>
 
                          <div class="logo-details" data-index="<?php echo $i; ?>">
                                 <h4 class="dg-header-4"><?php echo get_sub_field('home_page_awards_title'); ?></h4>
-                                <p class="dg-header-5 text-details"><?php echo get_sub_field('home_page_awards_description'); ?></p>
+                                <p class="dg-header-5 text-details hidden-sm hidden-xs hidden-md"><?php echo get_sub_field('home_page_awards_description'); ?></p>
                                 <!-- <a href="<?php echo get_sub_field('home_page_awards_link'); ?>" class="green-arrow">Read More <i class="on-hover-arrow-left" aria-hidden="true"></i></a> -->
                             </div>
 <?php $i++;  } ?>

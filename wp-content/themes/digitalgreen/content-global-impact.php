@@ -7,7 +7,8 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+$title = "Global Impact"; 
+include 'header-globalimpact.php'; ?>
 
  <div class="page-sub-menu clearfix hidden-xs">
                 <div class="container">

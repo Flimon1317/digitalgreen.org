@@ -7,7 +7,8 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+$title = "About Us"; 
+include 'header-globalimpact.php'; ?>
 
 
         <div id="sticky-anchor"></div>

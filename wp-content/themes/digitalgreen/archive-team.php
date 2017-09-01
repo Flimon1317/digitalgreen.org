@@ -15,7 +15,8 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
-get_header('globalimpact'); ?>
+$title = "Team"; 
+include 'header-globalimpact.php'; ?>
 </header>
     
         <!-- Banner Section -->
@@ -65,7 +66,7 @@ get_header('globalimpact'); ?>
                                     <div class="main-tab-txt <?php if($i==1) echo 'active-tab'; ?>"><?php echo $term->name; ?></div>
                                     <ul class="sub-tab-list">
                                         <?php if($term->name=='Team') echo '<li><a href="#" data-index="1" class="active-link" >Global Leadership Group</a></li>'; ?>
-                                     <?php if($term->name=='Board Members') echo '<li><a href="#" data-index="2" >Global Leadership Group</a></li>'; ?>
+                                     <?php if($term->name=='Board Members') echo '<li><a href="#" data-index="2" >Board of Directors</a></li>'; ?>
                                         <li>
                                         <?php
 
@@ -147,11 +148,11 @@ get_header('globalimpact'); ?>
       ?>
                                 
                                     <div class="team-member clearfix" id="<?php echo 'team'; ?><?php echo $i; ?>">
-                                        <div class="member-img-wrap">
+                                        <!-- <div class="member-img-wrap">
                                             <div class="image-green-shadow member-img">
                                                 <img src="<?php echo $section['team_board_image']; ?>" alt="Rikin Gandhi"/>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="member-details">
                                             <h2><a href="#"><?php echo $section['title']; ?></a></h2>
                                             <span class="member-designation"><?php echo $section['team_board_designation']; ?></span>
