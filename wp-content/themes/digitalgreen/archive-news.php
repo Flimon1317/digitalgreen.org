@@ -183,7 +183,7 @@ include 'header-globalimpact.php'; ?>
                                 <span class="half-squre-before-title"></span>
                             </h1>
                         </div>
-                        <a href="<?php echo esc_url(site_url()); ?>/resources" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
+                        <a href="<?php echo esc_url(site_url()); ?>/press-kit" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
                     </div>
                     <div class="gray-boxes-container clearfix">
                         <div class="news-resource-container clearfix">
@@ -239,11 +239,11 @@ $terms = get_terms("list_resources",array( 'parent' => 0 ));
                 <div class="common-news-sections">
                     <div class="section-header container-sectionH clearfix">
                         <div class="title-header">
-                            <h1 class="dg-header-1 main-section-title ">News
+                            <h1 class="dg-header-1 main-section-title ">Media
                                 <span class="half-squre-before-title"></span>
                             </h1>
                         </div>
-                        <a href="news" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
+                        <a href="<?php echo esc_url(site_url()); ?>/media" class="green-arrow">View More<i class="on-hover-arrow-left"></i></a>
                     </div>
                     <div class="gray-boxes-container clearfix">
                         <div class="news-resource-container clearfix">
