@@ -10,7 +10,7 @@
 
 $title = "Training"; 
 include 'header.php'; ?>
-
+</header>
 
 
  <div class="banner-section">
