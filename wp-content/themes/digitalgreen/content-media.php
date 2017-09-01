@@ -104,7 +104,7 @@ include 'header-globalimpact.php'; ?>
                 <div class="row">
                 
                     <div class="title-header news-title-header pull-left">
-                        <h1 class="dg-header-1 main-section-title ">Latest News
+                        <h1 class="dg-header-1 main-section-title ">Latest Media
                             <span class="half-squre-before-title"></span>
                         </h1>
                     </div>
