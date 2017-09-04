@@ -245,11 +245,10 @@ jQuery(document).ready(function(){
         jQuery('.timeline-dates-slider').slick({
             slidesToShow: 7,
             slidesToScroll: 1,
-            infinite: true,
             focusOnSelect: true,
+            infinite: false,
             asNavFor: '.timeline-info-slider',
             arrows: true,
-            centerMode: true,
             responsive: [
                 {
                     breakpoint: 991,
