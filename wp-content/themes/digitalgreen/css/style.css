@@ -1604,7 +1604,7 @@ nav:hover > .navbar-collapse ul > li > a {
   color: #65E214; }
 
 .stats-values {
-  padding: 20px 30px 26px 30px;
+  padding: 20px 20px 20px 20px;
   background-color: #3d3d3f;
   color: #fff; }
 
@@ -1706,7 +1706,7 @@ a.forward-redirection-green-link:hover {
 .post-type-archive-careers .work-inner-block.col-sm-7 {
   padding-right: 0; }
 .post-type-archive-careers .work-inner-block.col-md-5 {
-  padding-left: 15px; }
+  padding-left: 0px; }
 
 .stats-container {
   padding: 120px 0 20px 0; }

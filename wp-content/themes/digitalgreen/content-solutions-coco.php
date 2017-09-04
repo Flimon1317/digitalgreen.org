@@ -106,91 +106,6 @@ include 'header-globalimpact.php'; ?>
                             </div>
                         </div>
                       <?php $i++; } ?>  
-                        <!--  <div class="slider-with-tab hidden-lg hidden-md" data-index="2"><h1 class="dg-header-2">02</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container visible-approch" data-index="2">
-                            <div class="row">
-                                <div class="col-md-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div> -->
-                      <!--           <div class="col-md-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-with-tab hidden-lg hidden-md" data-index="3"><h1 class="dg-header-2">03</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container" data-index="3">
-                            <div class="row">
-                                <div class="col-sm-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="images/img-2.png" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider-with-tab hidden-lg hidden-md" data-index="4"><h1 class="dg-header-2">04</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </div>
-                        <div class="single-img-container" data-index="4">
-                            <div class="row">
-                                <div class="col-sm-6 right-block">
-                                    <div class="img-right-part">
-                                        <div class="image-green-shadow">
-                                            <img src="images/img-2.png" class="img-responsive" alt=""/>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 left-block">
-                                    <div class="row img-details">
-                                        <div class="single-img">
-                                            <div class="side-gray-border">
-                                                <h3 class="dg-header-2 sub-section-title">Lorem Ipsum
-                                                    <span class="half-squre-before-title"></span>
-                                                </h3>
-                                                <div class="single-img-content">
-                                                    <p class="dg-header-5 text-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tristique nisi ut congue vehicula.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                            
                         </div>
@@ -373,7 +288,7 @@ include 'header-globalimpact.php'; ?>
                                     <div class="row full-row">
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
-                                                <a href="<?php echo esc_url(site_url()); ?>/solutions">
+                                                <a href="<?php echo get_field('solutions_coco_featured_link'); ?>">
                                                     <div class="our-solution-box">
                                                         <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo get_field('solutions_coco_featured_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
                                                         </h3>

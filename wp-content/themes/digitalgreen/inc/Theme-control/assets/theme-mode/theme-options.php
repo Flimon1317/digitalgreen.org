@@ -4428,6 +4428,15 @@ array(
       'section'     => 'careers',      
       ),
 
+      array(        
+      'id'          => 'careers_solution_link',        
+      'label'       => __( 'Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'careers',      
+      ),
+
+
+
       array(
         'id'          => 'careers_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
@@ -5272,6 +5281,13 @@ array(
       'section'     => 'team',      
       ),
 
+      array(        
+      'id'          => 'team_solution_link',        
+      'label'       => __( 'Link', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'team',      
+      ),
+
       array(
         'id'          => 'team_solution_image',
         'label'       => __( 'Image', 'digitalgreen' ),
@@ -5365,6 +5381,13 @@ array(
       array(        
       'id'          => 'partners_solution_desc',        
       'label'       => __( 'Description', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'partners',      
+      ),
+
+      array(        
+      'id'          => 'partners_solution_link',        
+      'label'       => __( 'Link', 'digitalgreen' ),        
       'type'        => 'text',        
       'section'     => 'partners',      
       ),

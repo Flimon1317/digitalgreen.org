@@ -260,7 +260,7 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                                     <div class="row full-row">
                                         <div class="col-md-7 full-col">
                                             <div class="our-solution-wrap">
-                                                <a href="<?php echo esc_url(site_url()); ?>/solutions">
+                                                <a href="<?php echo ot_get_option('partners_solution_link'); ?>">
                                                     <div class="our-solution-box">
                                                         <h3 class="dg-header-2 sub-section-title on-hover-title-color"><?php echo ot_get_option('partners_solution_title'); ?> <i class="grey-arrow-right hidden-xs" aria-hidden="true"></i> <span class="half-squre-before-title"></span>
                                                         </h3>
