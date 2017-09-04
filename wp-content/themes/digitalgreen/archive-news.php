@@ -142,6 +142,7 @@ include 'header-globalimpact.php'; ?>
                     
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
                     $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
+                    $blogs_blog_image = get_post_meta(get_the_ID(),'blogs_blog_image', true);
                     $trimtitle = get_the_title();
     
             $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
@@ -151,10 +152,10 @@ include 'header-globalimpact.php'; ?>
     
             $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
                     ?>
-                            <div class="news-list">
+                            <div class="col-lg-3 news-list">
                                 <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
-                                    <div class="news-image">
-                                        <?php echo get_the_post_thumbnail( get_the_ID(), 'news-thumbnail',array('alt' => 'news image')); ?>
+                                    <div class="blogs-image">
+                                        <img src='<?php echo $blogs_blog_image;?>'>
                                         <span class="news-cat"><?php echo $term->name; ?></span>
                                     </div>
                                     <span class="date"><?php echo $blog_date; ?></span>
