@@ -136,7 +136,7 @@ include 'header-globalimpact.php'; ?>
 
             $trimdesc = $blogs_short_desc;
     
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 15, $more = '… ' );
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 10, $more = '… ' );
                     ?>
 
                 <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
