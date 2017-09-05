@@ -4336,9 +4336,12 @@ figure.pull-left {
 
 .author{
   font-style: italic;
+  font-size: small;
+  color: #CCCCCC;
 }
 
 .news-source{
   font-style: italic;
   font-size: small;
+  color: #CCCCCC;
 }

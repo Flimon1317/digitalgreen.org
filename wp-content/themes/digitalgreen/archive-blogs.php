@@ -148,7 +148,7 @@ include 'header-globalimpact.php'; ?>
                         <span class="date"><?php echo $blogs_date; ?></span>
                         <div class="info">
                            <h3 class="title"><?php echo $shorttitle; ?></h3>
-                            <p class="author">By: &nbsp;&nbsp;<?php echo $blogs_by; ?></p>
+                            <p class="author">By:&nbsp;<?php echo $blogs_by; ?></p>
                             <p class="description"><?php echo $shortdesc; ?></p>
                         </div>
                         <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>

@@ -141,6 +141,7 @@ include 'header-globalimpact.php'; ?>
           $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
+                    $blogs_by = get_post_meta(get_the_ID(),'blogs_by', true);
                     $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
                     $blogs_blog_image = get_post_meta(get_the_ID(),'blogs_blog_image', true);
                     $trimtitle = get_the_title();

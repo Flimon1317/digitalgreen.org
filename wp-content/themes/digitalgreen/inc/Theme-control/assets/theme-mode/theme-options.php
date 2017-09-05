@@ -5534,6 +5534,12 @@ array(
       'section'     => 'donate',      
       ),
   array(        
+      'id'          => 'donate_banner_lower_desc',        
+      'label'       => __( 'Description for Lower Section', 'digitalgreen' ),        
+      'type'        => 'text',        
+      'section'     => 'donate',      
+      ),
+  array(        
       'id'          => 'donate_banner_link',        
       'label'       => __( 'Link', 'digitalgreen' ),        
       'type'        => 'text',        
