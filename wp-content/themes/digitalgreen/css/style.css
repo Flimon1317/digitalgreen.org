@@ -4332,3 +4332,13 @@ figure.pull-left {
 .dropdown-menu{
   margin-top: 18px!important;
 }
+
+
+.author{
+  font-style: italic;
+}
+
+.news-source{
+  font-style: italic;
+  font-size: small;
+}

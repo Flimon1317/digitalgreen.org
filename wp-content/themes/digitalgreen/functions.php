@@ -734,7 +734,7 @@ function load_posts_by_ajax_callback() {
 
             $trimdesc = $blogs_short_desc;
     
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 10, $more = '… ' );
                     ?>
 
                 <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
@@ -746,6 +746,7 @@ function load_posts_by_ajax_callback() {
                         <span class="date"><?php echo $blogs_date; ?></span>
                         <div class="info">
                            <h3 class="title"><?php echo $shorttitle; ?></h3>
+                           <p class="author">By: &nbsp;&nbsp;<?php echo $blogs_by; ?></p>
                             <p class="description"><?php echo $shortdesc; ?></p>
                         </div>
                         <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
@@ -1053,6 +1054,7 @@ function load_news_by_ajax_callback() {
           $news_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
+                    $news_by = get_post_meta(get_the_ID(), 'news_by', true);
                     $news_attach = get_post_meta(get_the_ID(),'news_attach', true);
                     $trimtitle = get_the_title();
     
@@ -1061,7 +1063,7 @@ function load_news_by_ajax_callback() {
 
             $trimdesc = $news_short_desc;
     
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 10, $more = '… ' );
                  ?>
  
                 
@@ -1078,6 +1080,7 @@ function load_news_by_ajax_callback() {
                         <span class="date"><?php echo $news_date; ?></span>
                         <div class="info">
                             <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="news-source"><?php echo $news_by; ?></p>
                             <p class="description"><?php echo $shortdesc; ?></p>
                         </div>
                         <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>

@@ -34,7 +34,7 @@ function custom_meta_boxes_news() {
 
       array(
       'id'          => 'news_by',
-      'label'       => __( 'News Written By', 'digitalgreen' ),
+      'label'       => __( 'News Source', 'digitalgreen' ),
       
         'type'        => 'text'
       ), 

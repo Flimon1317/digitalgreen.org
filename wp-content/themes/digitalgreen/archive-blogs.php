@@ -128,6 +128,7 @@ include 'header-globalimpact.php'; ?>
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
                     $blogs_attach = get_post_meta(get_the_ID(),'blogs_attach', true);
                     $blogs_blog_image = get_post_meta(get_the_ID(),'blogs_blog_image', true);
+                    $blogs_by = get_post_meta(get_the_ID(),'blogs_by', true);
                     $trimtitle = get_the_title();
     
             $shorttitle = wp_trim_words( $trimtitle, $num_words = 4, $more = '… ' );
@@ -135,7 +136,7 @@ include 'header-globalimpact.php'; ?>
 
             $trimdesc = $blogs_short_desc;
     
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 15, $more = '… ' );
                     ?>
 
                 <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
@@ -147,6 +148,7 @@ include 'header-globalimpact.php'; ?>
                         <span class="date"><?php echo $blogs_date; ?></span>
                         <div class="info">
                            <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="author">By: &nbsp;&nbsp;<?php echo $blogs_by; ?></p>
                             <p class="description"><?php echo $shortdesc; ?></p>
                         </div>
                         <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>

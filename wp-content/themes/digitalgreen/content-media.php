@@ -162,6 +162,7 @@ include 'header-globalimpact.php'; ?>
           $news_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
+                    $news_by = get_post_meta(get_the_ID(), 'news_by', true);
                     $news_attach = get_post_meta(get_the_ID(),'news_attach', true);
                     $trimtitle = get_the_title();
     
@@ -188,6 +189,7 @@ include 'header-globalimpact.php'; ?>
                         <span class="date"><?php echo $news_date; ?></span>
                         <div class="info">
                             <h3 class="title"><?php echo $shorttitle; ?></h3>
+                            <p class="news-source"><?php echo $news_by; ?></p>
                             <p class="description"><?php echo $shortdesc; ?></p>
                         </div>
                         <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>

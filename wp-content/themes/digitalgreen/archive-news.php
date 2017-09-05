@@ -150,7 +150,7 @@ include 'header-globalimpact.php'; ?>
 
             $trimdesc = $blogs_short_desc;
     
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 10, $more = '… ' );
                     ?>
                             <div class="col-lg-3 news-list">
                                 <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
@@ -161,6 +161,7 @@ include 'header-globalimpact.php'; ?>
                                     <span class="date"><?php echo $blog_date; ?></span>
                                     <div class="info">
                                          <h3 class="title"><?php echo $shorttitle; ?></h3>
+                                         <p class="author">By: &nbsp;&nbsp;<?php echo $blogs_by; ?></p>
                             <p class="description"><?php echo $shortdesc; ?></p>
                                     </div>
                                     <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
@@ -266,6 +267,7 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
           $news_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $news_short_desc = get_post_meta(get_the_ID(),'news_short_desc', true);
+                    $news_by = get_post_meta(get_the_ID(), 'news_by', true);
                     $news_attach = get_post_meta(get_the_ID(),'news_attach', true);
                     $trimtitle = get_the_title();
     
@@ -274,7 +276,7 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
 
             $trimdesc = $news_short_desc;
     
-            $shortdesc = wp_trim_words( $trimdesc, $num_words = 20, $more = '… ' );
+            $shortdesc = wp_trim_words( $trimdesc, $num_words = 10, $more = '… ' );
                     ?>
         
                             <div class="news-list">
@@ -286,6 +288,7 @@ $terms = get_terms("list_news",array( 'parent' => 0 ));
                                     <span class="date"><?php echo $news_date; ?></span>
                                     <div class="info">
                                          <h3 class="title"><?php echo $shorttitle; ?></h3>
+                                         <p class="news-source"><?php echo $news_by; ?></p>
                             <p class="description"><?php echo $shortdesc; ?></p>
                                     </div>
                                     <div class="green-arrow">Read More<i class="on-hover-arrow-left"></i></div>
