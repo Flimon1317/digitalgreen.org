@@ -438,6 +438,10 @@ include_once( 'inc/custom-post-type-news.php' );
 include_once( 'inc/Theme-control/assets/theme-mode/meta-boxes-news.php' );
 include_once( 'inc/Theme-control/assets/theme-mode/meta-boxes-blogs.php' );
 include_once( 'inc/custom-post-type-blogs.php' );
+
+include_once( 'inc/Theme-control/assets/theme-mode/meta-boxes-testimonials.php' );
+include_once( 'inc/custom-post-type-testimonials.php' );
+
 include_once( 'inc/Theme-control/assets/theme-mode/meta-boxes-resources.php' );
 include_once( 'inc/custom-post-type-resources.php' );
 include_once( 'inc/Theme-control/assets/theme-mode/meta-boxes-partners.php' );
@@ -566,6 +570,45 @@ function create_blogs_taxonomies() {
 
 	register_taxonomy( 'list_blogs', array( 'blogs' ) , $args );
 }
+
+add_action( 'init', 'create_testimonials_taxonomies', 0 );
+
+// create two taxonomies, genres and writers for the post type "book"
+function create_testimonials_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Categories', 'digitalgreen' ),
+		'singular_name'     => _x( 'Category', 'digitalgreen' ),
+		'search_items'      => __( 'Search Category', 'digitalgreen' ),
+		'all_items'         => __( 'All Category', 'digitalgreen' ),
+		'parent_item'       => __( 'Parent Category', 'digitalgreen' ),
+		'parent_item_colon' => __( 'Parent Category:', 'digitalgreen' ),
+		'edit_item'         => __( 'Edit Category', 'digitalgreen' ),
+		'update_item'       => __( 'Update Category', 'digitalgreen' ),
+		'add_new_item'      => __( 'Add New Category', 'digitalgreen' ),
+		'new_item_name'     => __( 'New Category Name', 'digitalgreen' ),
+		'menu_name'         => __( 'Category', 'digitalgreen' ),
+	);
+	
+	$rewrite = array(
+		'slug'                       => 'blog-category',
+		'with_front'                 => true,
+		'hierarchical'               => false,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+
+	register_taxonomy( 'list_testimonials', array( 'testimonials' ) , $args );
+}
+
 
 add_action( 'init', 'create_news_taxonomies1', 0 );
 

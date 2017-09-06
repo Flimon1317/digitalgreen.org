@@ -138,7 +138,7 @@ include 'header-globalimpact.php'; ?>
         if ($the_query->have_posts()) {
            $i=1;
            while ( $the_query->have_posts() && $i < 5 ) : $the_query->the_post();
-          $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
+                    $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
                     $blogs_by = get_post_meta(get_the_ID(),'blogs_by', true);
@@ -159,7 +159,7 @@ include 'header-globalimpact.php'; ?>
                                         <img src='<?php echo $blogs_blog_image;?>'>
                                         <span class="news-cat"><?php echo $term->name; ?></span>
                                     </div>
-                                    <span class="date"><?php echo $blog_date; ?></span>
+                                    <span class="date"><?php echo $blogs_date; ?></span>
                                     <div class="info">
                                          <h3 class="title"><?php echo $shorttitle; ?></h3>
                                          <p class="author">By: &nbsp;&nbsp;<?php echo $blogs_by; ?></p>

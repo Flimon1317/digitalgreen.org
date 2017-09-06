@@ -4352,3 +4352,14 @@ figure.pull-left {
   font-size: small;
   color: #CCCCCC;
 }
+
+.testimonials-image {
+    position: relative;
+    border-bottom: 5px solid #65E214;
+    margin-bottom: 38px;
+    height: 240px;
+    width: 100%;
+    background-color: #fff; }
+.testimonials-image img {
+      height: 100%;
+      width: 100%; }
