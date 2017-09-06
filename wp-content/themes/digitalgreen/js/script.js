@@ -565,24 +565,37 @@ jQuery(document).ready(function(){
     */
     jQuery('.case-studies-dropdown li a').click(function(){
         catAttr = jQuery(this).attr('id');
-        jQuery('.case-studies-div .col-lg-4').hide();
-        jQuery('.case-studies-div .col-lg-4[data-category='+ catAttr +']').show();
 
-        //Update size_li after applying filter
-        size_li = jQuery(".case-studies-div .col-lg-4[data-category="+ catAttr +"]").length;
-        x = 3;
-        y = x - 1;
-
-        //Show first 3 items
-        jQuery('.case-studies-div .col-lg-4[data-category='+ catAttr +']:gt('+y+')').hide();
-        if(x >= size_li)
+        //Show All items
+        if(catAttr === "-1"){
+            jQuery('.case-studies-div .col-lg-4').show();
             $('.load-more').hide();
-        else
-            $('.load-more').show();
+        }
+
+        //Apply filters
+        else{
+            jQuery('.case-studies-div .col-lg-4').hide();
+            jQuery('.case-studies-div .col-lg-4[data-category='+ catAttr +']').show();
+
+            //Update size_li after applying filter
+            size_li = jQuery(".case-studies-div .col-lg-4[data-category="+ catAttr +"]").length;
+            x = 3;
+            y = x - 1;
+
+            //Show first 3 items
+            jQuery('.case-studies-div .col-lg-4[data-category='+ catAttr +']:gt('+y+')').hide();
+            if(x >= size_li)
+                $('.load-more').hide();
+            else
+                $('.load-more').show();
+        }
     });
 
     size_li = jQuery(".case-studies-div > div").length;
     x=3;
+    if(size_li <= 3)
+        $('.load-more').hide();
+    
     jQuery('.case-studies-div div.col-lg-4:lt('+x+')').show();
     jQuery('.load-more').click(function (e) {
         e.preventDefault();

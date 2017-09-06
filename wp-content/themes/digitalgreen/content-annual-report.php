@@ -51,6 +51,8 @@ include 'header-globalimpact.php'; ?>
                     <div class="dropdown-wrapper">
                                 <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" id="case-studies-filter-field"/></div>
                                 <ul class="dropdown case-studies-dropdown" id="category-dropdown">
+                                    <li><a href="#" id="-1">Show All</a></li>
+
                                 <?php
 
             $terms = get_terms( array('taxonomy' => 'list_financials','hide_empty' => false));
