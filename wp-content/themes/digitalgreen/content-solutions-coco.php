@@ -9,7 +9,7 @@
  */
 
 $title = "CoCo"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
 
 
 </header>

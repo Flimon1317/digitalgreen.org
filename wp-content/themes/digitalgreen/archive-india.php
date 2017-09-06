@@ -17,7 +17,7 @@
  */
 
 $title = "India"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
 
 
 </header>

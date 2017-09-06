@@ -18,7 +18,7 @@
  */
 
 $title = "Testimonials"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
 </header>
 
    <!-- Banner Section -->

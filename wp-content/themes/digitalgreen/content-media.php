@@ -8,7 +8,7 @@
  * @since Twenty Fifteen 1.0
  */
 $title = "Media"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
 </header>
 
 !-- Banner Section -->
