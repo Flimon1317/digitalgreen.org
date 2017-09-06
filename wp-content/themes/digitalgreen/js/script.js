@@ -682,18 +682,17 @@ function hasScrolled() {
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
-        console.log("IF",st , lastScrollTop , navbarHeight);
         $('header').removeClass('nav-down').addClass('nav-up');
         $('.navbar-background-home .page-menu.navbar-nav > li .icon, .navbar-background-home .page-menu.navbar-nav > li > a').css('color', '#fff');
 
-        }
-    else {
+    }else{
         // Scroll Up
-        var targetHeight = $('.navbar-background').outerHeight();;
-        if(jQuery('.our-solution').length)
-            targetHeight = jQuery('.our-solution').offset().top;
+        var targetHeight = $('.navbar-background').outerHeight();
+        if(jQuery('.welcome-solution').length){
+            targetHeight = jQuery('.welcome-solution').offset().top;
+        }
 
-        if(st + $(window).height() - navbarHeight > targetHeight) {
+        if((st + $(window).height() - navbarHeight) > targetHeight) {
             $('header').removeClass('nav-up').addClass('nav-down');
             $('header').css('background-color','#fff');
             $('.navbar-background-home .page-menu.navbar-nav > li .icon, .navbar-background-home .page-menu.navbar-nav > li > a').css('color', '#9BA0A7');
@@ -735,11 +734,11 @@ function hasScrolled() {
         jQuery('.dg-footer').addClass('active-footer');
     }
 
-    if(typeof jQuery('.our-solution').offset() === 'undefined'){
+    if(typeof jQuery('.welcome-solution').offset() === 'undefined'){
 
     }
     else{
-        if(st >= jQuery('.our-solution').offset().top - 100){
+        if(st >= jQuery('.welcome-solution').offset().top - 100){
                 $('#fp-nav').fadeOut();
             }else{
                 $('#fp-nav').fadeIn();

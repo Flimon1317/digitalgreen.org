@@ -98,7 +98,8 @@ get_header(); ?>
                 </ul>
                 <!-- </div> -->
             </div>
-            <div class="container section-padding our-solution animate-section">
+            <div class="container section-padding our-solution animate-section welcome-solution">
+            
                 <div class="activity-details-section">
                     <div class="title-header clearfix">
                         <div class="col-sm-5">
