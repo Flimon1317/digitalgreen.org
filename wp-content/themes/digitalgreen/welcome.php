@@ -15,7 +15,7 @@
  * @since Twenty Fifteen 1.0
  */
 
-get_header('home'); ?>
+get_header(); ?>
 
    <div class="home-page">
         <div class="wrapper">
@@ -98,7 +98,8 @@ get_header('home'); ?>
                 </ul>
                 <!-- </div> -->
             </div>
-            <div class="container section-padding our-solution animate-section">
+            <div class="container section-padding our-solution animate-section welcome-solution">
+            
                 <div class="activity-details-section">
                     <div class="title-header clearfix">
                         <div class="col-sm-5">
@@ -227,12 +228,9 @@ get_header('home'); ?>
             </div>
     </div>
      <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
-<?php get_footer(); ?>
-
-
        
      <script type="text/javascript">
-        $(document).ready(function() {
+        jQuery(document).ready(function() {
             var isSlider = true;
             
             var slideHeight = jQuery('.header-slider').outerHeight();
@@ -254,16 +252,13 @@ get_header('home'); ?>
 
                     if(index == 3){
                         jQuery('body, html').css({'overflow': 'visible'});
-                        if(/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-                            $.fn.fullpage.destroy('all');
-                            jQuery('.header-slider').css('pointer-events', 'none');
-                            jQuery('.slide-single').removeClass('active');
-                        } else {
-                           $.fn.fullpage.setAllowScrolling(false);
-                            jQuery('.header-slider').css('pointer-events', 'none');
-                            jQuery('.header-slider').css('-webkit-pointer-events', 'none');
-                        }
+                        jQuery('html').removeClass('fp-enabled');
+                        $.fn.fullpage.setAllowScrolling(false);
+                        jQuery('.header-slider').css('pointer-events', 'none');
+                        jQuery('.header-slider').css('-webkit-pointer-events', 'none');
                         jQuery(window).scrollTop(10);
+                    }else{
+                        jQuery('body, html').css({'overflow': 'hidden'});
                     }
 
                     
@@ -297,3 +292,5 @@ get_header('home'); ?>
             // }
         });
     </script>
+
+<?php get_footer(); ?>

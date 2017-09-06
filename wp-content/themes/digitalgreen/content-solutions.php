@@ -7,8 +7,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "Our Solutions"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 
             <div id="sticky-anchor"></div>
             <div class="page-sub-menu clearfix hidden-xs" id="sticky">

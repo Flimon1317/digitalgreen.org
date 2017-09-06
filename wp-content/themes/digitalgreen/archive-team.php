@@ -15,8 +15,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "Team"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
     
         <!-- Banner Section -->

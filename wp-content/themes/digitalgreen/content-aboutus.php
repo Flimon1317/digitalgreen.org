@@ -7,8 +7,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "About Us"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 
 
         <div id="sticky-anchor"></div>
@@ -31,7 +33,7 @@ include 'header-globalimpact.php'; ?>
                     </div>
                 </div>
             </div>
-            </header>
+    </header>
     <!-- Banner Section -->
         <div class="banner-section-sub-menu">
             <div class="banner-img"><img src="<?php echo get_field('about_us_banner_image'); ?>" class="sub-menu-banner w3-image" /></div>

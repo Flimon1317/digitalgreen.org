@@ -8,7 +8,8 @@
  */
 
 $title = "Not Found"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
 
 	<div class="banner-section">

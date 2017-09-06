@@ -16,8 +16,10 @@
  * @since Twenty Fifteen 1.0
  */
 
+
 $title = "Resources"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
 
    <!-- Banner Section -->

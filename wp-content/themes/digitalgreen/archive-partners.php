@@ -16,8 +16,10 @@
  * @since Twenty Fifteen 1.0
  */
 
+
 $title = "Partners"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
  
  <!-- Banner Section -->
@@ -72,7 +74,7 @@ include 'header-globalimpact.php'; ?>
                 foreach ( $root_terms as $root_term ) { 
 $children = get_terms( "list_partners", array('parent' => $root_term->term_id ));
 if(count($children)!=0){
-                	?>
+                    ?>
                         <ul class="tab-options-list clearfix" data-id="<?php echo $j?>">
                         <?php
  
@@ -98,15 +100,15 @@ $i=1;
                 <div class="partners-blocks">
                 
                 <?php
-			$root_terms = get_terms("list_partners",array( 'parent' => 0 ));
-			$i=1;
-			foreach ( $root_terms as $root_term ) {
-				$termname = strtolower($root_term->name);
-				$termname = str_replace(' ', '-', $termname);
-				$children = get_terms( "list_partners", array('parent' => $root_term->term_id));
-				if(count($children)==0){
-				
-				?>
+            $root_terms = get_terms("list_partners",array( 'parent' => 0 ));
+            $i=1;
+            foreach ( $root_terms as $root_term ) {
+                $termname = strtolower($root_term->name);
+                $termname = str_replace(' ', '-', $termname);
+                $children = get_terms( "list_partners", array('parent' => $root_term->term_id));
+                if(count($children)==0){
+                
+                ?>
                     <div class="partners-container"  data-index="<?php echo $i; ?>">
                     
                         <div class="gray-box-tabbing" id="<?php  $root_term->term_id; ?>">
@@ -121,7 +123,7 @@ $i=1;
                                         <?php 
                                     $k=1;
 $the_query = new WP_Query( array('post_type' => 'partners','orderby' => 'ID',
-				'order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_partners','field' => 'slug','terms' => $root_term->slug))));
+                'order' => 'ASC','tax_query' => array(array ('taxonomy' => 'list_partners','field' => 'slug','terms' => $root_term->slug))));
 
                     while ( $the_query->have_posts() ) : $the_query->the_post();
 
@@ -155,12 +157,12 @@ $partners_link = get_post_meta(get_the_ID(),'partners_link', true);
                     <?php } 
                     
                     else {
-                    	
+                        
                    foreach ( $children as $child ) {
-						$termname = strtolower($child->name);
-						$termname = str_replace(' ', '-', $termname);
-						
-						 ?>
+                        $termname = strtolower($child->name);
+                        $termname = str_replace(' ', '-', $termname);
+                        
+                         ?>
                     <div class="partners-container country-partner"  data-index="<?php echo $i; ?>">
                         <div class="gray-box-tabbing" id="<?php echo $child->term_id?>">
                             <div class="country-with-opening">

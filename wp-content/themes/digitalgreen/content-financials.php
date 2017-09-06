@@ -7,8 +7,10 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "Financials"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
+
 </header>
 
  <div class="banner-section">

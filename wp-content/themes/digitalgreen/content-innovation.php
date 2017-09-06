@@ -7,10 +7,12 @@
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
  */
+
 $title = "Innovation"; 
-include 'header-globalimpact.php'; ?>
+include 'header.php'; ?>
 
         </header>
+
         <!-- Banner Section -->
         <div class="banner-section">
             <div class="banner-img-normal"><img src="<?php echo get_field('innovation_banner_image'); ?>" class="sub-menu-banner w3-image"/></div>
