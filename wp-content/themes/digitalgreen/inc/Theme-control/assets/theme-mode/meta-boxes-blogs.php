@@ -44,7 +44,7 @@ function custom_meta_boxes_blogs() {
      array(
     'id'          => 'blogs_blog_image',
     'label'       => __( 'Image', 'digitalgreen' ),
-    'type'        => 'upload'
+    'type'        => 'upload',
       ),
 
      /*array(

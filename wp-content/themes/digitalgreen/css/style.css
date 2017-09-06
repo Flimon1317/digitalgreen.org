@@ -1734,15 +1734,22 @@ a.forward-redirection-green-link:hover {
   text-align: center; }
   .gray-boxes-container .case-study-boxes {
     margin-left: -9px !important; }
-  .gray-boxes-container .col-sm-4 {
+  .gray-boxes-container .col-lg-4 {
     width: 345px;
     float: none !important;
     margin-left: 52px;
     display: inline-block;
     padding: 0;
     vertical-align: top; }
-    .gray-boxes-container .col-sm-4:nth-child(3n+1) {
-      margin-left: 0; }
+
+    /*.gray-boxes-container .col-sm-4:nth-child(3n+1) {
+      margin-left: 0; }*/
+      .row.custom {
+        margin-left: -100px;
+        margin-right: -15px;
+
+      }
+
 
 .single-boxes-card {
   position: relative;

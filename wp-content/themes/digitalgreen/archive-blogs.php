@@ -83,7 +83,7 @@ include 'header-globalimpact.php'; ?>
                 </form>
                         </div>
                         <div class="dropdown-wrapper">
-                            <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" /></div>
+                            <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" id="filter-field"/></div>
                             <ul class="dropdown" id="category-dropdown">
                             <?php
         $terms = get_terms("list_blogs",array( 'parent' => 0 ));
@@ -111,18 +111,11 @@ include 'header-globalimpact.php'; ?>
         <div class="container news-container">
             <div class="row blogs-append">
 <?php
-        $terms = get_terms("list_blogs",array( 'parent' => 0 ));
-        $i=1;
-        foreach ( $terms as $term ) { 
-        $termname = strtolower($term->name);
-        $termname = str_replace(' ', '-', $termname);
-        
-
  
- $the_query = new WP_Query( array('post_type' => 'blogs','posts_per_page'=>'4','paged'=> 1, 'post_status'=>'publish','tax_query' => array(array ('taxonomy' => 'list_blogs','field' => 'slug','terms' => $term->slug))));
+ $the_query = new WP_Query( array('post_type' => 'blogs','posts_per_page'=>'4','paged'=> 1, 'post_status'=>'publish'));
           while ( $the_query->have_posts() ) : $the_query->the_post();
 
-          
+          $cat_array = get_the_terms(get_the_ID(),'list_blogs');
           $blogs_date = get_the_date( 'F d, Y', get_the_ID() );
                     
                     $blogs_short_desc = get_post_meta(get_the_ID(),'blogs_short_desc', true);
@@ -143,7 +136,7 @@ include 'header-globalimpact.php'; ?>
                     <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                         <div class="blogs-image">
                             <img src='<?php echo $blogs_blog_image;?>'>
-                            <span class="news-cat"><?php echo $term->name; ?></span>
+                            <span class="news-cat"><?php echo $cat_array[0]->name; ?></span>
                         </div>
                         <span class="date"><?php echo $blogs_date; ?></span>
                         <div class="info">
@@ -155,8 +148,6 @@ include 'header-globalimpact.php'; ?>
                     </a>
                 </div> 
 <?php endwhile; 
-$i++;
-}
 
 ?>
 

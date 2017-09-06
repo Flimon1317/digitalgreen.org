@@ -47,22 +47,30 @@
         }
 
 
-    size_li = jQuery("#case-studies-div > div").length;
-    x=3;
-    jQuery('#case-studies-div div.col-sm-4:lt('+x+')').show();
+    // size_li = jQuery("#case-studies-div > div").length;
+    // x=3;
+    // jQuery('#case-studies-div div.col-sm-4:lt('+x+')').show();
 
 
 
-    jQuery('#load-more').click(function (e) {
-    	e.preventDefault();
-        x= (x+3 <= size_li) ? x+3 : size_li;
-        jQuery('#case-studies-div div.col-sm-4:lt('+x+')').show();
-        jQuery('#case-studies-div div')
-        if(x == size_li){
-            $('#load-more').hide();
-        }
+    // jQuery('#load-more').click(function (e) {
+    // 	e.preventDefault();
+    //     x= (x+3 <= size_li) ? x+3 : size_li;
+    //     jQuery('#case-studies-div div.col-sm-4:lt('+x+')').show();
+    //     jQuery('#case-studies-div div')
+    //     if(x == size_li){
+    //         $('#load-more').hide();
+    //     }
         
-    });
+    // });
+
+
+    // jQuery('#case-studies-filter-field').change(function(e) {
+    // 	e.preventDefault();
+    // 	size_li = jQuery("#case-studies-div > div:visible").length;
+    // 	x = 3;
+    // 	jQuery('#case-studies-div div.col-sm-4:lt('+x+')').show();
+    // });
  
 	/*
 	 * Filter

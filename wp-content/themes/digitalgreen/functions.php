@@ -643,6 +643,84 @@ function create_team_taxonomies() {
 	register_taxonomy( 'list_team', array( 'team' ) , $args );
 }
 
+
+add_action( 'init', 'create_case_studies_taxonomies', 0 );
+
+// create two taxonomies, genres and writers for the post type "book"
+function create_case_studies_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Categories', 'digitalgreen' ),
+		'singular_name'     => _x( 'Category', 'digitalgreen' ),
+		'search_items'      => __( 'Search Category', 'digitalgreen' ),
+		'all_items'         => __( 'All Category', 'digitalgreen' ),
+		'parent_item'       => __( 'Parent Category', 'digitalgreen' ),
+		'parent_item_colon' => __( 'Parent Category:', 'digitalgreen' ),
+		'edit_item'         => __( 'Edit Category', 'digitalgreen' ),
+		'update_item'       => __( 'Update Category', 'digitalgreen' ),
+		'add_new_item'      => __( 'Add New Category', 'digitalgreen' ),
+		'new_item_name'     => __( 'New Category Name', 'digitalgreen' ),
+		'menu_name'         => __( 'Category', 'digitalgreen' ),
+	);
+	
+	$rewrite = array(
+		'slug'                       => 'case-study-category',
+		'with_front'                 => true,
+		'hierarchical'               => false,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+
+	register_taxonomy( 'list_case_studies', array( 'team' ) , $args );
+}
+
+
+add_action( 'init', 'create_financials_taxonomies', 0 );
+
+// create two taxonomies, genres and writers for the post type "book"
+function create_financials_taxonomies() {
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Categories', 'digitalgreen' ),
+		'singular_name'     => _x( 'Category', 'digitalgreen' ),
+		'search_items'      => __( 'Search Category', 'digitalgreen' ),
+		'all_items'         => __( 'All Category', 'digitalgreen' ),
+		'parent_item'       => __( 'Parent Category', 'digitalgreen' ),
+		'parent_item_colon' => __( 'Parent Category:', 'digitalgreen' ),
+		'edit_item'         => __( 'Edit Category', 'digitalgreen' ),
+		'update_item'       => __( 'Update Category', 'digitalgreen' ),
+		'add_new_item'      => __( 'Add New Category', 'digitalgreen' ),
+		'new_item_name'     => __( 'New Category Name', 'digitalgreen' ),
+		'menu_name'         => __( 'Category', 'digitalgreen' ),
+	);
+	
+	$rewrite = array(
+		'slug'                       => 'financials-category',
+		'with_front'                 => true,
+		'hierarchical'               => false,
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'public'                     => true,
+		'show_ui'                    => true,
+		'show_admin_column'          => true,
+		'show_in_nav_menus'          => true,
+		'show_tagcloud'              => true,
+		'rewrite'                    => $rewrite,
+	);
+
+	register_taxonomy( 'list_financials', array( 'team' ) , $args );
+}
+
 add_action( 'init', 'create_resources_taxonomies', 0 );
 
 // create two taxonomies, genres and writers for the post type "book"

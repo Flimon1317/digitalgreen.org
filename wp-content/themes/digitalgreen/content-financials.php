@@ -42,6 +42,32 @@ include 'header-globalimpact.php'; ?>
                                 <span class="half-squre-before-title"></span>
                             </h1>
                         </div>
+                        <div class="cat-search-wrap pull-right">
+                        <div class="search-category hidden-xs">
+                            <form method="get" role="search"  action="<?php echo esc_url( home_url( '/' ) ); ?>">
+<div class="custom-input-field">
+                
+          </div>
+                </form>
+                    </div>
+                    <div class="dropdown-wrapper">
+                                <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" id="case-studies-filter-field"/></div>
+                                <ul class="dropdown case-studies-dropdown" id="category-dropdown">
+                                <?php
+
+            $terms = get_terms( array('taxonomy' => 'list_financials','hide_empty' => false));
+            $i=1;
+            foreach ( $terms as $term ) { 
+            $termname = strtolower($term->name);
+            $termname = str_replace(' ', '-', $termname);
+            ?>
+                                    <li><a href="#" id="<?php echo $termname; ?>"><?php echo $term->name; ?></a></li>
+                                
+    <?php $i++; } ?>
+
+                                </ul>
+                    </div>
+                </div>
                     </div>
                 </div>
             </div>
@@ -50,13 +76,13 @@ include 'header-globalimpact.php'; ?>
 
     <div class="gray-boxes-container">
         <div class="container">
-            <div class="case-study-boxes" id="case-studies-div">
+            <div class="row custom case-studies-div" id="items-div">
             <?php $i=1;
                                 while ( have_rows('financials_section') ) 
                                 {   
                                     the_row();
                                     ?>
-                <div class="col-sm-4" id="<?php echo $i;?>" style="display:none;">
+                <div class="col-lg-4 col-md-8 col-sm-4 col-sm-offset-2 col-xs-4" data-category="<?php echo get_sub_field('financials_taxonomy')->name; ?>" style="display:none;">
                     <div class="single-boxes-card">
                         <div class="gray-boxes">
                             <div class="box-inner-white-border">
@@ -88,10 +114,10 @@ include 'header-globalimpact.php'; ?>
             <div class="text-center">
                 <!-- for desktop -->
                 <a href="#" class="hidden-xs">
-                    <button class="green-bordered-button" id="load-more">Load More</button>
+                    <button class="green-bordered-button load-more">Load More</button>
                 </a>
                 <!-- for mobile -->
-                <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link" role="button" data-toggle="collapse" href="#" id="load-more">Load More &nbsp;
+                <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link load-more" role="button" data-toggle="collapse" href="#">Load More &nbsp;
                 <span class="icon icon-down-arrow"></span>
                 </a>
             </div>
@@ -197,4 +223,14 @@ $blog_permalink = get_the_permalink($blog_id);
             </div>
      <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
  <?php get_footer(); ?>
+ <script type="text/javascript">
+    $(document).ready(function(){
+        if(jQuery(window).width() < 767){
+            jQuery('#items-div').removeClass('custom');
+            // jQuery('#items-div').removeClass('hidden-xs');
+            // jQuery('#items-div').removeClass('hidden-md');
+            // jQuery('#items-div').removeClass('hidden-sm');
+        }
+    });
+</script>
  

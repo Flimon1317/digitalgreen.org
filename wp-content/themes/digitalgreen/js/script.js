@@ -17,6 +17,10 @@ jQuery(document).ready(function(){
         }, 1000, 'linear');
     }
 
+    jQuery('#filter-field').change(function(){
+        alert(jQuery(this).val());
+    });
+
 
         // jQuery('.gray-box-wrap .gray-box-title').mouseenter(function(){
         //     jQuery(this).css('background-color','#000');
@@ -552,6 +556,57 @@ jQuery(document).ready(function(){
         jQuery('.news-list').hide();
         jQuery('.news-list[data-category='+ catAttr +']').fadeIn(200);
     });
+
+
+    /* 
+
+    Case Studies, Financials, Annual Report filter and Load More Section
+
+    */
+    jQuery('.case-studies-dropdown li a').click(function(){
+        catAttr = jQuery(this).attr('id');
+        jQuery('.case-studies-div .col-lg-4').hide();
+        jQuery('.case-studies-div .col-lg-4[data-category='+ catAttr +']').show();
+
+        //Update size_li after applying filter
+        size_li = jQuery(".case-studies-div .col-lg-4[data-category="+ catAttr +"]").length;
+        x = 3;
+        y = x - 1;
+
+        //Show first 3 items
+        jQuery('.case-studies-div .col-lg-4[data-category='+ catAttr +']:gt('+y+')').hide();
+        if(x >= size_li)
+            $('.load-more').hide();
+        else
+            $('.load-more').show();
+    });
+
+    size_li = jQuery(".case-studies-div > div").length;
+    x=3;
+    jQuery('.case-studies-div div.col-lg-4:lt('+x+')').show();
+    jQuery('.load-more').click(function (e) {
+        e.preventDefault();
+        x = (x+3 <= size_li) ? x+3 : size_li;
+        if(typeof catAttr === 'undefined')
+            jQuery('.case-studies-div div.col-lg-4:lt('+x+')').show();
+        else
+        {   
+            // jQuery('.case-studies-div div.col-sm-4:nth-child(3n+1)').css('margin-left', '52px');
+            jQuery('.case-studies-div div.col-lg-4[data-category='+ catAttr +']:lt('+x+')').show();
+
+        }
+
+        if(x == size_li){
+            $('.load-more').hide();
+        }
+        
+    });
+
+    /* 
+   Filter , Load More Section End 
+    */
+
+
 
     jQuery('#form-conatct').submit(function(){
         $("#form-conatct .contact-inp").each(function(){
