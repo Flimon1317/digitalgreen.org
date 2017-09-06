@@ -25,8 +25,8 @@ include 'header.php'; ?>
                         <h5 class="dg-header-5 banner-details hidden-xs">
                             <?php echo get_field('donate_banner_description'); ?>
                         </h5>
-                        <a href="<?php echo get_field('donate_banner_link'); ?>" target="_blank">
-                            <button class="green-bordered-button with-bottom-cut btn-donate">Donate</button>
+                        <a href="<?php echo get_field('donate_banner_link'); ?>" target="_blank" >
+                            <button class="donate-bordered-button with-bottom-cut btn-donate" style="margin-top:20px;">Donate</button>
                         </a>
                     </div>
 
@@ -42,11 +42,11 @@ include 'header.php'; ?>
 
         <div class="donate-sec">
             <div class="container">
-                <div class="row">
+                <div class="row col-sm-12">
                     
-                    <div class="section-header">
+                    <div class="section-header" style="padding-bottom: 5%; padding-top: 5%;" >
                         <div class="lower-desc--header">
-                            <h5 class="dg-header-5 banner-details hidden-xs"><?php echo get_field('donate_banner_lower_desc'); ?>
+                            <h5 class="dg-header-5 banner-details"><?php echo get_field('donate_banner_lower_desc'); ?>
                             </h5>
                         </div>
                     </div>

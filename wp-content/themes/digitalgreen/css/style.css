@@ -865,6 +865,46 @@ nav:hover > .navbar-collapse ul > li > a {
     background-position: left bottom; }
 
 
+    /* 
+    */
+    .donate-bordered-button {
+  background-color: rgba(101, 226, 20, 0.7);
+  padding: 20px 29px;
+  color: #fff;
+  outline: none;
+  margin-top: 30px;
+  transition: all 0.3s;
+  position: relative;
+  border: 0;
+  border-bottom: 2px solid #65E214;
+  border-right: 2px solid #65E214;
+  background-position: right bottom;
+  line-height: 14px;
+  min-width: 180px;
+  text-align: center;
+  text-transform: capitalize; }
+  .donate-bordered-button:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border-left: 2px solid #65E214;
+    bottom: 0; }
+  .donate-bordered-button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border-top: 2px solid #65E214;
+    right: 0; }
+  .donate-bordered-button:hover {
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 49%, #65E214 50%);
+    background-size: 200% 100%;
+    background-position: left bottom; }
+
+
   .green-bordered-button.load-more-projects { 
     display: inline-block;
     margin-top:60px;
@@ -933,6 +973,30 @@ nav:hover > .navbar-collapse ul > li > a {
     border-bottom: 2px solid #65E214;
     left: 0; }
   .green-bordered-button.with-bottom-cut:after {
+    right: 0;
+    left: auto;
+    border: 0;
+    border-right: 2px solid #65E214;
+    bottom: 10px;
+    top: 0; }
+
+
+  /* */
+  .donate-bordered-button.with-bottom-cut {
+  border: 0;
+  border-top: 2px solid #65E214;
+  border-left: 2px solid #65E214;
+  min-width: 160px; }
+  .donate-bordered-button.with-bottom-cut:before, .donate-bordered-button.with-bottom-cut:after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 2px); }
+  .donate-bordered-button.with-bottom-cut:before {
+    right: 10px;
+    border-top: 0;
+    border-bottom: 2px solid #65E214;
+    left: 0; }
+  .donate-bordered-button.with-bottom-cut:after {
     right: 0;
     left: auto;
     border: 0;
