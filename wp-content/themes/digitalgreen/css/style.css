@@ -4396,3 +4396,7 @@ figure.pull-left {
       height: 100%;
       width: 100%; }
 
+#feedback_val{
+  resize: both;
+}
+

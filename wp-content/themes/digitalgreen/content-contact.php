@@ -44,7 +44,7 @@ include 'header.php'; ?>
                             <span class="validation-error" id="name_val">Please enter your name.</span></li>
                             <li class="clearfix"><label for="email">Email:</label><input type="email" name="email_val" id="email_val" class="contact-inp">
                             <span class="validation-error" id="email_val">Please enter your email address.</span></li>
-                            <li class="clearfix"><label for="feedback">Feedback:</label><textarea name="feedback" id="feedback_val" class="contact-inp"></textarea>
+                            <li class="clearfix"><label for="feedback">Message:</label><textarea name="feedback" id="feedback_val" class="contact-inp"></textarea>
                             <span class="validation-error" id="feedback_val">Please enter feedback.</span></li>
                         </ul>
                         <div class="green-bordered-button  with-bottom-cut learn-more">

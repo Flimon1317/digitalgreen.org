@@ -23,7 +23,6 @@
                                 </span></h4>
                                 <ul class="footer-list text-details">
                                     
-                                    <li><a href="<?php echo esc_url(site_url()); ?>/contact">Contact Us</a></li>
                                     <li>
                                          <ul class="social-icon">
                                             <li><a href="<?php echo ot_get_option('footer_facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -38,6 +37,8 @@
                                                 <span class="social-tooltip">Facebook</span> -->
                                         </ul>
                                     </li>
+                                    <li><a href="<?php echo esc_url(site_url()); ?>/contact">Contact Us</a></li>
+                                    
                                 </ul>
                                
                             </div>

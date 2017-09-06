@@ -22,8 +22,6 @@
                                     <i class="icon icon-down-arrow down-arrow" aria-hidden="true"></i>
                                 </span></h4>
                                 <ul class="footer-list text-details">
-                                    
-                                    <li><a href="<?php echo esc_url(site_url()); ?>/contact">Contact Us</a></li>
                                     <li>
                                          <ul class="social-icon">
                                             <li><a href="<?php echo ot_get_option('footer_facebook'); ?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -37,7 +35,9 @@
 <!--                                                 <a href="#"><i class="icon icon-facebook"></i></a>
                                                 <span class="social-tooltip">Facebook</span> -->
                                         </ul>
-                                    </li>
+                                    </li>12
+                                    <li><a href="<?php echo esc_url(site_url()); ?>/contact">Contact Us</a></li>
+                                    
                                 </ul>
                                
                             </div>
