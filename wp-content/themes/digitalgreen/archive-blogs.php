@@ -84,16 +84,17 @@ include 'header.php'; ?>
                 </form>
                         </div>
                         <div class="dropdown-wrapper">
-                            <div class="select-input custom-input-field"><input readonly="true" name="Project" placeholder="Sort By" id="filter-field"/></div>
+                            <div class="select-input custom-input-field"><input readonly="true" name="blog-filter" placeholder="Sort By" id="filter-field"/>
+                            <input type="hidden" name="action" value="blogfilter" /></div>
                             <ul class="dropdown" id="category-dropdown">
                             <?php
-        $terms = get_terms("list_blogs",array( 'parent' => 0 ));
+        $terms = get_terms( array('taxonomy' => 'list_blogs','hide_empty' => false));
         $i=1;
         foreach ( $terms as $term ) { 
         $termname = strtolower($term->name);
         $termname = str_replace(' ', '-', $termname);
         ?>
-                                <li><a href="#" id="<?php echo $termname; ?>"><?php echo $term->name; ?></a></li>
+                                <li><a href="#" id="<?php echo $term->name; ?>"><?php echo $term->name; ?></a></li>
                                <!-- <li><a href="#" id="category-2">Lorem Ipsum</a></li>
                                 <li><a href="#" id="category-3">dummy text</a></li>
                                 <li><a href="#" id="category-4">Lorem Ipsum</a></li>
@@ -133,7 +134,7 @@ include 'header.php'; ?>
             $shortdesc = wp_trim_words( $trimdesc, $num_words = 10, $more = '… ' );
                     ?>
 
-                <div class="col-lg-3 news-list" data-category="<?php echo $termname; ?>">
+                <div class="col-lg-3 news-list" data-category="<?php echo $cat_array[0]->name; ?>">
                     <a href="<?php if($blogs_attach!="") echo $blogs_attach; else the_permalink(); ?>" class="news-hover" target="_blank">
                         <div class="blogs-image">
                             <img src='<?php echo $blogs_blog_image;?>'>
