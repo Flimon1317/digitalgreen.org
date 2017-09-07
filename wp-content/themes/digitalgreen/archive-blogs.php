@@ -153,8 +153,14 @@ include 'header.php'; ?>
 ?>
 
            </div>
-           <a  class="green-bordered-button load-more">Load more</a>
-        </div>
+          <?php  
+            if ($the_query->max_num_pages > 1):
+                // echo '<button data-count='.${count}.' onclick="load_more_post(\'india\',\'.project-list\');" class="green-bordered-button load-more-projects" id="load-more-button">More posts</button>'; // you can use <a> as well
+                echo "<a class='green-bordered-button load-more load-more-post'>Load more</a>";   
+                endif;
+                 ?>
+<!--            <a  class="green-bordered-button load-more">Load more</a>
+ -->        </div>
     </div>
     <a href="#" class="scroll-top hidden-xs"><i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i></a>
 

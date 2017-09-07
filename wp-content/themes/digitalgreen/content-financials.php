@@ -118,10 +118,10 @@ include 'header.php'; ?>
             <div class="text-center">
                 <!-- for desktop -->
                 <a href="#" class="hidden-xs">
-                    <button class="green-bordered-button load-more">Load More</button>
+                    <button class="green-bordered-button load-more load-more-documents">Load More</button>
                 </a>
                 <!-- for mobile -->
-                <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link load-more" role="button" data-toggle="collapse" href="#">Load More &nbsp;
+                <a class="news-collepse-button hidden-sm hidden-md hidden-lg load-more-btn-link load-more load-more-documents" role="button" data-toggle="collapse" href="#">Load More &nbsp;
                 <span class="icon icon-down-arrow"></span>
                 </a>
             </div>

@@ -573,7 +573,7 @@ jQuery(document).ready(function(){
         //Show All items
         if(catAttr === "-1"){
             jQuery('.case-studies-div .col-lg-4').show();
-            $('.load-more').hide();
+            $('.load-more-documents').hide();
         }
 
         //Apply filters
@@ -589,19 +589,19 @@ jQuery(document).ready(function(){
             //Show first 3 items
             jQuery('.case-studies-div .col-lg-4[data-category='+ catAttr +']:gt('+y+')').hide();
             if(x >= size_li)
-                $('.load-more').hide();
+                $('.load-more-documents').hide();
             else
-                $('.load-more').show();
+                $('.load-more-documents').show();
         }
     });
 
     size_li = jQuery(".case-studies-div > div").length;
     x=3;
     if(size_li <= 3)
-        $('.load-more').hide();
+        $('.load-more-documents').hide();
     
     jQuery('.case-studies-div div.col-lg-4:lt('+x+')').show();
-    jQuery('.load-more').click(function (e) {
+    jQuery('.load-more-documents').click(function (e) {
         e.preventDefault();
         x = (x+3 <= size_li) ? x+3 : size_li;
         if(typeof catAttr === 'undefined')
@@ -614,7 +614,7 @@ jQuery(document).ready(function(){
         }
 
         if(x == size_li){
-            $('.load-more').hide();
+            $('.load-more-documents').hide();
         }
         
     });
